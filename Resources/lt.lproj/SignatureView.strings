@@ -1,0 +1,20 @@
+/* 
+ SignatureView.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 30.07.11.
+ Copyright 2011 GPGMail. All rights reserved.
+ 
+ Defines the strings used in the signature view.
+ */
+"VALIDITY_NO_TRUST" = "Šiuo parašu negalima pasitikėti.";
+"VALIDITY_OK" = "Šiuo parašu galima pasitikėti";
+/* Signature view key status. */
+"VALIDITY_KEY_REVOKED" = "Šio parašo raktas buvo panaikintas.";
+"VALIDITY_SIGNATURE_EXPIRED" = "Šis parašas nebegalioja.";
+"VALIDITY_KEY_EXPIRED" = "Šio parašo raktas nebegalioja.";
+"VALIDITY_KEY_REVOKED" = "Šio parašo raktas buvo panaikintas.";
+"VALIDITY_UNKNOWN_ALGORITHM" = "Parašas buvo sukurtas su nežinomu algoritmu.";
+"VALIDITY_NO_PUBLIC_KEY" = "Šio parašo raktas nėra jūsų raktinėje.";
+"VALIDITY_UNKNOWN_ERROR" = "Nežinoma parašo klaida.";
+"VALIDITY_BAD_SIGNATURE" = "Šis parašas yra neteisingas.";

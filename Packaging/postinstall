@@ -1,0 +1,32 @@
+#!/bin/bash
+
+running=/private/tmp/MailTrackerBlocker-Installation-Temp/running
+
+# Move our temporary installation into the real destination.
+mkdir -p /Library/Mail/Bundles
+rm -R /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
+mv "/private/tmp/MailTrackerBlocker-Installation-Temp/MailTrackerBlocker.mailbundle" /Library/Mail/Bundles
+chown $USER /Library/Mail/
+chown -R $USER /Library/Mail/Bundles
+
+######
+# Note that we are running sudo'd, so these defaults will be written to
+# /Library/Preferences/com.apple.mail.plist
+#
+# Mail must NOT be running by the time this script executes
+######
+defaults write "/Library/Preferences/com.apple.mail" EnableBundles -bool YES
+# sudo -u $USER defaults write "$domain" EnableBundles -bool YES
+
+# Mac OS X 10.5's Mail.app requires bundle version 3 or greater
+# sudo -u $USER defaults write "$domain" BundleCompatibilityVersion -int "$bundle_compatibility_version"
+
+#relaunch mail if it was running before started
+if [ -f "$running" ]; then
+    osascript -e "activate app \"Mail\""
+fi
+
+# Remove our temporary directory so that another user account on the same system can install.
+rm -R /private/tmp/MailTrackerBlocker-Installation-Temp
+
+exit 0

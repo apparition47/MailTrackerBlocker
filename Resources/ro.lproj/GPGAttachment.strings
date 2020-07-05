@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Failed to verify the signature.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "The public key to verify the signature of this attachment is not in your keychain.\n\nPlease download the public key %@ using GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Failed to decrypt the attachment.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "The secret key to decrypt this attachment is not in your keychain.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "The attachment was decrypted successfully.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Open an attachment in the message view by double-clicking.";
