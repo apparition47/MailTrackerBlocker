@@ -31,8 +31,8 @@
 @implementation ComposeBackEnd_MailTrackerBlocker
 
 // generated quoted text in reply/forwards
-- (NSArray*)MAGeneratedMessageBodies {
-    NSArray *bodies = [self MAGeneratedMessageBodies];
+- (NSArray*)MTBGeneratedMessageBodies {
+    NSArray *bodies = [self MTBGeneratedMessageBodies];
     for (MCMessageBody *body in bodies) {
         body.html = [body.html trackerSanitized];
     }

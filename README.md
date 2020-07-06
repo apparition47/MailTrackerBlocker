@@ -1,8 +1,18 @@
 # MailTrackerBlocker
 
-MailTrackerBlocker is a plugin for Apple Mail on macOS to block trackers and spy pixels. [Inspired by Hey](https://twitter.com/dhh/status/1253389224516005889).
+MailTrackerBlocker is a plugin (i.e. mailbundle) for Apple Mail on macOS to block trackers and spy pixels. [Inspired by Hey](https://twitter.com/dhh/status/1253389224516005889).
 
 ![](https://user-images.githubusercontent.com/3298414/86532790-795c7480-bf07-11ea-9939-e82b12b04c3e.png)
+
+This is accomplished by zeroing out bad known URL patterns which should catch the majority of trackers:
+
+```diff
+<img width="0" height="0" class="mailtrack-img" alt="" style="display:flex" src=
+-"https://mailtrack.io/trace/mail/0eabccbe98c98e9b8e9a8b89eab89ce9ab89e8bc.png?u=1234567"
++"https://localhost/mail/0eabccbe98c98e9b8e9a8b89eab89ce9ab89e8bc.png?u=1234567"
+>
+```
+
 
 ## Prerequisites
 

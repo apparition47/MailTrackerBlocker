@@ -7,6 +7,7 @@ all: $(PRODUCT)
 
 $(PRODUCT): Source/* Resources/* Resources/*/* MailTrackerBlocker.xcodeproj
 	@xcodebuild -project $(PROJECT).xcodeproj -target $(TARGET) build $(XCCONFIG)
+	zip -r -9 $(VPATH)/$(PRODUCT).zip $(VPATH)/$(PRODUCT)
 	pkgbuild --install-location /private/tmp/MailTrackerBlocker-Installation-Temp --scripts Packaging --identifier com.onefatgiraffe.mailtrackerblocker --root $(VPATH) $(VPATH)/$(TARGET)-unsigned.pkg
 
 sign:

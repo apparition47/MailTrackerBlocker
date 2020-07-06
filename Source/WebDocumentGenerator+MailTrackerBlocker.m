@@ -7,16 +7,14 @@
 
 #import "WebDocumentGenerator+MailTrackerBlocker.h"
 #import "MUIWebDocument.h"
-#import "MCMessage.h"
 #import "MTBMailBundle.h"
-//#import "NSObject+LPDynamicIvars.h"
 #import "NSString+MailTrackerBlocker.h"
 
 @implementation WebDocumentGenerator_MailTrackerBlocker
 
-- (void)MASetWebDocument:(MUIWebDocument *)webDocument {
+- (void)MTBSetWebDocument:(MUIWebDocument *)webDocument {
     webDocument.html = [webDocument.html trackerSanitized];
-    [self MASetWebDocument:webDocument];
+    [self MTBSetWebDocument:webDocument];
 }
 
 @end

@@ -10,34 +10,6 @@
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DC2EF4F0486A6940098B216"
-               BuildableName = "Libmacgpg.framework"
-               BlueprintName = "Libmacgpg"
-               ReferencedContainer = "container:Dependencies/Libmacgpg/Libmacgpg.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B46CFCB161555DF00CF9C5F"
-               BuildableName = "org.gpgtoolz.Libmacgpg.xpc"
-               BlueprintName = "org.gpgtoolz.Libmacgpg.xpc"
-               ReferencedContainer = "container:Dependencies/Libmacgpg/Libmacgpg.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
             buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
@@ -86,15 +58,6 @@
          BundleIdentifier = "com.apple.mail"
          FilePath = "/Applications/Mail.app">
       </PathRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DC2EF4F0486A6940098B216"
-            BuildableName = "Libmacgpg.framework"
-            BlueprintName = "Libmacgpg"
-            ReferencedContainer = "container:Dependencies/Libmacgpg/Libmacgpg.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-AppleLanguages (&quot;en&quot;)"

@@ -35,7 +35,7 @@
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
-			remoteInfo = GPGMail;
+			remoteInfo = MailTrackerBlocker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -83,7 +83,6 @@
 		1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WebDocumentGenerator+MailTrackerBlocker.m"; sourceTree = "<group>"; };
 		1BF51A6F108FCD1900AC8268 /* ExceptionHandling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExceptionHandling.framework; path = System/Library/Frameworks/ExceptionHandling.framework; sourceTree = SDKROOT; };
 		307E1C6612B17CFF0012F3DF /* MTBMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBMailBundle.h; sourceTree = "<group>"; };
-		30E75A661731A7F900C9E391 /* Libmacgpg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Libmacgpg.framework; path = /Library/Frameworks/Libmacgpg.framework; sourceTree = "<absolute>"; };
 		32DBCF630370AF2F00C91783 /* MailTrackerBlocker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailTrackerBlocker_Prefix.pch; sourceTree = "<group>"; };
 		4523EB9D150515CD00497E39 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		559A80600838E8300052F47C /* NSString+MailTrackerBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MailTrackerBlocker.h"; sourceTree = "<group>"; };
@@ -1586,7 +1585,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		089C166AFE841209C02AAC07 /* GPGMail */ = {
+		089C166AFE841209C02AAC07 /* MailTrackerBlocker */ = {
 			isa = PBXGroup;
 			children = (
 				559A806B0838E96A0052F47C /* Classes */,
@@ -1598,7 +1597,7 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				1B8763621786020A00B24BBC /* Unit Tests */,
 			);
-			name = GPGMail;
+			name = MailTrackerBlocker;
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
@@ -1611,7 +1610,6 @@
 				4523EB9D150515CD00497E39 /* SenTestingKit.framework */,
 				1BF51A6F108FCD1900AC8268 /* ExceptionHandling.framework */,
 				1B19E84113A2AEA4002E59ED /* Foundation.framework */,
-				30E75A661731A7F900C9E391 /* Libmacgpg.framework */,
 				1BAFDD6F1784DAB100E9BA6A /* RegexKit.framework */,
 				559A812E0838EEFD0052F47C /* Security.framework */,
 				1B87639A178628FD00B24BBC /* XCTest.framework */,
@@ -3302,7 +3300,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55541F4C085AE6B100548474 /* Build configuration list for PBXNativeTarget "MailTrackerBlocker" */;
 			buildPhases = (
-				30DA468812B2D5E800E20039 /* Update en.lproj from Base.lproj */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
@@ -3310,7 +3307,6 @@
 				1B9EAAAD14352F0A0063F2F1 /* Fix RegEx loader path */,
 				30F151C51500BD4500980642 /* Fill Info.plist */,
 				30F151E21500BE8D00980642 /* Install MailTrackerBlocker */,
-				1BC07F3517466697004263BB /* Copy Libmacgpg into the sandbox container */,
 			);
 			buildRules = (
 			);
@@ -3319,7 +3315,7 @@
 			);
 			name = MailTrackerBlocker;
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = GPGMail;
+			productName = MailTrackerBlocker;
 			productReference = 8D5B49B6048680CD000E48DA /* MailTrackerBlocker.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -3348,35 +3344,9 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
-				fr,
-				fi,
-				it,
-				ko,
-				es,
-				da,
-				sv,
-				de,
-				ca,
-				cs,
-				gl,
-				id,
-				nb,
-				pl,
-				pt_PT,
-				pt,
-				ru,
-				sk,
-				tr,
-				zh_CN,
-				oc,
-				vi,
 				Base,
-				nl,
-				el,
-				fa_IR,
-				th,
 			);
-			mainGroup = 089C166AFE841209C02AAC07 /* GPGMail */;
+			mainGroup = 089C166AFE841209C02AAC07 /* MailTrackerBlocker */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -3420,36 +3390,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/MailTrackerBlocker\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1BC07F3517466697004263BB /* Copy Libmacgpg into the sandbox container */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Libmacgpg into the sandbox container";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\n\n # Check if a framework is available under ~/Library/Framework\n USER_FRAMEWORKS=\"$HOME/Library/Frameworks\"\n CONTAINER_FRAMEWORKS=\"$HOME/Library/Containers/com.apple.mail/Data/Library/Frameworks\"\n LIBMACGPG=\"Libmacgpg.framework\"\n [[ -d \"$USER_FRAMEWORKS/$LIBMACGPG\" ]] || exit 0\n\n # Create the Container Frameworks dir if it doesn't exist.\n if [ ! -d \"$CONTAINER_FRAMEWORKS\" ]; then\n     mkdir -p \"$CONTAINER_FRAMEWORKS\"\n fi\n if [ -d \"$CONTAINER_FRAMEWORKS/$LIBMACGPG\" ]; then\n    rm -rf \"$CONTAINER_FRAMEWORKS/$LIBMACGPG\"\n fi\n \n # Copy the framework into the container.\n rsync -rltD \"$USER_FRAMEWORKS/$LIBMACGPG/\" \"$CONTAINER_FRAMEWORKS/$LIBMACGPG/\"\n";
-			showEnvVarsInLog = 0;
-		};
-		30DA468812B2D5E800E20039 /* Update en.lproj from Base.lproj */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Update en.lproj from Base.lproj";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "[[ -d \"$DEPLOY_RESOURCES_DIR\" ]] || exit 0\n\"$DEPLOY_RESOURCES_DIR/scripts/updateStringsFiles.sh\" || exit 1\n";
 			showEnvVarsInLog = 0;
 		};
 		30F151C51500BD4500980642 /* Fill Info.plist */ = {
@@ -3621,7 +3561,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					/Library/Frameworks,
 					"\"$(SRCROOT)/Frameworks\"",
-					"$(SRCROOT)/Dependencies/Libmacgpg/build/$(CONFIGURATION)",
 					"$(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks",
 					"$(HOME)/Library/Frameworks",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
@@ -3729,7 +3668,6 @@
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Frameworks\"",
-					"$(SRCROOT)/Dependencies/Libmacgpg/build/$(CONFIGURATION)",
 					"$(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
@@ -3807,7 +3745,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Frameworks\"",
-					"$(SRCROOT)/Dependencies/Libmacgpg/build/$(CONFIGURATION)",
 					"$(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,

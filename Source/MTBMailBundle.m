@@ -47,7 +47,7 @@
 
 #pragma mark Constants and global variables
 
-NSString *MTBMailSwizzledMethodPrefix = @"MA";
+NSString *MTBMailSwizzledMethodPrefix = @"MTB";
 
 int MTBMailLoggingLevel = 0;
 
