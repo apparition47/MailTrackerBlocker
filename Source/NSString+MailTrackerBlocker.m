@@ -19,7 +19,7 @@
         for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
             NSRange matchedRange = [self rangeFromString:result pattern:regexStr];
             if (matchedRange.location != NSNotFound) {
-                result = [result stringByReplacingCharactersInRange:matchedRange withString:@"localhost"];
+                result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
             }
         }
     }
@@ -29,13 +29,11 @@
 #pragma mark - Helpers
 
 - (NSRange)rangeFromString:(NSString*)html pattern:(NSString*)pattern {
-    NSString *signatureRegex = [NSString stringWithFormat:@"%@",
-                                pattern];
     NSRange match = NSMakeRange(NSNotFound, 0);
     if([html length] == 0)
         return match;
     @try {
-        RKRegex *sigRKRegex = [RKRegex regexWithRegexString:signatureRegex options:RKCompileNoOptions];
+        RKRegex *sigRKRegex = [RKRegex regexWithRegexString:pattern options:RKCompileNoOptions];
         NSRange range = NSMakeRange(0, html.length);
         match = [html rangeOfRegex:sigRKRegex inRange:range capture:0];
     }
@@ -49,7 +47,8 @@
 // source: https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20
 - (NSDictionary*)getTrackerDict {
     return @{
-        @"ActiveCampaign": @[@"/lt.php(.*)?l=open/"],
+        @"ActiveCampaign": @[@"/lt.php(.*)\\?l=open/"],
+        @"Amazon SES": @[@".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/[A-Z][0-9]/[0-9]"],
         @"AWeber": @[@"openrate.aweber.com"],
         @"Bananatag": @[@"bl-1.com"],
         @"Boomerang": @[@"mailstat.us/tr"],
@@ -64,14 +63,15 @@
         @"Gem": @[@"zen.sr/o"],
         @"Getnotify": @[@"email81.com/case"],
         @"GetResponse": @[@"getresponse.com/open.html"],
+        @"GitHub": @[@"github.com/notifications/beacon/"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
         @"FreshMail": @[@"/\\/o\\/(\\w){10,}\\/(\\w){10,}/"],
-        @"Hubspot": @[@"/t.(hubspotemail|hubspotfree|signaux|senal|sidekickopen|sigopn)/"],
+        @"Hubspot": @[@"t.(hubspotemail|hubspotfree|signaux|senal|sidekickopen|sigopn)"],
         @"iContact": @[@"click.icptrack.com/icp"],
         @"Intercom": @[@"via.intercom.io/o", @"intercom-mail.com/via/o"],
         @"Litmus": @[@"emltrk.com"],
         @"Mailchimp": @[@"list-manage.com/track"],
-        @"Mailgun": @[@"/email.(mailgun|mg)(.*)?/o/"],
+        @"Mailgun": @[@"/email.(mailgun|mg)(.*)\\?/o/"],
         @"Mailjet": @[@"mjt.lu/oo"],
         @"Mailspring": @[@"getmailspring.com/open"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
@@ -87,15 +87,18 @@
         @"Return Path": @[@"returnpath.net/pixel.gif"],
         @"Sailthru": @[@"sailthru.com/trk"],
         @"Salesforce": @[@"nova.collect.igodigital.com"],
-        @"SendGrid": @[@"wf/open?upn"],
+        @"SendGrid": @[@"wf/open\\?upn"],
         @"Sendy": @[@"/sendy/t/"],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"Superhuman": @[@"r.superhuman.com"],
         @"Thunderhead": @[@"na5.thunderhead.com"],
-        @"Tinyletter": @[@"/tinyletterapp.com.*?open.gif/"],
+        @"Tinyletter": @[@"/tinyletterapp.com.*\\?open.gif/"],
+        @"Wix": @[@"shoutout.wix.com/.*/pixel"],
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"t.yesware.com"],
         @"Zendesk Sell": @[@"futuresimple.com/api/v1/sprite.png"],
+        
+        @"_Generic Spy Pixel": @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
     };
 }
 
