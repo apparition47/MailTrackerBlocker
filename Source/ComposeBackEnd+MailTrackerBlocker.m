@@ -12,15 +12,11 @@
 #import "MFMailAccount.h"
 #import "MCAttachment.h"
 #import "CCLog.h"
-#import "NSString+MailTrackerBlocker.h"
 #import "MTBMailBundle.h"
 #import "ComposeBackEnd+MailTrackerBlocker.h"
 
 #import "ComposeViewController.h"
-#import "HeadersEditor.h"
-#import "MCActivityMonitor.h"
-
-#import "MCKeychainManager.h"
+#import "MTBBlockedMessage.h"
 
 #import "MCMessageBody.h"
 
@@ -34,7 +30,8 @@
 - (NSArray*)MTBGeneratedMessageBodies {
     NSArray *bodies = [self MTBGeneratedMessageBodies];
     for (MCMessageBody *body in bodies) {
-        body.html = [body.html trackerSanitized];
+        MTBBlockedMessage *blkMsg = [[MTBBlockedMessage alloc] initWithHtml:body.html];
+        body.html = blkMsg.sanitizedHtml;
     }
     return bodies;
 }

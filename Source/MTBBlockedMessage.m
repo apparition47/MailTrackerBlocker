@@ -1,24 +1,58 @@
 //
-//  NSString+MailTrackerBlocker.m
+//  MTBBlockedMessage.m
 //  MailTrackerBlocker
 //
-//  Created by Aaron Lee on 2020/07/05.
+//  Created by Aaron Lee on 2020/07/12.
 //
 
 #import <RegexKit/RegexKit.h>
-#import <Foundation/Foundation.h>
-#import "NSString+MailTrackerBlocker.h"
-#import "MTBMailBundle.h"
+#import "MTBBlockedMessage.h"
 
-@implementation NSString (MTBMail)
+@interface MTBBlockedMessage ()
+@property (nonatomic, assign) NSString *sanitizedHtml;
+@property (nonatomic, retain) NSMutableDictionary *results;
+@property (nonatomic, weak) id <MTBBlockedMessageDelegate> delegate;
+@end
 
-- (NSString*)trackerSanitized {
-    NSString *result = self;
+@implementation MTBBlockedMessage
+
+@synthesize results, delegate;
+
+- (id)initWithHtml:(NSString*)html {
+    self = [self init];
+    if (!self) {
+        return nil;
+    }
+    results = [[NSMutableDictionary alloc] init];
+    _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
+    return self;
+}
+
+- (NSUInteger)blockedCount {
+    return results.count;
+}
+
+- (NSString*)sanitizedHtml {
+    return _sanitizedHtml;
+}
+
+- (NSString *)description {
+    NSString *desc = @"";
+    for (id key in results) {
+        desc = [desc stringByAppendingFormat:@"%@\n", key];
+    }
+    return desc;
+}
+
+#pragma mark - Helpers
+- (NSString*)sanitizedHtmlFromHtml:(NSString*)html {
+    NSString *result = html;
     NSDictionary *trackingDict = [self getTrackerDict];
     for (id trackingSourceKey in trackingDict) {
         for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
             NSRange matchedRange = [self rangeFromString:result pattern:regexStr];
             if (matchedRange.location != NSNotFound) {
+                results[trackingSourceKey] = result;
                 result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
             }
         }
@@ -101,5 +135,4 @@
         @"_Generic Spy Pixel": @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
     };
 }
-
 @end

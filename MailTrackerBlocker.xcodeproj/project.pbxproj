@@ -23,9 +23,11 @@
 		1BAFDD711784DB0800E9BA6A /* RegexKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAFDD6F1784DAB100E9BA6A /* RegexKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */; };
 		1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A806E0838E9B10052F47C /* MTBMailBundle.m */; };
-		1BED936B107958C700D22B4C /* NSString+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A807B0838E9B10052F47C /* NSString+MailTrackerBlocker.m */; };
 		1BF51A70108FCD1900AC8268 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF51A6F108FCD1900AC8268 /* ExceptionHandling.framework */; };
 		559A81330838EEFD0052F47C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559A812E0838EEFD0052F47C /* Security.framework */; };
+		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
+		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
+		73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,12 +87,14 @@
 		307E1C6612B17CFF0012F3DF /* MTBMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBMailBundle.h; sourceTree = "<group>"; };
 		32DBCF630370AF2F00C91783 /* MailTrackerBlocker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailTrackerBlocker_Prefix.pch; sourceTree = "<group>"; };
 		4523EB9D150515CD00497E39 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		559A80600838E8300052F47C /* NSString+MailTrackerBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MailTrackerBlocker.h"; sourceTree = "<group>"; };
 		559A80620838E8890052F47C /* ComposeBackEnd+MailTrackerBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ComposeBackEnd+MailTrackerBlocker.h"; sourceTree = "<group>"; };
 		559A806E0838E9B10052F47C /* MTBMailBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = MTBMailBundle.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
-		559A807B0838E9B10052F47C /* NSString+MailTrackerBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MailTrackerBlocker.m"; sourceTree = "<group>"; };
 		559A812E0838EEFD0052F47C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		559A81860838F3C30052F47C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBBlockedMessage.h; sourceTree = "<group>"; };
+		73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBBlockedMessage.m; sourceTree = "<group>"; };
+		73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LPDynamicIvars.m"; sourceTree = "<group>"; };
+		73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+LPDynamicIvars.h"; sourceTree = "<group>"; };
 		73C7BA6F24B0B493005BE934 /* IMAPFlagsResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAPFlagsResponse.h; sourceTree = "<group>"; };
 		73C7BA7024B0B493005BE934 /* IMAPSelectMailboxOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAPSelectMailboxOperation.h; sourceTree = "<group>"; };
 		73C7BA7124B0B493005BE934 /* IMAPUIDCopyCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAPUIDCopyCommand.h; sourceTree = "<group>"; };
@@ -1557,6 +1561,8 @@
 		73C7C02B24B0B499005BE934 /* MFMessageChangeManager_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFMessageChangeManager_macOS.h; sourceTree = "<group>"; };
 		73C7C02C24B0B499005BE934 /* MFEWSSuppressReadReceiptsRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFEWSSuppressReadReceiptsRequestOperation.h; sourceTree = "<group>"; };
 		73C7C02D24B0B499005BE934 /* MFUIMailbox-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFUIMailbox-Protocol.h"; sourceTree = "<group>"; };
+		73F7651824B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeaderViewController+MailTrackerBlocker.h"; sourceTree = "<group>"; };
+		73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HeaderViewController+MailTrackerBlocker.m"; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* MailTrackerBlocker.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailTrackerBlocker.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1661,7 +1667,8 @@
 			children = (
 				1B32AFF613AF827B0072079B /* CCLog.m */,
 				1B7E4DB614EEEAD90069E69C /* JRLPSwizzle.m */,
-				559A807B0838E9B10052F47C /* NSString+MailTrackerBlocker.m */,
+				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
+				73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1671,6 +1678,7 @@
 			children = (
 				1B3F2F9D13E59639006A8333 /* ComposeBackEnd+MailTrackerBlocker.m */,
 				1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */,
+				73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1698,6 +1706,7 @@
 			children = (
 				559A80620838E8890052F47C /* ComposeBackEnd+MailTrackerBlocker.h */,
 				1BD06B9918102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.h */,
+				73F7651824B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1707,7 +1716,8 @@
 			children = (
 				1B32AFF513AF827B0072079B /* CCLog.h */,
 				1B7E4DB514EEEACE0069E69C /* JRLPSwizzle.h */,
-				559A80600838E8300052F47C /* NSString+MailTrackerBlocker.h */,
+				73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */,
+				73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -3438,10 +3448,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */,
+				73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */,
 				1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
+				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
 				1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */,
-				1BED936B107958C700D22B4C /* NSString+MailTrackerBlocker.m in Sources */,
 				1B32AFF713AF827B0072079B /* CCLog.m in Sources */,
 				1B3F2F9E13E59639006A8333 /* ComposeBackEnd+MailTrackerBlocker.m in Sources */,
 				1B7E4DB714EEEAD90069E69C /* JRLPSwizzle.m in Sources */,

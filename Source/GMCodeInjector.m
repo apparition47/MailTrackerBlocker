@@ -45,6 +45,11 @@
         ],
         @"WebDocumentGenerator": @[
             @"setWebDocument:"
+        ],
+        @"HeaderViewController": @[
+            @"observeValueForKeyPath:ofObject:change:context:",
+            @"dealloc",
+            @"viewDidLoad"
         ]
     };
 }

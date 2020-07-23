@@ -36,7 +36,6 @@
 #import "GMCodeInjector.h"
 #import "MTBMailBundle.h"
 #import "MVMailBundle.h"
-#import "NSString+MailTrackerBlocker.h"
 #import "ComposeViewController.h"
 
 
