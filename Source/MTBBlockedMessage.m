@@ -9,7 +9,7 @@
 #import "MTBBlockedMessage.h"
 
 @interface MTBBlockedMessage ()
-@property (nonatomic, assign) NSString *sanitizedHtml;
+@property (nonatomic, copy) NSString *sanitizedHtml;
 @property (nonatomic, retain) NSMutableDictionary *results;
 @property (nonatomic, weak) id <MTBBlockedMessageDelegate> delegate;
 @end
