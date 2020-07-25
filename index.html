@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="og:site_name" content="MailTrackerBlocker">
+  <link rel="canonical" href="https://mailtrackerblocker.github.io">
+  <meta name="twitter:url" content="https://mailtrackerblocker.github.io">
+  <meta name="og:url" content="https://mailtrackerblocker.github.io">
+  <title>MailTrackerBlocker for Mail on macOS</title>
+  <meta name="twitter:title" content="MailTrackerBlocker for Mail on macOS">
+  <meta name="og:title" content="MailTrackerBlocker for Mail on macOS">
+  <meta name="description" content="A tracker and spy pixel blocker plugin for macOS Apple Mail.">
+  <meta name="twitter:description" content="A tracker and spy pixel blocker plugin for macOS Apple Mail.">
+  <meta name="og:description" content="A tracker and spy pixel blocker plugin for macOS Apple Mail.">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <meta name="twitter:image"
+    content="https://user-images.githubusercontent.com/3298414/88289106-b1e5b600-cd2f-11ea-8ba8-e8fa8ad70e78.png">
+  <meta name="og:image"
+    content="https://user-images.githubusercontent.com/3298414/88289106-b1e5b600-cd2f-11ea-8ba8-e8fa8ad70e78.png">
+</head>
+
+<body class="bg-info">
+  <div class="p-5 m-5 bg-light rounded-lg container mx-auto">
+    <div>
+      <img src="https://user-images.githubusercontent.com/3298414/88289106-b1e5b600-cd2f-11ea-8ba8-e8fa8ad70e78.png"
+        class="rounded img-fluid">
+      <h1 class="text-info text-center pt-4 text-wrap"><i class="fa fa-hand-paper-o mr-1" aria-hidden="true"></i>MailTrackerBlocker</h1>
+      <p class="text-center">A tracker and spy pixel blocker plugin for <b>macOS Apple Mail</b>.</p>
+
+      <div class="text-center">
+        <a href="https://github.com/apparition47/MailTrackerBlocker/releases/download/0.2.1/MailTrackerBlocker.pkg"
+          role="button" class="btn btn-info btn-lg m-1">
+          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+          Download v0.2.1 for macOS 10.15
+        </a>
+
+        <a href="https://github.com/apparition47/MailTrackerBlocker" role="button" class="btn btn-secondary btn-lg m-1">
+          <i class="fa fa-code-fork" aria-hidden="true"></i>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="pt-5">
+        <h3 class="text-info">What is this?</h3>
+          <p>I've been using the default Mail client built in macOS for a long time now and it works perfectly fine when I'm both at work and at home. My coworker one day sent me an email with a particuliar signature that claims to notify the sender when opened. Intrigued, I read into it a bit more and discovered there are services that allow users to embed a small image in emails (endearingly called "spy pixels" by some) to allow the sender to check if you read their email. </p>
+          <p>Hm. Coworkers checking up on me. That sounds lovely.</p>
+          <p><a class="text-info" href="https://www.theverge.com/21319293/gmail-reading-email-tracking-pixels-how-to-prevent-block-chrome">Luckily, The Verge wrote a piece on how prevent this</a>. Disabling "load remote content in messages" works like a treat but you're stuck without seeing legitimate images. Better yet, there are even Chrome extensions that automatically block these spy pixels images but nothing for Apple Mail so hence this plugin.</p>
+          
+          <p>
+            Most commercial trackers can be reliably blocked through a <a class="text-info" href="https://twitter.com/dhh/status/1253389224516005889">blacklist of known URL patterns<a>. Failing that,
+            MailTrackerBlocker applies a generic regex filter for 1x1 images. <a class="text-info"
+              href="https://www.gmass.co/blog/tracking-pixel-blockers/">Read more about how email pixel tracking
+              works.</a>
+          </p>
+
+        <h3 class="text-info">How do I use this?</h3>
+          <p>To enable, first install the <span class="text-monospace">.pkg</span> file then enable the plugin by (see <a class="text-info" href="https://gpgtools.tenderapp.com/kb/gpg-mail-faq/enable-gpg-mail-on-macos-mojave-or-newer">similar guide for nice pictures</a>):</p>
+          <ol>
+            <li>In Mail, open <span class="text-monospace">Preferences > General > Manage Plug-ins...</span></li>
+            <li>Check <span class="text-monospace">MailTrackerBlocker.mailbundle</span></li>
+            <li>Click <span class="text-monospace">Apply and Restart Mail</span></li>
+          </ol>
+          <p>Now when you view your email, a <span class="p-1 bg-warning text-monospace">🛑 #</span> button will appear in the header. The number indicates the number of services blocked. Tap on the button to show which services have been blocked.</p>
+      </div>
+
+      <h3 class="text-info">Credits</h3>
+      <p>Thanks to the GPGMail team for a lot of the work in hooking into Mail.app and <span class="text-monospace">@dhh</span> for sharing his spy pixel list.</p>
+
+      <div>
+        <h3 class="text-info">Contact</h3>
+          Tell me your story.
+          <a href="https://twitter.com/apparition47" role="button" class="text-info btn btn-sm">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            @apparition47
+          </a>
+          <a href="https://github.com/apparition47" role="button" class="text-info btn btn-sm">
+            <i class="fa fa-github-alt" aria-hidden="true"></i>
+            @apparition47
+          </a>
+      </div>
+
+      <div class="text-muted text-right"><small>© 2020 Aaron Lee</small></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
