@@ -14,6 +14,7 @@
   <meta name="twitter:description" content="A tracker and spy pixel blocker plugin for macOS Apple Mail.">
   <meta name="og:description" content="A tracker and spy pixel blocker plugin for macOS Apple Mail.">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@apparition47">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +50,7 @@
       <div class="pt-5">
         <h3 class="text-info">What is this?</h3>
           <p>I've been using the default Mail client built in macOS for a long time now and it works perfectly fine when I'm both at work and at home. My coworker one day sent me an email with a particuliar signature that claims to notify the sender when opened. Intrigued, I read into it a bit more and discovered there are services that allow users to embed a small image in emails (endearingly called "spy pixels" by some) to allow the sender to check if you read their email. </p>
-          <p>Hm. Coworkers checking up on me. That sounds lovely.</p>
+          <p>Hm. Coworkers checking up on me. That sounds <i>lovely</i>.</p>
           <p><a class="text-info" href="https://www.theverge.com/21319293/gmail-reading-email-tracking-pixels-how-to-prevent-block-chrome">Luckily, The Verge wrote a piece on how prevent this</a>. Disabling "load remote content in messages" works like a treat but you're stuck without seeing legitimate images. Better yet, there are even Chrome extensions that automatically block these spy pixels images but nothing for Apple Mail so hence this plugin.</p>
           
           <p>
@@ -66,7 +67,7 @@
             <li>Check <span class="text-monospace">MailTrackerBlocker.mailbundle</span></li>
             <li>Click <span class="text-monospace">Apply and Restart Mail</span></li>
           </ol>
-          <p>Now when you view your email, a <span class="p-1 bg-warning text-monospace">🛑 #</span> button will appear in the header. The number indicates the number of services blocked. Tap on the button to show which services have been blocked.</p>
+          <p>Now when you view your email, a <span class="p-1 bg-secondary text-monospace rounded">🛑 #</span> button will appear in the header. The number indicates the number of services blocked. Tap on the button to show which services have been blocked.</p>
       </div>
 
       <h3 class="text-info">Credits</h3>
