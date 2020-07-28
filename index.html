@@ -26,15 +26,15 @@
     content="https://user-images.githubusercontent.com/3298414/88289106-b1e5b600-cd2f-11ea-8ba8-e8fa8ad70e78.png">
 </head>
 
-<body class="bg-info">
+<body>
   <div class="p-5 m-5 bg-light rounded-lg container mx-auto">
     <div>
       <img src="https://user-images.githubusercontent.com/3298414/88289106-b1e5b600-cd2f-11ea-8ba8-e8fa8ad70e78.png"
         class="rounded img-fluid">
       <h2 class="text-info text-center pt-4 text-wrap"><i class="fa fa-hand-paper-o mr-1" aria-hidden="true"></i>MailTrackerBlocker</h2>
-      <p class="text-center">A tracker and spy pixel blocker plugin for <b>macOS Apple Mail</b>.</p>
+      <p class="text-center">An email tracker, read receipt and spy pixel blocker plugin for <b>macOS Apple Mail</b>.</p>
 
-      <div class="text-center">
+      <div class="text-center pb-5">
         <a href="https://github.com/apparition47/MailTrackerBlocker/releases/download/0.2.2/MailTrackerBlocker.pkg"
           role="button" class="btn btn-info btn-lg m-1">
           <i class="fa fa-cloud-download" aria-hidden="true"></i>
@@ -47,17 +47,10 @@
         </a>
       </div>
 
-      <div class="pt-5">
-        <h3 class="text-info">What is this?</h3>
-          <p>I've been using the default Mail client built in macOS for a long time now. I recently discovered services that allow users to <a class="text-info"
-              href="https://www.gmass.co/blog/tracking-pixel-blockers/">embed a small image in emails (called "spy pixels" by some) to allow the sender to check if you read their email</a>.</p>
-          <p><a class="text-info" href="https://www.theverge.com/21319293/gmail-reading-email-tracking-pixels-how-to-prevent-block-chrome">Luckily, The Verge wrote a piece on how prevent this</a>. Disabling "load remote content in messages" works like a treat but it's a all-or-nothing solution. There are some Chrome extensions that automatically block these spy pixels images but nothing for Apple Mail so hence this plugin.</p>
-          
-          <p>
-            MailTrackerBlocker works by applying a generic regex filter for 1x1 images. But these commercial trackers should be reliably blocked through a <a class="text-info" href="https://twitter.com/dhh/status/1253389224516005889">blacklist of known URL patterns<a>:
-          </p>
+      <h3 class="text-info py-2">What is this?</h3>
+      <p>MailTrackerBlocker is a plugin for the default Mail app built-in to macOS. When you view your email a <span class="p-1 bg-secondary text-light text-monospace text-nowrap rounded">🛑 #</span> button will appear to indicate the number of services blocked. Tap on the button to show which services have been blocked. It works with <b>any</b> email provider you have hooked up on macOS.</p>
 
-
+      <h3 class="text-info py-2">Blocked Trackers</h3>
       <div class="container-sm pb-3">
         <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> ActiveCampaign</span>
         <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Amazon SES</span>
@@ -111,33 +104,28 @@
         <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Zendesk Sell</span>
       </div>
 
-        <h3 class="text-info">How do I use this?</h3>
-          <p>To enable, first install the <span class="text-monospace">.pkg</span> file then enable the plugin by (see <a class="text-info" href="https://gpgtools.tenderapp.com/kb/gpg-mail-faq/enable-gpg-mail-on-macos-mojave-or-newer">similar guide for nice pictures</a>):</p>
-          <ol>
-            <li>In Mail, open <span class="text-monospace">Preferences > General > Manage Plug-ins...</span></li>
-            <li>Check <span class="text-monospace">MailTrackerBlocker.mailbundle</span></li>
-            <li>Click <span class="text-monospace">Apply and Restart Mail</span></li>
-          </ol>
-          <p>Now when you view your email, a <span class="p-1 bg-secondary text-monospace text-nowrap rounded">🛑 #</span> button will appear in the header. The number indicates the number of services blocked. Tap on the button to show which services have been blocked.</p>
-      </div>
+      <h3 class="text-info py-2">How can I enable this?</h3>
+      <p>To enable, first install the <span class="text-monospace">.pkg</span> file then enable the plugin by (see <a class="text-info" href="https://gpgtools.tenderapp.com/kb/gpg-mail-faq/enable-gpg-mail-on-macos-mojave-or-newer">similar guide for nice pictures</a>):</p>
+      <ol>
+        <li>In Mail, open <span class="text-monospace">Preferences > General > Manage Plug-ins...</span></li>
+        <li>Check <span class="text-monospace">MailTrackerBlocker.mailbundle</span></li>
+        <li>Click <span class="text-monospace">Apply and Restart Mail</span></li>
+      </ol>
 
-      <h3 class="text-info">Credits</h3>
+      <h3 class="text-info py-2">Credits</h3>
       <p>Thanks to the GPGMail team for a lot of the work in hooking into Mail.app and <span class="text-monospace">@dhh</span> for sharing his spy pixel list.</p>
 
-      <div>
-        <h3 class="text-info">Contact</h3>
-          Tell me your story.
-          <a href="https://twitter.com/apparition47" role="button" class="text-info btn btn-sm">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            @apparition47
-          </a>
-          <a href="https://github.com/apparition47" role="button" class="text-info btn btn-sm">
-            <i class="fa fa-github-alt" aria-hidden="true"></i>
-            @apparition47
-          </a>
-      </div>
+      <h3 class="text-info py-2">Contact</h3>
+      <p>Tell me your story. <a href="https://twitter.com/apparition47" role="button" class="text-info btn btn-sm">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        @apparition47
+      </a>
+      <a href="https://github.com/apparition47" role="button" class="text-info btn btn-sm">
+        <i class="fa fa-github-alt" aria-hidden="true"></i>
+        @apparition47
+      </a></p>
 
-      <div class="text-muted pt-4"><small>© 2020 Aaron Lee</small></div>
+      <div class="text-muted pt-5"><small>© 2020 Aaron Lee</small></div>
     </div>
 
   </div>
