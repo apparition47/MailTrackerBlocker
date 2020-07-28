@@ -59,6 +59,7 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
 
 #pragma mark - representedObject KVO
 - (void)MTBObserveValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    [self MTBObserveValueForKeyPath:keyPath ofObject:object change:change context:context];
     MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
     NSButton *blockingBtn = [mailself getIvar:kBlockingBtn];
     [blockingBtn setEnabled: blkMsg.blockedCount > 0];
