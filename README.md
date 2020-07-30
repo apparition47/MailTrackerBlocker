@@ -19,10 +19,15 @@ Only tested on Apple Mail 13.4 on macOS 10.15 Catalina.
 
 ## Setup
 
-1. Goto https://github.com/apparition47/MailTrackerBlocker/releases
-2. Download then open the `.pkg` to install.
-3. In Xcode, open `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`
-4. Tap on the `🛑 #` button to find out what was blocked.
+1. Download and install the latest `.pkg` from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases).
+2. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
+3. Tap on the `ⓧ #` button to find out what was blocked.
+
+You can now reenable "load remote content in messages" if you had it disabled before using MailTrackerBlocker.
+
+### Uninstall
+
+Delete `/Library/Mail/Bundles/MailTrackerBlocker.mailbundle`.
 
 ## Building from source
 
@@ -42,5 +47,6 @@ make
 
 ## Credits
 
-* Mail.app hooking from [GPGMail](https://github.com/GPGTools/GPGMail)
-* [Tracker blocking list from @dhh](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20)
+* [GPGMail](https://github.com/GPGTools/GPGMail) team for their work on Mail.app plugins
+* [@dhh](https://github.com/dhh) for the [spy pixel tracker blocking list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20)
+* [@bitmanic](https://github.com/bitmanic) for the UI design

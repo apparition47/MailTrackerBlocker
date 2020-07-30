@@ -130,6 +130,10 @@ int MTBMailLoggingLevel = 0;
 - (id)init {
 	if (self = [super init]) {
 		NSLog(@"Loaded MailTrackerBlocker %@", [self version]);
+        
+        NSBundle *myBundle = [MTBMailBundle bundle];
+        [self _loadImages];
+        
         [GMCodeInjector injectUsingMethodPrefix:MTBMailSwizzledMethodPrefix];
 	}
     
@@ -140,6 +144,34 @@ int MTBMailLoggingLevel = 0;
 
 }
 
+- (void)_loadImages {
+    /**
+     * Loads all images which are used in the MTB User interface.
+     */
+    // We need to load images and name them, because all images are searched by their name; as they are not located in the main bundle,
+    // +[NSImage imageNamed:] does not find them.
+    NSBundle *myBundle = [MTBMailBundle bundle];
+    
+    NSArray *bundleImageNames = @[@"inactive",
+                                  @"active"];
+    NSMutableArray *bundleImages = [[NSMutableArray alloc] initWithCapacity:[bundleImageNames count]];
+    
+    for (NSString *name in bundleImageNames) {
+        NSImage *image = [[NSImage alloc] initByReferencingFile:[myBundle pathForImageResource:name]];
+
+        // Shoud an image not exist, log a warning, but don't crash because of inserting
+        // nil!
+        if(!image) {
+            NSLog(@"MTB: Image %@ not found in bundle resources.", name);
+            continue;
+        }
+        [image setName:name];
+        [bundleImages addObject:image];
+    }
+    
+    _bundleImages = bundleImages;
+    
+}
 
 #pragma mark Localization Helper
 

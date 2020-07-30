@@ -25,20 +25,18 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
 
 - (void)MTBViewDidLoad {
     [self MTBViewDidLoad];
-    NSButton *blockingBtn = [[NSButton alloc] init];
+    NSButton *blockingBtn = [NSButton buttonWithTitle:[NSString stringWithFormat: @"%d", 0] image:[NSImage imageNamed:@"inactive"] target:self action:@selector(didPressBlockingBtn)];
+    
     [mailself setIvar:kBlockingBtn value:blockingBtn];
     
-    [blockingBtn setTitle: [NSString stringWithFormat: @"🛑 %d", 0]];
+    [blockingBtn setImagePosition: NSImageLeft];
     [blockingBtn setEnabled:NO];
-    [blockingBtn setAction:@selector(didPressBlockingBtn)];
-    [blockingBtn setTarget:self];
-    blockingBtn.bezelStyle = mailself.detailsLink.bezelStyle;
-    blockingBtn.bezelColor = mailself.detailsLink.bezelColor;
+    blockingBtn.bordered = NO;
 
     [[mailself view] addSubview:blockingBtn];
     
     blockingBtn.translatesAutoresizingMaskIntoConstraints = NO;
-    [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor].active = YES;
+    [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor constant:8].active = YES;
     [blockingBtn.rightAnchor constraintEqualToAnchor:mailself.detailsLink.rightAnchor].active = YES;
 
     [mailself _registerKVOForRepresentedObject:self];
@@ -47,11 +45,19 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
 
 #pragma mark - Buttons
 
+-(void) setButton:(NSButton *)button fontColor:(NSColor *)color {
+    NSMutableAttributedString *colorTitle = [[NSMutableAttributedString alloc] initWithAttributedString:[button attributedTitle]];
+    NSRange range = NSMakeRange(0, button.attributedTitle.length);
+    [colorTitle addAttribute:NSForegroundColorAttributeName value:color range:range];
+    [colorTitle fixAttributesInRange:range];
+    [button setAttributedTitle:colorTitle];
+}
+
 - (void)didPressBlockingBtn {
     MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"Ok"];
-    [alert setMessageText: [NSString stringWithFormat: @"MailBlockerTracker blocked %ld trackers", blkMsg.blockedCount]];
+    [alert setMessageText: [NSString stringWithFormat: @"MailBlockerTracker blocked %ld tracker(s)", blkMsg.blockedCount]];
     [alert setInformativeText: blkMsg.description];
     [alert setAlertStyle: NSAlertStyleWarning];
     [alert beginSheetModalForWindow:[[mailself view] window] completionHandler:nil];
@@ -62,8 +68,16 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     [self MTBObserveValueForKeyPath:keyPath ofObject:object change:change context:context];
     MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
     NSButton *blockingBtn = [mailself getIvar:kBlockingBtn];
-    [blockingBtn setEnabled: blkMsg.blockedCount > 0];
-    [blockingBtn setTitle:[NSString stringWithFormat: @"🛑 %ld", [blkMsg blockedCount]]];
+    [blockingBtn setTitle:[NSString stringWithFormat: @"%ld", [blkMsg blockedCount]]];
+    if (blkMsg.blockedCount > 0) {
+        [blockingBtn setEnabled: YES];
+        [blockingBtn setImage: [NSImage imageNamed:@"active"]];
+        [self setButton: blockingBtn fontColor: [NSColor systemBlueColor]];
+    } else {
+        [blockingBtn setEnabled: NO];
+        [blockingBtn setImage: [NSImage imageNamed:@"inactive"]];
+        [self setButton: blockingBtn fontColor: [NSColor systemGrayColor]];
+    }
 }
 @end
 #undef mailself
