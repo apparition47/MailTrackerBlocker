@@ -15,7 +15,7 @@ Most commercial trackers can be reliably blocked through a blacklist of known UR
 
 ## Prerequisites
 
-Only tested on Apple Mail 13.4 on macOS 10.15 Catalina.
+Apple Mail on macOS 10.11 - 11.0 (Intel).
 
 ## Setup
 
@@ -41,7 +41,7 @@ make
 #### B. Xcode
 
 1. Give XCode `Full Disk Access` from `System Preferences > Security & Privacy > Privacy > Full Disk Access` and add XCode.
-     * Need this because the plugin needs to be installed into the Mail Apps bundles at `~/Library/Mail/Bundles`.
+     * Need this because the plugin needs to be installed into the Mail Apps bundles at `/Library/Mail/Bundles`.
 2. Open the Xcode project, hit build.
 
 
