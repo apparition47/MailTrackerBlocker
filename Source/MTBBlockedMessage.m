@@ -5,8 +5,8 @@
 //  Created by Aaron Lee on 2020/07/12.
 //
 
-#import <RegexKit/RegexKit.h>
 #import "MTBBlockedMessage.h"
+#import "NSString+RegEx.h"
 
 @interface MTBBlockedMessage ()
 @property (nonatomic, copy) NSString *sanitizedHtml;
@@ -50,7 +50,7 @@
     NSDictionary *trackingDict = [self getTrackerDict];
     for (id trackingSourceKey in trackingDict) {
         for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
-            NSRange matchedRange = [self rangeFromString:result pattern:regexStr];
+            NSRange matchedRange = [result rangeFromPattern:regexStr];
             if (matchedRange.location != NSNotFound) {
                 results[trackingSourceKey] = result;
                 result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
@@ -58,24 +58,6 @@
         }
     }
     return result;
-}
-
-#pragma mark - Helpers
-
-- (NSRange)rangeFromString:(NSString*)html pattern:(NSString*)pattern {
-    NSRange match = NSMakeRange(NSNotFound, 0);
-    if([html length] == 0)
-        return match;
-    @try {
-        RKRegex *sigRKRegex = [RKRegex regexWithRegexString:pattern options:RKCompileNoOptions];
-        NSRange range = NSMakeRange(0, html.length);
-        match = [html rangeOfRegex:sigRKRegex inRange:range capture:0];
-    }
-    @catch (NSException *exception) {
-        // Ignore...
-    }
-    
-    return match;
 }
 
 // source: https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20

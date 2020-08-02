@@ -6,8 +6,6 @@
 	<string>AUTOFILL</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-	<key>CFBundleDocumentTypes</key>
-	<array/>
 	<key>CFBundleExecutable</key>
 	<string>MailTrackerBlocker</string>
 	<key>CFBundleIconFile</key>
@@ -19,7 +17,7 @@
 	<key>CFBundleName</key>
 	<string>MailTrackerBlocker</string>
 	<key>CFBundlePackageType</key>
-	<string>GpgM</string>
+	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>AUTOFILL</string>
 	<key>CFBundleVersion</key>

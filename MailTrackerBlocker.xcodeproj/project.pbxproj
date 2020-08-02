@@ -19,8 +19,6 @@
 		1B87639E17862AAA00B24BBC /* MailTrackerBlocker.mailbundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* MailTrackerBlocker.mailbundle */; };
 		1B87639F17862BD700B24BBC /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B19E83F13A2AEA4002E59ED /* AppKit.framework */; };
 		1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BADCE7D176B694C009D3785 /* GMCodeInjector.m */; };
-		1BAFDD701784DAB100E9BA6A /* RegexKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAFDD6F1784DAB100E9BA6A /* RegexKit.framework */; };
-		1BAFDD711784DB0800E9BA6A /* RegexKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAFDD6F1784DAB100E9BA6A /* RegexKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */; };
 		1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A806E0838E9B10052F47C /* MTBMailBundle.m */; };
 		1BF51A70108FCD1900AC8268 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF51A6F108FCD1900AC8268 /* ExceptionHandling.framework */; };
@@ -29,6 +27,7 @@
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
+		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
 		73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +49,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1BAFDD711784DB0800E9BA6A /* RegexKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +79,6 @@
 		1B87639A178628FD00B24BBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1BADCE7C176B694C009D3785 /* GMCodeInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMCodeInjector.h; sourceTree = "<group>"; };
 		1BADCE7D176B694C009D3785 /* GMCodeInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMCodeInjector.m; sourceTree = "<group>"; };
-		1BAFDD6F1784DAB100E9BA6A /* RegexKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RegexKit.framework; path = Frameworks/RegexKit.framework; sourceTree = "<group>"; };
 		1BCD9A4B13A8C6B5003024C7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1BD06B9918102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebDocumentGenerator+MailTrackerBlocker.h"; sourceTree = "<group>"; };
 		1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WebDocumentGenerator+MailTrackerBlocker.m"; sourceTree = "<group>"; };
@@ -1565,6 +1562,8 @@
 		73C7C02B24B0B499005BE934 /* MFMessageChangeManager_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFMessageChangeManager_macOS.h; sourceTree = "<group>"; };
 		73C7C02C24B0B499005BE934 /* MFEWSSuppressReadReceiptsRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFEWSSuppressReadReceiptsRequestOperation.h; sourceTree = "<group>"; };
 		73C7C02D24B0B499005BE934 /* MFUIMailbox-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFUIMailbox-Protocol.h"; sourceTree = "<group>"; };
+		73D0B19E24D689ED00CAC03F /* NSString+RegEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+RegEx.h"; sourceTree = "<group>"; };
+		73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegEx.m"; sourceTree = "<group>"; };
 		73F7651824B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeaderViewController+MailTrackerBlocker.h"; sourceTree = "<group>"; };
 		73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HeaderViewController+MailTrackerBlocker.m"; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* MailTrackerBlocker.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailTrackerBlocker.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1588,7 +1587,6 @@
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				559A81330838EEFD0052F47C /* Security.framework in Frameworks */,
 				1BF51A70108FCD1900AC8268 /* ExceptionHandling.framework in Frameworks */,
-				1BAFDD701784DAB100E9BA6A /* RegexKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1620,7 +1618,6 @@
 				4523EB9D150515CD00497E39 /* SenTestingKit.framework */,
 				1BF51A6F108FCD1900AC8268 /* ExceptionHandling.framework */,
 				1B19E84113A2AEA4002E59ED /* Foundation.framework */,
-				1BAFDD6F1784DAB100E9BA6A /* RegexKit.framework */,
 				559A812E0838EEFD0052F47C /* Security.framework */,
 				1B87639A178628FD00B24BBC /* XCTest.framework */,
 			);
@@ -1673,8 +1670,9 @@
 			children = (
 				1B32AFF613AF827B0072079B /* CCLog.m */,
 				1B7E4DB614EEEAD90069E69C /* JRLPSwizzle.m */,
-				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
 				73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */,
+				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
+				73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1722,8 +1720,9 @@
 			children = (
 				1B32AFF513AF827B0072079B /* CCLog.h */,
 				1B7E4DB514EEEACE0069E69C /* JRLPSwizzle.h */,
-				73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */,
 				73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */,
+				73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */,
+				73D0B19E24D689ED00CAC03F /* NSString+RegEx.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -3320,7 +3319,6 @@
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
 				1B45A52111CC977700ED4663 /* Copy Frameworks */,
-				1B9EAAAD14352F0A0063F2F1 /* Fix RegEx loader path */,
 				30F151C51500BD4500980642 /* Fill Info.plist */,
 				30F151E21500BE8D00980642 /* Install MailTrackerBlocker */,
 			);
@@ -3395,21 +3393,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B9EAAAD14352F0A0063F2F1 /* Fix RegEx loader path */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Fix RegEx loader path";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/MailTrackerBlocker\"\n";
-			showEnvVarsInLog = 0;
-		};
 		30F151C51500BD4500980642 /* Fill Info.plist */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3459,6 +3442,7 @@
 				73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */,
 				73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */,
 				1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */,
+				73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
 				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
 				1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */,
@@ -3580,7 +3564,6 @@
 				DEVELOPMENT_TEAM = CW298N32P4;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Library/Frameworks,
-					"\"$(SRCROOT)/Frameworks\"",
 					"$(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks",
 					"$(HOME)/Library/Frameworks",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
@@ -3687,7 +3670,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Frameworks\"",
 					"$(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
@@ -3764,7 +3746,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/Frameworks\"",
 					"$(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks",
 					"$(HOME)/Library/Frameworks",
 					/Library/Frameworks,
