@@ -36,7 +36,11 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     [[mailself view] addSubview:blockingBtn];
     
     blockingBtn.translatesAutoresizingMaskIntoConstraints = NO;
-    [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor constant:2].active = YES;
+    if (@available(macOS 11.0, *)) {
+          [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor constant:0].active = YES;
+    } else {
+          [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor constant:8].active = YES;
+    }
     [blockingBtn.rightAnchor constraintEqualToAnchor:mailself.detailsLink.rightAnchor].active = YES;
 
     [mailself _registerKVOForRepresentedObject:self];
