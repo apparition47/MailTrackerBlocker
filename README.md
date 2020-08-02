@@ -15,7 +15,7 @@ Most commercial trackers can be reliably blocked through a blacklist of known UR
 
 ## Prerequisites
 
-Apple Mail on macOS 10.11 - 11.0 (Intel).
+Apple Mail on macOS 10.11 - 11.0.
 
 ## Setup
 
