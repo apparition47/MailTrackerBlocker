@@ -25,11 +25,10 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
 
 - (void)MTBViewDidLoad {
     [self MTBViewDidLoad];
-    NSButton *blockingBtn = [NSButton buttonWithTitle:[NSString stringWithFormat: @"%d", 0] image:[NSImage imageNamed:@"inactive"] target:self action:@selector(didPressBlockingBtn)];
-    
+    NSButton *blockingBtn = [NSButton buttonWithImage:[NSImage imageNamed:@"inactive"] target:self action:@selector(didPressBlockingBtn)];
     [mailself setIvar:kBlockingBtn value:blockingBtn];
     
-    [blockingBtn setImagePosition: NSImageLeft];
+    [blockingBtn setImagePosition: NSImageOnly];
     [blockingBtn setEnabled:NO];
     blockingBtn.bordered = NO;
 
@@ -61,27 +60,36 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"Ok"];
-    [alert setMessageText: [NSString stringWithFormat: @"MailBlockerTracker blocked %ld tracker(s)", blkMsg.blockedCount]];
-    [alert setInformativeText: blkMsg.description];
+    [alert setMessageText: @"MailBlockerTracker"];
+    if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {
+        [alert setInformativeText: @"MailTrackerBlocker did not detect any trackers in this email."];
+    } else if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC) {
+        [alert setInformativeText: @"MailTrackerBlocker detected and preemptively blocked a possible tracker in this email."];
+    } else {
+        [alert setInformativeText: [NSString stringWithFormat:@"MailTrackerBlocker blocked a tracker from %@. This tool can track if you opened the email, when you opened it (and how often), where you are located, and how you opened it (phone, computer). Some or all of this data could have been reported back to its sender.", [blkMsg detectedTracker]]];
+    }
     [alert setAlertStyle: NSAlertStyleWarning];
     [alert beginSheetModalForWindow:[[mailself view] window] completionHandler:nil];
 }
 
-#pragma mark - representedObject KVO
-- (void)MTBObserveValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    [self MTBObserveValueForKeyPath:keyPath ofObject:object change:change context:context];
+- (void)updateButtonState {
     MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
     NSButton *blockingBtn = [mailself getIvar:kBlockingBtn];
-    [blockingBtn setTitle:[NSString stringWithFormat: @"%ld", [blkMsg blockedCount]]];
-    if (blkMsg.blockedCount > 0) {
-        [blockingBtn setEnabled: YES];
-        [blockingBtn setImage: [NSImage imageNamed:@"active"]];
-        [self setButton: blockingBtn fontColor: [NSColor systemBlueColor]];
-    } else {
-        [blockingBtn setEnabled: NO];
+    [blockingBtn setEnabled:YES];
+    if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {
         [blockingBtn setImage: [NSImage imageNamed:@"inactive"]];
-        [self setButton: blockingBtn fontColor: [NSColor systemGrayColor]];
+    } else if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC) {
+        [blockingBtn setImage: [NSImage imageNamed:@"possible"]];
+    } else {
+        [blockingBtn setImage: [NSImage imageNamed:@"active"]];
     }
+}
+
+#pragma mark - representedObject KVO
+
+- (void)MTBObserveValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    [self MTBObserveValueForKeyPath:keyPath ofObject:object change:change context:context];
+    [self updateButtonState];
 }
 @end
 #undef mailself

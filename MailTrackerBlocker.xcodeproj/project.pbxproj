@@ -28,6 +28,7 @@
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
 		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
+		73F69FC224D7194900D5D167 /* possible.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73F69FC124D7194900D5D167 /* possible.pdf */; };
 		73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -1564,6 +1565,7 @@
 		73C7C02D24B0B499005BE934 /* MFUIMailbox-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFUIMailbox-Protocol.h"; sourceTree = "<group>"; };
 		73D0B19E24D689ED00CAC03F /* NSString+RegEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+RegEx.h"; sourceTree = "<group>"; };
 		73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegEx.m"; sourceTree = "<group>"; };
+		73F69FC124D7194900D5D167 /* possible.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = possible.pdf; sourceTree = "<group>"; };
 		73F7651824B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeaderViewController+MailTrackerBlocker.h"; sourceTree = "<group>"; };
 		73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HeaderViewController+MailTrackerBlocker.m"; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* MailTrackerBlocker.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailTrackerBlocker.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1627,9 +1629,10 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7312BAB024D2F3BE00037A14 /* inactive.pdf */,
 				7312BAAE24D2F3B800037A14 /* active.pdf */,
+				7312BAB024D2F3BE00037A14 /* inactive.pdf */,
 				559A81860838F3C30052F47C /* Info.plist */,
+				73F69FC124D7194900D5D167 /* possible.pdf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -3386,6 +3389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7312BAAF24D2F3B800037A14 /* active.pdf in Resources */,
+				73F69FC224D7194900D5D167 /* possible.pdf in Resources */,
 				7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

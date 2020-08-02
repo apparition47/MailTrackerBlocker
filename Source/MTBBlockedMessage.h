@@ -7,6 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum BLOCKING_RESULT_CERTAINTY: NSUInteger {
+    BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES,
+    BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC,
+    BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH
+} BLOCKING_RESULT_CERTAINTY;
+
 @protocol MTBBlockedMessageDelegate <NSObject>
 @optional
 - (void)didCompleteSantizationWith:(NSUInteger)count;
@@ -14,7 +20,7 @@
 
 @interface MTBBlockedMessage : NSObject
 - (id)initWithHtml:(NSString*)html;
-- (NSUInteger)blockedCount;
+- (NSString *)detectedTracker;
+- (enum BLOCKING_RESULT_CERTAINTY)certainty;
 - (NSString*)sanitizedHtml;
-- (id)description;
 @end

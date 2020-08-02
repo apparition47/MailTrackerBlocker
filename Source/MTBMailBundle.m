@@ -152,7 +152,8 @@ int MTBMailLoggingLevel = 0;
     // +[NSImage imageNamed:] does not find them.
     NSBundle *myBundle = [MTBMailBundle bundle];
     
-    NSArray *bundleImageNames = @[@"inactive",
+    NSArray *bundleImageNames = @[@"possible",
+                                  @"inactive",
                                   @"active"];
     NSMutableArray *bundleImages = [[NSMutableArray alloc] initWithCapacity:[bundleImageNames count]];
     

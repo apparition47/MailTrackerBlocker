@@ -16,6 +16,8 @@
 
 @implementation MTBBlockedMessage
 
+NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
+
 @synthesize results, delegate;
 
 - (id)initWithHtml:(NSString*)html {
@@ -28,20 +30,27 @@
     return self;
 }
 
-- (NSUInteger)blockedCount {
-    return results.count;
+- (NSString *)detectedTracker {
+    for (NSString *key in results) {
+        if ([key isEqualToString:kGenericSpyPixel]) {
+            continue;
+        }
+        return key;
+    }
+    return nil;
+}
+
+- (enum BLOCKING_RESULT_CERTAINTY)certainty {
+    if ([results count] == 0) {
+        return BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES;
+    } else if ([results count] == 1 && [results objectForKey:kGenericSpyPixel]) {
+        return BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC;
+    }
+    return BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH;
 }
 
 - (NSString*)sanitizedHtml {
     return _sanitizedHtml;
-}
-
-- (NSString *)description {
-    NSString *desc = @"";
-    for (id key in results) {
-        desc = [desc stringByAppendingFormat:@"%@\n", key];
-    }
-    return desc;
 }
 
 #pragma mark - Helpers
@@ -113,8 +122,8 @@
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"t.yesware.com"],
         @"Zendesk Sell": @[@"futuresimple.com/api/v1/sprite.png"],
-        
-        @"_Generic Spy Pixel": @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
+
+        kGenericSpyPixel: @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
     };
 }
 @end
