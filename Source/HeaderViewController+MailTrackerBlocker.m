@@ -11,6 +11,7 @@
 #import "MUIWebDocument.h"
 #import "NSObject+LPDynamicIvars.h"
 #import "WebDocumentGenerator.h"
+#import "MTBMailBundle.h"
 
 #define mailself ((HeaderViewController *)self)
 
@@ -62,11 +63,12 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     [alert addButtonWithTitle:@"Ok"];
     [alert setMessageText: @"MailBlockerTracker"];
     if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {
-        [alert setInformativeText: @"MailTrackerBlocker did not detect any trackers in this email."];
+        [alert setInformativeText: GMLocalizedString(@"BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES")];
     } else if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC) {
-        [alert setInformativeText: @"MailTrackerBlocker detected and preemptively blocked a possible tracker in this email."];
+        [alert setInformativeText: GMLocalizedString(@"BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC")];
     } else {
-        [alert setInformativeText: [NSString stringWithFormat:@"MailTrackerBlocker blocked a tracker from %@. This tool can track if you opened the email, when you opened it (and how often), where you are located, and how you opened it (phone, computer). Some or all of this data could have been reported back to its sender.", [blkMsg detectedTracker]]];
+        NSString *hardMatchText = [NSString stringWithFormat:GMLocalizedString(@"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH"), [blkMsg detectedTracker], [blkMsg detectedTracker]];
+        [alert setInformativeText: hardMatchText];
     }
     [alert setAlertStyle: NSAlertStyleWarning];
     [alert beginSheetModalForWindow:[[mailself view] window] completionHandler:nil];

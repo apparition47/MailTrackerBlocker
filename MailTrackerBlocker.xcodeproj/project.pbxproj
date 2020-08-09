@@ -25,6 +25,7 @@
 		559A81330838EEFD0052F47C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559A812E0838EEFD0052F47C /* Security.framework */; };
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
+		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
 		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
@@ -93,6 +94,9 @@
 		559A81860838F3C30052F47C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7312BAAE24D2F3B800037A14 /* active.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = active.pdf; sourceTree = "<group>"; };
 		7312BAB024D2F3BE00037A14 /* inactive.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = inactive.pdf; sourceTree = "<group>"; };
+		731FCC1724E0357B00567CED /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		731FCC1824E035DF00567CED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7384C1BC24E0059200C25B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBBlockedMessage.h; sourceTree = "<group>"; };
 		73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBBlockedMessage.m; sourceTree = "<group>"; };
 		73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LPDynamicIvars.m"; sourceTree = "<group>"; };
@@ -1633,6 +1637,7 @@
 				7312BAB024D2F3BE00037A14 /* inactive.pdf */,
 				559A81860838F3C30052F47C /* Info.plist */,
 				73F69FC124D7194900D5D167 /* possible.pdf */,
+				7384C1BD24E0059200C25B97 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -3361,7 +3366,8 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
-				Base,
+				de,
+				fr,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* MailTrackerBlocker */;
 			projectDirPath = "";
@@ -3389,6 +3395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7312BAAF24D2F3B800037A14 /* active.pdf in Resources */,
+				7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */,
 				73F69FC224D7194900D5D167 /* possible.pdf in Resources */,
 				7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */,
 			);
@@ -3473,6 +3480,16 @@
 				1B8763661786020A00B24BBC /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7384C1BD24E0059200C25B97 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7384C1BC24E0059200C25B97 /* en */,
+				731FCC1724E0357B00567CED /* de */,
+				731FCC1824E035DF00567CED /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

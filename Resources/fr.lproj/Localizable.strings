@@ -1,0 +1,3 @@
+"BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker n'a pas détecté de traceurs dans cet e-mail.";
+"BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker a détecté et bloqué de manière préventive un éventuel traqueur dans cet e-mail.";
+"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker a bloqué un tracker de %@.\n\n%@ peut suivre si vous avez ouvert cet e-mail, quand vous l'avez ouvert (et à quelle fréquence), où vous vous trouvez et comment vous l'avez ouvert (téléphone, ordinateur). Une partie ou la totalité de ces données peuvent avoir été communiquées à l'expéditeur.";

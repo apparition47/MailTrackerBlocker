@@ -177,21 +177,7 @@ int MTBMailLoggingLevel = 0;
 #pragma mark Localization Helper
 
 + (NSString *)localizedStringForKey:(NSString *)key {
-    static dispatch_once_t onceToken;
-    static NSBundle *gmBundle = nil, *englishBundle = nil;
-    dispatch_once(&onceToken, ^{
-        gmBundle = [MTBMailBundle bundle];
-        englishBundle = [NSBundle bundleWithPath:[gmBundle pathForResource:@"en" ofType:@"lproj"]];
-    });
-    
-    NSString *notFoundValue = @"~#*?*#~";
-    NSString *localizedString = [gmBundle localizedStringForKey:key value:notFoundValue table:@"MTBMail"];
-    if (localizedString == notFoundValue) {
-        // No translation found. Use the english string.
-        localizedString = [englishBundle localizedStringForKey:key value:nil table:@"MTBMail"];
-    }
-
-    return localizedString;
+    return NSLocalizedStringFromTableInBundle(key, @"Localizable", [MTBMailBundle bundle], nil);
 }
 
 #pragma mark General Infos

@@ -4,7 +4,7 @@ MailTrackerBlocker is a macOS Apple Mail plugin (i.e. mailbundle) to block read 
 
 Commercial trackers can track how often, when and where you open your emails. Most commercial trackers can be reliably blocked through a blacklist of known URL patterns. Failing that, MailTrackerBlocker will apply a generic regex filter for all 1x1 images. Disabling "load remote content" should no longer be necessary just to read your emails. [Read more about how email pixel tracking works.](https://www.gmass.co/blog/tracking-pixel-blockers/)
 
-![](https://user-images.githubusercontent.com/3298414/88930093-f89a5980-d2b5-11ea-85f6-37020305a450.png)
+<img width="371" height="286" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png">
 
 ```diff
 <img width="0" height="0" class="mailtrack-img" alt="" style="display:flex" src=

@@ -1,0 +1,3 @@
+"BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker did not detect any trackers in this email.";
+"BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker detected and preemptively blocked a possible tracker in this email.";
+"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker blocked a tracker from %@.\n\n%@ can track if you opened this email, when you opened it (and how often), where you are located and how you opened it (phone, computer). Some or all of this data could have been reported back to its sender.";
