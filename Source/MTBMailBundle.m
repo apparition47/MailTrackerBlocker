@@ -183,17 +183,12 @@ int MTBMailLoggingLevel = 0;
 #pragma mark General Infos
 
 + (NSBundle *)bundle {
-    static NSBundle *bundle;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        bundle = [NSBundle bundleForClass:[MTBMailBundle class]];
-    });
-    return bundle;
+    return [NSBundle bundleForClass:[MTBMailBundle class]];
 }
 
 
 - (NSString *)version {
-	return [[MTBMailBundle bundle] infoDictionary][@"CFBundleShortVersionString"];
+    return [[MTBMailBundle bundle] infoDictionary][@"CFBundleShortVersionString"];
 }
 
 + (NSString *)bundleVersion {
