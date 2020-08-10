@@ -8,6 +8,10 @@
 #import "NSString+RegEx.h"
 
 @implementation NSString (RegEx)
+- (BOOL)hasMatchFromPattern:(NSString*)pattern {
+    return [self rangeFromPattern:pattern].location != NSNotFound;
+}
+
 - (NSRange)rangeFromPattern:(NSString*)pattern {
     NSRange match = NSMakeRange(NSNotFound, 0);
     if([self length] == 0)

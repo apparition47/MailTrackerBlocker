@@ -25,6 +25,8 @@
 		559A81330838EEFD0052F47C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559A812E0838EEFD0052F47C /* Security.framework */; };
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
+		73390E8E24E1317D005388CE /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 73390E8A24E1317C005388CE /* HTMLNode.m */; };
+		73390E8F24E1317D005388CE /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 73390E8D24E1317C005388CE /* HTMLParser.m */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
@@ -96,6 +98,10 @@
 		7312BAB024D2F3BE00037A14 /* inactive.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = inactive.pdf; sourceTree = "<group>"; };
 		731FCC1724E0357B00567CED /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		731FCC1824E035DF00567CED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		73390E8A24E1317C005388CE /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		73390E8B24E1317C005388CE /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		73390E8C24E1317C005388CE /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		73390E8D24E1317C005388CE /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 		7384C1BC24E0059200C25B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBBlockedMessage.h; sourceTree = "<group>"; };
 		73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBBlockedMessage.m; sourceTree = "<group>"; };
@@ -1677,6 +1683,8 @@
 			isa = PBXGroup;
 			children = (
 				1B32AFF613AF827B0072079B /* CCLog.m */,
+				73390E8A24E1317C005388CE /* HTMLNode.m */,
+				73390E8D24E1317C005388CE /* HTMLParser.m */,
 				1B7E4DB614EEEAD90069E69C /* JRLPSwizzle.m */,
 				73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */,
 				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
@@ -1727,6 +1735,8 @@
 			isa = PBXGroup;
 			children = (
 				1B32AFF513AF827B0072079B /* CCLog.h */,
+				73390E8B24E1317C005388CE /* HTMLNode.h */,
+				73390E8C24E1317C005388CE /* HTMLParser.h */,
 				1B7E4DB514EEEACE0069E69C /* JRLPSwizzle.h */,
 				73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */,
 				73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */,
@@ -3451,9 +3461,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */,
+				73390E8F24E1317D005388CE /* HTMLParser.m in Sources */,
 				73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */,
 				1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */,
 				73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */,
+				73390E8E24E1317D005388CE /* HTMLNode.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
 				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
 				1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */,

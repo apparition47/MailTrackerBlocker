@@ -7,10 +7,11 @@
 
 #import "MTBBlockedMessage.h"
 #import "NSString+RegEx.h"
+#import "HTMLParser.h"
 
 @interface MTBBlockedMessage ()
 @property (nonatomic, copy) NSString *sanitizedHtml;
-@property (nonatomic, retain) NSMutableDictionary *results;
+@property (nonatomic, retain) NSMutableSet *trackingSourceResults;
 @property (nonatomic, weak) id <MTBBlockedMessageDelegate> delegate;
 @end
 
@@ -18,20 +19,20 @@
 
 NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
 
-@synthesize results, delegate;
+@synthesize trackingSourceResults, delegate;
 
 - (id)initWithHtml:(NSString*)html {
     self = [self init];
     if (!self) {
         return nil;
     }
-    results = [[NSMutableDictionary alloc] init];
+    trackingSourceResults = [[NSMutableSet alloc] init];
     _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
     return self;
 }
 
 - (NSString *)detectedTracker {
-    for (NSString *key in results) {
+    for (NSString *key in trackingSourceResults) {
         if ([key isEqualToString:kGenericSpyPixel]) {
             continue;
         }
@@ -41,9 +42,9 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
 }
 
 - (enum BLOCKING_RESULT_CERTAINTY)certainty {
-    if ([results count] == 0) {
+    if ([trackingSourceResults count] == 0) {
         return BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES;
-    } else if ([results count] == 1 && [results objectForKey:kGenericSpyPixel]) {
+    } else if ([trackingSourceResults count] == 1 && [trackingSourceResults containsObject:kGenericSpyPixel]) {
         return BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC;
     }
     return BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH;
@@ -55,18 +56,30 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
 
 #pragma mark - Helpers
 - (NSString*)sanitizedHtmlFromHtml:(NSString*)html {
-    NSString *result = html;
+    NSError * error = nil;
+    HTMLParser *parser = [[HTMLParser alloc] initWithString:html error:&error];
+    if (error != nil) {
+        return html;
+    }
+    
+    HTMLNode *document = [parser doc];
     NSDictionary *trackingDict = [self getTrackerDict];
-    for (id trackingSourceKey in trackingDict) {
-        for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
-            NSRange matchedRange = [result rangeFromPattern:regexStr];
-            if (matchedRange.location != NSNotFound) {
-                results[trackingSourceKey] = result;
-                result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
+    
+    for (HTMLNode *inputNode in [document findChildTags:@"img"]) {
+        for (id trackingSourceKey in trackingDict) {
+            for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
+                if ([[inputNode getAttributeNamed:@"src"] hasMatchFromPattern:regexStr]) {
+                    setAttributeNamed(inputNode->_node, "src", "localhost");
+                    [trackingSourceResults addObject:trackingSourceKey];
+                } else if (([[inputNode getAttributeNamed:@"width"] isEqualToString:@"1"] && [[inputNode getAttributeNamed:@"height"] isEqualToString:@"1"]) || [[inputNode getAttributeNamed:@"style"] isEqualToString:@"1px"]) {
+                    setAttributeNamed(inputNode->_node, "src", "localhost");
+                    [trackingSourceResults addObject:kGenericSpyPixel];
+                }
             }
         }
     }
-    return result;
+    
+    return document.rawContents;
 }
 
 // source: https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20
@@ -121,9 +134,9 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         @"Wix": @[@"shoutout.wix.com/.*/pixel"],
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"t.yesware.com"],
-        @"Zendesk Sell": @[@"futuresimple.com/api/v1/sprite.png"],
+        @"Zendesk Sell": @[@"futuresimple.com/api/v1/sprite.png"]
 
-        kGenericSpyPixel: @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
+//        kGenericSpyPixel: @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
     };
 }
 @end

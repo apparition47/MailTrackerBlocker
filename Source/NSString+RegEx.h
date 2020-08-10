@@ -7,9 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
+@interface NSString (RegEx)
+- (BOOL)hasMatchFromPattern:(NSString*)pattern;
 /**
  Get range from a regex string. Returns NSNotFound if non-existent.
  */
-@interface NSString (RegEx)
 - (NSRange)rangeFromPattern:(NSString*)pattern;
 @end
