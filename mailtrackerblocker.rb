@@ -6,7 +6,7 @@ cask "mailtrackerblocker" do
   appcast "https://github.com/apparition47/MailTrackerBlocker/releases.atom"
   name "MailTrackerBlocker"
   homepage "https://apparition47.github.io/MailTrackerBlocker/"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :el_capitan"
   pkg 'MailTrackerBlocker.pkg', allow_untrusted: true
   uninstall delete: "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle", signal: ["TERM", "com.apple.mail"]
 end
