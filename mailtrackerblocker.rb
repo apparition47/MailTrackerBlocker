@@ -7,6 +7,8 @@ cask "mailtrackerblocker" do
   name "MailTrackerBlocker"
   homepage "https://apparition47.github.io/MailTrackerBlocker/"
   depends_on macos: ">= :el_capitan"
-  pkg 'MailTrackerBlocker.pkg', allow_untrusted: true
-  uninstall delete: "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle", signal: ["TERM", "com.apple.mail"]
+  pkg 'MailTrackerBlocker.pkg'
+  uninstall pkgutil: "com.onefatgiraffe.mailtrackerblocker", 
+  			delete: "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle", 
+  			signal: ["TERM", "com.apple.mail"]
 end

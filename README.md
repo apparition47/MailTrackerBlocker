@@ -21,21 +21,21 @@ Apple Mail on macOS 10.11 - 11.0.
 
 ### Recommended Installation via [Homebrew Cask](https://brew.sh) (private tap)
 
-You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating. [Until this project gets enough stars, it may have to remain a private tap.](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md)
+You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
 
 ```bash
 $ brew cask install \
 https://raw.githubusercontent.com/apparition47/MailTrackerBlocker/master/mailtrackerblocker.rb
 ```
 
-#### To enable and use
+### To enable and use
 
 1. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
 2. Tap on the `ⓧ` button to find out what was blocked.
 
 ⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; enable both for the best experience.
 
-#### To uninstall
+### To uninstall
 
 ```bash
 $ brew cask uninstall mailtrackerblocker
