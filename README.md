@@ -4,7 +4,7 @@ MailTrackerBlocker is a macOS Apple Mail plugin (i.e. mailbundle) to block read 
 
 Commercial trackers can track how often, when and where you open your emails. Fortunately, most of these trackers can be reliably blocked through a blacklist of known URL patterns. Failing that, MailTrackerBlocker will apply a generic regex filter for all 1x1 images. Disabling "load remote content" shouldn't be necessary just to read your emails. [Read more about how email pixel tracking works.](https://www.gmass.co/blog/tracking-pixel-blockers/)
 
-<img width="371" align="center" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png">
+<p align="center"><img width="371" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png"></p>
 
 ```diff
 <img width="0" height="0" class="mailtrack-img" alt="" style="display:flex" src=
@@ -19,33 +19,30 @@ Apple Mail on macOS 10.11 - 11.0.
 
 ## Setup
 
-### A. Recommended Install
+### Recommended Installation via [Homebrew Cask](https://brew.sh) (private tap)
 
-1. Download and install the latest `.pkg` from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases).
-2. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
-3. Tap on the `ⓧ` button to find out what was blocked.
+You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating. [Until this project gets enough stars, it may have to remain a private tap.](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/rejected_casks.md)
+
+```bash
+$ brew cask install \
+https://raw.githubusercontent.com/apparition47/MailTrackerBlocker/master/mailtrackerblocker.rb
+```
+
+#### To enable and use
+
+1. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
+2. Tap on the `ⓧ` button to find out what was blocked.
 
 ⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; enable both for the best experience.
 
 #### To uninstall
 
-Delete `/Library/Mail/Bundles/MailTrackerBlocker.mailbundle`.
-
-
-### B. Install via [Homebrew Cask](https://brew.sh) (private tap)
-
-
 ```bash
-$ homebrew cask install https://raw.githubusercontent.com/apparition47/MailTrackerBlocker/master/mailtrackerblocker.rb
+$ brew cask uninstall mailtrackerblocker
 ```
 
-After installation, to enable: open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
+Or if you installed manually, quit Mail then delete `/Library/Mail/Bundles/MailTrackerBlocker.mailbundle`.
 
-#### To uninstall
-
-```bash
-$ homebrew cask uninstall mailtrackerblocker
-```
 
 
 ## Building from source
