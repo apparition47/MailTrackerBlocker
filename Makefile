@@ -12,7 +12,6 @@ $(PRODUCT): Source/* Resources/* Resources/*/* MailTrackerBlocker.xcodeproj
 
 sign:
 	productsign --sign "Developer ID Installer: One Fat Giraffe (CW298N32P4)" $(VPATH)/$(TARGET)-unsigned.pkg $(VPATH)/$(TARGET).pkg
-	shasum --algorithm 256 $(VPATH)/$(TARGET).pkg
 
 clean:
 	rm -rf "./build"

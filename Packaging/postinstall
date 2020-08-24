@@ -9,6 +9,14 @@ mv "/private/tmp/MailTrackerBlocker-Installation-Temp/MailTrackerBlocker.mailbun
 chown $USER /Library/Mail/
 chown -R $USER /Library/Mail/Bundles
 
+# macOS 11.0 and up require code signing
+# older versions will NOT run if signed so we have to remove the sig
+currentver="$(sw_vers -productVersion)"
+requiredver="11.0"
+if [ "$(printf '%s\n' "$requiredver" "$currentver" | sort -V | head -n1)" != "$requiredver" ]; then 
+    codesign --remove-signature /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
+fi
+
 ######
 # Note that we are running sudo'd, so these defaults will be written to
 # /Library/Preferences/com.apple.mail.plist
