@@ -15,7 +15,7 @@ Commercial trackers can track how often, when and where you open your emails. Fo
 
 ## Prerequisites
 
-Apple Mail on macOS 10.11 - 11.0.
+Apple Mail on macOS 10.11 - 11.1.
 
 ## Setup
 

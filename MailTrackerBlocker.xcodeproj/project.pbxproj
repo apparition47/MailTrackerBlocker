@@ -3613,7 +3613,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.onefatgiraffe.mailtrackerblocker;
 				PRODUCT_NAME = MailTrackerBlocker;
 				STRIP_STYLE = "non-global";
-				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Debug;
@@ -3652,7 +3651,6 @@
 				PRODUCT_NAME = MailTrackerBlocker;
 				SEPARATE_STRIP = NO;
 				STRIP_STYLE = "non-global";
-				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Release;
@@ -3729,7 +3727,6 @@
 					dynamic_lookup,
 				);
 				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 				WARNING_CFLAGS = "-Warc-repeated-use-of-weak";
 			};
 			name = Debug;
@@ -3806,7 +3803,6 @@
 					dynamic_lookup,
 				);
 				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 				WARNING_CFLAGS = "-Warc-repeated-use-of-weak";
 			};
 			name = Release;
