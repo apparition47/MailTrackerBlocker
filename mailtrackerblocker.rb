@@ -1,6 +1,6 @@
 cask "mailtrackerblocker" do
-  version "0.3.3"
-  sha256 "7203c5dc09dde858e08c28baa090ef5853f8167f20c13093f89fd22057f20730"
+  version "0.3.4"
+  sha256 "4d661e591b81c132c0f7a4f5d0ffc27376467f797f3cd4036a1a48b19d8774df"
   
   url "https://github.com/apparition47/MailTrackerBlocker/releases/download/#{version}/MailTrackerBlocker.pkg"
   appcast "https://github.com/apparition47/MailTrackerBlocker/releases.atom"
@@ -20,13 +20,13 @@ cask "mailtrackerblocker" do
       
       1. Open Mail, goto Preferences > General > Manage Plug-ins... > 
       check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail.
-      2. Tap on the ⓧ  button to find out what was blocked.
+      2. Tap on the ⓧ button to find out what was blocked.
 
       ⚠️  Note:
 	  
       Disabling "load remote content in messages" 
       with MailTrackerBlocker enabled is redundant; 
-      enable both for the best experience.
+      re-enable this option for the best experience.
     EOS
   end
 end
