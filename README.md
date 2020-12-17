@@ -24,8 +24,8 @@ Apple Mail on macOS 10.11 - 11.
 You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
 
 ```bash
-$ brew cask install \
-https://raw.githubusercontent.com/apparition47/MailTrackerBlocker/master/mailtrackerblocker.rb
+$ brew tap apparition47/tap
+$ brew install --cask mailtrackerblocker
 ```
 
 ### To enable and use
@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/apparition47/MailTrackerBlocker/master/mailtra
 ### To uninstall
 
 ```bash
-$ brew cask uninstall mailtrackerblocker
+$ brew uninstall --cask mailtrackerblocker
 ```
 
 Or if you installed manually, quit Mail then delete `/Library/Mail/Bundles/MailTrackerBlocker.mailbundle`.
