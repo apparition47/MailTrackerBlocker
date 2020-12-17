@@ -57,6 +57,26 @@
 	<array>	
 		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
 	</array>
+	<key>Supported11.2PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
+	</array>
+	<key>Supported11.3PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
+	</array>
+	<key>Supported11.4PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
+	</array>
+	<key>Supported11.5PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
+	</array>
+	<key>Supported11.6PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
+	</array>
 	<key>SupportedPluginCompatibilityUUIDs</key>
 	<array>
 		<string>71562B89-0D90-4588-8E94-A75B701D6443</string>

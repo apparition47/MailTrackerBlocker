@@ -1,6 +1,6 @@
 # MailTrackerBlocker [![Awesome Humane Tech](https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true)](https://github.com/humanetech-community/awesome-humane-tech)
 
-MailTrackerBlocker is a macOS Apple Mail plugin (i.e. mailbundle) to block read trackers disguised as "spy pixels" in emails.
+MailTrackerBlocker is a macOS Apple Mail plugin (i.e. mailbundle) for blocking read trackers disguised as "spy pixels" in emails.
 
 Commercial trackers can track how often, when and where you open your emails. Fortunately, most of these trackers can be reliably blocked through a blacklist of known URL patterns. Failing that, MailTrackerBlocker will apply a generic regex filter for all 1x1 images. Disabling "load remote content" shouldn't be necessary just to read your emails. [Read more about how email pixel tracking works.](https://www.gmass.co/blog/tracking-pixel-blockers/)
 
@@ -15,7 +15,7 @@ Commercial trackers can track how often, when and where you open your emails. Fo
 
 ## Prerequisites
 
-Apple Mail on macOS 10.11 - 11.1.
+Apple Mail on macOS 10.11 - 11.
 
 ## Setup
 
@@ -24,7 +24,7 @@ Apple Mail on macOS 10.11 - 11.1.
 You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
 
 ```bash
-$ brew cask install \
+$ brew install --cask \
 https://raw.githubusercontent.com/apparition47/MailTrackerBlocker/master/mailtrackerblocker.rb
 ```
 
@@ -33,7 +33,7 @@ https://raw.githubusercontent.com/apparition47/MailTrackerBlocker/master/mailtra
 1. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
 2. Tap on the `ⓧ` button to find out what was blocked.
 
-⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; enable both for the best experience.
+⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
 
 ### To uninstall
 
