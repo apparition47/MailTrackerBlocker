@@ -66,3 +66,8 @@ make
 * [GPGMail](https://github.com/GPGTools/GPGMail) team for their work on Mail.app plugins
 * [@dhh](https://github.com/dhh) for the [spy pixel tracker blocking list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20)
 * [@bitmanic](https://github.com/bitmanic) for the UI design
+
+
+## [License](https://github.com/apparition47/MailTrackerBlocker/blob/master/LICENSE)
+
+BSD-3.
