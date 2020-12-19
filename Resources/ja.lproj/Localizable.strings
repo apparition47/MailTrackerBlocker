@@ -1,0 +1,3 @@
+"BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "メールからトラッキング情報は検出されませんでした。";
+"BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "メールからトラッキング情報が検出されたため、MailTrackerBlockerがトラッキングをブロックしました。";
+"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "%@からのトラッキングをブロックします。\n\n%@はあなたがメールを開いたか・いつ(また、どのくらいの頻度で)・どこで・どのように(携帯またはPC)開いたのか追跡し、その情報をメールの送信者に送ることができます。";
