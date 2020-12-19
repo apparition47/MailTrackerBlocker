@@ -30,7 +30,7 @@
   <div class="p-5 m-5 bg-light rounded-lg container mx-auto">
     <div>
       <div class="text-center">
-        <img width="371" height="286" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png"
+        <img alt="Screenshot" width="371" height="286" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png"
         class="rounded img-fluid">
       </div>
       <h2 class="text-info text-center pt-4 text-wrap">
@@ -40,84 +40,87 @@
       <p class="text-center">An email tracker, read receipt and spy pixel blocker plugin for <b>macOS Apple Mail</b>.</p>
 
       <div class="text-center pb-5">
-        <a href="https://github.com/apparition47/MailTrackerBlocker/releases/download/0.3.4/MailTrackerBlocker.pkg"
+        <a href="https://github.com/apparition47/MailTrackerBlocker/releases/latest/download/MailTrackerBlocker.pkg"
           role="button" class="btn btn-info btn-lg m-1">
           <i class="fa fa-cloud-download" aria-hidden="true"></i>
-          Download v0.3.4 for macOS 10.11+ (Universal, Apple Silicon)
+          Download Installer
+          <div style="font-size: 0.8em">macOS 10.11+ (Universal)</div>
         </a>
 
         <a href="https://github.com/apparition47/MailTrackerBlocker" role="button" class="btn btn-secondary btn-lg m-1">
           <i class="fa fa-code-fork" aria-hidden="true"></i>
           View on GitHub
+          <div style="font-size: 0.8em">Brew Cask available</div>
         </a>
 
-        <h4 class="text-center pt-3">
-          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?text=MailTrackerBlocker+for+macOS+Mail&u=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-1 text-muted fa fa-facebook-square" aria-hidden="true"></i></a>
-          <a target="_blank" href="https://twitter.com/intent/tweet?counturl=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker&text=MailTrackerBlocker+for+macOS+Mail&url=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-1 text-muted fa fa-twitter-square" aria-hidden="true"></i></a>
-          <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&summary=MailTrackerBlocker+for+macOS+Mail&url=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-1 text-muted fa fa-linkedin-square" aria-hidden="true"></i></a>
-          <a target="_blank" href="https://reddit.com/submit?title=MailTrackerBlocker+for+macOS+Mail&url=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-1 text-muted fa fa-reddit-square" aria-hidden="true"></i></a>
-          <a target="_blank" href="mailto:?subject=MailTrackerBlocker%20for%20macOS%20Mail&body=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-1 text-muted fa fa-envelope-square" aria-hidden="true"></i></a>
-        </h4>
+        <div class="text-center pt-3">
+          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?text=MailTrackerBlocker+for+macOS+Mail&u=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-2 text-muted fa fa-facebook-square" aria-hidden="true"></i></a>
+          <a target="_blank" href="https://twitter.com/intent/tweet?counturl=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker&text=MailTrackerBlocker+for+macOS+Mail&url=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-2 text-muted fa fa-twitter-square" aria-hidden="true"></i></a>
+          <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&summary=MailTrackerBlocker+for+macOS+Mail&url=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-2 text-muted fa fa-linkedin-square" aria-hidden="true"></i></a>
+          <a target="_blank" href="https://reddit.com/submit?title=MailTrackerBlocker+for+macOS+Mail&url=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-2 text-muted fa fa-reddit-square" aria-hidden="true"></i></a>
+          <a target="_blank" href="mailto:?subject=MailTrackerBlocker%20for%20macOS%20Mail&body=https%3A%2F%2Fapparition47.github.io%2FMailTrackerBlocker"><i class="px-2 text-muted fa fa-envelope-square" aria-hidden="true"></i></a>
+        </div>
       </div>
 
       <h3 class="text-info py-4">What is this?</h3>
-      <p>MailTrackerBlocker is a plugin for the default Mail app built-in to macOS. Look for the <span class="p-1 bg-secondary text-light text-monospace text-nowrap rounded">ⓧ</span> button to see which trackers have been blocked. These trackers can track how often, when and where you open your emails. Disabling "load remote content" should no longer be necessary just to read your emails privately!</p>
+      <p>MailTrackerBlocker is a plugin (mailbundle) for the default Mail app built-in to macOS. Email marketers often embed these trackers in HTML emails so they can track how often, when and where you open your emails. This plugin strips out a good majority of these spy pixels before Apple Mail displays your email so that disabling "load remote content" should no longer be necessary just to browse your inbox privately.</p>
+      <p>Read more about <a class="text-info" href="https://www.theverge.com/2019/7/3/20681508/tracking-pixel-email-spying-superhuman-web-beacon-open-tracking-read-receipts-location">spy trackers at The Verge</a>.</p>
 
       <h3 class="text-info py-4">Blocked Trackers</h3>
       <div class="container-sm pb-3">
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> ActiveCampaign</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Amazon SES</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> AWeber</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Bananatag</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Boomerang</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Campaign Monitor</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Cirrus Insight</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Close</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Constant Contact</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> ContactMonkey</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> ConvertKit</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Critical Impact</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Emarsys</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Gem</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Getnotify</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> GetResponse</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> GitHub</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> GrowthDot</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> FreshMail</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Hubspot</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> iContact</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Intercom</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Litmus</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Mailchimp</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Mailgun</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Mailjet</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Mailspring</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> MailTrack</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Mandrill</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Marketo</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> MixMax</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Mixpanel</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> NetHunt</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Outreach</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> phpList</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Polymail</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Postmark</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Return Path</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Sailthru</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Salesforce</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> SendGrid</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Sendy</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Streak</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Superhuman</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Thunderhead</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Tinyletter</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Wix</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> YAMM</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Yesware</span>
-        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban" aria-hidden="true"></i> Zendesk Sell</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>ActiveCampaign</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Amazon SES</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>AWeber</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Bananatag</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Boomerang</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Campaign Monitor</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Cirrus Insight</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Close</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Constant Contact</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>ContactMonkey</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>ConvertKit</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Critical Impact</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Emarsys</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Gem</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Getnotify</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>GetResponse</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>GitHub</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>GrowthDot</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>FreshMail</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Hubspot</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>iContact</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Intercom</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Litmus</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Mailchimp</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Mailgun</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Mailjet</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Mailspring</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>MailTrack</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Mandrill</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Marketo</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>MixMax</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Mixpanel</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>NetHunt</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Outreach</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>phpList</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Polymail</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Postmark</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Return Path</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Sailthru</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Salesforce</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>SendGrid</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Sendy</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Streak</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Superhuman</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Thunderhead</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Tinyletter</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Wix</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>YAMM</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Yesware</span>
+        <span class="d-inline px-2 bg-dark text-white text-nowrap rounded-pill"><i class="fa fa-ban pr-1" aria-hidden="true"></i>Zendesk Sell</span>
       </div>
 
-      <h3 class="text-info py-4">How can I enable this?</h3>
+      <h3 class="text-info py-4">Okay, how can I set this up?</h3>
       <p>Download and run the <span class="text-monospace">.pkg</span> installer from the link above.</p>
       <p>Enable the plugin by (see <a class="text-info" href="https://gpgtools.tenderapp.com/kb/gpg-mail-faq/enable-gpg-mail-on-macos-mojave-or-newer">similar guide for nice pictures</a>):</p>
       <ol>
@@ -126,11 +129,12 @@
         <li>Click <span class="text-monospace">Apply and Restart Mail</span></li>
       </ol>
       <p class="text-muted pl-2">
-        <i class="fa fa-exclamation-triangle pr-2" aria-hidden="true"></i>Disabling "load remote content in messages" with MailTrackerBlocker enabled is redundant; enable both for the best experience.
+        <i class="fa fa-exclamation-triangle pr-2" aria-hidden="true"></i>Disabling "load remote content in messages" with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
       </p>
+      <p>Once installed, look for the <span class="p-1 bg-secondary text-light text-monospace text-nowrap rounded">ⓧ</span> button to see which trackers have been blocked.</p>
 
       <h3 class="text-info py-4">Contact</h3>
-      <p>Tell me your story. <a href="https://twitter.com/apparition47" role="button" class="text-info btn btn-sm">
+      <p>Feedback or comments? Tell me your story. <a href="https://twitter.com/apparition47" role="button" class="text-info btn btn-sm">
         <i class="fa fa-twitter" aria-hidden="true"></i>
         @apparition47
       </a>
@@ -138,8 +142,10 @@
         <i class="fa fa-github-alt" aria-hidden="true"></i>
         @apparition47
       </a></p>
+      <p>Having issues? <a class="text-info" href="https://github.com/apparition47/MailTrackerBlocker/issues">Report them.</a></p>
+      <p>You can do it better? <a class="text-info" href="https://github.com/apparition47/MailTrackerBlocker/pulls">Pull requests or forks</a> are always welcome.</p>
 
-      <div class="text-muted pt-5"><small>© 2020 Aaron Lee</small></div>
+      <div class="text-muted pt-5"><small>© 2021 Aaron Lee</small></div>
     </div>
 
   </div>
