@@ -1,8 +1,10 @@
 # MailTrackerBlocker [![Awesome Humane Tech](https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true)](https://github.com/humanetech-community/awesome-humane-tech)
 
-MailTrackerBlocker is a macOS Apple Mail plugin (i.e. mailbundle) for blocking read trackers disguised as "spy pixels" in emails.
+MailTrackerBlocker is a plugin (mailbundle) for the default Mail app built-in to macOS. Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails. This plugin works by stripping out a good majority of these spy pixels out of the HTML before display, rendering the typical advice of disabling "load remote content in messages" unnecessary.
 
-Commercial trackers can track how often, when and where you open your emails. Fortunately, most of these trackers can be reliably blocked through a blacklist of known URL patterns. Failing that, MailTrackerBlocker will apply a generic regex filter for all 1x1 images. Disabling "load remote content" shouldn't be necessary just to read your emails. [Read more about how email pixel tracking works.](https://www.gmass.co/blog/tracking-pixel-blockers/)
+MailTrackerBlocker makes it possible to browse your inbox privately with images displayed once again.
+
+[Read more about how email pixel tracking works.](https://www.gmass.co/blog/tracking-pixel-blockers/)
 
 <p align="center"><img width="371" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png"></p>
 
@@ -24,8 +26,7 @@ Apple Mail on macOS 10.11 - 11.
 You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
 
 ```bash
-$ brew tap apparition47/tap
-$ brew install --cask mailtrackerblocker
+$ brew tap apparition47/tap && brew install --cask mailtrackerblocker
 ```
 
 ### To enable and use
@@ -61,7 +62,7 @@ make
 2. Open the Xcode project, hit build.
 
 
-## Credits
+## [Credits](https://github.com/apparition47/MailTrackerBlocker/blob/master/Resources/ACKNOWLEDGEMENTS)
 
 * [GPGMail](https://github.com/GPGTools/GPGMail) team for their work on Mail.app plugins
 * [@dhh](https://github.com/dhh) for the [spy pixel tracker blocking list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20)
