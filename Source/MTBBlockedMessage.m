@@ -76,6 +76,7 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         @"Amazon SES": @[@".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/[A-Z][0-9]/[0-9]"],
         @"AWeber": @[@"openrate.aweber.com"],
         @"Bananatag": @[@"bl-1.com"],
+        @"BlueKai": @[@"tags.bluekai.com/site/"],
         @"Boomerang": @[@"mailstat.us/tr"],
         @"Campaign Monitor": @[@"/cmail(\\d+).com/t//"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
