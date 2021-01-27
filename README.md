@@ -17,7 +17,7 @@ MailTrackerBlocker makes it possible to browse your inbox privately with images 
 
 ## Prerequisites
 
-Apple Mail on macOS 10.11 - 11.
+Apple Mail on macOS 10.11 - 11.x.
 
 ## Setup
 
@@ -26,7 +26,7 @@ Apple Mail on macOS 10.11 - 11.
 You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
 
 ```bash
-$ brew tap apparition47/tap && brew install --cask mailtrackerblocker
+$ brew install apparition47/tap/mailtrackerblocker
 ```
 
 ### To enable and use
@@ -39,7 +39,7 @@ $ brew tap apparition47/tap && brew install --cask mailtrackerblocker
 ### To uninstall
 
 ```bash
-$ brew uninstall --cask mailtrackerblocker
+$ brew uninstall mailtrackerblocker
 ```
 
 Or if you installed manually, quit Mail then delete `/Library/Mail/Bundles/MailTrackerBlocker.mailbundle`.
