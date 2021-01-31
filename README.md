@@ -65,8 +65,8 @@ make
 ## [Credits](https://github.com/apparition47/MailTrackerBlocker/blob/master/Resources/ACKNOWLEDGEMENTS)
 
 * [GPGMail](https://github.com/GPGTools/GPGMail) team for their work on Mail.app plugins
-* [@dhh](https://github.com/dhh) the original [spy pixel tracker blocking list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20) and @leggett for his [Simplify Gmail list](https://gist.github.com/leggett/8c2ab9735037cb66c218fdbe898ddf68)
-* [@bitmanic](https://github.com/bitmanic) for the UI design
+* **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20) and **[@leggett](https://gist.github.com/leggett)** for his [Simplify Gmail list](https://gist.github.com/leggett/8c2ab9735037cb66c218fdbe898ddf68)
+* **[@bitmanic](https://github.com/bitmanic)** for the UI design
 
 
 ## [License](https://github.com/apparition47/MailTrackerBlocker/blob/master/LICENSE)
