@@ -310,6 +310,7 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Vcommission": @[@"tracking.vcommission.com"],
+        @"Vrbo": @[@"sp.trk.homeaway.com/q/"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
         @"WildApricot": @[
             @"wildapricot.com/o/",
