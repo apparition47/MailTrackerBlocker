@@ -97,6 +97,7 @@
 		7312BAB024D2F3BE00037A14 /* inactive.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = inactive.pdf; sourceTree = "<group>"; };
 		731FCC1724E0357B00567CED /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		731FCC1824E035DF00567CED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		733755A725DD421600EAA3E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7384C1BC24E0059200C25B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ACKNOWLEDGEMENTS; sourceTree = "<group>"; };
 		73A1C156258DE1BB00992141 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -3373,6 +3374,7 @@
 				de,
 				fr,
 				ja,
+				ru,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* MailTrackerBlocker */;
 			projectDirPath = "";
@@ -3496,6 +3498,7 @@
 				731FCC1724E0357B00567CED /* de */,
 				731FCC1824E035DF00567CED /* fr */,
 				73A1C156258DE1BB00992141 /* ja */,
+				733755A725DD421600EAA3E5 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
