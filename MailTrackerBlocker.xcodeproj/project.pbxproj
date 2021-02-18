@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B00D9071B544C0300DBDCD7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00D9061B544C0300DBDCD7 /* WebKit.framework */; };
 		1B22C45D17B138390073DF81 /* cd-bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B22C45C17B138390073DF81 /* cd-bundle.bundle */; };
 		1B22C46417B138890073DF81 /* IntegrationHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B22C46317B138890073DF81 /* IntegrationHooks.m */; };
 		1B22C46717B13A250073DF81 /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B22C46617B13A250073DF81 /* TestHelpers.m */; };
@@ -21,8 +20,6 @@
 		1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BADCE7D176B694C009D3785 /* GMCodeInjector.m */; };
 		1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */; };
 		1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A806E0838E9B10052F47C /* MTBMailBundle.m */; };
-		1BF51A70108FCD1900AC8268 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF51A6F108FCD1900AC8268 /* ExceptionHandling.framework */; };
-		559A81330838EEFD0052F47C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559A812E0838EEFD0052F47C /* Security.framework */; };
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
@@ -32,7 +29,6 @@
 		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
 		73F69FC224D7194900D5D167 /* possible.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73F69FC124D7194900D5D167 /* possible.pdf */; };
 		73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */; };
-		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1593,10 +1589,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B00D9071B544C0300DBDCD7 /* WebKit.framework in Frameworks */,
-				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				559A81330838EEFD0052F47C /* Security.framework in Frameworks */,
-				1BF51A70108FCD1900AC8268 /* ExceptionHandling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
