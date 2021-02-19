@@ -1,10 +1,10 @@
 # MailTrackerBlocker [![Awesome Humane Tech](https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true)](https://github.com/humanetech-community/awesome-humane-tech)
 
-MailTrackerBlocker is a plugin (mailbundle) for the default Mail app built-in to macOS. Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails. This plugin works by stripping out a good majority of these spy pixels out of the HTML before display, rendering the typical advice of disabling "load remote content in messages" unnecessary.
+MailTrackerBlocker is a plugin (mailbundle) for the default Mail app built-in to macOS. Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails. This plugin works by stripping out a good majority of these spy pixels out of the HTML before display, rendering the typical advice of **disabling "load remote content in messages" unnecessary**.
 
-MailTrackerBlocker makes it possible to browse your inbox privately with images displayed once again.
+Browse your inbox privately with images displayed once again.
 
-[Read more about how email pixel tracking works.](https://www.gmass.co/blog/tracking-pixel-blockers/)
+[Say No To Spy Pixels](https://notospypixels.com/).
 
 <p align="center"><img width="371" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png"></p>
 
@@ -21,7 +21,7 @@ Apple Mail on macOS 10.11 - 11.x.
 
 ## Setup
 
-### Recommended Installation via [Homebrew Cask](https://brew.sh) (private tap)
+### Recommended Installation via [Homebrew Cask](https://brew.sh)
 
 You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
 
@@ -65,7 +65,7 @@ make
 ## [Credits](https://github.com/apparition47/MailTrackerBlocker/blob/master/Resources/ACKNOWLEDGEMENTS)
 
 * [GPGMail](https://github.com/GPGTools/GPGMail) team for their work on Mail.app plugins
-* **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20) and **[@leggett](https://gist.github.com/leggett)** for his [Simplify Gmail list](https://gist.github.com/leggett/8c2ab9735037cb66c218fdbe898ddf68)
+* **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20) and **[@leggett](https://github.com/leggett)** for his [Simplify Gmail list](https://gist.github.com/leggett/8c2ab9735037cb66c218fdbe898ddf68)
 * **[@bitmanic](https://github.com/bitmanic)** for the UI design
 
 
