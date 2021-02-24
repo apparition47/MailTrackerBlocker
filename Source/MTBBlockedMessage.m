@@ -263,6 +263,7 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
         @"Questrade": @[@"email.questrade.com/trk\\?t"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
+        @"Rakuten": @[@"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)&mpn=(\\d+)", @"cl.rakuten-bank.co.jp/rw/beacon_(.*).gif"],
         @"ReplyCal": @[@"replycal.com/home/index/\\?token"],
         @"ReplyMsg": @[@"replymsg.com"],
         @"Responder.co.il": @[@"opens.responder.co.il"],
@@ -307,6 +308,7 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
         @"Trello": @[@"sptrack.trello.com/q/", @"i.trellomail.com/e/eo"],
+        @"Uber": @[@"email.uber.com/wf/open"],
         @"Udacity": @[@"udacity.com/wf/open"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upwork": @[@"email.mg.upwork.com/o/"],
@@ -321,6 +323,7 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         @"Workona": @[@"workona.com/mk/op/"],
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
+        @"Zapier": @[@"opens.zapier.com/q/(.*)/(.*)/(.*)~~"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
 
         kGenericSpyPixel: @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
