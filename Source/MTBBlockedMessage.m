@@ -205,6 +205,7 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
             @"magento.com/wf/open",
             @"go.rjmetrics.com"
         ],
+        @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
         @"Mailchimp": @[@"list-manage.com/track"],
         @"MailCoral": @[@"mailcoral.com/open"],
         @"Mailgun": @[@"/email.(mailgun|mg)(.*)\\?/o/"],
