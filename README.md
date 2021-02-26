@@ -38,12 +38,19 @@ $ brew install apparition47/tap/mailtrackerblocker
 
 ### To uninstall
 
+If you installed with Homebrew:
+
 ```bash
 $ brew uninstall mailtrackerblocker
 ```
 
-Or if you installed manually, quit Mail then delete `/Library/Mail/Bundles/MailTrackerBlocker.mailbundle`.
+If you installed the `pkg` manually:
 
+```bash
+osascript -e "quit app \"Mail\""
+rm -r /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
+sudo pkgutil --forget com.onefatgiraffe.mailtrackerblocker
+```
 
 
 ## Building from source
