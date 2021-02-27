@@ -14,7 +14,7 @@ chown -R $USER /Library/Mail/Bundles
 currentver="$(sw_vers -productVersion)"
 requiredver="11.0"
 if [ "$(printf '%s\n' "$requiredver" "$currentver" | sort -V | head -n1)" != "$requiredver" ]; then 
-    codesign --remove-signature /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
+    /usr/bin/codesign --remove-signature /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
 fi
 
 ######
