@@ -8,13 +8,6 @@
 #import <XCTest/XCTest.h>
 #import "MTBBlockedMessage.h"
 
-#define CLEAN_HTML @"<p>This is an email without any trackers <img src='https://example.com/foo.png' width='32' height='16' style='width: 32px; height: 16px; border: 1px solid gray;'> blah </p>"
-#define SENDGRID_HTML @"<p>This is an email with a sendgrid tracker <img src='https://sendgrid.com/trk/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"
-#define SENDGRID_CLEANED @"<p>This is an email with a sendgrid tracker <img src='/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;></p>"
-#define PIXEL_HTML @"<p>This is an email with a generic tracking pixel <img src='https://example.com/foo/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"
-#define PIXEL_CLEANED @"<p>This is an email with a generic tracking pixel </p>"
-#define SENDGRID_HTML @"<p>This is an email with a sendgrid tracker <img src='https://sendgrid.com/trk/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"
-
 @interface MTBBlockedMessageTest : XCTestCase
 @end
 
