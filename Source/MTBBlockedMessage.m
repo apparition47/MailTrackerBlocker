@@ -59,10 +59,12 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
     NSDictionary *trackingDict = [self getTrackerDict];
     for (id trackingSourceKey in trackingDict) {
         for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
-            NSRange matchedRange = [result rangeFromPattern:regexStr];
-            if (matchedRange.location != NSNotFound) {
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexStr options:NSRegularExpressionCaseInsensitive error:NULL];
+            NSRange range = NSMakeRange(0, result.length);
+            NSString *replaced = [regex stringByReplacingMatchesInString:result options:0 range:range withTemplate:@""];
+            if (replaced != result) {
                 results[trackingSourceKey] = result;
-                result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
+                result = replaced;
             }
         }
     }
