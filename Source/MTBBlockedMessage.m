@@ -326,7 +326,7 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         @"Zapier": @[@"opens.zapier.com/q/(.*)/(.*)/(.*)~~"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
 
-        kGenericSpyPixel: @[@"<img[^>]+(1px|\"1\"|'1')+[^>]*>"]
+        kGenericSpyPixel: @[@"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>"]
     };
 }
 @end
