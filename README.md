@@ -1,18 +1,22 @@
 # MailTrackerBlocker [![Awesome Humane Tech](https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true)](https://github.com/humanetech-community/awesome-humane-tech)
 
-MailTrackerBlocker is a plugin (mailbundle) for the default Mail app built-in to macOS. Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails. This plugin works by stripping out a good majority of these spy pixels out of the HTML before display, rendering the typical advice of **disabling "load remote content in messages" unnecessary**.
+MailTrackerBlocker is a plugin (mailbundle) for the default Mail app built-in to macOS. Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails. This plugin labels who is tracking you and strips out spy pixels out of the HTML before display, rendering the typical advice of **disabling "load remote content in messages" unnecessary**.
 
 Browse your inbox privately with images displayed once again.
 
-[Say No To Spy Pixels](https://notospypixels.com/).
+Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 
-<p align="center"><img width="371" src="https://user-images.githubusercontent.com/47551890/89727857-6d625600-da63-11ea-91b9-90f48301dc05.png"></p>
+<p align="center"><img width="440" src="https://user-images.githubusercontent.com/3298414/109422170-c4d70c00-7a1d-11eb-9e5a-bf5a8e36d16d.jpg"></p>
 
 ```diff
-<img width="0" height="0" class="mailtrack-img" alt="" style="display:flex" src=
--"https://mailtrack.io/trace/mail/0eabccbe98c98e9b8e9a8b89eab89ce9ab89e8bc.png?u=1234567"
-+"https://localhost/mail/0eabccbe98c98e9b8e9a8b89eab89ce9ab89e8bc.png?u=1234567"
->
+<a style="color: #770506;">
+<img src="http://cdn.website.com/newsletter/logo.png" width="438" height="42" border="0" style="max-width: 90%; height: auto" alt="logo.png">
+</a>
+
+<br>
+<a href="https://website.us5.list-manage.com/unsubscribe?u=abdef">Click here to unsubscribe</a> or <a href="https://website.us5.list-manage.com/profile?u=abdef">Update subscription preferences</a>
+
+-<img width="0" height="0" class="mailtrack-img" alt="" style="display:flex" src="https://mailtrack.io/trace/mail/0eabccbe98c98e9b8e9a8b89eab89ce9ab89e8bc.png?u=1234567">
 ```
 
 ## Prerequisites
