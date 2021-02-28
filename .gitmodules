@@ -1,0 +1,4 @@
+[submodule "unsign"]
+	path = unsign
+	url = https://github.com/varenc/unsign.git
+	branch = fix-i386

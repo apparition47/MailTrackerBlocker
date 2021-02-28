@@ -3,7 +3,7 @@ TARGET = MailTrackerBlocker
 PRODUCT = MailTrackerBlocker.mailbundle
 VPATH = build/Release
 
-all: $(PRODUCT)
+all: clean unsigntool $(PRODUCT) sign
 
 $(PRODUCT): Source/* Resources/* Resources/*/* MailTrackerBlocker.xcodeproj
 	@xcodebuild -project $(PROJECT).xcodeproj -target $(TARGET) build $(XCCONFIG)
@@ -15,3 +15,9 @@ sign:
 
 clean:
 	rm -rf "./build"
+
+unsigntool:
+	make -C unsign
+	mkdir -p build/Release
+	mv unsign/unsign build/Release/
+	codesign --options=runtime -s "Developer ID Application: One Fat Giraffe (CW298N32P4)" build/Release/unsign

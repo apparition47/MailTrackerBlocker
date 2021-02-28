@@ -1,21 +1,27 @@
 #!/bin/bash
 
-running=/private/tmp/MailTrackerBlocker-Installation-Temp/running
+tempBaseDir=/private/tmp/MailTrackerBlocker-Installation-Temp
+running="${tempBaseDir}/running"
+currentMacOSVer="$(sw_vers -productVersion)"
+macOSBigSur="11.0"
+targetDir=/Library/Mail/Bundles
 
 # Move our temporary installation into the real destination.
-mkdir -p /Library/Mail/Bundles
-rm -R /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
-mv "/private/tmp/MailTrackerBlocker-Installation-Temp/MailTrackerBlocker.mailbundle" /Library/Mail/Bundles
-chown $USER /Library/Mail/
-chown -R $USER /Library/Mail/Bundles
+mkdir -p "${targetDir}" || exit 1
+rm -rf "${targetDir}/MailTrackerBlocker.mailbundle"
+mv "${tempBaseDir}/MailTrackerBlocker.mailbundle" "${targetDir}/"
 
 # macOS 11.0 and up require code signing
 # older versions will NOT run if signed so we have to remove the sig
-currentver="$(sw_vers -productVersion)"
-requiredver="11.0"
-if [ "$(printf '%s\n' "$requiredver" "$currentver" | sort -V | head -n1)" != "$requiredver" ]; then 
-    /usr/bin/codesign --remove-signature /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
-fi
+if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" != "$macOSBigSur" ]; then
+    # xcrun/codesign_allocate errors on some systems so incl. our own unsign tool
+    if [[ -e "$tempBaseDir/unsign" ]]; then
+        ${tempBaseDir}/unsign ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker
+        mv ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker.unsigned ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker
+    else
+        codesign --remove-signature $targetDir/MailTrackerBlocker.mailbundle || exit 1
+    fi
+fi 
 
 ######
 # Note that we are running sudo'd, so these defaults will be written to
@@ -24,10 +30,7 @@ fi
 # Mail must NOT be running by the time this script executes
 ######
 defaults write "/Library/Preferences/com.apple.mail" EnableBundles -bool YES
-# sudo -u $USER defaults write "$domain" EnableBundles -bool YES
-
-# Mac OS X 10.5's Mail.app requires bundle version 3 or greater
-# sudo -u $USER defaults write "$domain" BundleCompatibilityVersion -int "$bundle_compatibility_version"
+defaults write com.apple.mail EnableBundles -bool YES
 
 #relaunch mail if it was running before started
 if [ -f "$running" ]; then
@@ -35,6 +38,6 @@ if [ -f "$running" ]; then
 fi
 
 # Remove our temporary directory so that another user account on the same system can install.
-rm -R /private/tmp/MailTrackerBlocker-Installation-Temp
+rm -rf "${tempBaseDir}"
 
 exit 0
