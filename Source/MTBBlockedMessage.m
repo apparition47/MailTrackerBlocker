@@ -55,12 +55,10 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
     NSDictionary *trackingDict = [self getTrackerDict];
     for (id trackingSourceKey in trackingDict) {
         for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
-            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexStr options:NSRegularExpressionCaseInsensitive error:NULL];
-            NSRange range = NSMakeRange(0, result.length);
-            NSString *replaced = [regex stringByReplacingMatchesInString:result options:0 range:range withTemplate:@""];
-            if (![replaced isEqualToString:result]) {
+            NSRange matchedRange = [result rangeFromPattern:regexStr];
+            if (matchedRange.location != NSNotFound) {
                 [trackers addObject:trackingSourceKey];
-                result = replaced;
+                result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
             }
         }
     }

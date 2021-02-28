@@ -22,6 +22,7 @@
 		1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A806E0838E9B10052F47C /* MTBMailBundle.m */; };
 		6563D0D025EADB60002A2188 /* MTBBlockedMessageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563D0CF25EADB60002A2188 /* MTBBlockedMessageTest.m */; };
 		6563D0D225EAE170002A2188 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
+		6567F47D25EC39630013C8B1 /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
@@ -3449,6 +3450,7 @@
 				6563D0D225EAE170002A2188 /* MTBBlockedMessage.m in Sources */,
 				6563D0D025EADB60002A2188 /* MTBBlockedMessageTest.m in Sources */,
 				1B22C46717B13A250073DF81 /* TestHelpers.m in Sources */,
+				6567F47D25EC39630013C8B1 /* NSString+RegEx.m in Sources */,
 				1B22C46417B138890073DF81 /* IntegrationHooks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
