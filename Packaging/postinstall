@@ -10,6 +10,8 @@ targetDir=/Library/Mail/Bundles
 mkdir -p "${targetDir}" || exit 1
 rm -rf "${targetDir}/MailTrackerBlocker.mailbundle"
 mv "${tempBaseDir}/MailTrackerBlocker.mailbundle" "${targetDir}/"
+chown $USER /Library/Mail/
+chown -R $USER /Library/Mail/Bundles
 
 # macOS 11.0 and up require code signing
 # older versions will NOT run if signed so we have to remove the sig
