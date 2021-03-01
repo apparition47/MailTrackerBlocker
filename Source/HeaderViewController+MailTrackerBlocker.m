@@ -62,7 +62,7 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
-    [alert setMessageText: @"MailBlockerTracker"];
+    [alert setMessageText: @"MailTrackerBlocker"];
     if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {
         [alert setInformativeText: GMLocalizedString(@"BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES")];
     } else if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC) {
