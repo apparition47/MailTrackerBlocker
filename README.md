@@ -40,6 +40,8 @@ $ brew install apparition47/tap/mailtrackerblocker
 
 ⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
 
+Note that you'll need to re-enable MailTrackerBlocker again for every update.
+
 ### To uninstall
 
 If you installed with Homebrew:
