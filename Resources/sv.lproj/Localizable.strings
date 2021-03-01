@@ -1,3 +1,6 @@
 "BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker upptäckte inga spårare i detta mejl.";
 "BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker upptäckte eventuella spårare i detta mejl som blockerades i förebyggande syfte.";
 "BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker blockerade en spårare från %@.\n\n%@ kan spåra om du öppnade detta mejl, när du öppnade det (och hur ofta), var du befinner dig och på vilken sorts enhet (mobil, dator). En eller flera av dessa uppgifter kan ha raporterats till avsändaren.";
+"MTB_MULTIPLE_INSTALLATIONS_TITLE" = "Hittade flera installationer av MailTrackerBlocker";
+"MTB_MULTIPLE_INSTALLATIONS_MESSAGE" = "MailTrackerBlocker upptäckte fler installationer på följande platser, och detta kommer att leda till omedelbar krasch:\n\n%@\n\nTa bort MailTrackerBlocker.mailbundle på en av dessa platser och starta om Mail.\n";
+"MTB_MULTIPLE_INSTALLATIONS_BUTTON" = "Avsluta Mail";

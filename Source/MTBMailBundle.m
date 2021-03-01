@@ -77,9 +77,9 @@ int MTBMailLoggingLevel = 0;
 + (void)showMultipleInstallationsErrorAndExit:(NSArray *)installations {
     NSAlert *errorModal = [[NSAlert alloc] init];
     
-    errorModal.messageText = GMLocalizedString(@"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE");
-    errorModal.informativeText = [NSString stringWithFormat:GMLocalizedString(@"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE"), [installations componentsJoinedByString:@"\n\n"]];
-    [errorModal addButtonWithTitle:GMLocalizedString(@"GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON")];
+    errorModal.messageText = GMLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_TITLE");
+    errorModal.informativeText = [NSString stringWithFormat:GMLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_MESSAGE"), [installations componentsJoinedByString:@"\n\n"]];
+    [errorModal addButtonWithTitle:GMLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_BUTTON")];
     [errorModal runModal];
     
     
