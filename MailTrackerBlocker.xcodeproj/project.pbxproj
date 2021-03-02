@@ -20,6 +20,9 @@
 		1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BADCE7D176B694C009D3785 /* GMCodeInjector.m */; };
 		1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */; };
 		1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A806E0838E9B10052F47C /* MTBMailBundle.m */; };
+		6563D0D025EADB60002A2188 /* MTBBlockedMessageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563D0CF25EADB60002A2188 /* MTBBlockedMessageTest.m */; };
+		6563D0D225EAE170002A2188 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
+		6567F47D25EC39630013C8B1 /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
@@ -89,6 +92,7 @@
 		559A806E0838E9B10052F47C /* MTBMailBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = MTBMailBundle.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		559A812E0838EEFD0052F47C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		559A81860838F3C30052F47C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6563D0CF25EADB60002A2188 /* MTBBlockedMessageTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBBlockedMessageTest.m; sourceTree = "<group>"; };
 		7312BAAE24D2F3B800037A14 /* active.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = active.pdf; sourceTree = "<group>"; };
 		7312BAB024D2F3BE00037A14 /* inactive.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = inactive.pdf; sourceTree = "<group>"; };
 		731FCC1724E0357B00567CED /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1656,6 +1660,7 @@
 				1B8763631786020A00B24BBC /* Supporting Files */,
 				1B22C46517B13A250073DF81 /* TestHelpers.h */,
 				1B22C46617B13A250073DF81 /* TestHelpers.m */,
+				6563D0CF25EADB60002A2188 /* MTBBlockedMessageTest.m */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
@@ -3444,7 +3449,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6563D0D225EAE170002A2188 /* MTBBlockedMessage.m in Sources */,
+				6563D0D025EADB60002A2188 /* MTBBlockedMessageTest.m in Sources */,
 				1B22C46717B13A250073DF81 /* TestHelpers.m in Sources */,
+				6567F47D25EC39630013C8B1 /* NSString+RegEx.m in Sources */,
 				1B22C46417B138890073DF81 /* IntegrationHooks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

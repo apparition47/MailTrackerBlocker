@@ -10,43 +10,39 @@
 
 @interface MTBBlockedMessage ()
 @property (nonatomic, copy) NSString *sanitizedHtml;
-@property (nonatomic, retain) NSMutableDictionary *results;
+@property (nonatomic, retain) NSMutableSet *trackers;
+@property BOOL matchedGeneric;
 @property (nonatomic, weak) id <MTBBlockedMessageDelegate> delegate;
 @end
 
 @implementation MTBBlockedMessage
 
-NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
+NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
 
-@synthesize results, delegate;
+@synthesize trackers, delegate;
 
 - (id)initWithHtml:(NSString*)html {
     self = [self init];
     if (!self) {
         return nil;
     }
-    results = [[NSMutableDictionary alloc] init];
+    trackers = [[NSMutableSet alloc] init];
     _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
     return self;
 }
 
 - (NSString *)detectedTracker {
-    for (NSString *key in results) {
-        if ([key isEqualToString:kGenericSpyPixel]) {
-            continue;
-        }
-        return key;
-    }
-    return nil;
+    return [trackers anyObject];
 }
 
 - (enum BLOCKING_RESULT_CERTAINTY)certainty {
-    if ([results count] == 0) {
-        return BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES;
-    } else if ([results count] == 1 && [results objectForKey:kGenericSpyPixel]) {
+    if ([trackers count] > 0) {
+        return BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH;
+    } else if (_matchedGeneric) {
         return BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC;
+    } else {
+        return BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES;
     }
-    return BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH;
 }
 
 - (NSString*)sanitizedHtml {
@@ -61,11 +57,20 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
             NSRange matchedRange = [result rangeFromPattern:regexStr];
             if (matchedRange.location != NSNotFound) {
-                results[trackingSourceKey] = result;
+                [trackers addObject:trackingSourceKey];
                 result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
             }
         }
     }
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:kGenericSpyPixelRegex options:NSRegularExpressionCaseInsensitive error:NULL];
+    NSRange range = NSMakeRange(0, result.length);
+    NSString *replaced = [regex stringByReplacingMatchesInString:result options:0 range:range withTemplate:@""];
+    if (![replaced isEqualToString:result]) {
+        _matchedGeneric = YES;
+        result = replaced;
+    }
+
     return result;
 }
 
@@ -325,8 +330,6 @@ NSString *kGenericSpyPixel = @"_Generic Spy Pixel";
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
         @"Zapier": @[@"opens.zapier.com/q/(.*)/(.*)/(.*)~~"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
-
-        kGenericSpyPixel: @[@"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>"]
     };
 }
 @end
