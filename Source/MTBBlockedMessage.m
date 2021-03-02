@@ -324,6 +324,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
             @"wildapricot.com/o/",
             @"wildapricot.org/emailtracker"
         ],
+        @"Wish": @[@"wish.com/email-beacon.png"],
         @"Wix": @[@"shoutout.wix.com/.*/pixel"],
         @"Workona": @[@"workona.com/mk/op/"],
         @"YAMM": @[@"yamm-track.appspot"],
