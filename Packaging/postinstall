@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Note that we are running sudo'd
+
 tempBaseDir=/private/tmp/MailTrackerBlocker-Installation-Temp
 running="${tempBaseDir}/running"
 currentMacOSVer="$(sw_vers -productVersion)"
@@ -10,8 +12,12 @@ targetDir=/Library/Mail/Bundles
 mkdir -p "${targetDir}" || exit 1
 rm -rf "${targetDir}/MailTrackerBlocker.mailbundle"
 mv "${tempBaseDir}/MailTrackerBlocker.mailbundle" "${targetDir}/"
-chown $USER /Library/Mail/
-chown -R $USER /Library/Mail/Bundles
+
+# fix bundle permissions
+chown -R "root:admin" "${targetDir}/MailTrackerBlocker.mailbundle"
+chmod -h 755 ${targetDir}
+chmod -R u=rwX,go=rX "${targetDir}/MailTrackerBlocker.mailbundle"
+
 
 # macOS 11.0 and up require code signing
 # older versions will NOT run if signed so we have to remove the sig
@@ -25,12 +31,7 @@ if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" !
     fi
 fi 
 
-######
-# Note that we are running sudo'd, so these defaults will be written to
-# /Library/Preferences/com.apple.mail.plist
-#
-# Mail must NOT be running by the time this script executes
-######
+# Show "Manage Plugins"
 defaults write "/Library/Preferences/com.apple.mail" EnableBundles -bool YES
 defaults write com.apple.mail EnableBundles -bool YES
 
