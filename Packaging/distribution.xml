@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <pkg-ref id="com.onefatgiraffe.mailtrackerblocker"/>
+    <title>MailTrackerBlocker</title>
+    <options customize="never" require-scripts="false" hostArchitectures="x86_64,arm64"/>
+    <welcome file="welcome.rtf"/>
+    <conclusion file="conclusion.rtf"/>
+        <allowed-os-versions>
+        <os-version min="10.11"/>
+    </allowed-os-versions>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.onefatgiraffe.mailtrackerblocker"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.onefatgiraffe.mailtrackerblocker" visible="false">
+        <pkg-ref id="com.onefatgiraffe.mailtrackerblocker"/>
+    </choice>
+    <pkg-ref id="com.onefatgiraffe.mailtrackerblocker" version="0" onConclusion="none">Core.pkg</pkg-ref>
+</installer-gui-script>
