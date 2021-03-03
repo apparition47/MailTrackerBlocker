@@ -51,6 +51,10 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
 
 #pragma mark - Helpers
 - (NSString*)sanitizedHtmlFromHtml:(NSString*)html {
+    if (!html) {
+        return nil;
+    }
+    
     NSString *result = html;
     NSDictionary *trackingDict = [self getTrackerDict];
     for (id trackingSourceKey in trackingDict) {
