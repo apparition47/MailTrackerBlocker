@@ -18,7 +18,7 @@ chown -R $USER /Library/Mail/Bundles
 if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" != "$macOSBigSur" ]; then
     # xcrun/codesign_allocate errors on some systems so incl. our own unsign tool
     if [[ -e "$tempBaseDir/unsign" ]]; then
-        ${tempBaseDir}/unsign ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker
+        ${tempBaseDir}/unsign ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker || exit 1
         mv ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker.unsigned ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker
     else
         codesign --remove-signature $targetDir/MailTrackerBlocker.mailbundle || exit 1

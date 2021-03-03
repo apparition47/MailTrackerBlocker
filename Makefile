@@ -17,7 +17,7 @@ clean:
 	rm -rf "./build"
 
 unsigntool:
-	make -C unsign
+	make -C unsign ARCHS="-arch x86_64"
 	mkdir -p build/Release
 	mv unsign/unsign build/Release/
 	codesign --options=runtime -s "Developer ID Application: One Fat Giraffe (CW298N32P4)" build/Release/unsign
