@@ -1,0 +1,20 @@
+name: Build and Test
+
+on:
+  push:
+    paths:
+      - MailTrackerBlocker.xcodeproj
+      - Source/
+      - Unit Tests/
+  pull_request:
+    paths:
+      - MailTrackerBlocker.xcodeproj
+      - Source/
+      - Unit Tests/
+
+jobs:
+  upload-release:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: make test

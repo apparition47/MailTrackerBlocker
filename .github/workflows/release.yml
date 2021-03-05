@@ -1,0 +1,106 @@
+name: Release
+
+on:
+  create:
+    tags:
+      - '*'
+
+jobs:
+
+  sign-pack-upload:
+
+    runs-on: macos-10.15
+
+    steps:
+
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: checkout Mail.app
+      uses: actions/checkout@v2
+      with:
+        repository: apparition47/Mail.app
+        path: mail-app
+    - uses: apple-actions/import-codesign-certs@v1
+      with:
+        p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+        p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
+
+    - name: build and package
+      run: |
+        make unsigntool
+        xcodebuild \
+          -project MailTrackerBlocker.xcodeproj \
+          -target MailTrackerBlocker \
+          BUNDLE_LOADER=mail-app/14.0/Mail.app/Contents/MacOS/Mail \
+          build
+        make pack
+
+    - name: checkout notarize-app script
+      uses: actions/checkout@v2
+      with:
+        repository: rednoah/notarize-app
+        path: notarize-app
+    - name: notarize and staple
+      env:
+        AC_USERNAME: ${{ secrets.AC_USERNAME }}
+        AC_PASSWORD: ${{ secrets.AC_PASSWORD }}
+      run: |
+        notarize-app/notarize-app \
+          CW298N32P4 \
+          "$AC_USERNAME" \
+          "$AC_PASSWORD" \
+          com.onefatgiraffe.mailtrackerblocker \
+          build/Release/MailTrackerBlocker.pkg
+
+    - name: create release
+      id: create_release
+      uses: actions/create-release@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: ${{ github.ref }} Pre-Release
+        draft: false
+        prerelease: true
+
+    - name: upload release asset pkg
+      id: upload-pkg
+      uses: actions/upload-release-asset@v1.0.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./build/Release/MailTrackerBlocker.pkg
+        asset_name: MailTrackerBlocker.pkg
+        asset_content_type: application/x-newton-compatible-pkg 
+
+    - name: Checkout private Homebrew tap
+      uses: actions/checkout@v2
+      with:
+        repository: apparition47/homebrew-tap
+        path: apparition47-homebrew-tap
+
+    - name: Update cask in Homebrew tap
+      run: |
+        CASK_NAME=mailtrackerblocker
+        CASK_VERSION=$(echo "$GITHUB_REF" | cut -c11-)
+        CASK_SHA256=$(shasum --algorithm 256 "build/Release/MailTrackerBlocker.pkg" | awk '{print $1}')
+
+        brew update
+        brew bump-cask-pr --force --no-browse --sha256 '${CASK_SHA256}' --version '${CASK_VERSION}' ${CASK_NAME}
+
+        cd apparition47-homebrew-tap
+        git config --local user.name "${USER_NAME}"
+        git config --local user.email "${USER_NAME}@users.noreply.github.com"
+        CASK_NAME=mailtrackerblocker CASK_VERSION=69.0 sed -i '' "s/\( *version *'\)\([^']*\)'/\1${CASK_VERSION}'/" Casks/${CASK_NAME}.rb
+        sed -i '' "s/\( *version *\"\)\([^\"]*\)\"/\1${CASK_VERSION}\"/" Casks/${CASK_NAME}.rb
+        sed -i '' "s/\( *sha256 *\"\)\([^\"]*\)\"/\1${CASK_SHA256}\"/" Casks/${CASK_NAME}.rb
+        git add Casks/${CASK_NAME}.rb
+        git commit -m "update ${CASK_NAME} to v${CASK_VERSION}"
+        git push origin
+      env:
+        HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REF: ${{ github.ref }}
+        USER_NAME: ${{ github.event.sender.login }}
