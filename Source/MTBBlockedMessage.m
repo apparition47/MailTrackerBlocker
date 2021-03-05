@@ -80,9 +80,12 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
 
 - (NSDictionary*)getTrackerDict {
     return @{
+        @"365offers.trade": @[@"trk.365offers.trade"],
+        @"Absolute Software": @[@"click.absolutesoftware-email.com/open.aspx"],
         @"ActionKit": @[@"track.sp.actionkit.com/q/"],
         @"Active": @[@"click.email.active.com/q"],
         @"ActiveCampaign": @[@"/lt.php(.*)\\?l=open/"],
+        @"Acoustic": @[@"mkt\\d{4,5}.com/open"],
         @"Adobe": @[
             @"demdex.net",
             @"t.info.adobesystems.com",
@@ -92,7 +95,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         ],
         @"AgileCRM": @[@"agle2.me/open"],
         @"Airbnb": @[@"email.airbnb.com/wf/open"],
-        @"AirMiles": @[@"email.airmiles.ca/O"],
+        @"Air Miles": @[@"email.airmiles.ca/O"],
         @"Alaska Airlines": @[
             @"click.points-mail.com/open",
             @"sjv.io/i/",
@@ -108,9 +111,13 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
             @"amazonappservices.com/r/",
             @"awscloud.com/trk"
         ],
+        @"Apple": @[
+          @"apple.com/report/2/its_mail_sf",
+          @"apple_email_link/spacer",
+        ],
         @"Appriver": @[@"appriver.com/e1t/o/"],
         @"Apptivo": @[@"apptivo.com"],
-        @"Asus": @[@"emditpison.asus.com"],
+        @"ASUSTeK": @[@"emditpison.asus.com"],
         @"AWeber": @[@"openrate.aweber.com"],
         @"Axios": @[@"link.axios.com/img/.*.gif"],
         @"Bananatag": @[@"bl-1.com"],
@@ -136,7 +143,10 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         @"ConneQuityMailer": @[@"connequitymailer.com/open/"],
         @"Constant Contact": @[@"rs6.net/on.jsp"],
         @"ContactMonkey": @[@"contactmonkey.com/api/v1/tracker"],
-        @"ConvertKit": @[@"convertkit-mail.com/o/"],
+        @"ConvertKit": @[
+            @"convertkit-mail.com/o/",
+            @"open.convertkit-mail2.com/[a-z0-9]{20}"
+        ],
         @"Copper": @[@"prosperworks.com/tp/t"],
         @"Cprpt": @[@"/o.aspx?t="],
         @"Creditmantri.com": @[@"mailer.creditmantri.com/t/"],
@@ -154,7 +164,6 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         @"DZone": @[@"mailer.dzone.com/open.php"],
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
         @"EdgeSuite": @[@"epidm.edgesuite.net"],
-        @"Egocdn": @[@"egocdn.com/syn/mail_s.php"],
         @"EmailTracker.website": @[@"my-email-signature.link"],
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
         @"Etransmail": @[@"ftrans03.com/linktrack/"],
@@ -174,18 +183,26 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
             @"mail.[a-zA-Z0-9-.]+.pl/o/",
             @"/o/(w){10,}/(w){10,}",
         ],
-        @"FrontApp": @[@"web.frontapp.com/api"],
+        @"FrontApp": @[
+            @"app.frontapp.com/(.*)?/seen",
+            @"web.frontapp.com/api"
+        ],
         @"FullContact": @[@"fullcontact.com/wf/open"],
         @"GearBest": @[@"appinthestore.com/marketing/mail-user-deal/open"],
         @"Gem": @[@"zen.sr/o"],
         @"GetBase": @[@"getbase.com/e1t/o/"],
         @"GetMailSpring": @[@"getmailspring.com/open"],
-        @"Getnotify": @[@"email81.com/case"],
+        @"GetNotify": @[@"email81.com/case"],
         @"GetPocket": @[@"email.getpocket.com/wf/open"],
         @"GetResponse": @[@"getresponse.com/open.html"],
         @"GitHub": @[@"github.com/notifications/beacon/"],
         @"Glassdoor": @[@"mail.glassdoor.com/pub/as"],
-        @"Gmass": @[@"ec2-52-26-194-35.us-west-2.compute.amazonaws.com"],
+        @"Gmass": @[
+            @"ec2-52-26-194-35.us-west-2.compute.amazonaws.com",
+            @"link.gmreg\\d.net",
+            @"gmreg\\d.net",
+            @"gmtrack.net",
+        ],
         @"Gmelius": @[@"gml.email"],
         @"Google": @[
             @"ad.doubleclick.net/ddm/ad",
@@ -194,10 +211,16 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         ],
         @"Grammarly": @[@"grammarly.com/open"],
         @"Granicus": @[@"govdelivery.com(:d+)?/track"],
-        @"GreenMailInc": @[@"greenmail.co.in"],
+        @"GreenMail": @[@"greenmail.co.in"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
         @"FreshMail": @[@"//o/(\\w){10,}/(\\w){10,}/"],
-        @"Hubspot": @[@"t.(hubspotemail|hubspotfree|signaux|senal|sidekickopen|sigopn)"],
+        @"Homeaway": @[@"trk.homeaway.com"],
+        @"Hubspot": @[
+            @"t.(hubspotemail|hubspotfree|signaux|senal|signale|sidekickopen|sigopn|hsmsdd)",
+            @"t.strk\\d{2}.email",
+            @"track.getsidekick.com",
+            @"/e2t/(o|c|to)/",
+        ],
         @"Hunter.io": @[@"mltrk.io/pixel"],
         @"iContact": @[@"click.icptrack.com/icp"],
         @"Infusionsoft": @[@"infusionsoft.com/app/emailOpened"],
@@ -215,8 +238,13 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
             @"go.rjmetrics.com"
         ],
         @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
+        @"Mailcastr": @[@"mailcastr.com/image/"],
         @"Mailchimp": @[@"list-manage.com/track"],
         @"MailCoral": @[@"mailcoral.com/open"],
+        @"Mandrill": @[
+            @"mandrill.\\S+/track/open.php",
+            @"mandrillapp.com/track"
+        ],
         @"Mailgun": @[@"/email.(mailgun|mg)(.*)\\?/o/"],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
         @"Mailjet": @[@"mjt.lu/oo", @"links.[a-zA-Z0-9-.]+/oo/"],
@@ -234,6 +262,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
             @"mixmax.com/e/o"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
+        @"mkt81.net": @[@"open.mkt81.net/open/log/"],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
         @"Nation Builder": @[
             @"nationbuilder.com/r/o",
@@ -290,6 +319,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
         @"SalesLoft": @[@"salesloft.com/email_trackers"],
         @"Segment": @[@"email.segment.com/e/o/"],
+        @"Selligent": @[@"strongview.com/t"],
         @"SendInBlue": @[@"sendibtd.com", @"sendibw{2}.com/track/"],
         @"Sendgrid": @[
             @"sendgrid.(net|com)/wf/open",
@@ -301,6 +331,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         @"SendPulse": @[@"stat-pulse.com"],
         @"Sendy": @[@"/sendy/t/"],
         @"Skillsoft": @[@"skillsoft.com/trk"],
+        @"Signal": @[@"signl.live/tracker"],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
