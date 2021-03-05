@@ -8,6 +8,9 @@ all: clean unsigntool $(PRODUCT) pack
 $(PRODUCT): Source/* Resources/* Resources/*/* MailTrackerBlocker.xcodeproj
 	@xcodebuild -project $(PROJECT).xcodeproj -target $(TARGET) build $(XCCONFIG)
 
+test:
+	@xcodebuild -project $(PROJECT).xcodeproj -scheme $(TARGET) INSTALL_MAILTRACKERBLOCKER=0 CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test
+
 pack:
 	zip -r -9 $(VPATH)/$(PRODUCT).zip $(VPATH)/$(PRODUCT)
 	pkgbuild --install-location /private/tmp/MailTrackerBlocker-Installation-Temp --scripts Packaging --identifier com.onefatgiraffe.mailtrackerblocker --root $(VPATH) --filter ".pkg|.dSYM|.zip" $(VPATH)/Core.pkg
