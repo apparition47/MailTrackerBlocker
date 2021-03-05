@@ -2,18 +2,33 @@
 
 # Note that we are running sudo'd
 
+
+### CONFIG
 tempBaseDir=/private/tmp/MailTrackerBlocker-Installation-Temp
 running="${tempBaseDir}/running"
 currentMacOSVer="$(sw_vers -productVersion)"
 macOSBigSur="11.0"
 targetDir=/Library/Mail/Bundles
 
+### UTILITY
+mtb_log() {
+    echo "[mailtrackerblocker] $@"
+}
+
+### MIGRATED MAC SYMLINK FIX
+if [[ -L "$targetDir" ]] && [[ ! -w "$targetDir" ]]; then
+    mtb_log "$targetDir is a symlink to an unwritable destination. removing..."
+    rm "$targetDir"
+fi
+
 # Move our temporary installation into the real destination.
 mkdir -p "${targetDir}" || exit 1
+mtb_log "moving mailbundle to ${targetDir}"
 rm -rf "${targetDir}/MailTrackerBlocker.mailbundle"
 mv "${tempBaseDir}/MailTrackerBlocker.mailbundle" "${targetDir}/"
 
-# fix bundle permissions
+### fix bundle permissions
+mtb_log "fixing mailbundle permissions"
 chown -R "root:admin" "${targetDir}/MailTrackerBlocker.mailbundle"
 chmod -h 755 ${targetDir}
 chmod -R u=rwX,go=rX "${targetDir}/MailTrackerBlocker.mailbundle"
@@ -24,19 +39,23 @@ chmod -R u=rwX,go=rX "${targetDir}/MailTrackerBlocker.mailbundle"
 if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" != "$macOSBigSur" ]; then
     # xcrun/codesign_allocate errors on some systems so incl. our own unsign tool
     if [[ -e "$tempBaseDir/unsign" ]]; then
+        mtb_log "removing signature with unsign"
         ${tempBaseDir}/unsign ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker || exit 1
         mv ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker.unsigned ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker
     else
+        mtb_log "removing signature with codesign"
         codesign --remove-signature $targetDir/MailTrackerBlocker.mailbundle || exit 1
     fi
 fi 
 
-# Show "Manage Plugins"
+### Show "Manage Plugins"
+mtb_log "enable manage plugins for 10.14 and up"
 defaults write "/Library/Preferences/com.apple.mail" EnableBundles -bool YES
 defaults write com.apple.mail EnableBundles -bool YES
 
-#relaunch mail if it was running before started
+### relaunch mail if it was running before started
 if [ -f "$running" ]; then
+    mtb_log "Mail.app was running before installation. reopening."
     osascript -e "activate app \"Mail\""
 fi
 
