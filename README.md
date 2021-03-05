@@ -35,7 +35,7 @@ $ brew install apparition47/tap/mailtrackerblocker
 
 ### To enable and use
 
-1. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
+1. [Additional step for macOS 10.14 and newer only] Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
 2. Tap on the `ⓧ` button to find out what was blocked.
 
 ⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
