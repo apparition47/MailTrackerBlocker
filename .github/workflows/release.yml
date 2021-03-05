@@ -81,6 +81,7 @@ jobs:
       with:
         repository: apparition47/homebrew-tap
         path: apparition47-homebrew-tap
+        token: ${{ secrets.REPO_PAT }} # repo scope
 
     - name: Update cask in Homebrew tap
       run: |
@@ -89,18 +90,17 @@ jobs:
         CASK_SHA256=$(shasum --algorithm 256 "build/Release/MailTrackerBlocker.pkg" | awk '{print $1}')
 
         brew update
-        brew bump-cask-pr --force --no-browse --sha256 '${CASK_SHA256}' --version '${CASK_VERSION}' ${CASK_NAME}
+        brew bump-cask-pr --force --no-browse --sha256 ${CASK_SHA256} --version ${CASK_VERSION} ${CASK_NAME}
 
         cd apparition47-homebrew-tap
         git config --local user.name "${USER_NAME}"
         git config --local user.email "${USER_NAME}@users.noreply.github.com"
-        CASK_NAME=mailtrackerblocker CASK_VERSION=69.0 sed -i '' "s/\( *version *'\)\([^']*\)'/\1${CASK_VERSION}'/" Casks/${CASK_NAME}.rb
         sed -i '' "s/\( *version *\"\)\([^\"]*\)\"/\1${CASK_VERSION}\"/" Casks/${CASK_NAME}.rb
         sed -i '' "s/\( *sha256 *\"\)\([^\"]*\)\"/\1${CASK_SHA256}\"/" Casks/${CASK_NAME}.rb
         git add Casks/${CASK_NAME}.rb
         git commit -m "update ${CASK_NAME} to v${CASK_VERSION}"
         git push origin
       env:
-        HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }} # repo:public_repo scope
         GITHUB_REF: ${{ github.ref }}
         USER_NAME: ${{ github.event.sender.login }}
