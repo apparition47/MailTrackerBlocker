@@ -85,7 +85,10 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         @"ActionKit": @[@"track.sp.actionkit.com/q/"],
         @"Active": @[@"click.email.active.com/q"],
         @"ActiveCampaign": @[@"/lt.php(.*)\\?l=open/"],
-        @"Acoustic": @[@"mkt\\d{4,5}.com/open"],
+        @"Acoustic": @[
+            @"open.mkt\\d{2,3}.net/open/log/",
+            @"mkt\\d{3,4,5}.com/open"
+        ],
         @"Adobe": @[
             @"demdex.net",
             @"t.info.adobesystems.com",
@@ -262,7 +265,6 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
             @"mixmax.com/e/o"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
-        @"mkt81.net": @[@"open.mkt81.net/open/log/"],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
         @"Nation Builder": @[
             @"nationbuilder.com/r/o",
