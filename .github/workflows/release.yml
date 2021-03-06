@@ -62,8 +62,8 @@ jobs:
       with:
         tag_name: ${{ github.ref }}
         release_name: ${{ github.ref }} Pre-Release
-        draft: false
-        prerelease: true
+        draft: ${{ github.base_ref != 'main'}}
+        prerelease: ${{ github.base_ref == 'main'}}
 
     - name: upload release asset pkg
       id: upload-pkg
