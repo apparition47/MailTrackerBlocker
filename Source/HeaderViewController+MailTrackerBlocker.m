@@ -10,7 +10,6 @@
 #import "ConversationMember.h"
 #import "MUIWebDocument.h"
 #import "NSObject+LPDynamicIvars.h"
-#import "NSButton+Init.h"
 #import "WebDocumentGenerator.h"
 #import "MTBMailBundle.h"
 
