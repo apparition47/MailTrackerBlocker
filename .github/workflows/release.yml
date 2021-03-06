@@ -77,6 +77,7 @@ jobs:
         asset_content_type: application/x-newton-compatible-pkg 
 
     - name: Checkout private Homebrew tap
+      if: github.ref == 'refs/heads/main'
       uses: actions/checkout@v2
       with:
         repository: apparition47/homebrew-tap
@@ -84,13 +85,14 @@ jobs:
         token: ${{ secrets.REPO_PAT }} # repo scope
 
     - name: Update cask in Homebrew tap
+      if: github.ref == 'refs/heads/main'
       run: |
         CASK_NAME=mailtrackerblocker
         CASK_VERSION=$(echo "$GITHUB_REF" | cut -c11-)
         CASK_SHA256=$(shasum --algorithm 256 "build/Release/MailTrackerBlocker.pkg" | awk '{print $1}')
 
         brew update
-        brew bump-cask-pr --force --no-browse --sha256 ${CASK_SHA256} --version ${CASK_VERSION} ${CASK_NAME}
+        brew bump-cask-pr --force --no-browse --sha256 ${CASK_SHA256} --version --no-audit --no-style ${CASK_VERSION} ${CASK_NAME}
 
         cd apparition47-homebrew-tap
         git config --local user.name "${USER_NAME}"
