@@ -1,7 +1,9 @@
 name: Release
 
 on:
-  create:
+  push:
+    branches:
+      - "!*"
     tags:
       - '[0-9].[0-9]+.[0-9]+'
 
@@ -90,7 +92,7 @@ jobs:
         CASK_SHA256=$(shasum --algorithm 256 "build/Release/MailTrackerBlocker.pkg" | awk '{print $1}')
 
         brew update
-        brew bump-cask-pr --force --no-browse --sha256 ${CASK_SHA256} --version --no-audit --no-style ${CASK_VERSION} ${CASK_NAME}
+        brew bump-cask-pr --force --no-browse --sha256 ${CASK_SHA256} --version ${CASK_VERSION} --no-audit --no-style ${CASK_NAME}
 
         cd apparition47-homebrew-tap
         git config --local user.name "${USER_NAME}"
