@@ -7,9 +7,20 @@ on:
 
 jobs:
 
+  get-mail-app:
+    runs-on: macos-11.0
+    steps:
+    - name: tar Mail.app binary with arm64
+      run: tar -c -z -f mail-bin.tar.gz -C /System/Applications/Mail.app/Contents/MacOS/ Mail
+    - uses: actions/upload-artifact@v2
+      with:
+        name: mail-app
+        path: mail-bin.tar.gz
+
   sign-pack-upload:
 
     runs-on: macos-10.15
+    needs: get-mail-app
 
     steps:
 
@@ -17,11 +28,12 @@ jobs:
       with:
         submodules: true
 
-    - name: checkout Mail.app
-      uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
       with:
-        repository: apparition47/Mail.app
-        path: mail-app
+        name: mail-app
+    - name: extract Mail.app binary
+      run: tar -xvf mail-bin.tar.gz -C ./
+
     - uses: apple-actions/import-codesign-certs@v1
       with:
         p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
@@ -33,7 +45,7 @@ jobs:
         xcodebuild \
           -project MailTrackerBlocker.xcodeproj \
           -target MailTrackerBlocker \
-          BUNDLE_LOADER=mail-app/14.0/Mail.app/Contents/MacOS/Mail \
+          BUNDLE_LOADER=Mail #from get-mail-app \
           build
         make pack
 
