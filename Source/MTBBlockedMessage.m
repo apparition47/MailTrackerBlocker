@@ -120,6 +120,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         ],
         @"Appriver": @[@"appriver.com/e1t/o/"],
         @"Apptivo": @[@"apptivo.com"],
+        @"Artegic": @[@"elaine-asp.de"],
         @"ASUSTeK": @[@"emditpison.asus.com"],
         @"AWeber": @[@"openrate.aweber.com"],
         @"Axios": @[@"link.axios.com/img/.*.gif"],
@@ -234,6 +235,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         @"LaunchBit": @[@"launchbit.com/taz-pixel"],
         @"LinkedIn": @[@"linkedin.com/emimp/"],
         @"Litmus": @[@"emltrk.com"],
+        @"LogDNA": @[@"ping.answerbook.com"],
         @"Klaviyo": @[@"trk.klaviyomail.com"],
         @"Magento": @[
             @"magento.com/trk",
@@ -357,6 +359,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Vrbo": @[@"sp.trk.homeaway.com/q/"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
+        @"Webtrekk": @[@"webtrekk.net"],
         @"WildApricot": @[
             @"wildapricot.com/o/",
             @"wildapricot.org/emailtracker"
