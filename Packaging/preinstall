@@ -4,7 +4,7 @@ temp=/private/tmp/MailTrackerBlocker-Installation-Temp
 running="$temp/running"
 mkdir -p "$temp"
 
-if [ `/usr/bin/pgrep Mail` ]; then
+if [ $(osascript -e $'if application "Mail" is running then\nreturn "True"\nelse\nreturn "False"\nend if') == "True" ]; then
     touch $running
 fi
 
