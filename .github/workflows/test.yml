@@ -3,14 +3,11 @@ name: Build and Test
 on:
   push:
     paths:
-      - MailTrackerBlocker.xcodeproj
-      - Source/
-      - Unit Tests/
-  pull_request:
-    paths:
-      - MailTrackerBlocker.xcodeproj
-      - Source/
-      - Unit Tests/
+      - 'MailTrackerBlocker.xcodeproj/**'
+      - 'Source/**'
+      - 'Unit Tests/**'
+  pull_request_target:
+    branches: [main]
 
 jobs:
   upload-release:
