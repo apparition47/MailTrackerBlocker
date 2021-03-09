@@ -30,7 +30,7 @@ Apple Mail on macOS 10.11 - 11.x.
 You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
 
 ```bash
-$ brew install apparition47/tap/mailtrackerblocker
+$ brew install mailtrackerblocker
 ```
 
 ### To enable and use
