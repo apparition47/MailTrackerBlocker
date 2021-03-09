@@ -26,6 +26,7 @@
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
+		739CC11E25F75F19008BF764 /* MTBRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 739CC11D25F75F19008BF764 /* MTBRegexCache.m */; };
 		739D52C2258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS in Resources */ = {isa = PBXBuildFile; fileRef = 739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
@@ -100,6 +101,8 @@
 		733755A725DD421600EAA3E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7384C1BC24E0059200C25B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7396026F25EFACAE009A8F26 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		739CC11C25F75F19008BF764 /* MTBRegexCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBRegexCache.h; sourceTree = "<group>"; };
+		739CC11D25F75F19008BF764 /* MTBRegexCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBRegexCache.m; sourceTree = "<group>"; };
 		739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ACKNOWLEDGEMENTS; sourceTree = "<group>"; };
 		73A1C156258DE1BB00992141 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		73A9275B25ED197400BAE31A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1685,6 +1688,7 @@
 				73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */,
 				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
 				73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */,
+				739CC11D25F75F19008BF764 /* MTBRegexCache.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1735,6 +1739,7 @@
 				73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */,
 				73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */,
 				73D0B19E24D689ED00CAC03F /* NSString+RegEx.h */,
+				739CC11C25F75F19008BF764 /* MTBRegexCache.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -3471,6 +3476,7 @@
 				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
 				1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */,
 				1B32AFF713AF827B0072079B /* CCLog.m in Sources */,
+				739CC11E25F75F19008BF764 /* MTBRegexCache.m in Sources */,
 				1B3F2F9E13E59639006A8333 /* ComposeBackEnd+MailTrackerBlocker.m in Sources */,
 				1B7E4DB714EEEAD90069E69C /* JRLPSwizzle.m in Sources */,
 			);

@@ -6,6 +6,7 @@
 //
 
 #import "NSString+RegEx.h"
+#import "MTBRegexCache.h"
 
 @implementation NSString (RegEx)
 - (NSRange)rangeFromPattern:(NSString*)pattern {
@@ -14,7 +15,7 @@
         return match;
     
     NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [[MTBRegexCache sharedCache] regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
     NSRange range = NSMakeRange(0, self.length);
     NSTextCheckingResult *tcResult = [regex firstMatchInString:self options:0 range:range];
     if (tcResult != nil) {

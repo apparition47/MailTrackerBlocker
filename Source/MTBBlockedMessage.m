@@ -7,6 +7,7 @@
 
 #import "MTBBlockedMessage.h"
 #import "NSString+RegEx.h"
+#import "MTBRegexCache.h"
 
 @interface MTBBlockedMessage ()
 @property (nonatomic, copy) NSString *sanitizedHtml;
@@ -67,7 +68,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
         }
     }
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:kGenericSpyPixelRegex options:NSRegularExpressionCaseInsensitive error:NULL];
+    NSRegularExpression *regex = [[MTBRegexCache sharedCache] regularExpressionWithPattern:kGenericSpyPixelRegex options:NSRegularExpressionCaseInsensitive error:NULL];
     NSRange range = NSMakeRange(0, result.length);
     NSString *replaced = [regex stringByReplacingMatchesInString:result options:0 range:range withTemplate:@""];
     if (![replaced isEqualToString:result]) {
