@@ -60,4 +60,23 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)testBase64Email {
+    NSString *email = [self getHTMLResourceWithFileName:@"embeddedBase64Img"];
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Timeout"];
+    MTBBlockedMessage __block *msg;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        msg = [[MTBBlockedMessage alloc] initWithHtml: email];
+        [expectation fulfill];
+    });
+    [self waitForExpectations:@[expectation] timeout:5];
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+}
+
+- (NSString*)getHTMLResourceWithFileName:(NSString*)fileName {
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [bundle pathForResource:fileName ofType:@"html"];
+    NSData *xmlData = [NSData dataWithContentsOfFile:path];
+    return [[NSString alloc] initWithData:xmlData encoding:NSUTF8StringEncoding];
+}
 @end

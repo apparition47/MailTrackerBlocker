@@ -17,7 +17,7 @@
 
 @implementation MTBBlockedMessage
 
-NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
+NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
 
 @synthesize trackers, delegate;
 
@@ -286,7 +286,7 @@ NSString *kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
             @"dynect.net/trk.php",
             @"bm5150.com/t/",
             @"bm23.com/t/",
-            @"[a-zA-Z0-9-.]+/e/FooterImages/FooterImage"
+            @"[a-zA-Z0-9-.]/e/FooterImages/FooterImage"
         ],
         @"Outreach": @[
             @"app.outreach.io",

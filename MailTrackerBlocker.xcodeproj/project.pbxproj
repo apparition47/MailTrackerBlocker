@@ -26,6 +26,7 @@
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
+		738BDCFB25F7A2EC00D563F2 /* embeddedBase64Img.html in Resources */ = {isa = PBXBuildFile; fileRef = 738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */; };
 		739D52C2258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS in Resources */ = {isa = PBXBuildFile; fileRef = 739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
@@ -99,6 +100,7 @@
 		731FCC1824E035DF00567CED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		733755A725DD421600EAA3E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7384C1BC24E0059200C25B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = embeddedBase64Img.html; sourceTree = "<group>"; };
 		7396026F25EFACAE009A8F26 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ACKNOWLEDGEMENTS; sourceTree = "<group>"; };
 		73A1C156258DE1BB00992141 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1657,6 +1659,7 @@
 		1B8763621786020A00B24BBC /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				738BDCF925F7A2D900D563F2 /* Emails */,
 				1B22C46317B138890073DF81 /* IntegrationHooks.m */,
 				1B8763631786020A00B24BBC /* Supporting Files */,
 				1B22C46517B13A250073DF81 /* TestHelpers.h */,
@@ -1779,6 +1782,14 @@
 			);
 			name = Classes;
 			path = Source;
+			sourceTree = "<group>";
+		};
+		738BDCF925F7A2D900D563F2 /* Emails */ = {
+			isa = PBXGroup;
+			children = (
+				738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */,
+			);
+			path = Emails;
 			sourceTree = "<group>";
 		};
 		73C7BA6D24B0B493005BE934 /* Catalina */ = {
@@ -3392,6 +3403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				738BDCFB25F7A2EC00D563F2 /* embeddedBase64Img.html in Resources */,
 				1B87639E17862AAA00B24BBC /* MailTrackerBlocker.mailbundle in Resources */,
 				1B8763671786020A00B24BBC /* InfoPlist.strings in Resources */,
 				1B22C45D17B138390073DF81 /* cd-bundle.bundle in Resources */,
