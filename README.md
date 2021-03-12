@@ -35,11 +35,12 @@ $ brew install mailtrackerblocker
 
 ### To enable and use
 
-1. [Additional step for macOS 10.14, 10.15 only] Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`. Note that you'll need to do this again for each update.
+1. [Additional step for macOS 10.14 and newer only] Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`.
 2. Tap on the `ⓧ` button to find out what was blocked.
 
 ⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
 
+Note that you'll need to re-enable MailTrackerBlocker again for every update.
 
 ### To uninstall
 
@@ -76,7 +77,7 @@ make
 
 ## [Credits](https://github.com/apparition47/MailTrackerBlocker/blob/master/Resources/ACKNOWLEDGEMENTS)
 
-* MailTrackerBlocker project sponsors, donators and contributors
+* [GPGMail](https://github.com/GPGTools/GPGMail) team for their work on Mail.app plugins
 * **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20) and **[@leggett](https://github.com/leggett)** for his [Simplify Gmail list](https://gist.github.com/leggett/8c2ab9735037cb66c218fdbe898ddf68)
 * **[@bitmanic](https://github.com/bitmanic)** for the UI design
 

@@ -9,7 +9,6 @@ running="${tempBaseDir}/running"
 currentMacOSVer="$(sw_vers -productVersion)"
 macOSBigSur="11.0"
 targetDir=/Library/Mail/Bundles
-bigSurBundlesDir="/Users/${USER}/Library/Application Support/Mail/Plug-ins/Bundles/Library/Mail/Bundles"
 
 ### UTILITY
 mtb_log() {
@@ -47,24 +46,6 @@ if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" !
         mtb_log "removing signature with codesign"
         codesign --remove-signature $targetDir/MailTrackerBlocker.mailbundle || exit 1
     fi
-else
-    mtb_log "auto-enabling plugin for $USER (11.x and up only)"
-    mkdir -p "${bigSurBundlesDir}" || exit 1
-
-    osascript -e 'tell application "/System/Library/CoreServices/Installer.app"
-    activate
-    display dialog "Please allow the installer to use Finder to enable the plugin." buttons {"OK"} default button 1 giving up after 60 with icon caution
-    end tell'
-
-    osascript -e 'on run argv
-    set src to item 1 of argv as POSIX file
-    set dst to item 2 of argv as POSIX file
-    with timeout of 10 seconds
-        tell application "Finder"
-            duplicate src to dst
-        end tell
-    end timeout
-    end run' "${targetDir}/MailTrackerBlocker.mailbundle" "${bigSurBundlesDir}"
 fi 
 
 ### Show "Manage Plugins"
