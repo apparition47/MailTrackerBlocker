@@ -1,0 +1,18 @@
+name: Publicize Release
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload-release:
+    runs-on: macOS-latest
+    steps:
+    - uses: mugi111/tweet-trigger-release@v1.2
+      with:
+        consumer_key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+        consumer_secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+        access_token_key: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        tweet_body: "#MailTrackerBlocker ${{ github.event.release.tag_name }} released 🚀!"
+
+
