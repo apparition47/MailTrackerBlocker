@@ -244,7 +244,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]
         ],
         @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
         @"Mailcastr": @[@"mailcastr.com/image/"],
-        @"Mailchimp": @[@"list-manage.com/track"],
+        @"Mailchimp": @[@"list-manage.com/track/open.php"],
         @"MailCoral": @[@"mailcoral.com/open"],
         @"Mandrill": @[
             @"mandrill.\\S+/track/open.php",
