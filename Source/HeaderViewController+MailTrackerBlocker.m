@@ -26,10 +26,16 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
 
 - (void)MTBViewDidLoad {
     [self MTBViewDidLoad];
-    NSButton *blockingBtn = [[NSButton alloc] init];
-    [blockingBtn setImage: [NSImage imageNamed:@"inactive"]];
-    [blockingBtn setAction:@selector(didPressBlockingBtn)];
-    [blockingBtn setTarget:self];
+    NSButton *blockingBtn;
+    if (@available(macOS 10.12, *)) {
+        blockingBtn = [NSButton buttonWithImage:[NSImage imageNamed:@"inactive"] target:self action:@selector(didPressBlockingBtn)];
+    } else {
+        blockingBtn = [[NSButton alloc] init];
+        [blockingBtn setImage: [NSImage imageNamed:@"inactive"]];
+        [blockingBtn setAction:@selector(didPressBlockingBtn)];
+        [blockingBtn setTarget:self];
+    }
+    
     [mailself setIvar:kBlockingBtn value:blockingBtn];
     
     [blockingBtn setImagePosition: NSImageOnly];
