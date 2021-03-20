@@ -212,6 +212,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]
             @"ad.doubleclick.net/ddm/ad",
             @"google-analytics.com/collect",
             @"google.com/appserve/mkt/img/",
+            @"notifications.google.com/g/img/(.*).gif",
         ],
         @"Grammarly": @[@"grammarly.com/open"],
         @"Granicus": @[@"govdelivery.com(:d+)?/track"],

@@ -30,6 +30,14 @@
                    @"Original string should be referenced directly for clean HTML");
 }
 
+- (void)testGoogleAnalytics {
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with a google tracker <img alt="" height=1 width=3 src=https://notifications.google.com/g/img/AD-FnEzt8doYQCTNQv1w6jsjHDU6Kh6lId34t0STSV3ydKTDIw.gif></p>"];
+    XCTAssertEqualObjects(msg.sanitizedHtml,
+                          @"<p>This is an email with a google tracker <img alt="" height=1 width=3 src=https://></p>");
+    XCTAssertEqualObjects(msg.detectedTracker, @"Google");
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 - (void)testSendgrid {
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with a sendgrid tracker <img src='https://sendgrid.com/trk/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
