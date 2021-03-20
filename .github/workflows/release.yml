@@ -103,6 +103,6 @@ jobs:
         git commit -m "update ${CASK_NAME} to v${CASK_VERSION}"
         git push origin
       env:
-        HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }} # repo:public_repo scope
+        HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }} # repo:public_repo, workflow scope
         GITHUB_REF: ${{ github.ref }}
         USER_NAME: ${{ github.event.sender.login }}
