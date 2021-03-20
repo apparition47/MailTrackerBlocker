@@ -4,11 +4,13 @@
 
 
 ### CONFIG
-tempBaseDir=/private/tmp/MailTrackerBlocker-Installation-Temp
+tempBaseDir="/Library/Application Support/com.onefatgiraffe/mailtrackerblocker"
 running="${tempBaseDir}/running"
 currentMacOSVer="$(sw_vers -productVersion)"
 macOSBigSur="11.0"
 targetDir=/Library/Mail/Bundles
+userAppSupportDir="/Users/${USER}/Library/Application Support"
+bigSurBundlesDir="${userAppSupportDir}/Mail/Plug-ins/Bundles/Library/Mail/Bundles"
 
 ### UTILITY
 mtb_log() {
@@ -40,13 +42,38 @@ if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" !
     # xcrun/codesign_allocate errors on some systems so incl. our own unsign tool
     if [[ -e "$tempBaseDir/unsign" ]]; then
         mtb_log "removing signature with unsign"
-        ${tempBaseDir}/unsign ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker || exit 1
+        "${tempBaseDir}/unsign" ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker || exit 1
         mv ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker.unsigned ${targetDir}/MailTrackerBlocker.mailbundle/Contents/MacOS/MailTrackerBlocker
     else
         mtb_log "removing signature with codesign"
         codesign --remove-signature $targetDir/MailTrackerBlocker.mailbundle || exit 1
     fi
-fi 
+else
+    mtb_log "auto-enabling plugin for $USER (11.x and up only)"
+
+    osascript -e 'tell application "/System/Library/CoreServices/Installer.app"
+    activate
+    display dialog "If prompted, please allow the installer to use Finder to enable the plugin." buttons {"OK"} default button 1 giving up after 60 with icon caution
+    end tell'
+
+    osascript -e 'on run argv
+    set src to item 1 of argv as POSIX file
+    set dst to item 2 of argv as POSIX file
+    set appSupportDir to item 3 of argv as POSIX file
+
+    tell application "Finder"
+        set folderNames to {"Mail", "Plug-ins", "Bundles", "Library", "Mail", "Bundles"}
+        repeat with theFolder in folderNames
+            try
+                make new folder at appSupportDir with properties {name: theFolder}
+            end try
+            set appSupportDir to ((appSupportDir as text) & theFolder) as alias
+        end repeat
+
+        duplicate src to dst with replacing
+    end tell
+    end run' "${targetDir}/MailTrackerBlocker.mailbundle" "${bigSurBundlesDir}" "${userAppSupportDir}"
+fi
 
 ### Show "Manage Plugins"
 mtb_log "enable manage plugins for 10.14 and up"
@@ -56,10 +83,11 @@ defaults write com.apple.mail EnableBundles -bool YES
 ### relaunch mail if it was running before started
 if [ -f "$running" ]; then
     mtb_log "Mail.app was running before installation. reopening."
-    osascript -e "activate app \"Mail\""
+    open -gb com.apple.mail
+    rm "$running"
 fi
 
-# Remove our temporary directory so that another user account on the same system can install.
-rm -rf "${tempBaseDir}"
+### cleanup
+rm "${tempBaseDir}/unsign"
 
 exit 0

@@ -17,7 +17,7 @@
 
 @implementation MTBBlockedMessage
 
-NSString * const kGenericSpyPixelRegex = @"<img[^>]+(1px|\"1\"|'1')+[^>]*>";
+NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
 
 @synthesize trackers, delegate;
 
@@ -212,7 +212,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(1px|\"1\"|'1')+[^>]*>";
             @"ad.doubleclick.net/ddm/ad",
             @"google-analytics.com/collect",
             @"google.com/appserve/mkt/img/",
-            @"notifications.google.com/g/img/(.*).gif",
         ],
         @"Grammarly": @[@"grammarly.com/open"],
         @"Granicus": @[@"govdelivery.com(:d+)?/track"],
@@ -245,7 +244,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(1px|\"1\"|'1')+[^>]*>";
         ],
         @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
         @"Mailcastr": @[@"mailcastr.com/image/"],
-        @"Mailchimp": @[@"list-manage.com/track/open.php"],
+        @"Mailchimp": @[@"list-manage.com/track"],
         @"MailCoral": @[@"mailcoral.com/open"],
         @"Mandrill": @[
             @"mandrill.\\S+/track/open.php",

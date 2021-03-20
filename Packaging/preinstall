@@ -1,11 +1,13 @@
 #!/bin/bash
 
-temp=/private/tmp/MailTrackerBlocker-Installation-Temp
-running="$temp/running"
-mkdir -p "$temp"
+tempBaseDir="/Library/Application Support/com.onefatgiraffe/mailtrackerblocker"
+running="$tempBaseDir/running"
+
+rm -rf "$tempBaseDir"
+mkdir -p "$tempBaseDir"
 
 if [ $(osascript -e 'return application id "com.apple.Mail" is running') == "true" ]; then
-    touch $running
+    touch "$running"
 fi
 
 echo $running
