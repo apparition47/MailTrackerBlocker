@@ -47,10 +47,25 @@
 }
 
 - (void)testGenericPixel {
-    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with a generic pixel tracker <img src='https://example.com/foo/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"];
-    XCTAssertEqualObjects(msg.sanitizedHtml,
-                          @"<p>This is an email with a generic pixel tracker </p>");
-    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC);
+    MTBBlockedMessage *attrAndStyle = [[MTBBlockedMessage alloc] initWithHtml:@"<p>Generic tracker with 1x1 width/height attr and 1x1 style <img src='https://example.com/foo/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"];
+    XCTAssertEqualObjects(attrAndStyle.sanitizedHtml,
+                          @"<p>Generic tracker with 1x1 width/height attr and 1x1 style </p>");
+    XCTAssertEqual(attrAndStyle.certainty, BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC);
+    
+    MTBBlockedMessage *noStyle = [[MTBBlockedMessage alloc] initWithHtml:@"<p>Generic tracker with 1x1 width/height <img width=\"1px\" height=\"1px\" alt=\"\" src=\"https://example.com/eJwVjEsOgyAUAE8jSwI8sLpgYWx7DcPnEWlQDGJse_razSQzi_FaceNUIFELJjgD3v3JBOUUnt0Ij7EfYBBK3GUj2YrnnrBWLHTJNqb4RXrsZNYtOBCOBeNtf5NWMI7OMC6kahUABFL0C3300cxTyO9rZUs-V4r-IFWfuSTfwLCV7C_FxcQ01c-GV5P9DxElMgM\"></p>"];
+    XCTAssertEqualObjects(noStyle.sanitizedHtml,
+                          @"<p>Generic tracker with 1x1 width/height </p>");
+    XCTAssertEqual(noStyle.certainty, BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC);
+    
+    MTBBlockedMessage *style = [[MTBBlockedMessage alloc] initWithHtml:@"<p>Generic tracker with 1x1 style <img style='width: 1px; height: 1px;' src=\"https://example.com/track.gif\"></p>"];
+    XCTAssertEqualObjects(style.sanitizedHtml,
+                          @"<p>Generic tracker with 1x1 style </p>");
+    XCTAssertEqual(style.certainty, BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC);
+
+    MTBBlockedMessage *attrAndStyleSpaced = [[MTBBlockedMessage alloc] initWithHtml:@"<p>Generic tracker with 1x1 width/height attr with spaces <img width = \"1\" height = \"1\" src=\"https://example.com/track.gif\"></p>"];
+    XCTAssertEqualObjects(attrAndStyleSpaced.sanitizedHtml,
+                          @"<p>Generic tracker with 1x1 width/height attr with spaces </p>");
+    XCTAssertEqual(attrAndStyleSpaced.certainty, BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC);
 }
 
 - (void)testMultiplePixels {

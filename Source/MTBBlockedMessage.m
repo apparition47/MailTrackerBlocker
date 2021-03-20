@@ -17,7 +17,7 @@
 
 @implementation MTBBlockedMessage
 
-NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width: *1px|\"1\"|'1')+[^>]*>";
+NSString * const kGenericSpyPixelRegex = @"<img[^>]+(1px|\"1\"|'1')+[^>]*>";
 
 @synthesize trackers, delegate;
 
