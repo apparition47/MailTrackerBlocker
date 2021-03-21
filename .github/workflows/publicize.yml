@@ -1,10 +1,10 @@
 name: Publicize Release
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
-  upload-release:
+  tweet:
     runs-on: macOS-latest
     steps:
     - uses: mugi111/tweet-trigger-release@v1.2

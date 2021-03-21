@@ -10,7 +10,7 @@ on:
     branches: [main]
 
 jobs:
-  upload-release:
+  unit-test:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v2
