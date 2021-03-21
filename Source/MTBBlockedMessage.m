@@ -17,7 +17,7 @@
 
 @implementation MTBBlockedMessage
 
-NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*1p?x?[\"'\\s]|width:\\s*1px|\"1\"|'1')+[^>]*>";
+NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*1p?x?[\"'\\s]|width:\\s*1px)+[^>]*>";
 
 @synthesize trackers, delegate;
 
@@ -367,6 +367,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*1p?x?[\"
         ],
         @"Wish": @[@"wish.com/email-beacon.png"],
         @"Wix": @[@"shoutout.wix.com/.*/pixel"],
+        @"WordPress": @[@"pixel.wp.com/t.gif"],
         @"Workona": @[@"workona.com/mk/op/"],
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
