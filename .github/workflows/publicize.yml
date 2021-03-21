@@ -1,11 +1,14 @@
 name: Publicize Release
 on:
-  release:
-    types: [created]
+  workflow_run:
+    workflows: ["Release"]
+    types:
+      - completed
 
 jobs:
   tweet:
     runs-on: macOS-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - uses: mugi111/tweet-trigger-release@v1.2
       with:
