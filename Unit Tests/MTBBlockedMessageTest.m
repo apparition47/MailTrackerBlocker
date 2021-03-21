@@ -80,6 +80,11 @@
     XCTAssertEqualObjects(attrAndStyleSpaced.sanitizedHtml,
                           @"<p>Generic tracker with 1x1 width/height attr with spaces </p>");
     XCTAssertEqual(attrAndStyleSpaced.certainty, BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC);
+    
+    MTBBlockedMessage *zeroByZero = [[MTBBlockedMessage alloc] initWithHtml:@"<p>Generic tracker with 0x0 and display none<img src=\"https://example/?j3hjhdf3jsl&invite-opened=yes\" width=\"0\" height=\"0\" style=\"display: none !important;\" alt=\"\"></p>"];
+    XCTAssertEqualObjects(zeroByZero.sanitizedHtml,
+                          @"<p>Generic tracker with 0x0 and display none</p>");
+    XCTAssertEqual(zeroByZero.certainty, BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC);
 }
 
 - (void)testMultiplePixels {
