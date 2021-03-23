@@ -79,7 +79,8 @@ make
 ## [Credits](https://github.com/apparition47/MailTrackerBlocker/blob/master/Resources/ACKNOWLEDGEMENTS)
 
 * MailTrackerBlocker project sponsors, donators and contributors
-* **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20) and **[@leggett](https://github.com/leggett)** for his [Simplify Gmail list](https://gist.github.com/leggett/8c2ab9735037cb66c218fdbe898ddf68)
+* **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20)
+* **[@leggett](https://github.com/leggett)** for his [Simplify Gmail blocklist](https://github.com/leggett/simplify-trackers)
 * **[@bitmanic](https://github.com/bitmanic)** for the UI design
 
 
