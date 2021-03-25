@@ -274,6 +274,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"nationbuilder.com/wf/open"
         ],
         @"NeteCart": @[@"netecart.com/ltrack"],
+        @"Netflix": @[@"beaconimages.netflix.net/img/"],
         @"NetHunt": @[
             @"nethunt.com/api/v1/track/email/",
             @"nethunt.co(.*)\\?/pixel.gif"
