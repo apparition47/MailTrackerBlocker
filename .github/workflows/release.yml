@@ -85,10 +85,17 @@ jobs:
         path: apparition47-homebrew-tap
         token: ${{ secrets.REPO_PAT }} # repo scope
 
+    - name: Branch name
+      id: branch_name
+      run: |
+        echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+        echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+        echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+
     - name: Update cask in Homebrew tap
       run: |
         CASK_NAME=mailtrackerblocker
-        CASK_VERSION=$(echo "$GITHUB_REF" | cut -c11-)
+        CASK_VERSION=${{ steps.branch_name.outputs.SOURCE_TAG }}
         CASK_SHA256=$(shasum --algorithm 256 "build/Release/MailTrackerBlocker.pkg" | awk '{print $1}')
 
         brew update
@@ -104,5 +111,12 @@ jobs:
         git push origin
       env:
         HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }} # repo:public_repo, workflow scope
-        GITHUB_REF: ${{ github.ref }}
         USER_NAME: ${{ github.event.sender.login }}
+
+    - uses: mugi111/tweet-trigger-release@v1.2
+      with:
+        consumer_key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+        consumer_secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+        access_token_key: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        tweet_body: "#MailTrackerBlocker ${{ steps.branch_name.outputs.SOURCE_TAG }} released 🚀!"
