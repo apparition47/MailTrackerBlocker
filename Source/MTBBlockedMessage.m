@@ -198,7 +198,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"GetMailSpring": @[@"getmailspring.com/open"],
         @"GetNotify": @[@"email81.com/case"],
         @"GetPocket": @[@"email.getpocket.com/wf/open"],
-        @"GetResponse": @[@"getresponse.com/open.html"],
+        @"GetResponse": @[@"/open.html\\?x="],
         @"GitHub": @[@"github.com/notifications/beacon/"],
         @"Glassdoor": @[@"mail.glassdoor.com/pub/as"],
         @"Gmass": @[
