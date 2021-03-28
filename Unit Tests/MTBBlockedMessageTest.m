@@ -52,6 +52,14 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)testAwsTrack {
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p><a class=\"cta-btn\" href=\"http://qpvvmjwx.r.us-east-1.awstrack.me/L0/http:%2F%2Fmastercardidps.idprotectiononline.com%2Falerts%2Fhistory.html%3Flang=3Den_US%26utm_source=3Demail%26utm_medium=3Demail%26utm_campaign=3Didp_standard_emails%26utm_content=3D44a%2509Identity%2520Monitoring%2520Alert/1/01000178626eb1e0-f1b813fc-c0a8-4ba5-90af-b39d859905cf-000000/27r5oe9sP7Z0DFVB_WeA7aWcx2Y=3D206\">VIEW MY ALERT</a> <img alt=\"\" src=\"http://qpvvmjwx.r.us-east-1.awstrack.me/I0/01000178626eb1e0-f1b813fc-c0a8-4ba5-90af-b39d859905cf-000000/2FKwVZSzpKPUSLDQmdmviCr5aC0206\" style=\"display: none; width: 1px; height: 1px;\"></p>"];
+    XCTAssertEqualObjects(msg.sanitizedHtml,
+                          @"<p><a class=\"cta-btn\" href=\"http://qpvvmjwx.r.us-east-1.awstrack.me/L0/http:%2F%2Fmastercardidps.idprotectiononline.com%2Falerts%2Fhistory.html%3Flang=3Den_US%26utm_source=3Demail%26utm_medium=3Demail%26utm_campaign=3Didp_standard_emails%26utm_content=3D44a%2509Identity%2520Monitoring%2520Alert/1/01000178626eb1e0-f1b813fc-c0a8-4ba5-90af-b39d859905cf-000000/27r5oe9sP7Z0DFVB_WeA7aWcx2Y=3D206\">VIEW MY ALERT</a> </p>");
+    XCTAssertEqualObjects(msg.detectedTracker, @"Amazon SES");
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 - (void)testSendgrid {
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with a sendgrid tracker <img src='https://sendgrid.com/trk/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
