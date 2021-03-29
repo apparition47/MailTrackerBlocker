@@ -141,6 +141,10 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Clio": @[@"market.clio.com/trk"],
         @"Close": @[@"close.(io|com)/email_opened", @"dripemail2"],
         @"cloudHQ": @[@"cloudhq.io/mail_track", @"cloudhq-mkt(d).net/mail_track"],
+        @"CNN": @[
+            @"li.cnn.com/imp\\?", // live intent
+            @"e.newsletters.cnn.com/open/" // zeta global
+        ],
         @"Coda": @[@"coda.io/logging/ping"],
         @"CodePen": @[@"mailer.codepen.io/q"],
         @"ConneQuityMailer": @[@"connequitymailer.com/open/"],
