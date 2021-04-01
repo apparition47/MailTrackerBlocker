@@ -64,7 +64,7 @@
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with a sendgrid tracker <img src='https://sendgrid.com/trk/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
                           @"<p>This is an email with a sendgrid tracker </p>");
-    XCTAssertEqualObjects(msg.detectedTracker, @"Sendgrid");
+    XCTAssertEqualObjects(msg.detectedTracker, @"SendGrid");
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
@@ -106,7 +106,7 @@
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with sendgrid and adobe trackers <img src='https://sendgrid.net/trk/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>\n<img src='https://demex.com/123456' style='width: 1px; height: 1px;'>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
                           @"<p>This is an email with sendgrid and adobe trackers </p>\n");
-    XCTAssertEqualObjects(msg.detectedTracker, @"Sendgrid"); // Or Adobe? Depends on dictionary key order
+    XCTAssertEqualObjects(msg.detectedTracker, @"SendGrid");
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 

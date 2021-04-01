@@ -97,7 +97,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"sparkpostmail2.com",
         ],
         @"AgileCRM": @[@"agle2.me/open"],
-        @"Airbnb": @[@"email.airbnb.com/wf/open"],
         @"Air Miles": @[@"email.airmiles.ca/O"],
         @"Alaska Airlines": @[
             @"click.points-mail.com/open",
@@ -125,7 +124,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Axios": @[@"link.axios.com/img/.*.gif"],
         @"Bananatag": @[@"bl-1.com"],
         @"Blueshift.com": @[
-            @"blueshiftmail.com/wf/open",
             @"getblueshift.com/track"
         ],
         @"Bombcom": @[@"bixel.io"],
@@ -194,13 +192,11 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"app.frontapp.com/(.*)?/seen",
             @"web.frontapp.com/api"
         ],
-        @"FullContact": @[@"fullcontact.com/wf/open"],
         @"GearBest": @[@"appinthestore.com/marketing/mail-user-deal/open"],
         @"Gem": @[@"zen.sr/o"],
         @"GetBase": @[@"getbase.com/e1t/o/"],
         @"GetMailSpring": @[@"getmailspring.com/open"],
         @"GetNotify": @[@"email81.com/case"],
-        @"GetPocket": @[@"email.getpocket.com/wf/open"],
         @"GetResponse": @[@"/open.html\\?x="],
         @"GitHub": @[@"github.com/notifications/beacon/"],
         @"Glassdoor": @[@"mail.glassdoor.com/pub/as"],
@@ -243,7 +239,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Klaviyo": @[@"trk.klaviyomail.com"],
         @"Magento": @[
             @"magento.com/trk",
-            @"magento.com/wf/open",
             @"go.rjmetrics.com"
         ],
         @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
@@ -272,10 +267,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
-        @"Nation Builder": @[
-            @"nationbuilder.com/r/o",
-            @"nationbuilder.com/wf/open"
-        ],
+        @"Nation Builder": @[@"nationbuilder.com/r/o"],
         @"NeteCart": @[@"netecart.com/ltrack"],
         @"Netflix": @[@"beaconimages.netflix.net/img/"],
         @"NetHunt": @[
@@ -300,9 +292,9 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         ],
         @"PayBack": @[@"email.payback.in/a/", @"mail.payback.in/tr/"],
         @"PayPal": @[@"paypal-communication.com/O/"],
-        @"Paytm": @[@"email.paytm.com/wf/open", @"trk.paytmemail.com"],
+        @"Paytm": @[@"trk.paytmemail.com"],
         @"phpList": @[@"phplist.com/lists/ut.php"],
-        @"PipeDrive": @[@"pipedrive.com/wf/open", @"api.nylas.com/open"],
+        @"PipeDrive": @[@"api.nylas.com/open"],
         @"Playdom": @[@"playdom.com/g"],
         @"Polymail": @[@"polymail.io"],
         @"Postmark": @[@"pstmrk.it"],
@@ -330,12 +322,12 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Segment": @[@"email.segment.com/e/o/"],
         @"Selligent": @[@"strongview.com/t"],
         @"SendInBlue": @[@"sendibtd.com", @"sendibw{2}.com/track/"],
-        @"Sendgrid": @[
+        @"SendGrid": @[
             @"sendgrid.(net|com)/wf/open",
             @"sendgrid.(net|com)/trk",
             @"sendgrid.(net|com)/mpss/o",
-            @"sendgrid.(net|com)/ss/o"
-//            @"wf/open\\?upn"
+            @"sendgrid.(net|com)/ss/o",
+            @"/wf/open\\?upn="
         ],
         @"SendPulse": @[@"stat-pulse.com"],
         @"Sendy": @[@"/sendy/t/"],
@@ -357,8 +349,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
         @"Trello": @[@"sptrack.trello.com/q/", @"i.trellomail.com/e/eo"],
-        @"Uber": @[@"email.uber.com/wf/open"],
-        @"Udacity": @[@"udacity.com/wf/open"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Vcommission": @[@"tracking.vcommission.com"],
