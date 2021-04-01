@@ -94,7 +94,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"t.info.adobesystems.com",
             @"toutapp.com",
 //            @"/trk\\?t=",
-            @"sparkpostmail2.com",
         ],
         @"AgileCRM": @[@"agle2.me/open"],
         @"Air Miles": @[@"email.airmiles.ca/O"],
@@ -171,6 +170,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"EdgeSuite": @[@"epidm.edgesuite.net"],
         @"EmailTracker.website": @[@"my-email-signature.link"],
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
+        @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],
         @"Etransmail": @[@"ftrans03.com/linktrack/"],
         @"EventBrite": @[@"eventbrite.com/emails/action"],
         @"EventsInYourArea": @[@"eventsinyourarea.com/track/"],
@@ -236,6 +236,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"LinkedIn": @[@"linkedin.com/emimp/"],
         @"Litmus": @[@"emltrk.com"],
         @"LogDNA": @[@"ping.answerbook.com"],
+        @"Keychron": @[@"keychron.com/_t/open/"],
         @"Klaviyo": @[@"trk.klaviyomail.com"],
         @"Magento": @[
             @"magento.com/trk",
@@ -258,6 +259,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Mandrill": @[@"mandrill.S+/track/open.php"],
         @"Mailzter": @[@"mailzter.in/ltrack"],
         @"Marketo": @[@"resources.marketo.com/trk"/*, @"/trk\\?t="*/],
+        @"Medallia": @[@"survey.medallia.[A-Za-z]{2,3}/\\?(.*)&invite-opened=yes"],
         @"Mention": @[@"mention.com/e/o/"],
         @"MetaData": @[@"metadata.io/e1t/o/"],
         @"MixMax": @[
@@ -293,6 +295,10 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"PayBack": @[@"email.payback.in/a/", @"mail.payback.in/tr/"],
         @"PayPal": @[@"paypal-communication.com/O/"],
         @"Paytm": @[@"trk.paytmemail.com"],
+        @"Peach Aviation": @[
+            @"mlapp.flypeach.com/mail/prod/receipt/read.php\\?id=",
+            @"mag.flypeach.com/c/.*.gif"
+        ],
         @"phpList": @[@"phplist.com/lists/ut.php"],
         @"PipeDrive": @[@"api.nylas.com/open"],
         @"Playdom": @[@"playdom.com/g"],
@@ -333,6 +339,10 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Sendy": @[@"/sendy/t/"],
         @"Skillsoft": @[@"skillsoft.com/trk"],
         @"Signal": @[@"signl.live/tracker"],
+        @"SparkPost": @[
+            @"sparkpost.com/q/",
+            @"sparkpostmail2.com",
+        ],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
