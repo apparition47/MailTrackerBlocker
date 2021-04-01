@@ -119,6 +119,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Apptivo": @[@"apptivo.com"],
         @"Artegic": @[@"elaine-asp.de"],
         @"ASUSTeK": @[@"emditpison.asus.com"],
+        @"Atlassian": @[@"bitbucket.org/account/notifications/mark-read/"],
         @"AWeber": @[@"openrate.aweber.com"],
         @"Axios": @[@"link.axios.com/img/.*.gif"],
         @"Bananatag": @[@"bl-1.com"],
@@ -176,6 +177,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"EventsInYourArea": @[@"eventsinyourarea.com/track/"],
         @"EveryAction": @[@"click.everyaction.com/j/"],
         @"Evite": @[@"pippio.com/api/sync", @"nli.evite.com/imp"],
+        @"Expedia": @[@"link.expediamail.com/o/"],
         @"Facebook": @[
             @"facebook.com/email_open_log_pic.php",
             @"facebookdevelopers.com/trk",
@@ -250,7 +252,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"mandrill.\\S+/track/open.php",
             @"mandrillapp.com/track"
         ],
-        @"Mailgun": @[@"/email.(mailgun|mg)(.*)\\?/o/"],
+        @"Mailgun": @[@"mail.(mailgun|mg).com/o/",],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
         @"Mailjet": @[@"mjt.lu/oo", @"links.[a-zA-Z0-9-.]+/oo/"],
         @"Mailspring": @[@"getmailspring.com/open"],
@@ -293,7 +295,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"getoutreach.com/api/mailings/opened",
         ],
         @"PayBack": @[@"email.payback.in/a/", @"mail.payback.in/tr/"],
-        @"PayPal": @[@"paypal-communication.com/O/"],
+        @"PayPal": @[@"paypal-communication.com/O/", @"t.paypal.com/ts\\?"],
         @"Paytm": @[@"trk.paytmemail.com"],
         @"Peach Aviation": @[
             @"mlapp.flypeach.com/mail/prod/receipt/read.php\\?id=",
@@ -359,6 +361,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
         @"Trello": @[@"sptrack.trello.com/q/", @"i.trellomail.com/e/eo"],
+        @"Uber": @[@"click.uber.com/q/"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Vcommission": @[@"tracking.vcommission.com"],
