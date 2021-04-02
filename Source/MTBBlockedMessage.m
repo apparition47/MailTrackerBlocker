@@ -123,6 +123,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"AWeber": @[@"openrate.aweber.com"],
         @"Axios": @[@"link.axios.com/img/.*.gif"],
         @"Bananatag": @[@"bl-1.com"],
+        @"Bison": @[@"clicks.bisonapp.com"],
         @"Blueshift.com": @[
             @"getblueshift.com/track"
         ],
@@ -154,6 +155,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         ],
         @"Copper": @[@"prosperworks.com/tp/t"],
         @"Cprpt": @[@"/o.aspx?t="],
+        @"CreateSend": @[@"cmail\\d+.com/.+.gif", @"createsend\\d+.com/.+.gif"],
         @"Creditmantri.com": @[@"mailer.creditmantri.com/t/"],
         @"Critical Impact": @[@"portal.criticalimpact.com/c2/"],
         @"Customer.io": @[
@@ -186,6 +188,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Flipkart": @[@"flipkart.com/t/open"],
         @"ForMirror": @[@"formirror.com/open/"],
         @"FreeLancer": @[@"freelancer.com/1px.gif"],
+        @"FreeNow": @[@"ablink.mail.free-now.com"],
         @"FreshMail": @[
             @"mail.[a-zA-Z0-9-.]+.pl/o/",
             @"/o/(w){10,}/(w){10,}",
@@ -278,6 +281,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"nethunt.com/api/v1/track/email/",
             @"nethunt.co(.*)\\?/pixel.gif"
         ],
+        @"Newsletter2Go": @[@"amxe.net/\\S+.gif"],
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
@@ -329,7 +333,11 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"SalesLoft": @[@"salesloft.com/email_trackers"],
         @"Segment": @[@"email.segment.com/e/o/"],
         @"Selligent": @[@"strongview.com/t"],
-        @"SendInBlue": @[@"sendibtd.com", @"sendibw{2}.com/track/"],
+        @"SendInBlue": @[
+            @"sendibtd.com",
+            @"sendibw{2}.com/track/",
+            @"amxe.net/\\S+.gif" // formerly Newsletter2Go
+        ],
         @"SendGrid": @[
             @"sendgrid.(net|com)/wf/open",
             @"sendgrid.(net|com)/trk",
@@ -362,6 +370,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Transferwise": @[@"links.transferwise.com/track/"],
         @"Trello": @[@"sptrack.trello.com/q/", @"i.trellomail.com/e/eo"],
         @"Uber": @[@"click.uber.com/q/"],
+        @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Vcommission": @[@"tracking.vcommission.com"],
