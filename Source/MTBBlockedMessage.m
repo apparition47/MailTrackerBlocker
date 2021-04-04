@@ -94,7 +94,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"ADAC": @[@"mailing.adac.de/tr/"],
         @"Adtriba": @[@"d.adtriba.com"],
         @"Adobe": @[
-            @"demdex.net",
+            "demdex.net",
             @"t.info.adobesystems.com",
             @"toutapp.com",
             @"112.2o7.net",
