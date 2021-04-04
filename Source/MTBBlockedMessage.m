@@ -129,7 +129,11 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Artegic": @[@"elaine-asp.de"],
         @"Asana": @[@"app.asana.com/-/open"],
         @"ASUSTeK": @[@"emditpison.asus.com"],
-        @"Atlassian": @[@"bitbucket.org/account/notifications/mark-read/"],
+        @"Atlassian": @[
+            @"sptrack.trello.com/q/",
+            @"i.trellomail.com/e/eo",
+            @"bitbucket.org/account/notifications/mark-read/"
+        ],
         @"Autodesk": @[@"click.autodesk.com/trk"],
         @"Autopilot": @[@"autopilotmail\\d?.io"],
         @"AWeber": @[@"openrate.aweber.com"],
@@ -146,7 +150,10 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Boxbe": @[@"boxbe.com/stfopen"],
         @"Browserstack": @[@"browserstack.com/images/mail/track-open"],
         @"BuzzStream": @[@"tx.buzzstream.com"],
-        @"Campaign Monitor": @[@"/cmail(\\d+).com/t//"],
+        @"Campaign Monitor": @[
+            @"cmail\\d{1,2}.com/t/.+.gif",
+            @"createsend\\d+.com/.+.gif"
+        ],
         @"CanaryMail": @[@"canarymail.io(:d+)?/track", @"pardot.com/r/"],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
@@ -170,7 +177,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         ],
         @"Copper": @[@"prosperworks.com/tp/t"],
         @"Cprpt": @[@"/o.aspx?t="],
-        @"CreateSend": @[@"cmail\\d+.com/.+.gif", @"createsend\\d+.com/.+.gif"],
         @"Creditmantri.com": @[@"mailer.creditmantri.com/t/"],
         @"Critical Impact": @[@"portal.criticalimpact.com/c2/"],
         @"Customer.io": @[
@@ -398,7 +404,6 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"trackapp.io/static/img/track.gif"
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
-        @"Trello": @[@"sptrack.trello.com/q/", @"i.trellomail.com/e/eo"],
         @"Uber": @[@"click.uber.com/q/"],
         @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
