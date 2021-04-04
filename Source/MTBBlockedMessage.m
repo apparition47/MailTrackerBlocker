@@ -190,6 +190,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
         @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],
         @"Etransmail": @[@"ftrans03.com/linktrack/"],
+        @"Epic Games": @[@"accts.epicgames.com/O/"],
         @"EventBrite": @[@"eventbrite.com/emails/action"],
         @"EventsInYourArea": @[@"eventsinyourarea.com/track/"],
         @"EveryAction": @[@"click.everyaction.com/j/"],
