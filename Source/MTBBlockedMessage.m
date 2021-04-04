@@ -405,6 +405,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Validity": @[@"pixel.app.returnpath.net/pixel.gif"],
         @"Vcommission": @[@"tracking.vcommission.com"],
+        @"Vice Media": @[@"rs-stripe.refinery29.com/stripe/image"],
         @"Vrbo": @[@"sp.trk.homeaway.com/q/"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
         @"Webtrekk": @[@"webtrekk.net"],
