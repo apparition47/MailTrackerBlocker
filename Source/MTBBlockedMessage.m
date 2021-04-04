@@ -186,6 +186,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
             @"facebookdevelopers.com/trk",
             @"fb.com/trk",
         ],
+        @"Fastic": @[@"/e/eo/_t[^>]+_m[^>]+_e"],
         @"Flipkart": @[@"flipkart.com/t/open"],
         @"ForMirror": @[@"formirror.com/open/"],
         @"FreeLancer": @[@"freelancer.com/1px.gif"],
