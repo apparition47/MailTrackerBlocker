@@ -130,7 +130,7 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
         @"Asana": @[@"app.asana.com/-/open"],
         @"ASUSTeK": @[@"emditpison.asus.com"],
         @"Atlassian": @[@"bitbucket.org/account/notifications/mark-read/"],
-        @"Autodesk": @["click.autodesk.com/trk"],
+        @"Autodesk": @[@"click.autodesk.com/trk"],
         @"Autopilot": @[@"autopilotmail\\d?.io"],
         @"AWeber": @[@"openrate.aweber.com"],
         @"Axios": @[@"link.axios.com/img/.*.gif"],

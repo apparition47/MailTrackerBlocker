@@ -6,8 +6,7 @@ on:
       - 'MailTrackerBlocker.xcodeproj/**'
       - 'Source/**'
       - 'Unit Tests/**'
-  pull_request_target:
-    branches: [main]
+  pull_request:
 
 jobs:
   unit-test:
