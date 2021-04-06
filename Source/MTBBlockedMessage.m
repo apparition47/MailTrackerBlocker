@@ -347,7 +347,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
         @"Questrade": @[@"email.questrade.com/trk\\?t"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
-        @"Rakuten": @[@"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)&mpn=(\\d+)", @"cl.rakuten-bank.co.jp/rw/beacon_(.*).gif"],
+        @"Rakuten": @[
+            @"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)",
+            @"cl.rakuten-bank.co.jp/rw/beacon_(.*).gif"
+        ],
         @"ReplyCal": @[@"replycal.com/home/index/\\?token"],
         @"ReplyMsg": @[@"replymsg.com"],
         @"Responder.co.il": @[@"opens.responder.co.il"],
