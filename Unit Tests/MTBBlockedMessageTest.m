@@ -44,10 +44,18 @@
                    @"1px bordered img shouldn't be removed");
 }
 
+- (void)testDropboxHyperlinks {
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<a href=\"https://www.dropbox.com/l/AAAhW7m5KgieXUt96YPVxQAikIuP2k0jBzQ/deleted_files\"><img height=\"1\" src=\"https://www.dropbox.com/l/AADXCtjPO6z7f4q38mMZzFj33E0hL2iRjTE\" width=\"1\" /><a href=\"https://www.dropbox.com/l/AAApjR2Uembfm6p3zhWNf_5g0HGUNrTTE2E\">Unsubscribe</a>"];
+    XCTAssertEqualObjects(msg.sanitizedHtml,
+                          @"<a href=\"https://www.dropbox.com/l/AAAhW7m5KgieXUt96YPVxQAikIuP2k0jBzQ/deleted_files\"><a href=\"https://www.dropbox.com/l/AAApjR2Uembfm6p3zhWNf_5g0HGUNrTTE2E\">Unsubscribe</a>");
+    XCTAssertEqualObjects(msg.detectedTracker, @"Dropbox");
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 - (void)testGoogleAnalytics {
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with a google tracker <img alt="" height=1 width=3 src=https://notifications.google.com/g/img/AD-FnEzt8doYQCTNQv1w6jsjHDU6Kh6lId34t0STSV3ydKTDIw.gif></p>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
-                          @"<p>This is an email with a google tracker <img alt="" height=1 width=3 src=https://></p>");
+                          @"<p>This is an email with a google tracker </p>");
     XCTAssertEqualObjects(msg.detectedTracker, @"Google");
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }

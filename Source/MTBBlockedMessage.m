@@ -18,6 +18,7 @@
 @implementation MTBBlockedMessage
 
 NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?[\"'\\s]|width:\\s*[01]px)+[^>]*>";
+NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
 
 @synthesize trackers, delegate;
 
@@ -58,7 +59,8 @@ NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?
     NSString *result = html;
     NSDictionary *trackingDict = [self getTrackerDict];
     for (id trackingSourceKey in trackingDict) {
-        for (NSString *regexStr in [trackingDict objectForKey:trackingSourceKey]) {
+        for (NSString *trkRegexStr in [trackingDict objectForKey:trackingSourceKey]) {
+            NSString *regexStr = [NSString stringWithFormat:kImgTagTemplateRegex, trkRegexStr];
             NSRange matchedRange = [result rangeFromPattern:regexStr];
             if (matchedRange.location != NSNotFound) {
                 [trackers addObject:trackingSourceKey];
