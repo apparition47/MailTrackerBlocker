@@ -53,8 +53,8 @@ If you installed the `pkg` manually:
 
 ```bash
 osascript -e "quit app \"Mail\""
-rm -r /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
-rm -r /Library/Application\ Support/com.onefatgiraffe/mailtrackerblocker
+sudo rm -r /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
+sudo rm -r /Library/Application\ Support/com.onefatgiraffe/mailtrackerblocker
 sudo pkgutil --forget com.onefatgiraffe.mailtrackerblocker
 ```
 
