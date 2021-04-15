@@ -230,6 +230,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"GetNotify": @[@"email81.com/case"],
         @"GetResponse": @[@"/open.html\\?x="],
         @"GitHub": @[@"github.com/notifications/beacon/"],
+        @"GitGuardian": @[@"email.mail.gitguardian.com/o/"],
         @"Glassdoor": @[@"mail.glassdoor.com/pub/as"],
         @"Gmass": @[
             @"ec2-52-26-194-35.us-west-2.compute.amazonaws.com",
