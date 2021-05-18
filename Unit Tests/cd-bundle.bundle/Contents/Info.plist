@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>cd-bundle</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.gpgtoolz.gpgmail.tests.cd-bundle</string>
+	<string>org.gpgtools.gpgmail.tests.cd-bundle</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
