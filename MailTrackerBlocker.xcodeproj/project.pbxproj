@@ -28,6 +28,7 @@
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
 		738BDCFB25F7A2EC00D563F2 /* embeddedBase64Img.html in Resources */ = {isa = PBXBuildFile; fileRef = 738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */; };
 		739D52C2258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS in Resources */ = {isa = PBXBuildFile; fileRef = 739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */; };
+		73A3BC22265B2A66005874E1 /* MTBExampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3BC21265B2A66005874E1 /* MTBExampleClass.m */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
 		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
@@ -104,6 +105,9 @@
 		7396026F25EFACAE009A8F26 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ACKNOWLEDGEMENTS; sourceTree = "<group>"; };
 		73A1C156258DE1BB00992141 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		73A3BC20265B2A66005874E1 /* MTBExampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBExampleClass.h; sourceTree = "<group>"; };
+		73A3BC21265B2A66005874E1 /* MTBExampleClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBExampleClass.m; sourceTree = "<group>"; };
+		73A3BC23265B2DAC005874E1 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		73A9275B25ED197400BAE31A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBBlockedMessage.h; sourceTree = "<group>"; };
 		73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBBlockedMessage.m; sourceTree = "<group>"; };
@@ -1637,6 +1641,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				73A3BC23265B2DAC005874E1 /* Entitlements.plist */,
 				739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */,
 				7312BAAE24D2F3B800037A14 /* active.pdf */,
 				7312BAB024D2F3BE00037A14 /* inactive.pdf */,
@@ -1688,6 +1693,8 @@
 				73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */,
 				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
 				73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */,
+				73A3BC20265B2A66005874E1 /* MTBExampleClass.h */,
+				73A3BC21265B2A66005874E1 /* MTBExampleClass.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -3478,6 +3485,7 @@
 				73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */,
 				73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */,
 				1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */,
+				73A3BC22265B2A66005874E1 /* MTBExampleClass.m in Sources */,
 				73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
 				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
@@ -3605,7 +3613,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = /System/Applications/Mail.app/Contents/MacOS/Mail;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Resources/Entitlements.plist;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3651,7 +3659,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = /System/Applications/Mail.app/Contents/MacOS/Mail;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Resources/Entitlements.plist;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

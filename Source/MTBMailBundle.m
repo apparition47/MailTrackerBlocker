@@ -37,7 +37,7 @@
 #import "MTBMailBundle.h"
 #import "MVMailBundle.h"
 #import "ComposeViewController.h"
-
+#import "MTBExampleClass.h"
 
 @interface MTBMailBundle ()
 
@@ -125,6 +125,7 @@ int MTBMailLoggingLevel = 0;
     MTBMailBundle *instance = [MTBMailBundle sharedInstance];
     
 //    [[((MVMailBundle *)self) class] registerBundle];             // To force registering composeAccessoryView and preferences
+    [[[MTBExampleClass alloc] init] runExample];
 }
 
 - (id)init {
