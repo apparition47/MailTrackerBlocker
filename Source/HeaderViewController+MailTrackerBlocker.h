@@ -8,8 +8,5 @@
 #import <Foundation/Foundation.h>
 #import "MTBBlockedMessage.h"
 
-@interface HeaderViewController_MailTrackerBlocker : NSObject <MTBBlockedMessageDelegate> {
-//    NSButton *blockingBtn;
-}
-//@property(readonly, nonatomic) NSButton *blockingBtn;
+@interface HeaderViewController_MailTrackerBlocker : NSObject <MTBBlockedMessageDelegate>
 @end

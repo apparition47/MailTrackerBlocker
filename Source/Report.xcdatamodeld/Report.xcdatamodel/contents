@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Report" representedClassName=".Report" syncable="YES" codeGenerationType="class">
+        <attribute name="deep_link" optional="YES" attributeType="URI"/>
+    </entity>
+    <entity name="Tracker" representedClassName=".Tracker" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Report"/>
+    </entity>
+    <elements>
+        <element name="Report" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="Tracker" positionX="-54" positionY="9" width="128" height="59"/>
+    </elements>
+</model>

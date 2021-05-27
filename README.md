@@ -25,9 +25,9 @@ Apple Mail on macOS 10.11 - 11.x.
 
 ## Setup
 
-### Recommended Installation via [Homebrew Cask](https://brew.sh)
+### Installation
 
-You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) but I strongly recommend installing as an Homebrew Cask for ease of updating.
+You can install `MailTrackerBlocker.pkg` directly from the [releases page](https://github.com/apparition47/MailTrackerBlocker/releases) or via [Homebrew Cask](https://brew.sh):
 
 ```bash
 $ brew install mailtrackerblocker
@@ -53,9 +53,14 @@ If you installed the `pkg` manually:
 
 ```bash
 osascript -e "quit app \"Mail\""
+# plugin files
 sudo rm -r /Library/Mail/Bundles/MailTrackerBlocker.mailbundle
 sudo rm -r /Library/Application\ Support/com.onefatgiraffe/mailtrackerblocker
 sudo pkgutil --forget com.onefatgiraffe.mailtrackerblocker
+# user-generated settings
+rm -r ~/Library/Containers/com.apple.mail/Data/Library/Application\ Support/com.onefatgiraffe.mailtrackerblocker
+defaults delete com.apple.mail _mtb_IsAutoUpdateCheckAllowed
+defaults delete com.apple.mail _mtb_IsFirstStartup
 ```
 
 
@@ -81,7 +86,7 @@ make
 * MailTrackerBlocker project sponsors, donators and contributors
 * **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20)
 * **[@leggett](https://github.com/leggett)** for his [Simplify Gmail blocklist](https://github.com/leggett/simplify-trackers)
-* **[@bitmanic](https://github.com/bitmanic)** for the UI design
+* **[@raybrownco](https://github.com/raybrownco)** for the first UI design
 * **[GPGTools Team](https://gpgtools.org/)** for making this possible with GPGMail and for their extensive work on Mail plugins
 
 

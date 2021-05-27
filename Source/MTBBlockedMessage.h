@@ -19,7 +19,11 @@ typedef enum BLOCKING_RESULT_CERTAINTY: NSUInteger {
 @end
 
 @interface MTBBlockedMessage : NSObject
+@property(readonly, nonatomic) NSString *subjectField;
+@property(readonly, nonatomic) NSString *fromField;
+@property(readonly, nonatomic) NSString *deeplinkField;
 - (id)initWithHtml:(NSString*)html;
+- (id)initWithHtml:(NSString*)html from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink;
 - (NSString *)detectedTracker;
 - (enum BLOCKING_RESULT_CERTAINTY)certainty;
 - (NSString*)sanitizedHtml;

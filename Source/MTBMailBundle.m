@@ -37,7 +37,8 @@
 #import "MTBMailBundle.h"
 #import "MVMailBundle.h"
 #import "ComposeViewController.h"
-
+#import "MTBReportingManager.h"
+#import "MTBUpdateManager.h"
 
 @interface MTBMailBundle ()
 
@@ -77,9 +78,9 @@ int MTBMailLoggingLevel = 0;
 + (void)showMultipleInstallationsErrorAndExit:(NSArray *)installations {
     NSAlert *errorModal = [[NSAlert alloc] init];
     
-    errorModal.messageText = GMLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_TITLE");
-    errorModal.informativeText = [NSString stringWithFormat:GMLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_MESSAGE"), [installations componentsJoinedByString:@"\n\n"]];
-    [errorModal addButtonWithTitle:GMLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_BUTTON")];
+    errorModal.messageText = MTBLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_TITLE");
+    errorModal.informativeText = [NSString stringWithFormat:MTBLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_MESSAGE"), [installations componentsJoinedByString:@"\n\n"]];
+    [errorModal addButtonWithTitle:MTBLocalizedString(@"MTB_MULTIPLE_INSTALLATIONS_BUTTON")];
     [errorModal runModal];
     
     
@@ -123,8 +124,11 @@ int MTBMailLoggingLevel = 0;
     
     // Initialize the bundle by swizzling methods, loading keys, ...
     MTBMailBundle *instance = [MTBMailBundle sharedInstance];
+
+    [[MTBReportingManager sharedInstance] purgeReports30DaysOrOlder];
     
-//    [[((MVMailBundle *)self) class] registerBundle];             // To force registering composeAccessoryView and preferences
+    MTBUpdateManager *updater = [[MTBUpdateManager alloc] init];
+    [updater scheduleCheck];
 }
 
 - (id)init {
@@ -195,7 +199,7 @@ int MTBMailLoggingLevel = 0;
     /**
      Returns the version of the bundle as string.
      */
-    return [[[MTBMailBundle bundle] infoDictionary] valueForKey:@"CFBundleVersion"];
+    return [[[MTBMailBundle bundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
 }
 
 + (NSString *)bundleBuildNumber {
@@ -236,5 +240,28 @@ int MTBMailLoggingLevel = 0;
     return mailError;
 }
 
-@end
++(BOOL)isAppearanceDark {
+    NSAppearance * appearance = [NSApp effectiveAppearance];
+    if (@available(macOS 10.14, *)) {
+        NSAppearanceName basicAppearance = [appearance bestMatchFromAppearancesWithNames:@[
+            NSAppearanceNameAqua,
+            NSAppearanceNameDarkAqua
+        ]];
+        return [basicAppearance isEqualToString:NSAppearanceNameDarkAqua];
+    } else {
+        return NO;
+    }
+}
 
+#pragma mark - mailbundle Application Support directory
+
++ (NSURL *)bundleApplicationSupportDirectory {
+    NSError *error;
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSURL *applicationSupport = [manager URLForDirectory:NSApplicationSupportDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:false error:&error];
+    NSString *identifier = [[MTBMailBundle bundle] bundleIdentifier];
+    NSURL *folder = [applicationSupport URLByAppendingPathComponent:identifier];
+    [manager createDirectoryAtURL:folder withIntermediateDirectories:true attributes:nil error:&error];
+    return folder;
+}
+@end

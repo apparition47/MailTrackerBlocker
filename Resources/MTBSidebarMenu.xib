@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MTBSidebarMenu">
+            <connections>
+                <outlet property="aboutButton" destination="iRI-QZ-ujL" id="P0K-wE-rAY"/>
+                <outlet property="checkForUpdatesButton" destination="hdh-mF-8Gr" id="nuh-YW-9No"/>
+                <outlet property="helpButton" destination="ksC-Hy-kd0" id="kmM-Em-ERH"/>
+                <outlet property="licensesButton" destination="3iD-Mq-0eU" id="c0F-GP-R3R"/>
+                <outlet property="trackerReportButton" destination="tIn-XH-BCC" id="Kig-BY-XHE"/>
+                <outlet property="view" destination="c22-O7-iKe" id="Vvz-iZ-jrE"/>
+                <outlet property="websiteButton" destination="U5E-Og-JF5" id="2uN-XX-Pzr"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CP9-ym-EtX">
+                    <rect key="frame" x="8" y="8" width="144" height="176"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-XH-BCC">
+                            <rect key="frame" x="0.0" y="160" width="144" height="16"/>
+                            <buttonCell key="cell" type="bevel" title="Tracker Report" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="oAH-XO-HXR">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="trackerReportPressed:" target="-2" id="2cn-60-4oR"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-mF-8Gr">
+                            <rect key="frame" x="0.0" y="128" width="144" height="16"/>
+                            <buttonCell key="cell" type="bevel" title="Check for Updates" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="MvE-Oq-Li8">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="checkForUpdatesPressed:" target="-2" id="6LE-74-M1p"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U5E-Og-JF5">
+                            <rect key="frame" x="0.0" y="96" width="144" height="16"/>
+                            <buttonCell key="cell" type="bevel" title="Website" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="GwI-vX-Urg">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="websitePressed:" target="-2" id="QbS-mm-4zX"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3iD-Mq-0eU">
+                            <rect key="frame" x="0.0" y="64" width="144" height="16"/>
+                            <buttonCell key="cell" type="bevel" title="Licenses" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="3oV-E3-mwR">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="licensesPressed:" target="-2" id="kjg-nE-Q1K"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ksC-Hy-kd0">
+                            <rect key="frame" x="0.0" y="32" width="144" height="16"/>
+                            <buttonCell key="cell" type="bevel" title="Help" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="P5a-5O-STq">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="helpPressed:" target="-2" id="CdS-Je-G7M"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iRI-QZ-ujL">
+                            <rect key="frame" x="0.0" y="0.0" width="144" height="16"/>
+                            <buttonCell key="cell" type="bevel" title="Version 1.0" bezelStyle="regularSquare" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="jdL-6c-V4w">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="iRI-QZ-ujL" firstAttribute="width" secondItem="CP9-ym-EtX" secondAttribute="width" id="1S0-G5-Fca"/>
+                        <constraint firstItem="hdh-mF-8Gr" firstAttribute="width" secondItem="CP9-ym-EtX" secondAttribute="width" id="29W-SX-5ES"/>
+                        <constraint firstItem="tIn-XH-BCC" firstAttribute="width" secondItem="CP9-ym-EtX" secondAttribute="width" id="Iqs-0b-p1g"/>
+                        <constraint firstItem="U5E-Og-JF5" firstAttribute="width" secondItem="CP9-ym-EtX" secondAttribute="width" id="QG7-T8-ZsO"/>
+                        <constraint firstItem="ksC-Hy-kd0" firstAttribute="width" secondItem="CP9-ym-EtX" secondAttribute="width" id="Tgh-Tk-jwd"/>
+                        <constraint firstItem="3iD-Mq-0eU" firstAttribute="width" secondItem="CP9-ym-EtX" secondAttribute="width" id="lDG-HX-L5C"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CP9-ym-EtX" secondAttribute="trailing" constant="8" id="Dxf-fw-hmt"/>
+                <constraint firstItem="CP9-ym-EtX" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="8" id="KNq-sy-A5x"/>
+                <constraint firstAttribute="bottom" secondItem="CP9-ym-EtX" secondAttribute="bottom" constant="8" id="UsZ-bU-goH"/>
+                <constraint firstItem="CP9-ym-EtX" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="f21-W9-foR"/>
+            </constraints>
+            <point key="canvasLocation" x="-81" y="202"/>
+        </customView>
+    </objects>
+</document>

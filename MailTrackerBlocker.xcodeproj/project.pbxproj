@@ -25,9 +25,29 @@
 		6567F47D25EC39630013C8B1 /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
 		7312BAAF24D2F3B800037A14 /* active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAAE24D2F3B800037A14 /* active.pdf */; };
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
+		737675362652A9DF00363783 /* MailApp+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 737675352652A9DF00363783 /* MailApp+MailTrackerBlocker.m */; };
+		737C5508265FB778009E4D06 /* MTBPackageValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 737C5507265FB778009E4D06 /* MTBPackageValidator.m */; };
+		737EDFC126501A4100766F97 /* NSColor+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFAA26501A3D00766F97 /* NSColor+Style.m */; };
+		737EDFC226501A4100766F97 /* Reports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */; };
+		737EDFC326501A4100766F97 /* MTBReportPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */; };
+		737EDFC426501A4100766F97 /* MTBReportViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFB126501A3E00766F97 /* MTBReportViewModel.m */; };
+		737EDFC526501A4100766F97 /* MTBReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFB226501A3E00766F97 /* MTBReportViewController.m */; };
+		737EDFC726501A4100766F97 /* MTBReportPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFB726501A3F00766F97 /* MTBReportPopover.m */; };
+		737EDFC926501A4100766F97 /* NSManagedObjectContext+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFB926501A4000766F97 /* NSManagedObjectContext+Merge.m */; };
+		737EDFCC26501A4100766F97 /* MTBReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737EDFBD26501A4100766F97 /* MTBReportViewController.xib */; };
+		737EDFCD26501A4100766F97 /* MTBCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFBE26501A4100766F97 /* MTBCoreDataManager.m */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
+		738936162651222C008F4DDB /* MTBReportingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 738936152651222C008F4DDB /* MTBReportingManager.m */; };
 		738BDCFB25F7A2EC00D563F2 /* embeddedBase64Img.html in Resources */ = {isa = PBXBuildFile; fileRef = 738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */; };
+		739ACCD02655360900DA6078 /* MTBUpdateCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739ACCCF2655360900DA6078 /* MTBUpdateCheckViewController.xib */; };
+		739ACCD32655383F00DA6078 /* MTBUpdateCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739ACCD22655383F00DA6078 /* MTBUpdateCheckViewController.m */; };
 		739D52C2258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS in Resources */ = {isa = PBXBuildFile; fileRef = 739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */; };
+		73A216882653C39E00045303 /* MTBUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A216872653C39E00045303 /* MTBUpdateManager.m */; };
+		73A2168B2653C3E100045303 /* MTBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A2168A2653C3E100045303 /* MTBPreferences.m */; };
+		73A2168E2653DF4F00045303 /* MTBGitHubReleases.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A2168D2653DF4F00045303 /* MTBGitHubReleases.m */; };
+		73ABE26E2657B2C6005B6FCA /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ABE26D2657B2C6005B6FCA /* Media.xcassets */; };
+		73ABE2702657B97D005B6FCA /* MTBSidebarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73ABE26F2657B97D005B6FCA /* MTBSidebarMenu.xib */; };
+		73ABE2732657BB85005B6FCA /* MTBSidebarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
 		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
@@ -99,12 +119,46 @@
 		731FCC1724E0357B00567CED /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		731FCC1824E035DF00567CED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		733755A725DD421600EAA3E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		737675342652A9DF00363783 /* MailApp+MailTrackerBlocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailApp+MailTrackerBlocker.h"; sourceTree = "<group>"; };
+		737675352652A9DF00363783 /* MailApp+MailTrackerBlocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MailApp+MailTrackerBlocker.m"; sourceTree = "<group>"; };
+		737C5506265FB778009E4D06 /* MTBPackageValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBPackageValidator.h; sourceTree = "<group>"; };
+		737C5507265FB778009E4D06 /* MTBPackageValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBPackageValidator.m; sourceTree = "<group>"; };
+		737EDFA926501A3D00766F97 /* NSColor+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Style.h"; sourceTree = "<group>"; };
+		737EDFAA26501A3D00766F97 /* NSColor+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Style.m"; sourceTree = "<group>"; };
+		737EDFAB26501A3D00766F97 /* NSManagedObjectContext+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Merge.h"; sourceTree = "<group>"; };
+		737EDFAD26501A3E00766F97 /* CDCourses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDCourses.xcdatamodel; sourceTree = "<group>"; };
+		737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTBReportPopover.xib; sourceTree = "<group>"; };
+		737EDFAF26501A3E00766F97 /* MTBReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBReportViewController.h; sourceTree = "<group>"; };
+		737EDFB026501A3E00766F97 /* MTBCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBCoreDataManager.h; sourceTree = "<group>"; };
+		737EDFB126501A3E00766F97 /* MTBReportViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBReportViewModel.m; sourceTree = "<group>"; };
+		737EDFB226501A3E00766F97 /* MTBReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBReportViewController.m; sourceTree = "<group>"; };
+		737EDFB326501A3F00766F97 /* MTBReportPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBReportPopover.h; sourceTree = "<group>"; };
+		737EDFB626501A3F00766F97 /* MTBReportViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBReportViewModel.h; sourceTree = "<group>"; };
+		737EDFB726501A3F00766F97 /* MTBReportPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBReportPopover.m; sourceTree = "<group>"; };
+		737EDFB926501A4000766F97 /* NSManagedObjectContext+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Merge.m"; sourceTree = "<group>"; };
+		737EDFBD26501A4100766F97 /* MTBReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTBReportViewController.xib; sourceTree = "<group>"; };
+		737EDFBE26501A4100766F97 /* MTBCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBCoreDataManager.m; sourceTree = "<group>"; };
 		7384C1BC24E0059200C25B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7389361426510410008F4DDB /* MTBReportingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBReportingManager.h; sourceTree = "<group>"; };
+		738936152651222C008F4DDB /* MTBReportingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBReportingManager.m; sourceTree = "<group>"; };
 		738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = embeddedBase64Img.html; sourceTree = "<group>"; };
 		7396026F25EFACAE009A8F26 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		739ACCCF2655360900DA6078 /* MTBUpdateCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTBUpdateCheckViewController.xib; sourceTree = "<group>"; };
+		739ACCD12655383E00DA6078 /* MTBUpdateCheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBUpdateCheckViewController.h; sourceTree = "<group>"; };
+		739ACCD22655383F00DA6078 /* MTBUpdateCheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBUpdateCheckViewController.m; sourceTree = "<group>"; };
 		739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ACKNOWLEDGEMENTS; sourceTree = "<group>"; };
 		73A1C156258DE1BB00992141 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		73A216862653C39E00045303 /* MTBUpdateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBUpdateManager.h; sourceTree = "<group>"; };
+		73A216872653C39E00045303 /* MTBUpdateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBUpdateManager.m; sourceTree = "<group>"; };
+		73A216892653C3E100045303 /* MTBPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBPreferences.h; sourceTree = "<group>"; };
+		73A2168A2653C3E100045303 /* MTBPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBPreferences.m; sourceTree = "<group>"; };
+		73A2168C2653DF4F00045303 /* MTBGitHubReleases.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBGitHubReleases.h; sourceTree = "<group>"; };
+		73A2168D2653DF4F00045303 /* MTBGitHubReleases.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBGitHubReleases.m; sourceTree = "<group>"; };
 		73A9275B25ED197400BAE31A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		73ABE26D2657B2C6005B6FCA /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		73ABE26F2657B97D005B6FCA /* MTBSidebarMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTBSidebarMenu.xib; sourceTree = "<group>"; };
+		73ABE2712657BB85005B6FCA /* MTBSidebarMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBSidebarMenu.h; sourceTree = "<group>"; };
+		73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBSidebarMenu.m; sourceTree = "<group>"; };
 		73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBBlockedMessage.h; sourceTree = "<group>"; };
 		73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBBlockedMessage.m; sourceTree = "<group>"; };
 		73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LPDynamicIvars.m"; sourceTree = "<group>"; };
@@ -1637,12 +1691,18 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */,
+				73ABE26F2657B97D005B6FCA /* MTBSidebarMenu.xib */,
+				737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */,
+				737EDFBD26501A4100766F97 /* MTBReportViewController.xib */,
+				739ACCCF2655360900DA6078 /* MTBUpdateCheckViewController.xib */,
 				739D52C1258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS */,
 				7312BAAE24D2F3B800037A14 /* active.pdf */,
 				7312BAB024D2F3BE00037A14 /* inactive.pdf */,
 				559A81860838F3C30052F47C /* Info.plist */,
 				73F69FC124D7194900D5D167 /* possible.pdf */,
 				7384C1BD24E0059200C25B97 /* Localizable.strings */,
+				73ABE26D2657B2C6005B6FCA /* Media.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1688,6 +1748,10 @@
 				73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */,
 				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
 				73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */,
+				737EDFAA26501A3D00766F97 /* NSColor+Style.m */,
+				737EDFB926501A4000766F97 /* NSManagedObjectContext+Merge.m */,
+				73A2168D2653DF4F00045303 /* MTBGitHubReleases.m */,
+				737C5507265FB778009E4D06 /* MTBPackageValidator.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1698,6 +1762,10 @@
 				1B3F2F9D13E59639006A8333 /* ComposeBackEnd+MailTrackerBlocker.m */,
 				1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */,
 				73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */,
+				737EDFB726501A3F00766F97 /* MTBReportPopover.m */,
+				737EDFB226501A3E00766F97 /* MTBReportViewController.m */,
+				739ACCD22655383F00DA6078 /* MTBUpdateCheckViewController.m */,
+				73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1707,6 +1775,12 @@
 			children = (
 				559A806E0838E9B10052F47C /* MTBMailBundle.m */,
 				1BADCE7D176B694C009D3785 /* GMCodeInjector.m */,
+				737EDFBE26501A4100766F97 /* MTBCoreDataManager.m */,
+				738936152651222C008F4DDB /* MTBReportingManager.m */,
+				737EDFB126501A3E00766F97 /* MTBReportViewModel.m */,
+				737675352652A9DF00363783 /* MailApp+MailTrackerBlocker.m */,
+				73A216872653C39E00045303 /* MTBUpdateManager.m */,
+				73A2168A2653C3E100045303 /* MTBPreferences.m */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -1716,6 +1790,12 @@
 			children = (
 				307E1C6612B17CFF0012F3DF /* MTBMailBundle.h */,
 				1BADCE7C176B694C009D3785 /* GMCodeInjector.h */,
+				737EDFB026501A3E00766F97 /* MTBCoreDataManager.h */,
+				7389361426510410008F4DDB /* MTBReportingManager.h */,
+				737EDFB626501A3F00766F97 /* MTBReportViewModel.h */,
+				737675342652A9DF00363783 /* MailApp+MailTrackerBlocker.h */,
+				73A216862653C39E00045303 /* MTBUpdateManager.h */,
+				73A216892653C3E100045303 /* MTBPreferences.h */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -1726,6 +1806,10 @@
 				559A80620838E8890052F47C /* ComposeBackEnd+MailTrackerBlocker.h */,
 				1BD06B9918102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.h */,
 				73F7651824B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.h */,
+				737EDFB326501A3F00766F97 /* MTBReportPopover.h */,
+				737EDFAF26501A3E00766F97 /* MTBReportViewController.h */,
+				739ACCD12655383E00DA6078 /* MTBUpdateCheckViewController.h */,
+				73ABE2712657BB85005B6FCA /* MTBSidebarMenu.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1738,6 +1822,10 @@
 				73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */,
 				73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */,
 				73D0B19E24D689ED00CAC03F /* NSString+RegEx.h */,
+				737EDFA926501A3D00766F97 /* NSColor+Style.h */,
+				737EDFAB26501A3D00766F97 /* NSManagedObjectContext+Merge.h */,
+				73A2168C2653DF4F00045303 /* MTBGitHubReleases.h */,
+				737C5506265FB778009E4D06 /* MTBPackageValidator.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -3415,10 +3503,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7312BAAF24D2F3B800037A14 /* active.pdf in Resources */,
+				73ABE2702657B97D005B6FCA /* MTBSidebarMenu.xib in Resources */,
 				7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */,
+				73ABE26E2657B2C6005B6FCA /* Media.xcassets in Resources */,
 				739D52C2258EFB8100A7B8A8 /* ACKNOWLEDGEMENTS in Resources */,
+				739ACCD02655360900DA6078 /* MTBUpdateCheckViewController.xib in Resources */,
 				73F69FC224D7194900D5D167 /* possible.pdf in Resources */,
 				7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */,
+				737EDFCC26501A4100766F97 /* MTBReportViewController.xib in Resources */,
+				737EDFC326501A4100766F97 /* MTBReportPopover.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3475,15 +3568,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A2168B2653C3E100045303 /* MTBPreferences.m in Sources */,
 				73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */,
 				73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */,
 				1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */,
+				737EDFC726501A4100766F97 /* MTBReportPopover.m in Sources */,
+				737EDFC126501A4100766F97 /* NSColor+Style.m in Sources */,
 				73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
+				738936162651222C008F4DDB /* MTBReportingManager.m in Sources */,
+				737EDFC926501A4100766F97 /* NSManagedObjectContext+Merge.m in Sources */,
 				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
 				1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */,
+				739ACCD32655383F00DA6078 /* MTBUpdateCheckViewController.m in Sources */,
+				73A216882653C39E00045303 /* MTBUpdateManager.m in Sources */,
+				737C5508265FB778009E4D06 /* MTBPackageValidator.m in Sources */,
 				1B32AFF713AF827B0072079B /* CCLog.m in Sources */,
+				737EDFC226501A4100766F97 /* Reports.xcdatamodeld in Sources */,
+				737EDFC526501A4100766F97 /* MTBReportViewController.m in Sources */,
+				73ABE2732657BB85005B6FCA /* MTBSidebarMenu.m in Sources */,
+				73A2168E2653DF4F00045303 /* MTBGitHubReleases.m in Sources */,
 				1B3F2F9E13E59639006A8333 /* ComposeBackEnd+MailTrackerBlocker.m in Sources */,
+				737EDFC426501A4100766F97 /* MTBReportViewModel.m in Sources */,
+				737675362652A9DF00363783 /* MailApp+MailTrackerBlocker.m in Sources */,
+				737EDFCD26501A4100766F97 /* MTBCoreDataManager.m in Sources */,
 				1B7E4DB714EEEAD90069E69C /* JRLPSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3866,6 +3974,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				737EDFAD26501A3E00766F97 /* CDCourses.xcdatamodel */,
+			);
+			currentVersion = 737EDFAD26501A3E00766F97 /* CDCourses.xcdatamodel */;
+			path = Reports.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
 }

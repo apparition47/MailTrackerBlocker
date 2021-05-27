@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MTBReportPopover">
+            <connections>
+                <outlet property="trackerDescriptionLabel" destination="HW9-Rf-LDY" id="t2Y-Gl-dGR"/>
+                <outlet property="trackerNameLabel" destination="m69-cz-IjM" id="ttW-NJ-j0k"/>
+                <outlet property="view" destination="0kg-w9-yn9" id="fAV-sF-e2u"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <viewController id="ZYH-tJ-A3H" userLabel="Popover View Controller">
+            <connections>
+                <outlet property="view" destination="0kg-w9-yn9" id="R9X-Is-Ts7"/>
+            </connections>
+        </viewController>
+        <popover id="gVD-rG-xlu">
+            <connections>
+                <outlet property="contentViewController" destination="ZYH-tJ-A3H" id="jMl-Hi-7ii"/>
+            </connections>
+        </popover>
+        <customView id="0kg-w9-yn9">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GzM-jn-FqP">
+                    <rect key="frame" x="8" y="24" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="2i0-NV-h4J"/>
+                        <constraint firstAttribute="height" constant="40" id="sfy-Np-pXJ"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="PrivacyReportPopoverShield" id="64g-l1-GJO"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HW9-Rf-LDY">
+                    <rect key="frame" x="54" y="16" width="259" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="255" id="lvP-ZQ-AeI"/>
+                    </constraints>
+                    <textFieldCell key="cell" title="Tracker detected" id="OGc-Mw-u2A">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LH0-Us-8gD">
+                    <rect key="frame" x="327" y="4" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="DZT-8k-wUD"/>
+                        <constraint firstAttribute="height" constant="32" id="VZc-Gb-AN6"/>
+                    </constraints>
+                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="info-circle" imagePosition="only" alignment="center" inset="2" id="qkl-hZ-4uE">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="reportPressed:" target="-2" id="L2E-su-ZSi"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m69-cz-IjM">
+                    <rect key="frame" x="54" y="48" width="88" height="16"/>
+                    <textFieldCell key="cell" title="example.com" id="YCq-jV-tcp">
+                        <font key="font" metaFont="systemSemibold" size="13"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Nj-KX-2al">
+                    <rect key="frame" x="327" y="40" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="g5m-I7-Uio"/>
+                        <constraint firstAttribute="width" constant="32" id="nNV-vy-g43"/>
+                    </constraints>
+                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="ellipsis-vertical" imagePosition="only" alignment="center" inset="2" id="xdC-OA-fW1">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="sidebarPressed:" target="-2" id="9EN-bO-pVy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="GzM-jn-FqP" firstAttribute="leading" secondItem="0kg-w9-yn9" secondAttribute="leading" constant="8" id="7Jv-gk-gGt"/>
+                <constraint firstAttribute="trailing" secondItem="LH0-Us-8gD" secondAttribute="trailing" constant="8" id="8yD-5p-8hE"/>
+                <constraint firstItem="HW9-Rf-LDY" firstAttribute="trailing" secondItem="LH0-Us-8gD" secondAttribute="leading" constant="-16" id="FJZ-SY-OHx"/>
+                <constraint firstItem="LH0-Us-8gD" firstAttribute="top" secondItem="0Nj-KX-2al" secondAttribute="bottom" constant="4" id="Lj0-sS-6hZ"/>
+                <constraint firstAttribute="bottom" secondItem="HW9-Rf-LDY" secondAttribute="bottom" constant="16" id="YZ2-26-zRq"/>
+                <constraint firstItem="HW9-Rf-LDY" firstAttribute="top" secondItem="m69-cz-IjM" secondAttribute="bottom" constant="16" id="eSZ-N7-qfw"/>
+                <constraint firstItem="m69-cz-IjM" firstAttribute="top" secondItem="GzM-jn-FqP" secondAttribute="top" id="fce-T2-dlW"/>
+                <constraint firstItem="HW9-Rf-LDY" firstAttribute="leading" secondItem="GzM-jn-FqP" secondAttribute="trailing" constant="8" id="gGg-G2-Tqj"/>
+                <constraint firstItem="GzM-jn-FqP" firstAttribute="top" secondItem="0kg-w9-yn9" secondAttribute="top" constant="16" id="m7R-pW-qHh"/>
+                <constraint firstItem="m69-cz-IjM" firstAttribute="leading" secondItem="GzM-jn-FqP" secondAttribute="trailing" constant="8" id="oQX-ah-Ub4"/>
+                <constraint firstItem="0Nj-KX-2al" firstAttribute="top" secondItem="0kg-w9-yn9" secondAttribute="top" constant="8" id="sMj-SM-qoY"/>
+                <constraint firstAttribute="trailing" secondItem="0Nj-KX-2al" secondAttribute="trailing" constant="8" id="wJ5-Du-rJJ"/>
+            </constraints>
+            <point key="canvasLocation" x="-12" y="-189"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="PrivacyReportPopoverShield" width="40" height="40"/>
+        <image name="ellipsis-vertical" width="40" height="40"/>
+        <image name="info-circle" width="40" height="40"/>
+    </resources>
+</document>

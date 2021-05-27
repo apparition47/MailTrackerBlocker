@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MTBUpdateCheckViewController">
+            <connections>
+                <outlet property="autoUpdateCheckButton" destination="FM2-pZ-8wM" id="fe0-u1-MVL"/>
+                <outlet property="changelogButton" destination="ug6-xE-Xo3" id="lie-Ep-yQk"/>
+                <outlet property="closeButton" destination="eT4-79-pAF" id="bCD-Yx-cXH"/>
+                <outlet property="downloadProgress" destination="Ko2-Ps-AwD" id="S3m-gJ-tdI"/>
+                <outlet property="installButton" destination="twJ-oE-lMH" id="Ztq-32-ejj"/>
+                <outlet property="updateStatusLabel" destination="90Z-hU-aYS" id="4LQ-p8-InW"/>
+                <outlet property="view" destination="c22-O7-iKe" id="jpY-cA-N0l"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oma-re-Exb">
+                    <rect key="frame" x="120" y="16" width="270" height="118"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="90Z-hU-aYS">
+                            <rect key="frame" x="-2" y="102" width="163" height="16"/>
+                            <textFieldCell key="cell" selectable="YES" title="You are already up to date" id="G1b-Yh-GpL">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <progressIndicator maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-Ps-AwD">
+                            <rect key="frame" x="0.0" y="67" width="260" height="20"/>
+                        </progressIndicator>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FM2-pZ-8wM">
+                            <rect key="frame" x="-2" y="35" width="268" height="18"/>
+                            <buttonCell key="cell" type="check" title="Automatically check online for updates?" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="jPJ-Fg-wi1">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="autoUpdatePressed:" target="-2" id="4ee-yk-DcU"/>
+                            </connections>
+                        </button>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJv-2Z-MWW">
+                            <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
+                            <subviews>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ug6-xE-Xo3">
+                                    <rect key="frame" x="-7" y="-7" width="121" height="32"/>
+                                    <buttonCell key="cell" type="push" title="Release Notes" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6eY-oA-3g3">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                        <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="changelogPressed:" target="-2" id="YAA-Qe-VvX"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="twJ-oE-lMH">
+                                    <rect key="frame" x="108" y="-7" width="79" height="32"/>
+                                    <buttonCell key="cell" type="push" title="Update" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP0-2l-PIr">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="installPressed:" target="-2" id="xt0-z2-yNj"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-79-pAF">
+                                    <rect key="frame" x="181" y="-7" width="76" height="32"/>
+                                    <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0Tq-tU-ezs">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                        <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="closePressed:" target="-2" id="2jz-CJ-LZs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vI2-e0-jB0">
+                    <rect key="frame" x="28" y="69" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="inactive" id="4lF-jw-6jr"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhJ-Lj-XU7">
+                    <rect key="frame" x="41" y="45" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="active" id="otY-b6-9Bm"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="oma-re-Exb" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="120" id="4zW-XF-ncb"/>
+                <constraint firstItem="oma-re-Exb" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="16" id="QrK-8u-HD5"/>
+                <constraint firstAttribute="bottom" secondItem="oma-re-Exb" secondAttribute="bottom" constant="16" id="hEz-io-JgW"/>
+                <constraint firstAttribute="trailing" secondItem="oma-re-Exb" secondAttribute="trailing" constant="16" id="wyr-PS-unW"/>
+            </constraints>
+            <point key="canvasLocation" x="-511" y="-27"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="active" width="12" height="12"/>
+        <image name="inactive" width="12" height="12"/>
+    </resources>
+</document>

@@ -50,6 +50,10 @@
             @"observeValueForKeyPath:ofObject:change:context:",
             @"dealloc",
             @"viewDidLoad"
+        ],
+        @"MailApp": @[
+            @"applicationWillTerminate:",
+            @"applicationDidBecomeActive:"
         ]
     };
 }

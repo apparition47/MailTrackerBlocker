@@ -12,12 +12,16 @@
 #import "NSObject+LPDynamicIvars.h"
 #import "WebDocumentGenerator.h"
 #import "MTBMailBundle.h"
+#import "MTBReportPopover.h"
+#import "MTBReportingManager.h"
 
 #define mailself ((HeaderViewController *)self)
 
 @implementation HeaderViewController_MailTrackerBlocker
 
 NSString * const kBlockingBtn = @"kBlockingBtn";
+
+#pragma mark - Lifecycle
 
 - (void)MTBDealloc {
     [mailself _unregisterKVOForRepresentedObject:self];
@@ -26,13 +30,20 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
 
 - (void)MTBViewDidLoad {
     [self MTBViewDidLoad];
+    [self setupButtonView];
+    [mailself _registerKVOForRepresentedObject:self];
+}
+
+#pragma mark - Buttons
+
+-(void)setupButtonView {
     NSButton *blockingBtn;
     if (@available(macOS 10.12, *)) {
-        blockingBtn = [NSButton buttonWithImage:[NSImage imageNamed:@"inactive"] target:self action:@selector(didPressBlockingBtn)];
+        blockingBtn = [NSButton buttonWithImage:[NSImage imageNamed:@"inactive"] target:self action:@selector(didPressBlockingBtn:)];
     } else {
         blockingBtn = [[NSButton alloc] init];
         [blockingBtn setImage: [NSImage imageNamed:@"inactive"]];
-        [blockingBtn setAction:@selector(didPressBlockingBtn)];
+        [blockingBtn setAction:@selector(didPressBlockingBtn:)];
         [blockingBtn setTarget:self];
     }
     
@@ -45,19 +56,21 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     [[mailself view] addSubview:blockingBtn];
     
     blockingBtn.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    // Big Sur: attachment icons were moved inbetween the dateView and detailsLink
+    // which reduces space for our button
     if (@available(macOS 11.0, *)) {
         [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor].active = YES;
-        [blockingBtn.trailingAnchor constraintEqualToAnchor:mailself.detailsLink.leadingAnchor].active = YES;
+        if (mailself.detailsLink.isHidden) {
+            [blockingBtn.trailingAnchor constraintEqualToAnchor:mailself.dateView.trailingAnchor].active = YES;
+        } else {
+            [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor constant:8].active = YES;
+        }
     } else {
         [blockingBtn.topAnchor constraintEqualToAnchor:mailself.detailsLink.bottomAnchor constant:8].active = YES;
         [blockingBtn.trailingAnchor constraintEqualToAnchor:mailself.detailsLink.trailingAnchor].active = YES;
     }
-
-    [mailself _registerKVOForRepresentedObject:self];
-
 }
-
-#pragma mark - Buttons
 
 -(void) setButton:(NSButton *)button fontColor:(NSColor *)color {
     NSMutableAttributedString *colorTitle = [[NSMutableAttributedString alloc] initWithAttributedString:[button attributedTitle]];
@@ -67,25 +80,23 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     [button setAttributedTitle:colorTitle];
 }
 
-- (void)didPressBlockingBtn {
+- (void)didPressBlockingBtn:(NSButton*)sender {
     MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert addButtonWithTitle:@"OK"];
-    [alert setMessageText: @"MailTrackerBlocker"];
-    if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {
-        [alert setInformativeText: GMLocalizedString(@"BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES")];
-    } else if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC) {
-        [alert setInformativeText: GMLocalizedString(@"BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC")];
-    } else {
-        NSString *hardMatchText = [NSString stringWithFormat:GMLocalizedString(@"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH"), [blkMsg detectedTracker], [blkMsg detectedTracker]];
-        [alert setInformativeText: hardMatchText];
-    }
-    [alert setAlertStyle: NSAlertStyleWarning];
-    [alert beginSheetModalForWindow:[[mailself view] window] completionHandler:nil];
+    
+    MTBReportPopover *reportPopover = [[MTBReportPopover alloc] initWithNibName:@"MTBReportPopover" bundle:[MTBMailBundle bundle]];
+    reportPopover.blockedMessage = blkMsg;
+    NSRect entryRect = [sender convertRect:sender.bounds
+                                  toView:mailself.view];
+    [mailself presentViewController:reportPopover asPopoverRelativeToRect:entryRect ofView:mailself.view preferredEdge:NSMaxYEdge behavior:NSPopoverBehaviorSemitransient];
 }
 
 - (void)updateButtonState {
-    MTBBlockedMessage *blkMsg = [[mailself representedObject]  getIvar:@"MTBBlockedMessage"];
+    MTBBlockedMessage *blkMsg = [[mailself representedObject] getIvar:@"MTBBlockedMessage"];
+    
+    // report hit
+    [[MTBReportingManager sharedInstance] markEmailRead:blkMsg];
+    
+    // update UI
     NSButton *blockingBtn = [mailself getIvar:kBlockingBtn];
     [blockingBtn setEnabled:YES];
     if ([blkMsg certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {

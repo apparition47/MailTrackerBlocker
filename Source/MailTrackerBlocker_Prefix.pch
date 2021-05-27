@@ -7,7 +7,7 @@
 extern int MTBMailLoggingLevel;
 
 #define DebugLog(...) if (MTBMailLoggingLevel) {CCLog(__VA_ARGS__);}
-#define GMLocalizedString(key) \
+#define MTBLocalizedString(key) \
 [MTBMailBundle localizedStringForKey:(key)]
 
 /**

@@ -11,12 +11,15 @@
 #import "MTBBlockedMessage.h"
 #import "NSObject+LPDynamicIvars.h"
 #import "ConversationMember.h"
+#import "MCMessage.h"
+#import "MCMessageHeaders.h"
 
 #define mailself ((WebDocumentGenerator *)self)
 @implementation WebDocumentGenerator_MailTrackerBlocker
 
 - (void)MTBSetWebDocument:(MUIWebDocument *)webDocument {
-    MTBBlockedMessage *blkMsg = [[MTBBlockedMessage alloc] initWithHtml:webDocument.html];
+    ConversationMember *member = [mailself conversationMember];
+    MTBBlockedMessage *blkMsg = [[MTBBlockedMessage alloc] initWithHtml:webDocument.html from:member.sender subject:member.subject deeplink:member.originalMessage.URLString];
     [[mailself conversationMember] setIvar: @"MTBBlockedMessage" value: blkMsg];
     webDocument.html = [blkMsg sanitizedHtml];
     [self MTBSetWebDocument:webDocument];

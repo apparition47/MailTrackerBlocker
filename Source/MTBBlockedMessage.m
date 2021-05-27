@@ -22,13 +22,32 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
 
 @synthesize trackers, delegate;
 
+- (id)init {
+    if( self = [super init]) {
+        trackers = [[NSMutableSet alloc] init];
+    }
+    return self;
+}
+
 - (id)initWithHtml:(NSString*)html {
     self = [self init];
     if (!self) {
         return nil;
     }
-    trackers = [[NSMutableSet alloc] init];
+    
     _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
+    return self;
+}
+
+- (id)initWithHtml:(NSString*)html from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink {
+    self = [self init];
+    if (!self) {
+        return nil;
+    }
+    _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
+    _deeplinkField = deeplink;
+    _fromField = from;
+    _subjectField = subject;
     return self;
 }
 
