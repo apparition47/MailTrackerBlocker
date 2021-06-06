@@ -72,6 +72,7 @@ typedef enum VIEW_STATE: NSUInteger {
 #pragma mark - Private
 
 -(void)setupView {
+    [downloadProgress setDisplayedWhenStopped:NO];
     changelogButton.stringValue = MTBLocalizedString(@"RELEASE_NOTES");
     installButton.stringValue = MTBLocalizedString(@"UPDATE_INSTALL");
     closeButton.stringValue = MTBLocalizedString(@"UPDATE_CANCEL");
