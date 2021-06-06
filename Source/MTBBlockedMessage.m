@@ -209,6 +209,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"DotDigital": @[@"trackedlink.net", @"dmtrk.net"],
         @"Driftem": @[@"driftem.com/ltrack"],
+        @"Drop": @[@"pixel.massdrop.com/open/pixel.gif", @"t.drop.com/q/"],
         @"Dropbox": @[@"dropbox.com/l/"],
         @"DZone": @[@"mailer.dzone.com/open.php"],
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
