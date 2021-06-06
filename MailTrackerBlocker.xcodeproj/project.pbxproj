@@ -27,7 +27,6 @@
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		737675362652A9DF00363783 /* MailApp+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 737675352652A9DF00363783 /* MailApp+MailTrackerBlocker.m */; };
 		737C5508265FB778009E4D06 /* MTBPackageValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 737C5507265FB778009E4D06 /* MTBPackageValidator.m */; };
-		737EDFC126501A4100766F97 /* NSColor+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFAA26501A3D00766F97 /* NSColor+Style.m */; };
 		737EDFC226501A4100766F97 /* Reports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */; };
 		737EDFC326501A4100766F97 /* MTBReportPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */; };
 		737EDFC426501A4100766F97 /* MTBReportViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFB126501A3E00766F97 /* MTBReportViewModel.m */; };
@@ -123,8 +122,6 @@
 		737675352652A9DF00363783 /* MailApp+MailTrackerBlocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MailApp+MailTrackerBlocker.m"; sourceTree = "<group>"; };
 		737C5506265FB778009E4D06 /* MTBPackageValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBPackageValidator.h; sourceTree = "<group>"; };
 		737C5507265FB778009E4D06 /* MTBPackageValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBPackageValidator.m; sourceTree = "<group>"; };
-		737EDFA926501A3D00766F97 /* NSColor+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Style.h"; sourceTree = "<group>"; };
-		737EDFAA26501A3D00766F97 /* NSColor+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Style.m"; sourceTree = "<group>"; };
 		737EDFAB26501A3D00766F97 /* NSManagedObjectContext+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Merge.h"; sourceTree = "<group>"; };
 		737EDFAD26501A3E00766F97 /* CDCourses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDCourses.xcdatamodel; sourceTree = "<group>"; };
 		737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTBReportPopover.xib; sourceTree = "<group>"; };
@@ -1748,7 +1745,6 @@
 				73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */,
 				73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */,
 				73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */,
-				737EDFAA26501A3D00766F97 /* NSColor+Style.m */,
 				737EDFB926501A4000766F97 /* NSManagedObjectContext+Merge.m */,
 				73A2168D2653DF4F00045303 /* MTBGitHubReleases.m */,
 				737C5507265FB778009E4D06 /* MTBPackageValidator.m */,
@@ -1822,7 +1818,6 @@
 				73BB027C24BACA08009BBD68 /* MTBBlockedMessage.h */,
 				73BB028124BAD379009BBD68 /* NSObject+LPDynamicIvars.h */,
 				73D0B19E24D689ED00CAC03F /* NSString+RegEx.h */,
-				737EDFA926501A3D00766F97 /* NSColor+Style.h */,
 				737EDFAB26501A3D00766F97 /* NSManagedObjectContext+Merge.h */,
 				73A2168C2653DF4F00045303 /* MTBGitHubReleases.h */,
 				737C5506265FB778009E4D06 /* MTBPackageValidator.h */,
@@ -3573,7 +3568,6 @@
 				73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */,
 				1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m in Sources */,
 				737EDFC726501A4100766F97 /* MTBReportPopover.m in Sources */,
-				737EDFC126501A4100766F97 /* NSColor+Style.m in Sources */,
 				73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
 				738936162651222C008F4DDB /* MTBReportingManager.m in Sources */,

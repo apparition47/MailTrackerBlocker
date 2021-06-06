@@ -240,19 +240,6 @@ int MTBMailLoggingLevel = 0;
     return mailError;
 }
 
-+(BOOL)isAppearanceDark {
-    NSAppearance * appearance = [NSApp effectiveAppearance];
-    if (@available(macOS 10.14, *)) {
-        NSAppearanceName basicAppearance = [appearance bestMatchFromAppearancesWithNames:@[
-            NSAppearanceNameAqua,
-            NSAppearanceNameDarkAqua
-        ]];
-        return [basicAppearance isEqualToString:NSAppearanceNameDarkAqua];
-    } else {
-        return NO;
-    }
-}
-
 #pragma mark - mailbundle Application Support directory
 
 + (NSURL *)bundleApplicationSupportDirectory {

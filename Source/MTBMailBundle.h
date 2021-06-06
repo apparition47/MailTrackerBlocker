@@ -76,7 +76,6 @@
 + (Class)resolveMailClassFromName:(NSString *)name;
 
 + (NSError *)errorWithCode:(NSInteger)code userInfo:(nullable NSDictionary *)userInfo;
-+(BOOL)isAppearanceDark;
 + (NSURL *)bundleApplicationSupportDirectory;
 @end
 

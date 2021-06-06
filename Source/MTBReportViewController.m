@@ -7,7 +7,6 @@
 
 #import "MTBMailBundle.h"
 #import "MTBReportViewController.h"
-#import "NSColor+Style.h"
 #import <AppKit/AppKit.h>
 #import "Reports+CoreDataModel.h"
 #import "MTBReportViewModel.h"
@@ -63,7 +62,31 @@
     [self fetchData];
 }
 
+-(void)viewDidAppear {
+    [super viewDidAppear];
+    [self addObserver:self forKeyPath:@"view.effectiveAppearance" options:0 context:nil];
+}
+
+-(void)viewDidDisappear {
+    [super viewDidDisappear];
+    [self removeObserver:self forKeyPath:@"view.effectiveAppearance"];
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context {
+    if ([keyPath isEqualToString:@"view.effectiveAppearance"]) {
+        [self themeDidChange];
+    }
+}
+    
 #pragma mark - Private
+
+-(void)themeDidChange {
+    [self setStatTileStyleFor:trackersPreventedView];
+    [self setStatTileStyleFor:emailRatioView];
+    [self setStatTileStyleFor:mostFreqTrackerView];
+}
 
 -(void)setupView {
     _taglineHeaderLabel.stringValue = MTBLocalizedString(@"TAGLINE");
@@ -80,9 +103,7 @@
     preferredContentSize = CGRectMake(0, 0, 656, 838).size; // prevent window resize
 
     [self showMoreHelpPressed:nil];
-    [self setStatTileStyleFor:trackersPreventedView];
-    [self setStatTileStyleFor:emailRatioView];
-    [self setStatTileStyleFor:mostFreqTrackerView];
+    [self themeDidChange];
 
     [_trackerOutlineView setDelegate:self];
     [_trackerOutlineView setDataSource:self];
@@ -133,10 +154,30 @@
 
 #pragma mark - Private
 
+-(BOOL)isAppearanceDark {
+    NSAppearance * appearance = self.view.effectiveAppearance;
+    if (@available(macOS 10.14, *)) {
+        NSAppearanceName basicAppearance = [appearance bestMatchFromAppearancesWithNames:@[
+            NSAppearanceNameAqua,
+            NSAppearanceNameDarkAqua
+        ]];
+        return [basicAppearance isEqualToString:NSAppearanceNameDarkAqua];
+    } else {
+        return NO;
+    }
+}
+
+-(NSColor*)statCellBackground {
+    if ([self isAppearanceDark]) {
+        return [NSColor colorWithRed: 0.18 green: 0.19 blue: 0.20 alpha: 1.00];
+    }
+    return [NSColor colorWithRed: 0.95 green: 0.95 blue: 0.95 alpha: 1.00];
+}
+
 -(void)setStatTileStyleFor:(NSView*)view {
     view.wantsLayer = YES;
     view.layer.cornerRadius = 8.0;
-    view.layer.backgroundColor = [[NSColor mtbStatCellBackground] CGColor];
+    view.layer.backgroundColor = [[self statCellBackground] CGColor];
 }
 
 #pragma mark - NSOutlineViewDelegate
