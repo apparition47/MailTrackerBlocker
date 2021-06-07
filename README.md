@@ -6,7 +6,7 @@ Browse your inbox privately with images displayed once again.
 
 Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 
-<p align="center"><img width="440" src="https://user-images.githubusercontent.com/3298414/109422170-c4d70c00-7a1d-11eb-9e5a-bf5a8e36d16d.jpg"></p>
+<p align="center"><img width="600" src="https://user-images.githubusercontent.com/3298414/121038136-00d2f780-c7eb-11eb-8e1a-d7d1fafc2e15.jpg"></p>
 
 ```diff
 <a style="color: #770506;">
