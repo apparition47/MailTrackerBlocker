@@ -431,6 +431,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"trackapp.io/static/img/track.gif"
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
+        @"Twitch": @[@"spade.twitch.tv/track"],
         @"Uber": @[@"click.uber.com/q/"],
         @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
