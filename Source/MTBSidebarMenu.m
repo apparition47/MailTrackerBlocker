@@ -41,6 +41,13 @@
 #pragma mark - IBAction
 
 -(IBAction)trackerReportPressed:(id)sender {
+    for (NSWindow *window in [[NSApplication sharedApplication] windows]) {
+        if ([window.contentViewController isKindOfClass:[MTBReportViewController class]]) {
+            [window makeKeyAndOrderFront:self];
+            return;
+        }
+    }
+    
     NSViewController *vc = [[MTBReportViewController alloc] initWithNibName:@"MTBReportViewController" bundle:[MTBMailBundle bundle]];
     
     NSWindow *window = [[NSWindow alloc] init];
@@ -57,6 +64,13 @@
 }
 
 -(IBAction)checkForUpdatesPressed:(id)sender {
+    for (NSWindow *window in [[NSApplication sharedApplication] windows]) {
+        if ([window.contentViewController isKindOfClass:[MTBUpdateCheckViewController class]]) {
+            [window makeKeyAndOrderFront:self];
+            return;
+        }
+    }
+    
     MTBUpdateManager *updater = [[MTBUpdateManager alloc] init];
     NSViewController *vc = [[MTBUpdateCheckViewController alloc] initWithNibWithUpdateURL:nil updater:updater];
 

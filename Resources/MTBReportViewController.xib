@@ -33,10 +33,10 @@
             <rect key="frame" x="0.0" y="0.0" width="842" height="832"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ8-V8-iyZ">
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ8-V8-iyZ">
                     <rect key="frame" x="0.0" y="0.0" width="842" height="832"/>
                     <clipView key="contentView" id="3mG-Gg-zn6">
-                        <rect key="frame" x="1" y="1" width="825" height="830"/>
+                        <rect key="frame" x="1" y="1" width="840" height="830"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRn-TB-wfM">
@@ -46,7 +46,7 @@
                                         <rect key="frame" x="48" y="500" width="746" height="284"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Nq-Vg-Fwu">
-                                                <rect key="frame" x="0.0" y="214" width="57" height="70"/>
+                                                <rect key="frame" x="0.0" y="227" width="57" height="57"/>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="PrivacyReportShield" id="5Ai-Em-H01"/>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-bQ-6HV">
@@ -367,8 +367,8 @@
                         <rect key="frame" x="-100" y="-100" width="639" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Ogl-Fw-bmA">
-                        <rect key="frame" x="826" y="1" width="15" height="830"/>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Ogl-Fw-bmA">
+                        <rect key="frame" x="-100" y="-100" width="15" height="830"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
@@ -387,6 +387,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="PrivacyReportShield" width="57" height="70"/>
+        <image name="PrivacyReportShield" width="57" height="57"/>
     </resources>
 </document>

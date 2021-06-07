@@ -89,6 +89,12 @@
 }
 
 -(void)setupView {
+    // match Big Sur NSFontTextStyleTitle1 style
+    [_taglineHeaderLabel setFont:[NSFont systemFontOfSize:22]];
+    [_emailRatioLabel setFont:[NSFont systemFontOfSize:22]];
+    [_trackersPreventedLabel setFont:[NSFont systemFontOfSize:22]];
+    [_mostFreqTrackerLabel setFont:[NSFont systemFontOfSize:22]];
+    
     _taglineHeaderLabel.stringValue = MTBLocalizedString(@"TAGLINE");
     [_faqShowButton setTitle:!_helpStackView.isHidden ? MTBLocalizedString(@"SHOW_LESS_DETAIL") : MTBLocalizedString(@"SHOW_MORE_DETAIL")];
     _emailRatioHeaderLabel.stringValue = MTBLocalizedString(@"TRACKED_EMAILS_RATIO_STAT");
@@ -100,7 +106,8 @@
     _faqHeaderLabel.stringValue = MTBLocalizedString(@"WHAT_ARE_TRACKERS");
     _faqDescLabel.stringValue = MTBLocalizedString(@"WHAT_ARE_TRACKERS_DESC");
     
-    preferredContentSize = CGRectMake(0, 0, 656, 838).size; // prevent window resize
+    CGFloat height = MIN(838, [NSScreen mainScreen] ? [NSScreen mainScreen].frame.size.height-100 : CGFLOAT_MAX);
+    preferredContentSize = CGRectMake(0, 0, 656, height).size; // prevent window resize
 
     [self showMoreHelpPressed:nil];
     [self themeDidChange];

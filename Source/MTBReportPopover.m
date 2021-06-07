@@ -45,10 +45,18 @@
 
     [targetPopover showRelativeToRect: entryRect
                             ofView: self.view
-                     preferredEdge: NSMaxXEdge];
+                     preferredEdge: NSMaxYEdge];
 }
 
 -(IBAction)reportPressed:(NSButton*)sender {
+    for (NSWindow *window in [[NSApplication sharedApplication] windows]) {
+        if ([window.contentViewController isKindOfClass:[MTBReportViewController class]]) {
+            [window makeKeyAndOrderFront:self];
+            [self dismissViewController:self];
+            return;
+        }
+    }
+    
     NSViewController *vc = [[MTBReportViewController alloc] initWithNibName:@"MTBReportViewController" bundle:[MTBMailBundle bundle]];
     
     NSWindow *window = [[NSWindow alloc] init];

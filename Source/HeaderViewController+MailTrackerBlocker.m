@@ -87,7 +87,7 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     reportPopover.blockedMessage = blkMsg;
     NSRect entryRect = [sender convertRect:sender.bounds
                                   toView:mailself.view];
-    [mailself presentViewController:reportPopover asPopoverRelativeToRect:entryRect ofView:mailself.view preferredEdge:NSMaxYEdge behavior:NSPopoverBehaviorSemitransient];
+    [mailself presentViewController:reportPopover asPopoverRelativeToRect:entryRect ofView:mailself.view preferredEdge:NSMaxYEdge behavior:NSPopoverBehaviorTransient];
 }
 
 - (void)updateButtonState {
