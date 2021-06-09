@@ -13,6 +13,7 @@
 -(void)scheduleCheck;
 -(void)requestAutoUpdatePermissionWith:(void (^)(BOOL granted))completion;
 -(void)checkBundleUpdateAvailableWith:(void (^)(NSURL *latestDownloadURL))completion;
+-(void)checkBundleUpdateAvailableManuallyWith:(void (^)(NSURL *latestDownloadURL))completion;
 -(void)downloadFromRemote:(NSURL*)pkgDownloadURL completion:(void (^)(NSURL *pkgLocalURL, NSError *error))completion;
 
 @end

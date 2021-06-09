@@ -11,7 +11,7 @@ static NSString *const MTBUserDefaultsPrefix = @"_mtb_";
 
 NSString *const kMTBIsFirstStartupKey = @"IsFirstStartup";
 NSString *const kMTBIsAutoUpdateCheckAllowedKey = @"IsAutoUpdateCheckAllowed";
-
+NSString *const kMTBLastUpdateCheckDateKey = @"LastUpdateCheckDate";
 
 @implementation MTBPreferences
 

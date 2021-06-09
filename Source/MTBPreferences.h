@@ -7,8 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *const kMTBIsFirstStartupKey;
-extern NSString *const kMTBIsAutoUpdateCheckAllowedKey;
+extern NSString * _Nonnull const kMTBIsFirstStartupKey;
+extern NSString * _Nonnull const kMTBIsAutoUpdateCheckAllowedKey;
+extern NSString * _Nonnull const kMTBLastUpdateCheckDateKey;
 
 @interface MTBPreferences : NSObject
 +(void)save:(NSString*)key value:(nullable id)value;

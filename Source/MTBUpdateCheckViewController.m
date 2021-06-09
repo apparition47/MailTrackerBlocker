@@ -87,7 +87,7 @@ typedef enum VIEW_STATE: NSUInteger {
         [self downloadUpdate];
     } else {
         __weak typeof(self) weakSelf = self;
-        [updater checkBundleUpdateAvailableWith:^(NSURL *latestDownloadURL) {
+        [updater checkBundleUpdateAvailableManuallyWith:^(NSURL *latestDownloadURL) {
             __strong typeof(self) strongSelf = weakSelf;
             
             strongSelf.preloadedUpdateURL = latestDownloadURL;

@@ -61,6 +61,7 @@ sudo pkgutil --forget com.onefatgiraffe.mailtrackerblocker
 rm -r ~/Library/Containers/com.apple.mail/Data/Library/Application\ Support/com.onefatgiraffe.mailtrackerblocker
 defaults delete com.apple.mail _mtb_IsAutoUpdateCheckAllowed
 defaults delete com.apple.mail _mtb_IsFirstStartup
+defaults delete com.apple.mail _mtb_LastUpdateCheckDate
 ```
 
 
