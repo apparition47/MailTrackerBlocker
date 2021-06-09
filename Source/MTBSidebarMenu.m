@@ -11,6 +11,7 @@
 #import "MTBReportViewController.h"
 #import "MTBUpdateManager.h"
 #import "MTBUpdateCheckViewController.h"
+#import "MTBLicensesViewController.h"
 
 @interface MTBSidebarMenu ()
 #pragma mark - IBOutlet
@@ -98,9 +99,26 @@
 }
 
 -(IBAction)licensesPressed:(id)sender {
-    NSURL *licenseURL = [[MTBMailBundle bundle] URLForResource:@"ACKNOWLEDGEMENTS" withExtension:nil];
-    [[NSWorkspace sharedWorkspace] openURL:licenseURL];
-    [self dismissViewController:self];
+    for (NSWindow *window in [[NSApplication sharedApplication] windows]) {
+        if ([window.contentViewController isKindOfClass:[MTBLicensesViewController class]]) {
+            [window makeKeyAndOrderFront:self];
+            return;
+        }
+    }
+    
+    NSViewController *vc = [[MTBLicensesViewController alloc] initWithNibName:@"MTBLicensesViewController" bundle:[MTBMailBundle bundle]];
+
+    NSWindow *window = [[NSWindow alloc] init];
+    NSUInteger masks = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskTexturedBackground | NSWindowStyleMaskMiniaturizable;
+    [window setStyleMask:masks];
+    [window setContentViewController:vc];
+    [window setTitle:MTBLocalizedString(@"Licenses")];
+    
+    NSWindowController *wc = [[NSWindowController alloc] initWithWindow:window];
+    CGFloat xPos = NSWidth([[window screen] frame])/2 - NSWidth([window frame])/2;
+    CGFloat yPos = NSHeight([[window screen] frame])/2 - NSHeight([window frame])/2;
+    [window setFrame:NSMakeRect(xPos, yPos, NSWidth([window frame]), NSHeight([window frame])) display:YES];
+    [wc showWindow:nil];
 }
 
 -(IBAction)helpPressed:(id)sender {

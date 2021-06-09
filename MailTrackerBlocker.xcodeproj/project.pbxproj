@@ -49,6 +49,8 @@
 		73ABE2732657BB85005B6FCA /* MTBSidebarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
+		73CE06902670D1CD006FB79F /* MTBLicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CE068E2670D1CD006FB79F /* MTBLicensesViewController.m */; };
+		73CE06912670D1CD006FB79F /* MTBLicensesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73CE068F2670D1CD006FB79F /* MTBLicensesViewController.xib */; };
 		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
 		73F69FC224D7194900D5D167 /* possible.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73F69FC124D7194900D5D167 /* possible.pdf */; };
 		73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */; };
@@ -1626,6 +1628,9 @@
 		73C7C02B24B0B499005BE934 /* MFMessageChangeManager_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFMessageChangeManager_macOS.h; sourceTree = "<group>"; };
 		73C7C02C24B0B499005BE934 /* MFEWSSuppressReadReceiptsRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFEWSSuppressReadReceiptsRequestOperation.h; sourceTree = "<group>"; };
 		73C7C02D24B0B499005BE934 /* MFUIMailbox-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFUIMailbox-Protocol.h"; sourceTree = "<group>"; };
+		73CE068D2670D1CD006FB79F /* MTBLicensesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBLicensesViewController.h; sourceTree = "<group>"; };
+		73CE068E2670D1CD006FB79F /* MTBLicensesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBLicensesViewController.m; sourceTree = "<group>"; };
+		73CE068F2670D1CD006FB79F /* MTBLicensesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTBLicensesViewController.xib; sourceTree = "<group>"; };
 		73D0B19E24D689ED00CAC03F /* NSString+RegEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+RegEx.h"; sourceTree = "<group>"; };
 		73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegEx.m"; sourceTree = "<group>"; };
 		73F69FC124D7194900D5D167 /* possible.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = possible.pdf; sourceTree = "<group>"; };
@@ -1689,6 +1694,7 @@
 			isa = PBXGroup;
 			children = (
 				737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */,
+				73CE068F2670D1CD006FB79F /* MTBLicensesViewController.xib */,
 				73ABE26F2657B97D005B6FCA /* MTBSidebarMenu.xib */,
 				737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */,
 				737EDFBD26501A4100766F97 /* MTBReportViewController.xib */,
@@ -1762,6 +1768,7 @@
 				737EDFB226501A3E00766F97 /* MTBReportViewController.m */,
 				739ACCD22655383F00DA6078 /* MTBUpdateCheckViewController.m */,
 				73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */,
+				73CE068E2670D1CD006FB79F /* MTBLicensesViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1806,6 +1813,7 @@
 				737EDFAF26501A3E00766F97 /* MTBReportViewController.h */,
 				739ACCD12655383E00DA6078 /* MTBUpdateCheckViewController.h */,
 				73ABE2712657BB85005B6FCA /* MTBSidebarMenu.h */,
+				73CE068D2670D1CD006FB79F /* MTBLicensesViewController.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -3505,6 +3513,7 @@
 				739ACCD02655360900DA6078 /* MTBUpdateCheckViewController.xib in Resources */,
 				73F69FC224D7194900D5D167 /* possible.pdf in Resources */,
 				7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */,
+				73CE06912670D1CD006FB79F /* MTBLicensesViewController.xib in Resources */,
 				737EDFCC26501A4100766F97 /* MTBReportViewController.xib in Resources */,
 				737EDFC326501A4100766F97 /* MTBReportPopover.xib in Resources */,
 			);
@@ -3563,6 +3572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CE06902670D1CD006FB79F /* MTBLicensesViewController.m in Sources */,
 				73A2168B2653C3E100045303 /* MTBPreferences.m in Sources */,
 				73F7651A24B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m in Sources */,
 				73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */,
