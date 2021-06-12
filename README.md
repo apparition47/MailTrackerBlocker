@@ -23,6 +23,8 @@ Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 
 Apple Mail on macOS 10.11 - 11.x.
 
+(macOS 12 and newer users should enable the built-in Mail Privacy Protection instead!)
+
 ## Setup
 
 ### Installation
