@@ -46,20 +46,18 @@ const int kUpdateCheckDays = 5;
     [self checkBundleUpdateAvailableWith:^(NSURL *latestDownloadURL) {}];
     
     // schedule update check
-    NSBackgroundActivityScheduler *activity = [[NSBackgroundActivityScheduler alloc] initWithIdentifier:@"com.oneefatgiraffe.mailtrackerblocker.updater"];
+    NSBackgroundActivityScheduler *activity = [[NSBackgroundActivityScheduler alloc] initWithIdentifier:@"com.onefatgiraffe.mailtrackerblocker.updater"];
     activity.repeats = YES;
     activity.interval = 24 * 60 * 60; // seconds
     activity.tolerance = 1 * 60 * 60;
-    
-    __weak typeof(self) weakSelf = self;
+
     [activity
     scheduleWithBlock:^(NSBackgroundActivityCompletionHandler completion) {
         if (activity.shouldDefer) {
             completion(NSBackgroundActivityResultDeferred);
             return;
         }
-        __strong typeof(self) strongSelf = weakSelf;
-        [strongSelf checkBundleUpdateAvailableWith:^(NSURL *latestDownloadURL) {
+        [self checkBundleUpdateAvailableWith:^(NSURL *latestDownloadURL) {
             completion(NSBackgroundActivityResultFinished);
         }];
     }];
