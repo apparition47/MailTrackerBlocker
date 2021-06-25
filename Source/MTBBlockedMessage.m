@@ -225,6 +225,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Evite": @[@"pippio.com/api/sync", @"nli.evite.com/imp"],
         @"Expedia": @[@"link.expediamail.com/o/"],
         @"Facebook": @[
+            @"facebook.com/aymt/aa/",
             @"facebook.com/email_open_log_pic.php",
             @"facebookdevelopers.com/trk",
             @"fb.com/trk",
