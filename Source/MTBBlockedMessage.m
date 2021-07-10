@@ -115,12 +115,13 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"ADAC": @[@"mailing.adac.de/tr/"],
         @"Adtriba": @[@"d.adtriba.com"],
         @"Adobe": @[
+            @"/trk\\?t=1&mid=", // Marketo
+            @"t.newsletter.maisonmargiela.com/r/",
             @"demdex.net",
             @"t.info.adobesystems.com",
             @"toutapp.com",
             @"112.2o7.net",
             @"postoffice.adobe.com/po-server/link/open"
-//            @"/trk\\?t=",
         ],
         @"AgileCRM": @[@"agle2.me/open"],
         @"Air Miles": @[@"email.airmiles.ca/O"],
@@ -129,7 +130,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"sjv.io/i/",
             @"gqco.net/i/",
         ],
-        @"Anker": @[@"info.anker.com/trk"],
         @"Amazon": @[@"sellercentral-europe.amazon.com/nms/img/"],
         @"Amazon SES": @[
             @".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/I0/[a-zA-Z0-9-]*/[a-zA-Z0-9-]*",
@@ -155,10 +155,9 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"i.trellomail.com/e/eo",
             @"bitbucket.org/account/notifications/mark-read/"
         ],
-        @"Autodesk": @[@"click.autodesk.com/trk"],
+        @"Aurea": @[@"listserv.international.gc.ca/db/"],
         @"Autopilot": @[@"autopilotmail\\d?.io"],
         @"AWeber": @[@"openrate.aweber.com"],
-        @"Axios": @[@"link.axios.com/img/.*.gif"],
         @"Bananatag": @[@"bl-1.com"],
         @"Bison": @[@"clicks.bisonapp.com"],
         @"Bandsintown": @[@"px1.bandsintown.com/.+.gif"],
@@ -178,7 +177,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"CanaryMail": @[@"canarymail.io(:d+)?/track", @"pardot.com/r/"],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
-        @"Clio": @[@"market.clio.com/trk"],
+        @"Clio": @[@"app.clio.com/tracking_pixel"],
         @"Clockwise": @[@"x.getclockwise.com/q/"],
         @"Close": @[@"close.(io|com)/email_opened", @"dripemail2"],
         @"cloudHQ": @[@"cloudhq.io/mail_track", @"cloudhq-mkt(d).net/mail_track"],
@@ -205,7 +204,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"track.customer.io/e/o",
             @"/e/o/[a-zA-Z0-9]{63}",
         ],
-        @"Dell": @[@"ind.dell.com"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"DotDigital": @[@"trackedlink.net", @"dmtrk.net"],
         @"Driftem": @[@"driftem.com/ltrack"],
@@ -217,8 +215,9 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"EmailTracker.website": @[@"my-email-signature.link"],
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
         @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],
-        @"Etransmail": @[@"ftrans03.com/linktrack/"],
         @"Epic Games": @[@"accts.epicgames.com/O/"],
+        @"Epsilon Interactive": @[@"ind.dell.com"],
+        @"Etransmail": @[@"ftrans03.com/linktrack/"],
         @"EventBrite": @[@"eventbrite.com/emails/action"],
         @"EventsInYourArea": @[@"eventsinyourarea.com/track/"],
         @"EveryAction": @[@"click.everyaction.com/j/"],
@@ -270,7 +269,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Granicus": @[@"govdelivery.com(:d+)?/track"],
         @"GreenMail": @[@"greenmail.co.in"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
-        @"FreshMail": @[@"//o/(\\w){10,}/(\\w){10,}/"],
         @"Homeaway": @[@"trk.homeaway.com"],
         @"Hubspot": @[
             @"t.(hubspotemail|hubspotfree|signaux|senal|signale|sidekickopen|sigopn|hsmsdd)",
@@ -281,7 +279,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Hunter.io": @[@"mltrk.io/pixel"],
         @"iContact": @[@"click.icptrack.com/icp"],
         @"Infusionsoft": @[@"infusionsoft.com/app/emailOpened"],
-        @"Insightly": @[@"insgly.net/api/trk"],
         @"Integral Ad Science": @[@"pixel.adsafeprotected.com"],
         @"Intercom": @[@"via.intercom.io/o", @"intercom-mail[a-zA-Z0-9-.]*.com/(via/)?(o|q)"],
         @"Is-tracking-pixel-api-prod.appspot.com": @[@"is-tracking-pixel-api-prod.appspot.com"],
@@ -312,9 +309,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Mailspring": @[@"getmailspring.com/open"],
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
-        @"Mandrill": @[@"mandrill.S+/track/open.php"],
         @"Mailzter": @[@"mailzter.in/ltrack"],
-        @"Marketo": @[@"resources.marketo.com/trk"/*, @"/trk\\?t="*/],
         @"Medallia": @[@"survey.medallia.[A-Za-z]{2,3}/\\?(.*)&invite-opened=yes"],
         @"Mention": @[@"mention.com/e/o/"],
         @"MetaData": @[@"metadata.io/e1t/o/"],
@@ -367,7 +362,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Postmark": @[@"pstmrk.it"],
         @"Product Hunt": @[@"links.producthunt.com/oo/"],
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
-        @"Questrade": @[@"email.questrade.com/trk\\?t"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
         @"Rakuten": @[
             @"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)",
@@ -380,7 +374,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Rewe": @[@"epost.rewe.de/action/view/"],
         @"Rocketbolt": @[@"email.rocketbolt.com/o/"],
         @"Runtastic": @[@"runtastic.com/mo/"],
-        @"Sailthru": @[@"sailthru.com/trk"],
+        @"Sailthru": @[
+            @"sailthru.com/trk",
+            @"link.axios.com/img/.*.gif"
+        ],
         @"Salesforce": @[
             @"salesforceiq.com/t.png",
             @"beacon.krxd.net",
@@ -390,7 +387,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         ],
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
         @"SalesLoft": @[@"salesloft.com/email_trackers"],
-        @"Segment": @[@"email.segment.com/e/o/"],
+        @"Segment": @[ // Twilio
+            @"api.segment.io/v1/pixel/track",
+            @"email.segment.com/e/o/"
+        ],
         @"Selligent": @[
             @"strongview.com/t",
             @"emsecure.net",
@@ -400,7 +400,8 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Sendinblue": @[
             @"sendibtd.com",
             @"sendibw{2}.com/track/",
-            @"amxe.net/\\S+.gif" // formerly Newsletter2Go
+            @"amxe.net/\\S+.gif", // formerly Newsletter2Go
+            @"r.news.wahlandcase.com/mk/op/"
         ],
         @"SendGrid": @[
             @"sendgrid.(net|com)/wf/open",
@@ -411,7 +412,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         ],
         @"SendPulse": @[@"stat-pulse.com"],
         @"Sendy": @[@"/sendy/t/"],
-        @"Skillsoft": @[@"skillsoft.com/trk"],
         @"Signal": @[@"signl.live/tracker"],
         @"SparkPost": @[
             @"sparkpost.com/q/",
