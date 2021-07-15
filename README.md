@@ -66,6 +66,12 @@ defaults delete com.apple.mail _mtb_IsFirstStartup
 defaults delete com.apple.mail _mtb_LastUpdateCheckDate
 ```
 
+### FAQ
+
+#### Why am I getting a "Incompatible Plug-ins Disabled" message after enabling?
+
+Typically caused by Mac migration or restoration from backup. [Delete Mail's private plugin-ins dir (or DataVaults)](https://c-command.com/spamsieve/help/resetting-mail-s-privat) to reset and resolve this issue.
+
 
 ## Building from source
 
