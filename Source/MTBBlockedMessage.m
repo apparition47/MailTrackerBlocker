@@ -297,7 +297,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         ],
         @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
         @"Mailcastr": @[@"mailcastr.com/image/"],
-        @"Mailchimp": @[@"list-manage.com/track/open.php"],
+        @"Mailchimp": @[
+            @"list-manage.com/track/open.php",
+            @"us\\d+.mailchimp.com/mctx/opens"
+        ],
         @"MailCoral": @[@"mailcoral.com/open"],
         @"Mandrill": @[
             @"mandrill.\\S+/track/open.php",
