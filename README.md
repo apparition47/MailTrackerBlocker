@@ -35,7 +35,7 @@ You can install `MailTrackerBlocker.pkg` directly from the [releases page](https
 $ brew install mailtrackerblocker
 ```
 
-### To enable and use
+### Usage
 
 1. [Additional step for macOS 10.14, 10.15 only] Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`. Note that you'll need to do this again for each update.
 2. Tap on the `ⓧ` button to find out what was blocked.
@@ -66,28 +66,42 @@ defaults delete com.apple.mail _mtb_IsFirstStartup
 defaults delete com.apple.mail _mtb_LastUpdateCheckDate
 ```
 
-### FAQ
+## FAQ
 
-#### Why am I getting a "Incompatible Plug-ins Disabled" message after enabling?
+### Why am I getting a "Incompatible Plug-ins Disabled" message after enabling?
 
-Typically caused by Mac migration or restoration from backup. [Delete Mail's private plugin-ins dir (or DataVaults)](https://c-command.com/spamsieve/help/resetting-mail-s-privat) to reset and resolve this issue.
+Typically caused by Mac migration or restoration from backup. [Delete Mail's private plugin-ins dir (or DataVaults)](https://c-command.com/spamsieve/help/resetting-mail-s-privat) to fix this issue. This dir will automatically be regenerated afterwards.
 
 
 ## Building from source
 
-#### A. Makefile
+Building will automatically install a copy into your `/Library/Mail/Bundles/` dir so if you have a current installation from the public pkg installer, you'll need to remove it due to permissions: `$ rm -rf /Library/Bundles/MailTrackerBlocker.mailbundle`.
+
 ```bash
-git clone https://github.com/apparition47/MailTrackerBlocker.git
+git clone https://github.com/apparition47/MailTrackerBlocker.git --recursive
+```
+
+#### A. Make
+
+You'll need to edit `Makefile` and specify your own `Developer ID Application` (used to sign the plugin binary [for macOS 11 and up]) and `Developer ID Installer` (used to sign the pkg) certificates.
+
+```bash
 cd MailTrackerBlocker
+
+# build-only
 make
+
+# build, sign binary and make pkg
+make all
 ```
 
 #### B. Xcode
 
 1. Give Xcode `Full Disk Access` from `System Preferences > Security & Privacy > Privacy > Full Disk Access` and add Xcode.
      * Required because the mailbundle needs to be installed into `/Library/Mail/Bundles`.
-2. Open the Xcode project, hit build.
-     * Big Sur and up: allow `Finder` access to allow Xcode to copy unsigned directly into sandboxed env
+2. Open the Xcode project.
+3. Change the Signing settings in `Signing & Capabilities` (macOS 11 and up: you'll need to use your own `Developer ID Application` certificate; below macOS 11: set it to none/don't sign) then hit build.
+     * mac OS 11 and up: allow `Finder` access to allow Xcode to copy unsigned directly into sandboxed env
 
 
 ## [Credits](https://github.com/apparition47/MailTrackerBlocker/blob/master/Resources/ACKNOWLEDGEMENTS)
