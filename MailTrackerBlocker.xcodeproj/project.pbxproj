@@ -44,6 +44,7 @@
 		73A216882653C39E00045303 /* MTBUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A216872653C39E00045303 /* MTBUpdateManager.m */; };
 		73A2168B2653C3E100045303 /* MTBPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A2168A2653C3E100045303 /* MTBPreferences.m */; };
 		73A2168E2653DF4F00045303 /* MTBGitHubReleases.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A2168D2653DF4F00045303 /* MTBGitHubReleases.m */; };
+		73A43DD326A2AFE900157391 /* MTBWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A43DD226A2AFE900157391 /* MTBWindowController.m */; };
 		73ABE26E2657B2C6005B6FCA /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ABE26D2657B2C6005B6FCA /* Media.xcassets */; };
 		73ABE2702657B97D005B6FCA /* MTBSidebarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73ABE26F2657B97D005B6FCA /* MTBSidebarMenu.xib */; };
 		73ABE2732657BB85005B6FCA /* MTBSidebarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */; };
@@ -153,6 +154,8 @@
 		73A2168A2653C3E100045303 /* MTBPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBPreferences.m; sourceTree = "<group>"; };
 		73A2168C2653DF4F00045303 /* MTBGitHubReleases.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBGitHubReleases.h; sourceTree = "<group>"; };
 		73A2168D2653DF4F00045303 /* MTBGitHubReleases.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBGitHubReleases.m; sourceTree = "<group>"; };
+		73A43DD126A2AFE900157391 /* MTBWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBWindowController.h; sourceTree = "<group>"; };
+		73A43DD226A2AFE900157391 /* MTBWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBWindowController.m; sourceTree = "<group>"; };
 		73A9275B25ED197400BAE31A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		73ABE26D2657B2C6005B6FCA /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		73ABE26F2657B97D005B6FCA /* MTBSidebarMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTBSidebarMenu.xib; sourceTree = "<group>"; };
@@ -1762,13 +1765,14 @@
 			isa = PBXGroup;
 			children = (
 				1B3F2F9D13E59639006A8333 /* ComposeBackEnd+MailTrackerBlocker.m */,
-				1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */,
 				73F7651924B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.m */,
+				73CE068E2670D1CD006FB79F /* MTBLicensesViewController.m */,
 				737EDFB726501A3F00766F97 /* MTBReportPopover.m */,
 				737EDFB226501A3E00766F97 /* MTBReportViewController.m */,
-				739ACCD22655383F00DA6078 /* MTBUpdateCheckViewController.m */,
 				73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */,
-				73CE068E2670D1CD006FB79F /* MTBLicensesViewController.m */,
+				739ACCD22655383F00DA6078 /* MTBUpdateCheckViewController.m */,
+				73A43DD226A2AFE900157391 /* MTBWindowController.m */,
+				1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1807,13 +1811,14 @@
 			isa = PBXGroup;
 			children = (
 				559A80620838E8890052F47C /* ComposeBackEnd+MailTrackerBlocker.h */,
-				1BD06B9918102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.h */,
 				73F7651824B9F0B0000DD869 /* HeaderViewController+MailTrackerBlocker.h */,
+				73CE068D2670D1CD006FB79F /* MTBLicensesViewController.h */,
 				737EDFB326501A3F00766F97 /* MTBReportPopover.h */,
 				737EDFAF26501A3E00766F97 /* MTBReportViewController.h */,
-				739ACCD12655383E00DA6078 /* MTBUpdateCheckViewController.h */,
 				73ABE2712657BB85005B6FCA /* MTBSidebarMenu.h */,
-				73CE068D2670D1CD006FB79F /* MTBLicensesViewController.h */,
+				739ACCD12655383E00DA6078 /* MTBUpdateCheckViewController.h */,
+				73A43DD126A2AFE900157391 /* MTBWindowController.h */,
+				1BD06B9918102CF300EC9902 /* WebDocumentGenerator+MailTrackerBlocker.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -3581,6 +3586,7 @@
 				73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
 				738936162651222C008F4DDB /* MTBReportingManager.m in Sources */,
+				73A43DD326A2AFE900157391 /* MTBWindowController.m in Sources */,
 				737EDFC926501A4100766F97 /* NSManagedObjectContext+Merge.m in Sources */,
 				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
 				1BADCE7E176B694C009D3785 /* GMCodeInjector.m in Sources */,

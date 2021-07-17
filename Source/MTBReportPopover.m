@@ -10,6 +10,7 @@
 #import "MTBReportViewController.h"
 #import "MTBReportingManager.h"
 #import "MTBSidebarMenu.h"
+#import "MTBWindowController.h"
 
 @interface MTBReportPopover () <NSPopoverDelegate>
 #pragma mark - IBOutlet
@@ -65,7 +66,7 @@
     [window setContentViewController:vc];
     [window setTitle:MTBLocalizedString(@"TRACKER_REPORT")];
     
-    NSWindowController *wc = [[NSWindowController alloc] initWithWindow:window];
+    MTBWindowController *wc = [[MTBWindowController alloc] initWithWindow:window];
     CGFloat xPos = NSWidth([[window screen] frame])/2 - NSWidth([window frame])/2;
     CGFloat yPos = NSHeight([[window screen] frame])/2 - NSHeight([window frame])/2;
     [window setFrame:NSMakeRect(xPos, yPos, NSWidth([window frame]), NSHeight([window frame])) display:YES];
