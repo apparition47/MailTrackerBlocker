@@ -10,7 +10,7 @@
 "TRACKER_COLUMN" = "Tracker";
 "NUMBER_TIMES_TRACKER_SEEN_COLUMN" = "Gezien op e-mail";
 "WHAT_ARE_TRACKERS" = "Wat zijn trackers?";
-"WHAT_ARE_TRACKERS_DESC" = "Trackers kan bijhouden of deze e-mail is geopend, wanneer deze is geopend (en hoe vaak), waar u zich op dat moment bevindt en hoe u deze heeft geopend (telefoon, computer). Sommige van deze gegevens kunnen al gestuurd zijn naar de afzender.";
+"WHAT_ARE_TRACKERS_DESC" = "Trackers kan bijhouden of deze e-mail is geopend, wanneer deze is geopend (en hoe vaak), waar u zich op dat moment bevindt en hoe u deze heeft geopend (telefoon, computer). Deze gegevens hadden aan de afzender kunnen worden gerapporteerd.";
 "TAGLINE" = "MailTrackerBlocker voorkomt dat trackers je over websites volgen.";
 "TRACKERS_PREVENTED_STAT" = "Trackers die verhinderd zijn een profiel van je op te bouwen";
 "TRACKED_EMAILS_RATIO_STAT" = "E-mail die trackers hebben gecontacteerd";

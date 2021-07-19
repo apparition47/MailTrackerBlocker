@@ -10,7 +10,7 @@
 "TRACKER_COLUMN" = "Tracquer";
 "NUMBER_TIMES_TRACKER_SEEN_COLUMN" = "Vu sur des emails";
 "WHAT_ARE_TRACKERS" = "Que sont les tracquers?";
-"WHAT_ARE_TRACKERS_DESC" = "Tracquers peut suivre si vous avez ouvert cet e-mail, quand vous l'avez ouvert (et à quelle fréquence), où vous vous trouvez et comment vous l'avez ouvert (téléphone, ordinateur). Une partie ou la totalité de ces données peuvent avoir été communiquées à l'expéditeur.";
+"WHAT_ARE_TRACKERS_DESC" = "Tracquers peut suivre si vous avez ouvert cet e-mail, quand vous l'avez ouvert (et à quelle fréquence), où vous vous trouvez et comment vous l'avez ouvert (téléphone, ordinateur). Ces données auraient pu être rapportées à leur expéditeur.";
 "TAGLINE" = "MailTrackerBlocker empêche les traqueurs de vous identifier sur les emails.";
 "TRACKERS_PREVENTED_STAT" = "Traqueurs n’ayant pas pu établir votre profil";
 "TRACKED_EMAILS_RATIO_STAT" = "Email ayant contacté des traqueurs";

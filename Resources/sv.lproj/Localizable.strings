@@ -10,7 +10,7 @@
 "TRACKER_COLUMN" = "Tracker";
 "NUMBER_TIMES_TRACKER_SEEN_COLUMN" = "Sedd på mejl";
 "WHAT_ARE_TRACKERS" = "Vad är trackers?";
-"WHAT_ARE_TRACKERS_DESC" = "Trackers kan spåra om du öppnade detta mejl, när du öppnade det (och hur ofta), var du befinner dig och på vilken sorts enhet (mobil, dator). En eller flera av dessa uppgifter kan ha raporterats till avsändaren.";
+"WHAT_ARE_TRACKERS_DESC" = "Trackers kan spåra om du öppnade detta mejl, när du öppnade det (och hur ofta), var du befinner dig och på vilken sorts enhet (mobil, dator). Dessa uppgifter kunde ha rapporterats tillbaka till avsändaren.";
 "TAGLINE" = "MailTrackerBlocker förhindrar att spårare följer dig mellan trackers.";
 "TRACKERS_PREVENTED_STAT" = "Spårare som förhindrades från att profilera dig";
 "TRACKED_EMAILS_RATIO_STAT" = "Trackers som kontaktade spårare";
