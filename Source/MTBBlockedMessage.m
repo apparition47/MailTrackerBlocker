@@ -386,6 +386,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"beacon.krxd.net",
             @"app.relateiq.com/t.png",
             @"nova.collect.igodigital.com",
+            @"click.email.jal.com/open.aspx",
             @"exct.net/open.aspx"
         ],
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
@@ -421,6 +422,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"sparkpostmail2.com",
         ],
         @"Streak": @[@"mailfoogae.appspot.com"],
+        @"Stripe": @[@"\\d{2}.email.stripe.com/CI0/"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],
