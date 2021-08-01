@@ -349,6 +349,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"app.outreach.io",
             @"outrch.com/api/mailings/opened",
             @"getoutreach.com/api/mailings/opened",
+            @"a.science-recruiting.com/api/mailings/opened"
         ],
         @"Patreon": @[@"email.mailgun.patreon.com/o/"],
         @"PayBack": @[@"email.payback.in/a/", @"mail.payback.in/tr/"],
@@ -419,6 +420,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Signal": @[@"signl.live/tracker"],
         @"SparkPost": @[
             @"sparkpost.com/q/",
+            @"post.spmailtechno.com/q/",
             @"sparkpostmail2.com",
         ],
         @"Streak": @[@"mailfoogae.appspot.com"],
