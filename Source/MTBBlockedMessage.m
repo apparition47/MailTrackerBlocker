@@ -104,8 +104,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"1&1": @[@"simg.1und1.de"],
         @"365offers.trade": @[@"trk.365offers.trade"],
         @"Absolute Software": @[@"click.absolutesoftware-email.com/open.aspx"],
-        @"ActionKit": @[@"track.sp.actionkit.com/q/"],
-        @"Active": @[@"click.email.active.com/q"],
         @"ActiveCampaign": @[@"/lt.php(.*)\\?l=open/"],
         @"Act-On": @[@"actonsoftware.com"],
         @"Acoustic": @[
@@ -151,7 +149,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Asana": @[@"app.asana.com/-/open"],
         @"ASUSTeK": @[@"emditpison.asus.com"],
         @"Atlassian": @[
-            @"sptrack.trello.com/q/",
             @"i.trellomail.com/e/eo",
             @"bitbucket.org/account/notifications/mark-read/"
         ],
@@ -178,7 +175,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
         @"Clio": @[@"app.clio.com/tracking_pixel"],
-        @"Clockwise": @[@"x.getclockwise.com/q/"],
         @"Close": @[@"close.(io|com)/email_opened", @"dripemail2"],
         @"cloudHQ": @[@"cloudhq.io/mail_track", @"cloudhq-mkt(d).net/mail_track"],
         @"CNN": @[
@@ -186,7 +182,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"e.newsletters.cnn.com/open/" // zeta global
         ],
         @"Coda": @[@"coda.io/logging/ping"],
-        @"CodePen": @[@"mailer.codepen.io/q"],
         @"ConneQuityMailer": @[@"connequitymailer.com/open/"],
         @"Conrad": @[@"aktuell.conrad.de/g.html"],
         @"Constant Contact": @[@"rs6.net/on.jsp"],
@@ -207,7 +202,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"DotDigital": @[@"trackedlink.net", @"dmtrk.net"],
         @"Driftem": @[@"driftem.com/ltrack"],
-        @"Drop": @[@"pixel.massdrop.com/open/pixel.gif", @"t.drop.com/q/"],
+        @"Drop": @[@"pixel.massdrop.com/open/pixel.gif"],
         @"Dropbox": @[@"dropbox.com/l/"],
         @"DZone": @[@"mailer.dzone.com/open.php"],
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
@@ -234,7 +229,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Flipkart": @[@"flipkart.com/t/open"],
         @"ForMirror": @[@"formirror.com/open/"],
         @"FreeLancer": @[@"freelancer.com/1px.gif"],
-        @"FreeNow": @[@"ablink.mail.free-now.com"],
         @"FreshMail": @[
             @"mail.[a-zA-Z0-9-.]+.pl/o/",
             @"/o/(w){10,}/(w){10,}",
@@ -286,7 +280,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"LaunchBit": @[@"launchbit.com/taz-pixel"],
         @"Lidl": @[@"servicemails.lidl.de/d/d.gif"],
         @"LinkedIn": @[@"linkedin.com/emimp/"],
-        @"Lime": @[@"ablink.marketing.li.me", @"ablink.rider.li.me"],
         @"Litmus": @[@"emltrk.com"],
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
@@ -357,7 +350,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Paytm": @[@"trk.paytmemail.com"],
         @"Peach Aviation": @[
             @"mlapp.flypeach.com/mail/prod/receipt/read.php\\?id=",
-            @"mag.flypeach.com/c/.*.gif"
+            @"mag.flypeach.com/c/.*.gif" // Cuenote
         ],
         @"phpList": @[@"phplist.com/lists/ut.php"],
         @"PipeDrive": @[@"api.nylas.com/open"],
@@ -409,6 +402,15 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"r.news.wahlandcase.com/mk/op/"
         ],
         @"SendGrid": @[
+//            @"ablink.hello.wyze.com/ss/o/",
+//            @"ablink.marketing.li.me", @"ablink.rider.li.me",
+//            @"ablink.mail.free-now.com",
+//            @"ablink.email.etsy.com",
+//            @"ablink.comms.trainline.com",
+//            @"ablink.emails.just-eat.co.uk",
+//            @"ablink.mail.delosdestinations.com",
+//            @"ablink.m1.cratejoy.com",
+            @"/ss/o/.*.gif",
             @"sendgrid.(net|com)/wf/open",
             @"sendgrid.(net|com)/trk",
             @"sendgrid.(net|com)/mpss/o",
@@ -419,9 +421,20 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Sendy": @[@"/sendy/t/"],
         @"Signal": @[@"signl.live/tracker"],
         @"SparkPost": @[
-            @"sparkpost.com/q/",
-            @"post.spmailtechno.com/q/",
+//            @"mailer.codepen.io/q",
+//            @"sptrack.trello.com/q/",
+//            @"track.sp.actionkit.com/q/",
+//            @"click.email.active.com/q/",
+//            @"x.getclockwise.com/q/",
+//            @"t.drop.com/q/",
+//            @"sp.trk.homeaway.com/q/",
+//            @"click.uber.com/q/",
+//            @"opens.zapier.com/q/",
+//            @"sparkpost.com/q/",
+//            @"go.sparkpostmail.com/q/"
+//            @"post.spmailtechno.com/q/",
             @"sparkpostmail2.com",
+            @"/q/(.*)~~/(.*)~/(.*)",
         ],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"Stripe": @[@"\\d{2}.email.stripe.com/CI0/"],
@@ -440,14 +453,13 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
         @"Twitch": @[@"spade.twitch.tv/track"],
-        @"Uber": @[@"click.uber.com/q/"],
+        @"Twitter": @[@"twitter.com/scribe/ibis"],
         @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Validity": @[@"pixel.app.returnpath.net/pixel.gif"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Vice Media": @[@"rs-stripe.refinery29.com/stripe/image"],
-        @"Vrbo": @[@"sp.trk.homeaway.com/q/"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
         @"Webtrekk": @[@"webtrekk.net"],
         @"WildApricot": @[
@@ -461,7 +473,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Yahoo": @[@"a.analytics.yahoo.com/p.pl"],
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
-        @"Zapier": @[@"opens.zapier.com/q/(.*)/(.*)/(.*)~~"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
     };
 }
