@@ -103,8 +103,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
     return @{
         @"1&1": @[@"simg.1und1.de"],
         @"365offers.trade": @[@"trk.365offers.trade"],
-        @"Absolute Software": @[@"click.absolutesoftware-email.com/open.aspx"],
-        @"ActiveCampaign": @[@"/lt.php(.*)\\?l=open/"],
+        @"ActiveCampaign": @[@"/lt.php\\?.*l=open"],
         @"Act-On": @[@"actonsoftware.com"],
         @"Acoustic": @[
             @"open.mkt\\d{2,3}.net/open/log/",
@@ -199,6 +198,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"track.customer.io/e/o",
             @"/e/o/[a-zA-Z0-9]{63}",
         ],
+        @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"DotDigital": @[@"trackedlink.net", @"dmtrk.net"],
         @"Driftem": @[@"driftem.com/ltrack"],
@@ -288,6 +288,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"magento.com/trk",
             @"go.rjmetrics.com"
         ],
+        @"Mailbird": @[@"tracking.getmailbird.com/OpenTrackingPixel/"],
         @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
         @"Mailcastr": @[@"mailcastr.com/image/"],
         @"Mailchimp": @[
@@ -375,13 +376,13 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"sailthru.com/trk",
             @"link.axios.com/img/.*.gif"
         ],
-        @"Salesforce": @[
+        @"Salesforce": @[ // ExactTarget
             @"salesforceiq.com/t.png",
             @"beacon.krxd.net",
             @"app.relateiq.com/t.png",
             @"nova.collect.igodigital.com",
-            @"click.email.jal.com/open.aspx",
-            @"exct.net/open.aspx"
+            @"exct.net/open.aspx",
+            @"click.*./open.aspx\\?"
         ],
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
         @"SalesLoft": @[@"salesloft.com/email_trackers"],
@@ -434,7 +435,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
 //            @"go.sparkpostmail.com/q/"
 //            @"post.spmailtechno.com/q/",
             @"sparkpostmail2.com",
-            @"/q/(.*)~~/(.*)~/(.*)",
+            @"/q/.*~~/.*~/",
         ],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"Stripe": @[@"\\d{2}.email.stripe.com/CI0/"],
@@ -461,6 +462,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Vice Media": @[@"rs-stripe.refinery29.com/stripe/image"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
+        @"We Are Web": @[@"tracking.weareweb.in/index.php/campaigns/"],
         @"Webtrekk": @[@"webtrekk.net"],
         @"WildApricot": @[
             @"wildapricot.com/o/",
