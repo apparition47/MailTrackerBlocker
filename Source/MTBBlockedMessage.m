@@ -329,6 +329,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"nethunt.co(.*)\\?/pixel.gif"
         ],
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
+        @"Omnisend": @[@"/track/.*/.*\\?signature="],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
         @"Oracle": @[
