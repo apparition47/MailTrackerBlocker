@@ -311,6 +311,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Mention": @[@"mention.com/e/o/"],
         @"MetaData": @[@"metadata.io/e1t/o/"],
         @"Microsoft": @[
+            @"svc.dynamics.com/t/i/", // Dynamics 365
             @"mucp.api.account.microsoft.com",
             @"gridinbound.blob.core.windows.net"
         ],
