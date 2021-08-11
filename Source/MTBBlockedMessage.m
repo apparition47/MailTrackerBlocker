@@ -151,7 +151,9 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"i.trellomail.com/e/eo",
             @"bitbucket.org/account/notifications/mark-read/"
         ],
-        @"Aurea": @[@"listserv.international.gc.ca/db/"],
+        @"Aurea": @[ // Lyris
+            @"/db/.*/.*/1.gif",
+        ],
         @"Autopilot": @[@"autopilotmail\\d?.io"],
         @"AWeber": @[@"openrate.aweber.com"],
         @"Bananatag": @[@"bl-1.com"],
@@ -478,6 +480,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
+        @"Zoho Campaigns": @[@"/clicks/.*/.*/open.gif"],
     };
 }
 @end
