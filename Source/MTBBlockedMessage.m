@@ -247,7 +247,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"GetResponse": @[@"/open.html\\?x="],
         @"GitHub": @[@"github.com/notifications/beacon/"],
         @"GitGuardian": @[@"email.mail.gitguardian.com/o/"],
-        @"Glassdoor": @[@"mail.glassdoor.com/pub/as"],
         @"Gmass": @[
             @"ec2-52-26-194-35.us-west-2.compute.amazonaws.com",
             @"link.gmreg\\d.net",
@@ -336,11 +335,12 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
         @"Oracle": @[
-            @"tags.bluekai.com/site",
+            @"tags.bluekai.com/site", // Bluekai
             @"en25.com/e/",
             @"dynect.net/trk.php",
             @"bm5150.com/t/",
             @"bm23.com/t/",
+            @"/pub/as\\?_ri_=.*&_ei_=", // Responsys
             @"[a-zA-Z0-9-.]/e/FooterImages/FooterImage"
         ],
         @"Outreach": @[
