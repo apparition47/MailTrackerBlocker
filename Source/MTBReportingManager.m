@@ -40,14 +40,23 @@
             return;
         }
         Email *email;
-        if (fetchResults.count == 0) {
+        if (fetchResults.count > 0 && ![fetchResults.firstObject.tracker.name isEqualToString:blkMsg.detectedTracker]) {
+            // if tracker has assoc with tracker rule that since changed
+            [context deleteObject:fetchResults.firstObject];
+            
             email = [NSEntityDescription insertNewObjectForEntityForName:@"Email" inManagedObjectContext:context];
             [email setSubject:blkMsg.subjectField];
             [email setDeeplink:blkMsg.deeplinkField];
-        } else {
+            [email setRead_timestamp:[NSDate date]];
+        } else if (fetchResults.count > 0) {
+            // id'd tracker exists and is same as previous record
             email = fetchResults.firstObject;
+        } else {
+            email = [NSEntityDescription insertNewObjectForEntityForName:@"Email" inManagedObjectContext:context];
+            [email setSubject:blkMsg.subjectField];
+            [email setDeeplink:blkMsg.deeplinkField];
+            [email setRead_timestamp:[NSDate date]];
         }
-        [email setRead_timestamp:[NSDate date]];
         
         // check if tracker has been prev saved
         if (blkMsg.detectedTracker != nil) {
