@@ -466,6 +466,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Vice Media": @[@"rs-stripe.refinery29.com/stripe/image"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
+        @"WhatCounts": @[@"whatcounts.com/t"],
         @"We Are Web": @[@"tracking.weareweb.in/index.php/campaigns/"],
         @"Webtrekk": @[@"webtrekk.net"],
         @"WildApricot": @[
