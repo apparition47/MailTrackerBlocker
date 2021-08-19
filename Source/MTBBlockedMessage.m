@@ -110,6 +110,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"mkt\\d{3,4,5}.com/open"
         ],
         @"ADAC": @[@"mailing.adac.de/tr/"],
+        @"AdComplete": @[@"/banman.asp\\?"],
         @"Adtriba": @[@"d.adtriba.com"],
         @"Adobe": @[
             @"/trk\\?t=1&mid=", // Marketo
