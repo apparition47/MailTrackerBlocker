@@ -171,7 +171,7 @@
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yxb-sW-BPd">
                                                         <rect key="frame" x="14" y="58" width="341" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Email that contracted trackers" id="xkz-wW-7lG">
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Email that contacted trackers" id="xkz-wW-7lG">
                                                             <font key="font" usesAppearanceFont="YES"/>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

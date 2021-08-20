@@ -13,7 +13,7 @@
 "WHAT_ARE_TRACKERS_DESC" = "Trackers can track if you opened email, when you opened it (and how often), where you are located and how you opened it (phone, computer). This data could have been reported back to its sender.";
 "TAGLINE" = "MailTrackerBlocker prevents trackers from following you via email.";
 "TRACKERS_PREVENTED_STAT" = "Trackers prevented from profiling you";
-"TRACKED_EMAILS_RATIO_STAT" = "Email that contracted trackers";
+"TRACKED_EMAILS_RATIO_STAT" = "Email that contacted trackers";
 "MOST_FREQUENT_TRACKER_STAT" = "Most contacted tracker";
 "TRACKER_PREVENTED_INSTANCES_STAT" = "%1$@ was prevented from profiling you across %2$d emails";
 "UPDATE_CHECK" = "Check for updates";
