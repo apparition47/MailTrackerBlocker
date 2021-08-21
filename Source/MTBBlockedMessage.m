@@ -128,6 +128,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"sjv.io/i/",
             @"gqco.net/i/",
         ],
+        @"Alida": @[@"www.aaacrossroads.com/c/static_images/.*.png1"], // formerly Vision Critical
         @"Amazon": @[@"sellercentral-europe.amazon.com/nms/img/"],
         @"Amazon SES": @[
             @".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/I0/[a-zA-Z0-9-]*/[a-zA-Z0-9-]*",
@@ -152,6 +153,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"i.trellomail.com/e/eo",
             @"bitbucket.org/account/notifications/mark-read/"
         ],
+        @"AT&T": @[@"clicks.att.com/OCT/eTrac\\?EMAIL_ID=\\d+&amp;src="],
         @"Aurea": @[ // Lyris
             @"/db/.*/.*/1.gif",
         ],
@@ -174,8 +176,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"createsend\\d+.com/.+.gif"
         ],
         @"CanaryMail": @[@"canarymail.io(:d+)?/track", @"pardot.com/r/"],
+        @"Cheetah Digital": @[@"l.info6.citi.com/rts/open.aspx"],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
+        @"ClickMeter": @[@"pixel.watch/"],
         @"Clio": @[@"app.clio.com/tracking_pixel"],
         @"Close": @[@"close.(io|com)/email_opened", @"dripemail2"],
         @"cloudHQ": @[@"cloudhq.io/mail_track", @"cloudhq-mkt(d).net/mail_track"],
@@ -203,10 +207,12 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         ],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
+        @"DocuMatix": @[@"enews.itcu.org/op\\?m="],
         @"DotDigital": @[@"trackedlink.net", @"dmtrk.net"],
         @"Driftem": @[@"driftem.com/ltrack"],
         @"Drop": @[@"pixel.massdrop.com/open/pixel.gif"],
         @"Dropbox": @[@"dropbox.com/l/"],
+        @"Dyson": @[@"tracking.dyson.com/t/"], //.*?k=.*&m=.*&c=
         @"DZone": @[@"mailer.dzone.com/open.php"],
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
         @"EdgeSuite": @[@"epidm.edgesuite.net"],
@@ -463,9 +469,11 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Twitter": @[@"twitter.com/scribe/ibis"],
         @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
+        @"Upland PostUp": @[@"efeedbacktrk.com/.*.gif"],
         @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Validity": @[@"pixel.app.returnpath.net/pixel.gif"],
         @"Vcommission": @[@"tracking.vcommission.com"],
+        @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
         @"Vice Media": @[@"rs-stripe.refinery29.com/stripe/image"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
         @"WhatCounts": @[@"whatcounts.com/t"],
