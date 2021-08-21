@@ -255,6 +255,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"gmtrack.net",
         ],
         @"Gmelius": @[@"gml.email"],
+        @"G/O Media": @[@"r.g-omedia.com/CI0/"],
         @"Google": @[
             @"ad.doubleclick.net/ddm/ad",
             @"google-analytics.com/collect",
