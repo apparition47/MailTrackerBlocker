@@ -103,6 +103,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
     return @{
         @"1&1": @[@"simg.1und1.de"],
         @"365offers.trade": @[@"trk.365offers.trade"],
+        @"3hands": @[@"mi.pbz.jp/"],
         @"ActiveCampaign": @[@"/lt.php\\?.*l=open"],
         @"Act-On": @[@"actonsoftware.com"],
         @"Acoustic": @[
