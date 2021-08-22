@@ -130,7 +130,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"gqco.net/i/",
         ],
         @"Alida": @[@"www.aaacrossroads.com/c/static_images/.*.png1"], // formerly Vision Critical
-        @"Amazon": @[@"sellercentral-europe.amazon.com/nms/img/"],
+        @"Amazon": @[@"sellercentral(-europe|-japan|)?.amazon.(com|co.uk|com.au|sg|in|com.tr|ae|com.br)/nms/img/"],
         @"Amazon SES": @[
             @".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/I0/[a-zA-Z0-9-]*/[a-zA-Z0-9-]*",
             @"aws-track-email-open",
@@ -289,7 +289,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
 //        @"JangoMail": @["/[a-z].z\\?[a-z]="],
         @"LaunchBit": @[@"launchbit.com/taz-pixel"],
         @"Lidl": @[@"servicemails.lidl.de/d/d.gif"],
-        @"LinkedIn": @[@"linkedin.com/emimp/"],
+        @"LinkedIn": @[@"linkedin.com/emimp/", @"help.linkedin.com/rd/"],
         @"Litmus": @[@"emltrk.com"],
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
@@ -457,6 +457,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],
         @"Techgig": @[@"tj_mailer_opened_count_all.php"],
         @"The Atlantic": @[@"links.e.theatlantic.com/open/log/"],
+        @"The Chronicle of Higher Education": @[@"d2uowlhdj52lqx.cloudfront.net/emailbeacon.png"],
         @"TheTopInbox": @[@"thetopinbox.com/track/"],
         @"Thunderhead": @[@"na5.thunderhead.com"],
         @"Tinyletter": @[@"tinyletterapp.com.*\\?open.gif/"],
