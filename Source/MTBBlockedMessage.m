@@ -184,10 +184,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Clio": @[@"app.clio.com/tracking_pixel"],
         @"Close": @[@"close.(io|com)/email_opened", @"dripemail2"],
         @"cloudHQ": @[@"cloudhq.io/mail_track", @"cloudhq-mkt(d).net/mail_track"],
-        @"CNN": @[
-            @"li.cnn.com/imp\\?", // live intent
-            @"e.newsletters.cnn.com/open/" // zeta global
-        ],
         @"Coda": @[@"coda.io/logging/ping"],
         @"ConneQuityMailer": @[@"connequitymailer.com/open/"],
         @"Conrad": @[@"aktuell.conrad.de/g.html"],
@@ -254,7 +250,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"GetNotify": @[@"email81.com/case"],
         @"GetResponse": @[@"/open.html\\?x="],
         @"GitHub": @[@"github.com/notifications/beacon/"],
-        @"GitGuardian": @[@"email.mail.gitguardian.com/o/"],
         @"Gmass": @[
             @"ec2-52-26-194-35.us-west-2.compute.amazonaws.com",
             @"link.gmreg\\d.net",
@@ -291,6 +286,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Lidl": @[@"servicemails.lidl.de/d/d.gif"],
         @"LinkedIn": @[@"linkedin.com/emimp/", @"help.linkedin.com/rd/"],
         @"Litmus": @[@"emltrk.com"],
+        @"LiveIntent": @[@"/imp\\?s=\\d{6}&li="], // imp?s=&li=&e=&p=&stpe= // imp?s=&li=&m=&p=
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
         @"Klaviyo": @[@"trk.klaviyomail.com"],
@@ -310,7 +306,13 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"mandrill.\\S+/track/open.php",
             @"mandrillapp.com/track"
         ],
-        @"Mailgun": @[@"mail.(mailgun|mg).com/o/",],
+        @"Mailgun": @[
+            @"mail.(mailgun|mg).com/o/",
+            @"email.mailgun.patreon.com/o/",
+            @"email.mgdynamic1.webpt.com/o/",
+            @"email.mg.upwork.com/o/",
+            @"email.mail.gitguardian.com/o/",
+        ],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
         @"Mailjet": @[@"mjt.lu/oo", @"links.[a-zA-Z0-9-.]+/oo/"],
         @"Mailspring": @[@"getmailspring.com/open"],
@@ -340,6 +342,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"nethunt.co(.*)\\?/pixel.gif"
         ],
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
+        @"NTT": @[@"club-ntt-west.com/cn-w/cmn/img/1.png"],
         @"Omnisend": @[@"/track/.*/.*\\?signature="],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
@@ -358,7 +361,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"getoutreach.com/api/mailings/opened",
             @"a.science-recruiting.com/api/mailings/opened"
         ],
-        @"Patreon": @[@"email.mailgun.patreon.com/o/"],
         @"PayBack": @[@"email.payback.in/a/", @"mail.payback.in/tr/"],
         @"PayPal": @[@"paypal-communication.com/O/", @"t.paypal.com/ts\\?"],
         @"Paytm": @[@"trk.paytmemail.com"],
@@ -459,6 +461,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"The Atlantic": @[@"links.e.theatlantic.com/open/log/"],
         @"The Chronicle of Higher Education": @[@"d2uowlhdj52lqx.cloudfront.net/emailbeacon.png"],
         @"TheTopInbox": @[@"thetopinbox.com/track/"],
+        @"The Washington Post": @[@"palomaimages.washingtonpost.com/pr2/\\w{32}-beacon-\\d-\\d-\\d{1,2}-\\d"],
         @"Thunderhead": @[@"na5.thunderhead.com"],
         @"Tinyletter": @[@"tinyletterapp.com.*\\?open.gif/"],
         @"ToutApp": @[@"go.toutapp.com"],
@@ -472,7 +475,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upland PostUp": @[@"efeedbacktrk.com/.*.gif"],
-        @"Upwork": @[@"email.mg.upwork.com/o/"],
         @"Validity": @[@"pixel.app.returnpath.net/pixel.gif"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
@@ -494,6 +496,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"YAMM": @[@"yamm-track.appspot"],
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
+        @"Zeta Global": @[@"e.newsletters.cnn.com/open/"],
         @"Zoho Campaigns": @[@"/clicks/.*/.*/open.gif"],
     };
 }
