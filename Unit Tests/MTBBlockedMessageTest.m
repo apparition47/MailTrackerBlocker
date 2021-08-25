@@ -42,6 +42,13 @@
     XCTAssertEqual([[MTBBlockedMessage alloc] initWithHtml:cleanHTML].sanitizedHtml,
                    cleanHTML,
                    @"1px bordered img shouldn't be removed");
+    
+    NSString *borderWidth = @"<img src=\"https://www.example.co.jp/mediapermalink/NI_banner_20210825\" alt=\"This week new items\" width=\"1000\" style=\"display:block; border-style: solid;border-width: 1px 1px; border-color: #000000;\" />";
+    XCTAssertEqualObjects([[MTBBlockedMessage alloc] initWithHtml:borderWidth].sanitizedHtml,
+                          borderWidth);
+    XCTAssertEqual([[MTBBlockedMessage alloc] initWithHtml:borderWidth].sanitizedHtml,
+                   borderWidth,
+                   @"1px bordered img shouldn't be removed");
 }
 
 - (void)testDropboxHyperlinks {
