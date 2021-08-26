@@ -108,7 +108,8 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Act-On": @[@"actonsoftware.com"],
         @"Acoustic": @[
             @"open.mkt\\d{2,3}.net/open/log/",
-            @"mkt\\d{3,4,5}.com/open"
+            @"mkt\\d{3,4,5}.com/open",
+            @"open.t[1234].hyatt.com/eos/v1/"
         ],
         @"ADAC": @[@"mailing.adac.de/tr/"],
         @"AdComplete": @[@"/banman.asp\\?"],
