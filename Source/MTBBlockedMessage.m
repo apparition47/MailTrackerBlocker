@@ -133,7 +133,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Alida": @[@"www.aaacrossroads.com/c/static_images/.*.png1"], // formerly Vision Critical
         @"Amazon": @[@"sellercentral(-europe|-japan|)?.amazon.(com|co.uk|com.au|sg|in|com.tr|ae|com.br)/nms/img/"],
         @"Amazon SES": @[
-            @".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/I0/[a-zA-Z0-9-]*/[a-zA-Z0-9-]*",
+            @".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/I0/\\w{16}-\\w{8}-\\w{4}",
             @"aws-track-email-open",
             @"/gp/r.html",
             @"/gp/forum/email/tracking",
@@ -369,10 +369,11 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"mlapp.flypeach.com/mail/prod/receipt/read.php\\?id=",
             @"mag.flypeach.com/c/.*.gif" // Cuenote
         ],
+        @"PersistIQ": @[@"infinite-stream-5194.herokuapp.com/pixel"],
         @"phpList": @[@"phplist.com/lists/ut.php"],
         @"PipeDrive": @[@"api.nylas.com/open"],
         @"Playdom": @[@"playdom.com/g"],
-        @"Polymail": @[@"polymail.io"],
+        @"Polymail": @[@"polymail.io/v2/z/|share.polymail.io"],
         @"Postmark": @[@"pstmrk.it"],
         @"Product Hunt": @[@"links.producthunt.com/oo/"],
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
@@ -436,6 +437,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         ],
         @"SendPulse": @[@"stat-pulse.com"],
         @"Sendy": @[@"/sendy/t/"],
+        @"Shopify": @[@"/tools/emails/open/"],
         @"Signal": @[@"signl.live/tracker"],
         @"SparkPost": @[
 //            @"mailer.codepen.io/q",
