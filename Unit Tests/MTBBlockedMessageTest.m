@@ -83,6 +83,28 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)testMailgun {
+    MTBBlockedMessage *mail1 = [[MTBBlockedMessage alloc] initWithHtml:@"<img width=\"1px\" height=\"1px\" alt=\" src=\"http://email.mgdynamic1.webpt.com/o/eJwtz81uhCAUQOGnqZtJCCoOsmA3D9Ck3ZvL5aqMIArqaJ--P-n-LM5nNZUCAItEgGMHuLk468c1Q3BYOH0vq0bKsq7b1qqOKsOlqFtRGsFrUatKKXgTXIlKSd4CIa9YAOeLUZfSyAbR3qWVgpteNQrQ1tgbsrw4pqDfsAuUMwzUOauf8_6cDrOveFrCYXiNF17opxXD7vGK59CfYcoegj1SXjyuRdImmp-BtOccWd5262KxpHg4S6mLaYDZfcGf6WNL7qDb-3hlh-Bvn4yxf3WmdFDSSwrsRWbZGMbwDa8dYfg\">"];
+    XCTAssertEqualObjects(mail1.sanitizedHtml, @"");
+    XCTAssertEqualObjects(mail1.detectedTracker, @"Mailgun");
+    XCTAssertEqual(mail1.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    MTBBlockedMessage *mail2 = [[MTBBlockedMessage alloc] initWithHtml:@"<img width=\"1px\" height=\"1px\" alt=\" src=\"https://email.unsplash.com/o/eJydkDFThDAQhX_N0TDHJCThSEHheaNj49hYM0uycHEgwRDO4d8L6CnXWNgl-96-7yUKuh5MY3fi6FGZ3qANpXYdmHl0KpzFGkJjPNQ1Jsp1kfpdwNnVlsNYvaEKi_vVDn0Lwzk2Q1yhsU0M6n00HnVcTfEjhjDFTx00OES64JRBvo27gDcQjFvB984G79rIFClJKWGMEiKIkAlNCCMZFzw_UiEe7k5ix8n4DV4bngsQkKu0onDgNKMSU8w0PUiOFIREVFvq_-r7AsDPTTn584d675bw0kKHN4QX7_Solsdu7WHqV9szfgztjEN_o2I4Lwf8SduK12Np9CLlguVMRqG4oHf7r9tepizj1-EnXGmq-Q\">"];
+    XCTAssertEqualObjects(mail2.sanitizedHtml, @"");
+    XCTAssertEqualObjects(mail2.detectedTracker, @"Mailgun");
+    XCTAssertEqual(mail2.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    MTBBlockedMessage *mail3 = [[MTBBlockedMessage alloc] initWithHtml:@"<img width=\"1px\" height=\"1px\" alt=\" src=\"email.mailgun.patreon.com/o/eJwdj0uOwzAMQ08z2TlQZPmjRRZFD1Iolt0Gkx9Sd9HbjzM7kiAeSB0zOOLYVXn_PmYdaUCLCmxsUTUUlM2kxZoYfJ6QC7AL3TwiDAyEjE047IeefLjdbwMFQHsPzv8QrDIvz8_WH1LPvG992teu5vVYpObHJmsej42Z0_dzaEuu1r69L3B3jiLNNMa-5SL1OZ9SSv4nvEZo05xaJUAkKS7awIKelJPjZGM3SU2v64ykBNZyMgliNOR1MkIQTBFs24fM6uEPmrNNVA\">"];
+    XCTAssertEqualObjects(mail3.sanitizedHtml, @"");
+    XCTAssertEqualObjects(mail3.detectedTracker, @"Mailgun");
+    XCTAssertEqual(mail3.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    MTBBlockedMessage *mail4 = [[MTBBlockedMessage alloc] initWithHtml:@"<img width=\"1px\" height=\"1px\" alt=\" src=\"http://email.mail.gitguardian.com/o/eJxtUctuGzEM_BrvJbBBPVa7OuwhqZtLgB6a3BeUSNlCvA9oZRf--zJ10VMJiZghAWo0pAGsVaHBNX_yfTzn0_kitzKN13IZzrWu28487_SrnFOu52s4xGUSguuKJde8zLYT-v7j_cjTIkjaU64COifRQ1DOGibykl2MgkJIyjMYz8rart1pQzmlPacYTYuxZxsCE1itnVecDIRIoOmn0k0eNGiAXnkFrYX2oA7uu26Px_5FgVPf3LHbWZgwXw6i9nTFQhnnL8lN5Wm9YOVxxomHf2wt03jTDd94riN9VdJSJqxiwZ-39tDvlf9QIDbYXlLrd_oFJBq8cKljpgESGfB9DylCjK3qlHaYOnBOc3KcSLukLAefOo3UkifwLXTW-w6d7rApA2JZZpG-zJywnnLBlPihe1jLQiOGm7JC6q8s2spYl0-eNyl9PArNefBBeQvojFUQ2HBrewJKhmwEq9g0xJVjXcpIeZPf3x9W_B3w9CzL2banN75vTeF1eXT_v-ffeoW1Xw\">"];
+    XCTAssertEqualObjects(mail4.sanitizedHtml, @"");
+    XCTAssertEqualObjects(mail4.detectedTracker, @"Mailgun");
+    XCTAssertEqual(mail4.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 - (void)testGenericPixel {
     MTBBlockedMessage *attrAndStyle = [[MTBBlockedMessage alloc] initWithHtml:@"<p>Generic tracker with 1x1 width/height attr and 1x1 style <img src='https://example.com/foo/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"];
     XCTAssertEqualObjects(attrAndStyle.sanitizedHtml,

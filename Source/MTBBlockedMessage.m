@@ -307,13 +307,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"mandrill.\\S+/track/open.php",
             @"mandrillapp.com/track"
         ],
-        @"Mailgun": @[
-            @"mail.(mailgun|mg).com/o/",
-            @"email.mailgun.patreon.com/o/",
-            @"email.mgdynamic1.webpt.com/o/",
-            @"email.mg.upwork.com/o/",
-            @"email.mail.gitguardian.com/o/",
-        ],
+        @"Mailgun": @[@"/o/eJ"],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
         @"Mailjet": @[@"mjt.lu/oo", @"links.[a-zA-Z0-9-.]+/oo/"],
         @"Mailspring": @[@"getmailspring.com/open"],
