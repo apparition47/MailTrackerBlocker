@@ -178,7 +178,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"createsend\\d+.com/.+.gif"
         ],
         @"CanaryMail": @[@"canarymail.io(:d+)?/track", @"pardot.com/r/"],
-        @"Cheetah Digital": @[@"l.info6.citi.com/rts/open.aspx"],
+        @"Cheetah Digital": @[@"/rts/open.aspx\\?tp="],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
         @"ClickMeter": @[@"pixel.watch/"],
@@ -195,7 +195,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"open.convertkit-mail2.com/[a-z0-9]{20}"
         ],
         @"Copper": @[@"prosperworks.com/tp/t"],
-        @"Cprpt": @[@"/o.aspx?t="],
+        @"Cprpt": @[@"/o.aspx\\?t="],
         @"Creditmantri.com": @[@"mailer.creditmantri.com/t/"],
         @"Critical Impact": @[@"portal.criticalimpact.com/c2/"],
         @"Customer.io": @[
@@ -219,6 +219,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],
         @"Epic Games": @[@"accts.epicgames.com/O/"],
         @"Epsilon Interactive": @[@"ind.dell.com"],
+        @"eSputnik": @[@"esputnik.com/repository/applications/commons/hidden.png"],
         @"Etransmail": @[@"ftrans03.com/linktrack/"],
         @"EventBrite": @[@"eventbrite.com/emails/action"],
         @"EventsInYourArea": @[@"eventsinyourarea.com/track/"],
