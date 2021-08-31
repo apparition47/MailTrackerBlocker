@@ -218,7 +218,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
         @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],
         @"Epic Games": @[@"accts.epicgames.com/O/"],
-        @"Epsilon Interactive": @[@"ind.dell.com"],
+        @"Epsilon Interactive": @[
+            @"epslocalmail.com/O/",
+            @"ind.dell.com"
+        ],
         @"eSputnik": @[@"esputnik.com/repository/applications/commons/hidden.png"],
         @"Etransmail": @[@"ftrans03.com/linktrack/"],
         @"EventBrite": @[@"eventbrite.com/emails/action"],
@@ -304,6 +307,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"us\\d+.mailchimp.com/mctx/opens"
         ],
         @"MailCoral": @[@"mailcoral.com/open"],
+        @"MailerLite": @[@"click.mlsend.com/link/o/"],
         @"Mandrill": @[
             @"mandrill.\\S+/track/open.php",
             @"mandrillapp.com/track"
