@@ -77,6 +77,10 @@
 	<array>	
 		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
 	</array>
+	<key>Supported12.0PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>224E7F96-2099-499C-A501-63FB68C79CD2</string>
+	</array>
 	<key>SupportedPluginCompatibilityUUIDs</key>
 	<array>
 		<string>71562B89-0D90-4588-8E94-A75B701D6443</string>
