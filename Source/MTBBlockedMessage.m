@@ -211,7 +211,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Drop": @[@"pixel.massdrop.com/open/pixel.gif"],
         @"Dropbox": @[@"dropbox.com/l/"],
         @"Dyson": @[@"tracking.dyson.com/t/"], //.*?k=.*&m=.*&c=
-        @"DZone": @[@"mailer.dzone.com/open.php"],
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
         @"EdgeSuite": @[@"epidm.edgesuite.net"],
         @"EmailTracker.website": @[@"my-email-signature.link"],
@@ -304,14 +303,11 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Mailcastr": @[@"mailcastr.com/image/"],
         @"Mailchimp": @[
             @"list-manage.com/track/open.php",
-            @"us\\d+.mailchimp.com/mctx/opens"
+            @"us\\d+.mailchimp.com/mctx/opens",
+            @"/track/open.php\\?u=",
         ],
         @"MailCoral": @[@"mailcoral.com/open"],
         @"MailerLite": @[@"click.mlsend.com/link/o/"],
-        @"Mandrill": @[
-            @"mandrill.\\S+/track/open.php",
-            @"mandrillapp.com/track"
-        ],
         @"Mailgun": @[@"/o/eJ"],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
         @"Mailjet": @[@"mjt.lu/oo", @"links.[a-zA-Z0-9-.]+/oo/"],
