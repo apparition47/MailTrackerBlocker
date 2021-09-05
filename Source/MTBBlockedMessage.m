@@ -104,12 +104,13 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"1&1": @[@"simg.1und1.de"],
         @"365offers.trade": @[@"trk.365offers.trade"],
         @"3hands": @[@"mi.pbz.jp/"],
+        @"4Cite": @[@"/\\?sv_cid=\\d+_\\d+&sv_emopen=true&sv_sveme=\\w+"],
         @"ActiveCampaign": @[@"/lt.php\\?.*l=open"],
         @"Act-On": @[@"actonsoftware.com"],
         @"Acoustic": @[
             @"open.mkt\\d{2,3}.net/open/log/",
             @"mkt\\d{3,4,5}.com/open",
-            @"open.t[1234].hyatt.com/eos/v1/"
+            @"/eos/v1/\\w{232}",
         ],
         @"ADAC": @[@"mailing.adac.de/tr/"],
         @"AdComplete": @[@"/banman.asp\\?"],
@@ -141,6 +142,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"amazonappservices.com/r/",
             @"awscloud.com/trk"
         ],
+        @"Amobee": @[@"d.turn.com/r/"],
         @"Apo.com": @[@"info.apo.com/op/\\d+/.+.gif"],
         @"Apple": @[
           @"apple.com/report/2/its_mail_sf",
@@ -272,6 +274,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Grammarly": @[@"grammarly.com/open"],
         @"Granicus": @[@"govdelivery.com(:d+)?/track"],
         @"GreenMail": @[@"greenmail.co.in"],
+        @"Groupon": @[@"groupon.com/analytic/track.gif\\?"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
         @"Homeaway": @[@"trk.homeaway.com"],
         @"Hubspot": @[
