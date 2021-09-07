@@ -117,7 +117,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Adtriba": @[@"d.adtriba.com"],
         @"Adobe": @[
             @"/trk\\?t=1&mid=", // Marketo
-            @"t.newsletter.maisonmargiela.com/r/",
+            @"/r/\\?id=\\w+,\\w+,1",
             @"demdex.net",
             @"t.info.adobesystems.com",
             @"toutapp.com",
@@ -179,7 +179,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"cmail\\d{1,2}.com/t/.+.gif",
             @"createsend\\d+.com/.+.gif"
         ],
-        @"CanaryMail": @[@"canarymail.io(:d+)?/track", @"pardot.com/r/"],
+        @"CanaryMail": @[@"canarymail.io(:\\d+)?/track", @"pardot.com/r/"],
         @"Cheetah Digital": @[@"/rts/open.aspx\\?tp="],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
@@ -272,16 +272,17 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"notifications.google.com/g/img/(.*).gif",
         ],
         @"Grammarly": @[@"grammarly.com/open"],
-        @"Granicus": @[@"govdelivery.com(:d+)?/track"],
+        @"Granicus": @[@"govdelivery.com(:\\d+)?/track"],
         @"GreenMail": @[@"greenmail.co.in"],
         @"Groupon": @[@"groupon.com/analytic/track.gif\\?"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
         @"Homeaway": @[@"trk.homeaway.com"],
-        @"Hubspot": @[
+        @"HubSpot": @[
             @"t.(hubspotemail|hubspotfree|signaux|senal|signale|sidekickopen|sigopn|hsmsdd)",
             @"t.strk\\d{2}.email",
             @"track.getsidekick.com",
             @"/e2t/(o|c|to)/",
+            @"/e3t/Bto/"
         ],
         @"Hunter.io": @[@"mltrk.io/pixel"],
         @"iContact": @[@"click.icptrack.com/icp"],
@@ -319,7 +320,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
         @"Mailzter": @[@"mailzter.in/ltrack"],
-        @"Medallia": @[@"survey.medallia.[A-Za-z]{2,3}/\\?(.*)&invite-opened=yes"],
+        @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
         @"Mention": @[@"mention.com/e/o/"],
         @"MetaData": @[@"metadata.io/e1t/o/"],
         @"Microsoft": @[
@@ -341,6 +342,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"nethunt.com/api/v1/track/email/",
             @"nethunt.co(.*)\\?/pixel.gif"
         ],
+        @"Neustar": @[@"/emailprefs/images/\\w+/\\d+/\\d"],
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
         @"NTT": @[@"club-ntt-west.com/cn-w/cmn/img/1.png"],
         @"Omnisend": @[@"/track/.*/.*\\?signature="],

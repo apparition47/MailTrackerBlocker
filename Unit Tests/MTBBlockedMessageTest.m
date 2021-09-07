@@ -75,6 +75,16 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)testAdobe {
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<img height='0' width='0' alt='' src='http://t.newsletter.maisonmargiela.com/r/?id=h43bbc67c,11de365c,1'/>"];
+    MTBBlockedMessage *msg2 = [[MTBBlockedMessage alloc] initWithHtml:@"<img height='0' width='0' alt='' src='http://t.c.mcdonalds.com/r/?id=h199899af1,1ccea045,1'/>"];
+    XCTAssertEqualObjects(msg.sanitizedHtml, @"");
+    XCTAssertEqualObjects(msg2.sanitizedHtml, @"");
+    XCTAssertEqualObjects(msg.detectedTracker, msg2.detectedTracker);
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    XCTAssertEqual(msg2.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 - (void)testSendgrid {
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with a sendgrid tracker <img src='https://sendgrid.com/trk/123ef89329817898/3248932743' width='1' height='1' style='width: 1px; height: 1px;'></p>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
