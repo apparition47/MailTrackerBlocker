@@ -173,6 +173,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Boomerang": @[@"mailstat.us/tr"],
         @"Boots": @[@"boots.com/rts/open.aspx"],
         @"Boxbe": @[@"boxbe.com/stfopen"],
+        @"Branch": @[@"click.redditmail.com/CI0/"],
         @"Browserstack": @[@"browserstack.com/images/mail/track-open"],
         @"BuzzStream": @[@"tx.buzzstream.com"],
         @"Campaign Monitor": @[
