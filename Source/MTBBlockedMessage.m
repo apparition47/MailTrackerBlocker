@@ -464,7 +464,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Superhuman": @[@"r.superhuman.com"],
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],
         @"Techgig": @[@"tj_mailer_opened_count_all.php"],
-        @"The Atlantic": @[@"links.e.theatlantic.com/open/log/"],
+        @"The Atlantic": @[
+            @"links.e.theatlantic.com/open/log/",
+            @"data-cdn.theatlantic.com/email.gif"
+        ],
         @"The Chronicle of Higher Education": @[@"d2uowlhdj52lqx.cloudfront.net/emailbeacon.png"],
         @"TheTopInbox": @[@"thetopinbox.com/track/"],
         @"The Washington Post": @[@"palomaimages.washingtonpost.com/pr2/\\w{32}-beacon-\\d-\\d-\\d{1,2}-\\d"],
