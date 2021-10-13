@@ -166,6 +166,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Bananatag": @[@"bl-1.com"],
         @"Bison": @[@"clicks.bisonapp.com"],
         @"Bandsintown": @[@"px1.bandsintown.com/.+.gif"],
+        @"Blackbaud": @[@"support.planetary.org/site/PixelServer"],
         @"Blueshift.com": @[
             @"getblueshift.com/track"
         ],
@@ -277,6 +278,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"GreenMail": @[@"greenmail.co.in"],
         @"Groupon": @[@"groupon.com/analytic/track.gif\\?"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
+        @"Higher Logic": @[@"arrl.informz.net/z/\\w+/image.gif"],
         @"Homeaway": @[@"trk.homeaway.com"],
         @"HubSpot": @[
             @"t.(hubspotemail|hubspotfree|signaux|senal|signale|sidekickopen|sigopn|hsmsdd)",
@@ -321,6 +323,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
         @"Mailzter": @[@"mailzter.in/ltrack"],
+        @"Maropost": @[@"links.myrideshop.com/a/"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
         @"Mention": @[@"mention.com/e/o/"],
         @"MetaData": @[@"metadata.io/e1t/o/"],
@@ -380,6 +383,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Postmark": @[@"pstmrk.it"],
         @"Product Hunt": @[@"links.producthunt.com/oo/"],
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
+        @"Qualtrics": @[@"customerfeedback.ups.com/WRQualtricsContacts/Watermark.php"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
         @"Rakuten": @[
             @"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)",
