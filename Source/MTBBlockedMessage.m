@@ -209,7 +209,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"DocuMatix": @[@"enews.itcu.org/op\\?m="],
-        @"DotDigital": @[@"trackedlink.net", @"dmtrk.net"],
+        @"DotDigital": @[@"trackedlink.net", @"dmtrk.net", @"email.syntricate.com.au"],
         @"Driftem": @[@"driftem.com/ltrack"],
         @"Drop": @[@"pixel.massdrop.com/open/pixel.gif"],
         @"Dropbox": @[@"dropbox.com/l/"],
@@ -442,6 +442,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Sendy": @[@"/sendy/t/"],
         @"Shopify": @[@"/tools/emails/open/"],
         @"Signal": @[@"signl.live/tracker"],
+        @"Smore": @[@"smore.com/app/reporting/pixel/"],
         @"SparkPost": @[
 //            @"mailer.codepen.io/q",
 //            @"sptrack.trello.com/q/",
