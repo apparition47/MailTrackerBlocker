@@ -362,6 +362,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"/pub/as\\?_ri_=.*&_ei_=", // Responsys
             @"[a-zA-Z0-9-.]/e/FooterImages/FooterImage"
         ],
+        @"OutMaster": @[@"outmaster.co/mailer/index.php/campaigns/"],
         @"Outreach": @[
             @"app.outreach.io",
             @"outrch.com/api/mailings/opened",
