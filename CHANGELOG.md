@@ -3,6 +3,7 @@
 ## [0.4.14] - TBA
 
 - added OutMaster rule (thanks James M.)
+- improved generic rule for Qualtrics (thanks Robert R.)
 
 ## [0.4.13] - 2021-10-22
 

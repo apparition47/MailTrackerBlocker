@@ -384,7 +384,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Postmark": @[@"pstmrk.it"],
         @"Product Hunt": @[@"links.producthunt.com/oo/"],
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
-        @"Qualtrics": @[@"customerfeedback.ups.com/WRQualtricsContacts/Watermark.php"],
+        @"Qualtrics": @[@"/WRQualtricsContacts/Watermark.php"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
         @"Rakuten": @[
             @"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)",
