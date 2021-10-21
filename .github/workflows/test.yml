@@ -14,5 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: make test
-    - name: xcresulttool
-      uses: kishikawakatsumi/xcresulttool@v1.0.3
+    - uses: kishikawakatsumi/xcresulttool@v1.0.3
+      with:
+        path: TestResults.xcresult
