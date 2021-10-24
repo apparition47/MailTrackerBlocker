@@ -140,7 +140,8 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"/gp/forum/email/tracking",
             @"amazonappservices.com/trk",
             @"amazonappservices.com/r/",
-            @"awscloud.com/trk"
+            @"awscloud.com/trk",
+            @"/CI0/(\\w|-){60}/(\\w|-){43}=\\d{3}"
         ],
         @"Amobee": @[@"d.turn.com/r/"],
         @"Apo.com": @[@"info.apo.com/op/\\d+/.+.gif"],
@@ -174,7 +175,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Boomerang": @[@"mailstat.us/tr"],
         @"Boots": @[@"boots.com/rts/open.aspx"],
         @"Boxbe": @[@"boxbe.com/stfopen"],
-        @"Branch": @[@"click.redditmail.com/CI0/"],
         @"Browserstack": @[@"browserstack.com/images/mail/track-open"],
         @"BuzzStream": @[@"tx.buzzstream.com"],
         @"Campaign Monitor": @[
@@ -265,7 +265,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"gmtrack.net",
         ],
         @"Gmelius": @[@"gml.email"],
-        @"G/O Media": @[@"r.g-omedia.com/CI0/"],
         @"GoDaddy": @[@"email.cloud.secureclick.net/view\\?"],
         @"Google": @[
             @"ad.doubleclick.net/ddm/ad",
@@ -465,7 +464,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"/q/.*~~/.*~/",
         ],
         @"Streak": @[@"mailfoogae.appspot.com"],
-        @"Stripe": @[@"\\d{2}.email.stripe.com/CI0/"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],
