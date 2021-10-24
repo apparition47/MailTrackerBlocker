@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.4.14] - TBA
+## [0.4.14] - 2021-10-25
 
 - added OutMaster rule (thanks James M.)
 - improved generic rules for Qualtrics and Amazon SES (thanks Robert R.)
 - fixed generic tracker rule removing spacers
 
-## [0.4.13] - 2021-10-22
+## [0.4.13] - 2021-10-13
 
 - #141 added The Atlantic daily rule (thanks @dcquad and Damon S.)
 - added Maropost and a DotDigital custom domain (thanks Damon S.)
