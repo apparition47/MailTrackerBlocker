@@ -88,15 +88,55 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         }
     }
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:kGenericSpyPixelRegex options:NSRegularExpressionCaseInsensitive error:NULL];
-    NSRange range = NSMakeRange(0, result.length);
-    NSString *replaced = [regex stringByReplacingMatchesInString:result options:0 range:range withTemplate:@""];
-    if (![replaced isEqualToString:result]) {
-        _matchedGeneric = YES;
-        result = replaced;
-    }
+    // strip generic pixels
+    NSUInteger originalLength = [result length];
+    result = [self replacedGenericPixelsFrom:result];
+    _matchedGeneric = originalLength != [result length];
 
     return result;
+}
+
+// replaces generic pixels but skips spacers
+// https://stackoverflow.com/questions/6222115/how-do-you-use-nsregularexpressions-replacementstringforresultinstringoffset
+- (NSString*)replacedGenericPixelsFrom:(NSString*)html {
+    NSError* error = NULL;
+    NSRegularExpression* regex = [NSRegularExpression
+                                  regularExpressionWithPattern:kGenericSpyPixelRegex
+                                  options:NSRegularExpressionCaseInsensitive
+                                  error:&error];
+
+    NSMutableString *mutableString = [html mutableCopy];
+    NSInteger offset = 0;
+    for (NSTextCheckingResult* result in [regex matchesInString:html
+                                                        options:0
+                                                          range:NSMakeRange(0, [html length])]) {
+
+        NSRange resultRange = [result range];
+        resultRange.location += offset;
+
+        // template $0 is replaced by the match
+        NSString* match = [regex replacementStringForResult:result
+                                                   inString:mutableString
+                                                     offset:offset
+                                                   template:@"$0"];
+        
+        NSString* replacement;
+        if ([match containsString:@"spacer.gif"]) {
+            continue; // no replacement
+        } else {
+            replacement = @"";
+        }
+
+        [mutableString replaceCharactersInRange:resultRange withString:replacement];
+        offset += ([replacement length] - resultRange.length);
+    }
+
+    // return original reference if nothing changed
+    if ([mutableString length] == [html length] && [mutableString isEqualToString:html]) {
+        return html;
+    }
+    
+    return mutableString;
 }
 
 - (NSDictionary*)getTrackerDict {

@@ -202,6 +202,29 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
 }
 
+// expected not be marked as generic pixels
+- (void)testSpacers {
+    NSString *email = @"<img src=\"https://www.redditstatic.com/spacer.gif\" width=\"620\" height=\"1\" style=\"min-width:620px\" alt=\" border=\"0\" />";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:email];
+    XCTAssertEqualObjects(msg.sanitizedHtml, email);
+    XCTAssertEqualObjects(msg.detectedTracker, nil);
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+    
+    NSString *email2 = @"<img src=\"https://www.FAASafety.gov/include/lookandfeel/images/email/spacer.gif\" WIDTH=\"1\" HEIGHT=\"1\" alt=\"used for alignment\" />";
+    MTBBlockedMessage *msg2 = [[MTBBlockedMessage alloc] initWithHtml:email2];
+    XCTAssertEqualObjects(msg2.sanitizedHtml, email2);
+    XCTAssertEqualObjects(msg2.detectedTracker, nil);
+    XCTAssertEqual(msg2.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+    
+    NSString *email3 = @"<img style=\"display: block;\" src=\"https://image.fidelityinvestments.com/lib/fe90157070640d7a7c/m/3/pi_svc_spacer.gif\" alt=\" height=\"10\" border=\"0\" width=\"1\">";
+    MTBBlockedMessage *msg3 = [[MTBBlockedMessage alloc] initWithHtml:email3];
+    XCTAssertEqualObjects(msg3.sanitizedHtml, email3);
+    XCTAssertEqualObjects(msg3.detectedTracker, nil);
+    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+}
+
+#pragma mark - Helpers
+
 - (NSString*)getHTMLResourceWithFileName:(NSString*)fileName {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSString *path = [bundle pathForResource:fileName ofType:@"html"];
