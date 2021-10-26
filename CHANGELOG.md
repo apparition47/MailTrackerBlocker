@@ -1,10 +1,14 @@
 # Changelog
 
+## [0.4.15] - TBA
+
+- added Email on Acid rule (thanks @m-schmitt)
+
 ## [0.4.14] - 2021-10-25
 
 - added OutMaster rule (thanks James M.)
 - improved generic rules for Qualtrics and Amazon SES (thanks Robert R.)
-- fixed generic tracker rule removing spacers
+- fixed generic tracker rule falsely identifying spacers as trackers in some cases
 
 ## [0.4.13] - 2021-10-13
 

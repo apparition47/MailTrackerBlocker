@@ -75,6 +75,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         return nil;
     }
     
+    // img tags
     NSString *result = html;
     NSDictionary *trackingDict = [self getTrackerDict];
     for (id trackingSourceKey in trackingDict) {
@@ -86,6 +87,15 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
                 result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
             }
         }
+    }
+    
+    // strip additional CSS tracker
+    NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"][\\w:./]*%@[\\w:./\\?=]*[\'\"]\\)";
+    NSString *regexStr = [NSString stringWithFormat:kCSSTemplateRegex, [[trackingDict valueForKey:@"Email on Acid"] firstObject]];
+    NSRange matchedRange = [result rangeFromPattern:regexStr];
+    while (matchedRange.location != NSNotFound) {
+        result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
+        matchedRange = [result rangeFromPattern:regexStr];
     }
     
     // strip generic pixels
@@ -257,6 +267,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Dyson": @[@"tracking.dyson.com/t/"], //.*?k=.*&m=.*&c=
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
         @"EdgeSuite": @[@"epidm.edgesuite.net"],
+        @"Email on Acid": @[@"eoapxl.com"],
         @"EmailTracker.website": @[@"my-email-signature.link"],
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
         @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],

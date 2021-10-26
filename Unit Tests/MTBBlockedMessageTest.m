@@ -202,6 +202,14 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
 }
 
+- (void)testCSSTracker {
+    NSString *css = @"<style>#_eoa_div, #_eoa_img { display: none; } @media print { #_eoa_div { background-image: url('https://b2ccbsz7BC.eoapxl.com/b2ccbsz7BC/3211022171135001432317022/P');} } div.OutlookMessageHeader, table.moz-email-headers-table, blockquote #_eoa_div, #mailContainerBody #_eoa_div {background-image: url('https://b2ccbsz7BC.eoapxl.com/b2ccbsz7BC/3211022171135001432317022/F') }</style>";
+    MTBBlockedMessage *msg3 = [[MTBBlockedMessage alloc] initWithHtml:css];
+    XCTAssertEqualObjects(msg3.sanitizedHtml, @"<style>#_eoa_div, #_eoa_img { display: none; } @media print { #_eoa_div { ;} } div.OutlookMessageHeader, table.moz-email-headers-table, blockquote #_eoa_div, #mailContainerBody #_eoa_div { }</style>");
+//    XCTAssertEqualObjects(msg3.detectedTracker, @"Email on Acid");
+//    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 // expected not be marked as generic pixels
 - (void)testSpacers {
     NSString *email = @"<img src=\"https://www.redditstatic.com/spacer.gif\" width=\"620\" height=\"1\" style=\"min-width:620px\" alt=\" border=\"0\" />";
