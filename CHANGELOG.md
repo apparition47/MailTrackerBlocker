@@ -3,6 +3,7 @@
 ## [0.4.15] - TBA
 
 - added Email on Acid rule (thanks @m-schmitt)
+- added Aislelabs rule
 
 ## [0.4.14] - 2021-10-25
 

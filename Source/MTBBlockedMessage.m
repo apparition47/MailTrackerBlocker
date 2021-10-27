@@ -176,6 +176,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         ],
         @"AgileCRM": @[@"agle2.me/open"],
         @"Air Miles": @[@"email.airmiles.ca/O"],
+        @"Aislelabs": @[@"app.aislelabs.com/o/emailv3/emailv3onepixel.jsp"],
         @"Alaska Airlines": @[
             @"click.points-mail.com/open",
             @"sjv.io/i/",
