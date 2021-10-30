@@ -1,7 +1,8 @@
 # Changelog
 
-## [0.4.15] - TBA
+## [0.5.0] - 2021-10-30
 
+- allow usage on macOS 12
 - added Email on Acid rule (thanks @m-schmitt)
 - added Aislelabs rule
 - added Splio rule
