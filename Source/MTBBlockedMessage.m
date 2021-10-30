@@ -561,7 +561,10 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
         @"Zeta Global": @[@"e.newsletters.cnn.com/open/"],
-        @"Zoho Campaigns": @[@"/clicks/.*/.*/open.gif"],
+        @"Zoho": @[
+            @"/clicks/.*/.*/open.gif",
+            @"sender\\d.zohoinsights-crm.com/ocimage/"
+        ],
     };
 }
 @end
