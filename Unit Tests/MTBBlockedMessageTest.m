@@ -67,12 +67,54 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
-- (void)testAwsTrack {
+- (void)testSES {
+    // awstrack pattern
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p><a class=\"cta-btn\" href=\"http://qpvvmjwx.r.us-east-1.awstrack.me/L0/http:%2F%2Fmastercardidps.idprotectiononline.com%2Falerts%2Fhistory.html%3Flang=3Den_US%26utm_source=3Demail%26utm_medium=3Demail%26utm_campaign=3Didp_standard_emails%26utm_content=3D44a%2509Identity%2520Monitoring%2520Alert/1/01000178626eb1e0-f1b813fc-c0a8-4ba5-90af-b39d859905cf-000000/27r5oe9sP7Z0DFVB_WeA7aWcx2Y=3D206\">VIEW MY ALERT</a> <img alt=\"\" src=\"http://qpvvmjwx.r.us-east-1.awstrack.me/I0/01000178626eb1e0-f1b813fc-c0a8-4ba5-90af-b39d859905cf-000000/2FKwVZSzpKPUSLDQmdmviCr5aC0206\" style=\"display: none; width: 1px; height: 1px;\"></p>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
                           @"<p><a class=\"cta-btn\" href=\"http://qpvvmjwx.r.us-east-1.awstrack.me/L0/http:%2F%2Fmastercardidps.idprotectiononline.com%2Falerts%2Fhistory.html%3Flang=3Den_US%26utm_source=3Demail%26utm_medium=3Demail%26utm_campaign=3Didp_standard_emails%26utm_content=3D44a%2509Identity%2520Monitoring%2520Alert/1/01000178626eb1e0-f1b813fc-c0a8-4ba5-90af-b39d859905cf-000000/27r5oe9sP7Z0DFVB_WeA7aWcx2Y=3D206\">VIEW MY ALERT</a> </p>");
     XCTAssertEqualObjects(msg.detectedTracker, @"Amazon SES");
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    MTBBlockedMessage *msg6 = [[MTBBlockedMessage alloc] initWithHtml:@"<img alt=\"\" src=\"http://ql9whnmm.r.us-east-1.awstrack.me/I0/01000174cf3fdcab-ecc7d369-5fb0-44f3-8399-6d801e7cbb70-000000/FQQ6fmRGPj_Eb_dkOISswGPZgLY=181\" style=\"display: none; width: 1px; height: 1px;\">"];
+    XCTAssertEqualObjects(msg6.sanitizedHtml,
+                          @"");
+    XCTAssertEqualObjects(msg6.detectedTracker, @"Amazon SES");
+    XCTAssertEqual(msg6.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    // custom domain pattern
+    MTBBlockedMessage *msg2 = [[MTBBlockedMessage alloc] initWithHtml:@"<img alt=\"\" src=\"http://click.em.nike.com/CI0/0100017caa0a4138-89d1c903-b840-471e-ad1a-0cbc0997641a-000000/Q6hkyQLinbRp9WRkl0o8ZJlBZ-elr1g-yPs6poQou-o=220\" style=\"display: none; width: 1px; height: 1px;\">"];
+    XCTAssertEqualObjects(msg2.sanitizedHtml,
+                          @"");
+    XCTAssertEqualObjects(msg2.detectedTracker, @"Amazon SES");
+    XCTAssertEqual(msg2.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    MTBBlockedMessage *msg3 = [[MTBBlockedMessage alloc] initWithHtml:@"<img alt=\"\" src=\"http://59.email.stripe.com/CI0/0101017a18a2c884-275c7052-5962-46c6-9f24-38b9c237837d-000000/EQegK2PpXW-rBnfB_Vcavg3BZn7XuZm-Izjx1ypvG3U=196\" style=\"display: none; width: 1px; height: 1px;\">"];
+    XCTAssertEqualObjects(msg3.sanitizedHtml,
+                          @"");
+    XCTAssertEqualObjects(msg3.detectedTracker, @"Amazon SES");
+    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    MTBBlockedMessage *msg4 = [[MTBBlockedMessage alloc] initWithHtml:@"<img alt=\"\" src=\"http://r.g-omedia.com/CI0/0100017b655e9634-e9db3649-077c-4eb3-bc18-d712a8f04278-000000/9A0iiORY_AD4aLf2hhsOMBi_Nz7EPp3ERensOLcwYno=211\" style=\"display: none; width: 1px; height: 1px;\">"];
+    XCTAssertEqualObjects(msg4.sanitizedHtml,
+                          @"");
+    XCTAssertEqualObjects(msg4.detectedTracker, @"Amazon SES");
+    XCTAssertEqual(msg4.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    
+    MTBBlockedMessage *msg5 = [[MTBBlockedMessage alloc] initWithHtml:@"<img alt=\"\" src=\"http://click.redditmail.com/CI0/0100017c014860ac-0625adf4-797e-4e18-9aaf-6e3ee131936e-000000/Po3PKjEXpdWDIPTCQoCMB_gkYAx_6ebEOgAeKSqyA-g=215\" style=\"display: none; width: 1px; height: 1px;\">"];
+    XCTAssertEqualObjects(msg5.sanitizedHtml,
+                          @"");
+    XCTAssertEqualObjects(msg5.detectedTracker, @"Amazon SES");
+    XCTAssertEqual(msg5.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
+- (void)testAdobe {
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<img height='0' width='0' alt='' src='http://t.newsletter.maisonmargiela.com/r/?id=h43bbc67c,11de365c,1'/>"];
+    MTBBlockedMessage *msg2 = [[MTBBlockedMessage alloc] initWithHtml:@"<img height='0' width='0' alt='' src='http://t.c.mcdonalds.com/r/?id=h199899af1,1ccea045,1'/>"];
+    XCTAssertEqualObjects(msg.sanitizedHtml, @"");
+    XCTAssertEqualObjects(msg2.sanitizedHtml, @"");
+    XCTAssertEqualObjects(msg.detectedTracker, msg2.detectedTracker);
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    XCTAssertEqual(msg2.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
 - (void)testSendgrid {
@@ -159,6 +201,37 @@
     [self waitForExpectations:@[expectation] timeout:5];
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
 }
+
+- (void)testCSSTracker {
+    NSString *css = @"<style>#_eoa_div, #_eoa_img { display: none; } @media print { #_eoa_div { background-image: url('https://b2ccbsz7BC.eoapxl.com/b2ccbsz7BC/3211022171135001432317022/P');} } div.OutlookMessageHeader, table.moz-email-headers-table, blockquote #_eoa_div, #mailContainerBody #_eoa_div {background-image: url('https://b2ccbsz7BC.eoapxl.com/b2ccbsz7BC/3211022171135001432317022/F') }</style>";
+    MTBBlockedMessage *msg3 = [[MTBBlockedMessage alloc] initWithHtml:css];
+    XCTAssertEqualObjects(msg3.sanitizedHtml, @"<style>#_eoa_div, #_eoa_img { display: none; } @media print { #_eoa_div { ;} } div.OutlookMessageHeader, table.moz-email-headers-table, blockquote #_eoa_div, #mailContainerBody #_eoa_div { }</style>");
+//    XCTAssertEqualObjects(msg3.detectedTracker, @"Email on Acid");
+//    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
+// expected not be marked as generic pixels
+- (void)testSpacers {
+    NSString *email = @"<img src=\"https://www.redditstatic.com/spacer.gif\" width=\"620\" height=\"1\" style=\"min-width:620px\" alt=\" border=\"0\" />";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:email];
+    XCTAssertEqualObjects(msg.sanitizedHtml, email);
+    XCTAssertEqualObjects(msg.detectedTracker, nil);
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+    
+    NSString *email2 = @"<img src=\"https://www.FAASafety.gov/include/lookandfeel/images/email/spacer.gif\" WIDTH=\"1\" HEIGHT=\"1\" alt=\"used for alignment\" />";
+    MTBBlockedMessage *msg2 = [[MTBBlockedMessage alloc] initWithHtml:email2];
+    XCTAssertEqualObjects(msg2.sanitizedHtml, email2);
+    XCTAssertEqualObjects(msg2.detectedTracker, nil);
+    XCTAssertEqual(msg2.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+    
+    NSString *email3 = @"<img style=\"display: block;\" src=\"https://image.fidelityinvestments.com/lib/fe90157070640d7a7c/m/3/pi_svc_spacer.gif\" alt=\" height=\"10\" border=\"0\" width=\"1\">";
+    MTBBlockedMessage *msg3 = [[MTBBlockedMessage alloc] initWithHtml:email3];
+    XCTAssertEqualObjects(msg3.sanitizedHtml, email3);
+    XCTAssertEqualObjects(msg3.detectedTracker, nil);
+    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+}
+
+#pragma mark - Helpers
 
 - (NSString*)getHTMLResourceWithFileName:(NSString*)fileName {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];

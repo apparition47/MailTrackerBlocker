@@ -9,7 +9,7 @@ $(PRODUCT): Source/* Resources/* Resources/*/* MailTrackerBlocker.xcodeproj
 	@xcodebuild -project $(PROJECT).xcodeproj -target $(TARGET) build $(XCCONFIG)
 
 test:
-	@xcodebuild -project $(PROJECT).xcodeproj -scheme $(TARGET) INSTALL_MAILTRACKERBLOCKER=0 CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test
+	@xcodebuild -project $(PROJECT).xcodeproj -scheme $(TARGET) -resultBundlePath TestResults INSTALL_MAILTRACKERBLOCKER=0 CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test
 
 pack:
 	pkgbuild $(VPATH)/Core.pkg \
