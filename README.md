@@ -21,9 +21,9 @@ Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 
 ## Prerequisites
 
-Apple Mail on macOS 10.11 - 11.x.
+Apple Mail on macOS 10.11 - 12.x.
 
-(macOS 12 and newer users should enable the built-in Mail Privacy Protection instead!)
+⚠️ macOS 12 and newer users should enable [Mail Privacy Protection](https://support.apple.com/en-ca/guide/mail/mlhl03be2866/mac) **instead** of installing MailTrackerBlocker for more complete privacy guards.
 
 ## Setup
 
