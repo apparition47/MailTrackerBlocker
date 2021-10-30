@@ -19,6 +19,7 @@
 
 NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?[\"'\\s]|[^-]width:\\s*[01]px)+[^>]*>";
 NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
+NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./]*%@[\\w:&./\\?=]*[\'\"]?\\)";
 
 @synthesize trackers, delegate;
 
@@ -90,12 +91,17 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
     }
     
     // strip additional CSS tracker
-    NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"][\\w:./]*%@[\\w:./\\?=]*[\'\"]\\)";
-    NSString *regexStr = [NSString stringWithFormat:kCSSTemplateRegex, [[trackingDict valueForKey:@"Email on Acid"] firstObject]];
-    NSRange matchedRange = [result rangeFromPattern:regexStr];
-    while (matchedRange.location != NSNotFound) {
-        result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
-        matchedRange = [result rangeFromPattern:regexStr];
+    NSArray *cssTrackingDict = @[
+        [[trackingDict valueForKey:@"Email on Acid"] firstObject],
+        [[trackingDict valueForKey:@"Litmus"] firstObject]
+    ];
+    for (NSString *regexValue in cssTrackingDict) {
+        NSString *regexStr = [NSString stringWithFormat:kCSSTemplateRegex, regexValue];
+        NSRange matchedRange = [result rangeFromPattern:regexStr];
+        while (matchedRange.location != NSNotFound) {
+            result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
+            matchedRange = [result rangeFromPattern:regexStr];
+        }
     }
     
     // strip generic pixels

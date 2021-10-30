@@ -6,6 +6,7 @@
 - added Aislelabs rule
 - improved generic rule for Sendinblue
 - improve Zoho rule (thanks Robert R.)
+- block CSS trackers
 
 ## [0.4.14] - 2021-10-25
 
