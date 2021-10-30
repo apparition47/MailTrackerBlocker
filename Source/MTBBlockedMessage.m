@@ -476,7 +476,7 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
             @"sendibtd.com",
             @"sendibw{2}.com/track/",
             @"amxe.net/\\S+.gif", // formerly Newsletter2Go
-            @"r.news.wahlandcase.com/mk/op/"
+            @"/[a-z]{2}/op/",
         ],
         @"SendGrid": @[
 //            @"ablink.hello.wyze.com/ss/o/",
@@ -555,7 +555,6 @@ NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
         @"Wish": @[@"wish.com/email-beacon.png"],
         @"Wix": @[@"shoutout.wix.com/.*/pixel"],
         @"WordPress": @[@"pixel.wp.com/t.gif"],
-        @"Workona": @[@"workona.com/mk/op/"],
         @"Yahoo!": @[@"a.analytics.yahoo.com/p.pl"],
         @"Yahoo! Japan": @[@"dsb.yahoo.co.jp/api/v1/clear.gif"],
         @"YAMM": @[@"yamm-track.appspot"],

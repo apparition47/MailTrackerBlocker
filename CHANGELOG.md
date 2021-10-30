@@ -4,6 +4,7 @@
 
 - added Email on Acid rule (thanks @m-schmitt)
 - added Aislelabs rule
+- improved generic rule for Sendinblue
 
 ## [0.4.14] - 2021-10-25
 
