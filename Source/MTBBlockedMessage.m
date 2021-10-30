@@ -521,6 +521,7 @@ NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./
             @"sparkpostmail2.com",
             @"/q/.*~~/.*~/",
         ],
+        @"Splio": @[@"trk-2.net/ouv"],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],

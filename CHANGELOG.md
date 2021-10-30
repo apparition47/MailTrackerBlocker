@@ -4,6 +4,7 @@
 
 - added Email on Acid rule (thanks @m-schmitt)
 - added Aislelabs rule
+- added Splio rule
 - improved generic rule for Sendinblue
 - improve Zoho rule (thanks Robert R.)
 - block CSS trackers
