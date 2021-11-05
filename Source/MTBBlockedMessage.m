@@ -416,6 +416,7 @@ NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./
             @"dynect.net/trk.php",
             @"bm5150.com/t/",
             @"bm23.com/t/",
+            @"/t/o\\?", // bronto
             @"/pub/as\\?_ri_=.*&_ei_=", // Responsys
             @"[a-zA-Z0-9-.]/e/FooterImages/FooterImage"
         ],

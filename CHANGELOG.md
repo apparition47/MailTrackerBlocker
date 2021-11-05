@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.1] - TBA
+
+- added Oracle Bronto rule (thanks Damon S.)
+
 ## [0.5.0] - 2021-10-30
 
 - allow usage on macOS 12
