@@ -3,6 +3,7 @@
 ## [0.5.1] - TBA
 
 - added Oracle Bronto rule (thanks Damon S.)
+- #146 added US Bancorp (thanks @m-schmitt)
 
 ## [0.5.0] - 2021-10-30
 

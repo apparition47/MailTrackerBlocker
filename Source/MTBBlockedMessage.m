@@ -548,6 +548,7 @@ NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./
         @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upland PostUp": @[@"efeedbacktrk.com/.*.gif"],
+        @"US Bancorp": @[@"post-images.com/amy/open.action"],
         @"Validity": @[@"pixel.app.returnpath.net/pixel.gif"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
