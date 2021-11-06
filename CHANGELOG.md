@@ -4,6 +4,7 @@
 
 - added Oracle Bronto rule (thanks Damon S.)
 - #146 added US Bancorp (thanks @m-schmitt)
+- added Doorkeeper header logo rule
 
 ## [0.5.0] - 2021-10-30
 

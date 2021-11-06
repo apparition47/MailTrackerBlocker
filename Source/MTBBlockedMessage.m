@@ -267,6 +267,7 @@ NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"DocuMatix": @[@"enews.itcu.org/op\\?m="],
+        @"Doorkeeper": @[@"r.doorkeeper.jp/(\\w|_|-){40,100}.png"],
         @"DotDigital": @[@"trackedlink.net", @"dmtrk.net", @"email.syntricate.com.au"],
         @"Driftem": @[@"driftem.com/ltrack"],
         @"Drop": @[@"pixel.massdrop.com/open/pixel.gif"],
