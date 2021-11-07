@@ -19,7 +19,7 @@
 
 NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?[\"'\\s]|[^-]width:\\s*[01]px)+[^>]*>";
 NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
-NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./]*%@[\\w:&./\\?=]*[\'\"]?\\)";
+NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\"]?[\\w:./]*%@[\\w:&./\\?=]*[\'\"]?\\)";
 
 @synthesize trackers, delegate;
 
@@ -411,6 +411,7 @@ NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./
         @"Omnisend": @[@"/track/.*/.*\\?signature="],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
+        @"Optimove": @[@"/ss/o/\\w{22}/\\w{3}/\\w{22}/\\w{2}.gif"],
         @"Oracle": @[
             @"tags.bluekai.com/site", // Bluekai
             @"en25.com/e/",
@@ -495,7 +496,6 @@ NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./
 //            @"ablink.emails.just-eat.co.uk",
 //            @"ablink.mail.delosdestinations.com",
 //            @"ablink.m1.cratejoy.com",
-            @"/ss/o/.*.gif",
             @"sendgrid.(net|com)/wf/open",
             @"sendgrid.(net|com)/trk",
             @"sendgrid.(net|com)/mpss/o",
@@ -524,6 +524,7 @@ NSString * const kCSSTemplateRegex = @"background-image:\\s?url\\([\'\"]?[\\w:./
             @"/q/.*~~/.*~/",
         ],
         @"Splio": @[@"trk-2.net/ouv"],
+        @"Staples": @[@"/ctt/mktOpen\\?"],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
