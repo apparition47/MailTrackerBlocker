@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.5.1] - TBA
+## [0.5.1] - 2021-11-07
 
 - added Oracle Bronto rule (thanks Damon S.)
 - #146 added US Bancorp (thanks @m-schmitt)
@@ -9,7 +9,7 @@
 
 ## [0.5.0] - 2021-10-30
 
-- allow usage on macOS 12
+- #145 allow usage on macOS 12
 - added Email on Acid rule (thanks @m-schmitt)
 - added Aislelabs rule
 - added Splio rule
