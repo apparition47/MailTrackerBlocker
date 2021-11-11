@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.2] - TBA
+
+- added Mailcampaigns (thanks Jan-Bert)
+
 ## [0.5.1] - 2021-11-07
 
 - added Oracle Bronto rule (thanks Damon S.)

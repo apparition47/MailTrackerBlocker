@@ -366,6 +366,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Mailbird": @[@"tracking.getmailbird.com/OpenTrackingPixel/"],
         @"Mailbutler": @[@"bowtie.mailbutler.io/tracking/hit/(.*)/t.gif"],
+        @"Mailcampaigns": @[@"interface.mailcampaigns.nl/v\\d/t/"],
         @"Mailcastr": @[@"mailcastr.com/image/"],
         @"Mailchimp": @[
             @"list-manage.com/track/open.php",
