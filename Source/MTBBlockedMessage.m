@@ -157,7 +157,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
 
 - (NSDictionary*)getTrackerDict {
     return @{
-        @"1&1": @[@"simg.1und1.de"],
+        @"1&1": @[
+            @"simg.1und1.de",
+            @"oc.ionos.com/\\?utm_rid="
+        ],
         @"365offers.trade": @[@"trk.365offers.trade"],
         @"3hands": @[@"mi.pbz.jp/"],
         @"4Cite": @[@"/\\?sv_cid=\\d+_\\d+&sv_emopen=true&sv_sveme=\\w+"],
@@ -471,7 +474,8 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"app.relateiq.com/t.png",
             @"nova.collect.igodigital.com",
             @"exct.net/open.aspx",
-            @"click.*./open.aspx\\?"
+            @"click.*./open.aspx\\?",
+            @"pixel.inbox.exacttarget.com/pixel.gif"
         ],
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
         @"SalesLoft": @[@"salesloft.com/email_trackers"],

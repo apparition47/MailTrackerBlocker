@@ -4,6 +4,7 @@
 
 - added Mailcampaigns (thanks Jan-Bert)
 - #150 added rule for Blackbaud (thanks @oneofthedamons)
+- added 1&1, Salesforce rules (thanks James M.)
 
 ## [0.5.1] - 2021-11-07
 
