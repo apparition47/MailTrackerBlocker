@@ -3,10 +3,11 @@
 ## [0.5.2] - TBA
 
 - added Mailcampaigns (thanks Jan-Bert)
+- #150 added rule for Blackbaud (thanks @oneofthedamons)
 
 ## [0.5.1] - 2021-11-07
 
-- added Oracle Bronto rule (thanks Damon S.)
+- added Oracle Bronto rule (thanks @oneofthedamons)
 - #146 added US Bancorp (thanks @m-schmitt)
 - #148 added Staples rule, improved Litmus CSS rule, fixed Optimove rule (thanks @m-schmitt)
 - added Doorkeeper header logo rule
@@ -29,8 +30,8 @@
 
 ## [0.4.13] - 2021-10-13
 
-- #141 added The Atlantic daily rule (thanks @dcquad and Damon S.)
-- added Maropost and a DotDigital custom domain (thanks Damon S.)
+- #141 added The Atlantic daily rule (thanks @dcquad and @oneofthedamons)
+- added Maropost and a DotDigital custom domain (thanks @oneofthedamons)
 - #139 added Branch rule (thanks @austinhuang0131)
 - #137 added Newegg rule (thanks @m-schmitt)
 - added Smore rule (thanks Robert R.)
