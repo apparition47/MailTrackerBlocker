@@ -577,6 +577,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Yahoo!": @[@"a.analytics.yahoo.com/p.pl"],
         @"Yahoo! Japan": @[@"dsb.yahoo.co.jp/api/v1/clear.gif"],
         @"YAMM": @[@"yamm-track.appspot"],
+        @"Yardi": @[@"/t/teo\\?ref="],
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
         @"Zeta Global": @[@"e.newsletters.cnn.com/open/"],
