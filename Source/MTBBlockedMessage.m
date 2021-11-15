@@ -418,7 +418,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Omnisend": @[@"/track/.*/.*\\?signature="],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
-        @"Optimove": @[@"/ss/o/\\w{22}/\\w{3}/\\w{22}/\\w{2}.gif"],
+        @"Optimove": @[@"/ss/o/(\\w|-){22}/\\w{3}/(\\w|-){22}/\\w{2}.gif"],
         @"Oracle": @[
             @"tags.bluekai.com/site", // Bluekai
             @"en25.com/e/",
@@ -453,6 +453,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
         @"Qualtrics": @[@"/WRQualtricsContacts/Watermark.php"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
+        @"Rabobank": @[@"mail.rabobank.nl/public/o/"],
         @"Rakuten": @[
             @"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)",
             @"cl.rakuten-bank.co.jp/rw/beacon_(.*).gif",

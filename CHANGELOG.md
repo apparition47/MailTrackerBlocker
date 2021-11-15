@@ -2,8 +2,8 @@
 
 ## [0.5.2] - TBA
 
-- added Mailcampaigns (thanks @Jee-Bee)
-- #150 added rule for Blackbaud (thanks @oneofthedamons)
+- added Mailcampaigns, Rabobank (thanks @Jee-Bee)
+- #150 added rule for Blackbaud, improved Optimove rule (thanks @oneofthedamons)
 - added 1&1, Salesforce rules (thanks James M.)
 - #149 added Yardi rule (thanks @m-schmitt)
 - added Rakuten Securities rule
