@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.5.2] - TBA
+## [0.5.2] - 2021-11-18
 
 - added Mailcampaigns, Rabobank (thanks @Jee-Bee)
 - #150 added rule for Blackbaud, improved Optimove and Maropost rules (thanks @oneofthedamons)
