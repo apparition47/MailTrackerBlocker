@@ -285,6 +285,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"EmailTracker.website": @[@"my-email-signature.link"],
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
         @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],
+        @"Envoke": @[@"envoke.com/o/"],
         @"Epic Games": @[@"accts.epicgames.com/O/"],
         @"Epsilon Interactive": @[
             @"epslocalmail.com/O/",
@@ -424,6 +425,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"tags.bluekai.com/site", // Bluekai
             @"en25.com/e/",
             @"dynect.net/trk.php",
+            @"lifelock.custhelp.com/rd/",
             @"bm5150.com/t/",
             @"bm23.com/t/",
             @"/t/o\\?", // bronto

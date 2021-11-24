@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.5.3] - TBA
+
+- #151 added Envoke rule (thanks @austinhuang0131)
+- #152 improved Oracle rule (thanks @m-schmitt)
+
 ## [0.5.2] - 2021-11-18
 
 - added Mailcampaigns, Rabobank (thanks @Jee-Bee)
