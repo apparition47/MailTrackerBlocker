@@ -2,8 +2,10 @@
 
 ## [0.5.3] - TBA
 
+- improved Meta/Facebook rule
 - #151 added Envoke rule (thanks @austinhuang0131)
 - #152 improved Oracle rule (thanks @m-schmitt)
+- improved ActiveCampaign, AT&T, Epsilon, MailJet rules (thanks James M.)
 
 ## [0.5.2] - 2021-11-18
 

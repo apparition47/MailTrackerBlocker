@@ -164,7 +164,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"365offers.trade": @[@"trk.365offers.trade"],
         @"3hands": @[@"mi.pbz.jp/"],
         @"4Cite": @[@"/\\?sv_cid=\\d+_\\d+&sv_emopen=true&sv_sveme=\\w+"],
-        @"ActiveCampaign": @[@"/lt.php\\?.*l=open"],
+        @"ActiveCampaign": @[
+            @"/lt.php\\?.*l=open",
+            @".lt.acemlnb.com/Prod/link-tracker\\?nl="
+        ],
         @"Act-On": @[@"actonsoftware.com"],
         @"Acoustic": @[
             @"open.mkt\\d{2,3}.net/open/log/",
@@ -218,7 +221,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"i.trellomail.com/e/eo",
             @"bitbucket.org/account/notifications/mark-read/"
         ],
-        @"AT&T": @[@"clicks.att.com/OCT/eTrac\\?EMAIL_ID=\\d+&amp;src="],
+        @"AT&T": @[@"clicks.att.com/OCT/eTrac\\?EMAIL_ID=\\d+&src="],
         @"Aurea": @[ // Lyris
             @"/db/.*/.*/1.gif",
         ],
@@ -288,7 +291,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Envoke": @[@"envoke.com/o/"],
         @"Epic Games": @[@"accts.epicgames.com/O/"],
         @"Epsilon Interactive": @[
-            @"epslocalmail.com/O/",
+            @"/O/\\w{34}/\\w{32}",
             @"ind.dell.com"
         ],
         @"eSputnik": @[@"esputnik.com/repository/applications/commons/hidden.png"],
@@ -298,12 +301,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"EveryAction": @[@"click.everyaction.com/j/"],
         @"Evite": @[@"pippio.com/api/sync", @"nli.evite.com/imp"],
         @"Expedia": @[@"link.expediamail.com/o/"],
-        @"Facebook": @[
-            @"facebook.com/aymt/aa/",
-            @"facebook.com/email_open_log_pic.php",
-            @"facebookdevelopers.com/trk",
-            @"fb.com/trk",
-        ],
         @"Fastic": @[@"/e/eo\\?_t=[^>]+_m=[^>]+_e="],
         @"Flatastic": @[@"api.flatastic-app.com/index.php/img"],
         @"Flipkart": @[@"flipkart.com/t/open"],
@@ -385,7 +382,11 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"MailerLite": @[@"click.mlsend.com/link/o/"],
         @"Mailgun": @[@"/o/eJ"],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
-        @"Mailjet": @[@"mjt.lu/oo", @"links.[a-zA-Z0-9-.]+/oo/"],
+        @"Mailjet": @[
+            @"mjt.lu/oo",
+            @"links.[a-zA-Z0-9-.]+/oo/",
+            @"s0hu.mj.am/oo/"
+        ],
         @"Mailspring": @[@"getmailspring.com/open"],
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
@@ -393,6 +394,13 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Maropost": @[@"/a/\\d{4}/open/\\d{4}/\\d{6,7}/\\w{40}"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
         @"Mention": @[@"mention.com/e/o/"],
+        @"Meta": @[
+            @"facebook.com/aymt/aa/",
+            @"facebook.com/r/v/",
+            @"facebook.com/email_open_log_pic.php",
+            @"facebookdevelopers.com/trk",
+            @"fb.com/trk",
+        ],
         @"MetaData": @[@"metadata.io/e1t/o/"],
         @"Microsoft": @[
             @"svc.dynamics.com/t/i/", // Dynamics 365
@@ -405,6 +413,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"mixmax.com/e/o"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
+        @"Movable Ink": @[@"movable-ink-3094.com/p/cp/"],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
         @"Nation Builder": @[@"nationbuilder.com/r/o"],
         @"NeteCart": @[@"netecart.com/ltrack"],
