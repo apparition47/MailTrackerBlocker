@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.5.3] - TBA
+## [0.5.3] - 2021-11-28
 
 - improved Meta/Facebook rule, added activecore rule
 - #151 added Envoke rule (thanks @austinhuang0131)
 - #152 improved Oracle rule (thanks @m-schmitt)
 - improved ActiveCampaign, AT&T, Epsilon, MailJet rules (thanks James M.)
-- added AutoAlert (thanks Robert R.)
+- added AutoAlert, marked Outlook OWA attachments as false positives (thanks Robert R.)
 - added Hyper Hyper (thanks @oneofthedamons)
 
 ## [0.5.2] - 2021-11-18
