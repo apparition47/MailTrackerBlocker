@@ -137,7 +137,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
                                                    template:@"$0"];
         
         NSString* replacement;
-        if ([match containsString:@"spacer.gif"]) {
+        if ([match containsString:@"spacer.gif"] || [match containsString:@"attachments.office.net/owa/"]) {
             continue; // no replacement
         } else {
             replacement = @"";
@@ -169,6 +169,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @".lt.acemlnb.com/Prod/link-tracker\\?nl="
         ],
         @"Act-On": @[@"actonsoftware.com"],
+        @"activecore": @[@"h-cast.jp/mail_open"],
         @"Acoustic": @[
             @"open.mkt\\d{2,3}.net/open/log/",
             @"mkt\\d{3,4,5}.com/open",
@@ -222,6 +223,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"bitbucket.org/account/notifications/mark-read/"
         ],
         @"AT&T": @[@"clicks.att.com/OCT/eTrac\\?EMAIL_ID=\\d+&src="],
+        @"AutoAlert": @[
+            @"dealer.autoalert.com/email/tracking/open",
+            @"fzlnk.com/AutoAlertEmailHandler.ashx"
+        ],
         @"Aurea": @[ // Lyris
             @"/db/.*/.*/1.gif",
         ],
@@ -350,6 +355,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/e3t/Bto/"
         ],
         @"Hunter.io": @[@"mltrk.io/pixel"],
+        @"Hyper Hyper": @[@"hyperhub.com.au/newhub/api/email/track"],
         @"iContact": @[@"click.icptrack.com/icp"],
         @"Indeed": @[@"subscriptions.indeed.com/imgping"],
         @"Infusionsoft": @[@"infusionsoft.com/app/emailOpened"],
