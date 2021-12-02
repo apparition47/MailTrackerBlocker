@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.4] - TBA
+
+- improved Zoho Campaigns rule, added YouTube
+- added Benchmark Email, Epsilon (thanks James M.)
+- more spacers identified as false positives (thanks James M.)
+- added Mapp rule (thanks Robert R.)
+- fixed SMTP.com rule
+- renamed Mailchimp to Intuit
+
 ## [0.5.3] - 2021-11-28
 
 - improved Meta/Facebook rule, added activecore rule
