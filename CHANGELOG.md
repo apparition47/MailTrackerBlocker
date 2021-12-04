@@ -2,6 +2,7 @@
 
 ## [0.5.4] - TBA
 
+- #154 added Paystone, Ashby rules (thanks @austinhuang0131)
 - improved Zoho Campaigns rule, added YouTube
 - added Benchmark Email, Epsilon (thanks James M.)
 - more spacers identified as false positives (thanks James M.)

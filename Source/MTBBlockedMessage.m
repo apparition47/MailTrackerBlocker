@@ -217,6 +217,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Apptivo": @[@"apptivo.com"],
         @"Artegic": @[@"elaine-asp.de"],
         @"Asana": @[@"app.asana.com/-/open"],
+        @"Ashby": @[@"app.ashbyhq.com/api/beacon/email-read/"],
         @"ASUSTeK": @[@"emditpison.asus.com"],
         @"Atlassian": @[
             @"i.trellomail.com/e/eo",
@@ -460,6 +461,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"PayBack": @[@"email.payback.in/a/", @"mail.payback.in/tr/"],
         @"PayPal": @[@"paypal-communication.com/O/", @"t.paypal.com/ts\\?"],
+        @"Paystone": @[@"link.datacandy.com/i/"],
         @"Paytm": @[@"trk.paytmemail.com"],
         @"Peach Aviation": @[
             @"mlapp.flypeach.com/mail/prod/receipt/read.php\\?id=",
