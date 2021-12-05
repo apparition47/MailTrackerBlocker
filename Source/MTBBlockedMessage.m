@@ -278,7 +278,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Customer.io": @[
             @"customeriomail.com/e/o",
             @"track.customer.io/e/o",
-            @"/e/o/[a-zA-Z0-9]{63}",
+            @"/e/o/[a-zA-Z0-9=]{60}",
         ],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
@@ -291,6 +291,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Dyson": @[@"tracking.dyson.com/t/"], //.*?k=.*&m=.*&c=
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
         @"EdgeSuite": @[@"epidm.edgesuite.net"],
+        @"eGain": @[@"notify.egain.cloud/egain/notify/"],
         @"Email on Acid": @[@"eoapxl.com"],
         @"EmailTracker.website": @[@"my-email-signature.link"],
         @"Emarsys": @[@"emarsys.com/e2t/o/"],
@@ -345,7 +346,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"youtube.com/gen_204"
         ],
         @"Grammarly": @[@"grammarly.com/open"],
-        @"Granicus": @[@"govdelivery.com(:\\d+)?/track"],
+        @"Granicus": @[
+            @"govdelivery.com(:\\d+)?/track",
+            @"links.ssa.gov/track"
+        ],
         @"GreenMail": @[@"greenmail.co.in"],
         @"Groupon": @[@"groupon.com/analytic/track.gif\\?"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
@@ -376,6 +380,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Lidl": @[@"servicemails.lidl.de/d/d.gif"],
         @"LinkedIn": @[@"linkedin.com/emimp/", @"help.linkedin.com/rd/"],
         @"Litmus": @[@"emltrk.com"],
+        @"Liveclicker": @[@"em.realtime.email/service/rte\\?kind=duration"],
         @"LiveIntent": @[@"/imp\\?s=\\d{6}&li="], // imp?s=&li=&e=&p=&stpe= // imp?s=&li=&m=&p=
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
@@ -404,7 +409,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Mapp": @[@"/tr/p.gif\\?"],
         @"Maropost": @[@"/a/\\d{4}/open/\\d{4}/\\d{6,7}/\\w{40}"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
-        @"Mention": @[@"mention.com/e/o/"],
         @"Meta": @[
             @"facebook.com/aymt/aa/",
             @"facebook.com/r/v/",
@@ -420,8 +424,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"MixMax": @[
             @"(email|track).mixmax.com",
-            @"mixmax.com/api/track/",
-            @"mixmax.com/e/o"
+            @"mixmax.com/api/track/"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
         @"Movable Ink": @[@"movable-ink-3094.com/p/cp/"],
@@ -505,10 +508,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
         @"SalesLoft": @[@"salesloft.com/email_trackers"],
-        @"Segment": @[ // Twilio
-            @"api.segment.io/v1/pixel/track",
-            @"email.segment.com/e/o/"
-        ],
         @"Selligent": @[
             @"strongview.com/t",
             @"emsecure.net",
@@ -583,6 +582,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"trackapp.io/static/img/track.gif"
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
+        @"Twilio": @[@"api.segment.io/v1/pixel/track"],
         @"Twitch": @[@"spade.twitch.tv/track"],
         @"Twitter": @[@"twitter.com/scribe/ibis"],
         @"UNiDAYS": @[@"links\\d?.m.myunidays.com"],
@@ -610,7 +610,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Yardi": @[@"/t/teo\\?ref="],
         @"Yesware": @[@"yesware.com/trk", @"yesware.com/t/", @"t.yesware.com"],
         @"Zendesk": @[@"futuresimple.com/api/v1/sprite.png"],
-        @"Zeta Global": @[@"e.newsletters.cnn.com/open/"],
+        @"Zeta Global": @[
+            @"e.newsletters.cnn.com/open/",
+            @"e.email.consumerreports.org/open/"
+        ],
         @"Zoho": @[
             @"maillist-manage.com/clicks/",
             @"/clicks/.*/.*/open.gif",
