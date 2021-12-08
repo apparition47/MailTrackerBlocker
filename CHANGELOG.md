@@ -1,8 +1,7 @@
 # Changelog
 
-## [0.5.5] - TBA
+## [0.5.5] - 2021-12-08
 
-- support Mail on macOS 12.1 beta 4 (thanks @ackerthehacker2)
 - support Mail in macOS 12.1 (thanks @ackerthehacker2, @berkue)
 - #146 exception for FedEx and Apple Pay spacers (thanks James M., @m-schmitt)
 - #149, #146, #135 add Paved rule (thanks @m-schmitt)
