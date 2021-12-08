@@ -137,7 +137,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
                                                    template:@"$0"];
         
         NSString* replacement;
-        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_";
+        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web";
         NSRange matchedRange = [match rangeFromPattern:regexStr];
         if (matchedRange.location != NSNotFound) {
             continue; // no replacement
@@ -467,6 +467,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"getoutreach.com/api/mailings/opened",
             @"a.science-recruiting.com/api/mailings/opened"
         ],
+        @"Paved": @[@"vpdae.com/open/\\d{4}.gif"],
         @"PayBack": @[@"email.payback.in/a/", @"mail.payback.in/tr/"],
         @"PayPal": @[@"paypal-communication.com/O/", @"t.paypal.com/ts\\?"],
         @"Paystone": @[@"link.datacandy.com/i/"],

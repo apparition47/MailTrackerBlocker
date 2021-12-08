@@ -3,7 +3,9 @@
 ## [0.5.5] - TBA
 
 - support Mail on macOS 12.1 beta 4 (thanks @ackerthehacker2)
-- exception for Fedex spacers (thanks James M.)
+- support Mail in macOS 12.1 (thanks @ackerthehacker2, @berkue)
+- #146 exception for FedEx and Apple Pay spacers (thanks James M., @m-schmitt)
+- #149, #146, #135 add Paved rule (thanks @m-schmitt)
 - #155 add Telstra rule (thanks @oneofthedamons)
 
 ## [0.5.4] - 2021-12-05
