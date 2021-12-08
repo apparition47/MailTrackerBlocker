@@ -229,6 +229,18 @@
     XCTAssertEqualObjects(msg3.sanitizedHtml, email3);
     XCTAssertEqualObjects(msg3.detectedTracker, nil);
     XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+    
+    NSString *email4 = @"<img style=\"display:inline-block; color: #4D148C;\" alt=\"FedEx\" height=\"157\" width=\"44\" border=\"0\" src=\"http://www.fedex.com/ENS/images/fedex_collective_logo_desktop.png\">";
+    MTBBlockedMessage *msg4 = [[MTBBlockedMessage alloc] initWithHtml:email4];
+    XCTAssertEqualObjects(msg4.sanitizedHtml, email4);
+    XCTAssertEqualObjects(msg4.detectedTracker, nil);
+    XCTAssertEqual(msg4.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+    
+    NSString *email5 = @"<img alt=\"FedEx\" border=\"0\" class=\"showonmobilelogo\" style=\"display:none;width:0px;max-height:0px;overflow:hidden;\" height=\"1\" width=\"1\" src=\"http://www.fedex.com/ENS/images/fedex_collective_logo_mobile.png\">";
+    MTBBlockedMessage *msg5 = [[MTBBlockedMessage alloc] initWithHtml:email5];
+    XCTAssertEqualObjects(msg5.sanitizedHtml, email5);
+    XCTAssertEqualObjects(msg5.detectedTracker, nil);
+    XCTAssertEqual(msg5.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
 }
 
 #pragma mark - Helpers

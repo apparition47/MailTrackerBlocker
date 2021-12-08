@@ -3,6 +3,8 @@
 ## [0.5.5] - TBA
 
 - support Mail on macOS 12.1 beta 4 (thanks @ackerthehacker2)
+- exception for Fedex spacers (thanks James M.)
+- #155 add Telstra rule (thanks @oneofthedamons)
 
 ## [0.5.4] - 2021-12-05
 

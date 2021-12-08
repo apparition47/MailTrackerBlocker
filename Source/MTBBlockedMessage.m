@@ -137,7 +137,9 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
                                                    template:@"$0"];
         
         NSString* replacement;
-        if ([match containsString:@"spacer."] || [match containsString:@"attachments.office.net/owa/"]) {
+        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_";
+        NSRange matchedRange = [match rangeFromPattern:regexStr];
+        if (matchedRange.location != NSNotFound) {
             continue; // no replacement
         } else {
             replacement = @"";
@@ -406,7 +408,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
         @"Mailzter": @[@"mailzter.in/ltrack"],
-        @"Mapp": @[@"/tr/p.gif\\?"],
+        @"Mapp": @[
+            @"/tr/p.gif\\?",
+            @"enews.zdnet.com/imagelibrary/"
+        ],
         @"Maropost": @[@"/a/\\d{4}/open/\\d{4}/\\d{6,7}/\\w{40}"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
         @"Meta": @[
@@ -564,6 +569,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Superhuman": @[@"r.superhuman.com"],
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],
         @"Techgig": @[@"tj_mailer_opened_count_all.php"],
+        @"Telstra": @[@"tapi.telstra.com/presentation/v1/notification-mngmt/delivery-status-tracker"],
         @"The Atlantic": @[
             @"links.e.theatlantic.com/open/log/",
             @"data-cdn.theatlantic.com/email.gif"
