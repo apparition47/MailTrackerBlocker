@@ -1,9 +1,13 @@
 # Changelog
 
+## [0.5.5] - TBA
+
+- support Mail on macOS 12.1 beta 4 (thanks @ackerthehacker2)
+
 ## [0.5.4] - 2021-12-05
 
 - #154 added Paystone, Ashby rules (thanks @austinhuang0131)
-- #146 added Liveclicker & eGain, improved Zeta Global, Customer.io, Granicus rules (thanks @m-schmitt)
+- #153 added Liveclicker & eGain, improved Zeta Global, Customer.io, Granicus rules (thanks @m-schmitt)
 - improved Zoho Campaigns rule, added YouTube
 - added Benchmark Email, Epsilon (thanks James M.)
 - more spacers identified as false positives (thanks James M.)
