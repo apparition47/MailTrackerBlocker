@@ -1,8 +1,13 @@
 # Changelog
 
+## [0.5.6] - TBA
+
+- improved Higher Logic rule (thanks James M.)
+- improved Salesforce rule (thanks Steve H.)
+
 ## [0.5.5] - 2021-12-08
 
-- support Mail in macOS 12.1 (thanks @ackerthehacker2, @berkue)
+- #156 support Mail in macOS 12.1 (thanks @ackerthehacker2, @berkue)
 - #146 exception for FedEx and Apple Pay spacers (thanks James M., @m-schmitt)
 - #149, #146, #135 add Paved rule (thanks @m-schmitt)
 - #155 add Telstra rule (thanks @oneofthedamons)

@@ -256,7 +256,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"cmail\\d{1,2}.com/t/.+.gif",
             @"createsend\\d+.com/.+.gif"
         ],
-        @"CanaryMail": @[@"canarymail.io(:\\d+)?/track", @"pardot.com/r/"],
+        @"CanaryMail": @[@"canarymail.io(:\\d+)?/track"],
         @"Cheetah Digital": @[@"/rts/open.aspx\\?tp="],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
@@ -355,7 +355,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"GreenMail": @[@"greenmail.co.in"],
         @"Groupon": @[@"groupon.com/analytic/track.gif\\?"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
-        @"Higher Logic": @[@"arrl.informz.net/z/\\w+/image.gif"],
+        @"Higher Logic": @[@"informz.net/z/\\w{45,60}/image.gif"],
         @"Homeaway": @[@"trk.homeaway.com"],
         @"HubSpot": @[
             @"t.(hubspotemail|hubspotfree|signaux|senal|signale|sidekickopen|sigopn|hsmsdd)",
@@ -510,7 +510,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"nova.collect.igodigital.com",
             @"exct.net/open.aspx",
             @"click.*./open.aspx\\?",
-            @"pixel.inbox.exacttarget.com/pixel.gif"
+            @"pixel.inbox.exacttarget.com/pixel.gif",
+            // Pardot
+            @"welcome.michaelcassel.com/r/\\d{6,9}/1/\\d{6,9}/open/1",
+            @"pardot.com/r/"
         ],
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
         @"SalesLoft": @[@"salesloft.com/email_trackers"],
