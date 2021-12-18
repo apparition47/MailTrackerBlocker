@@ -282,6 +282,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"track.customer.io/e/o",
             @"/e/o/[a-zA-Z0-9=]{60}",
         ],
+        @"Cyberimpact": @[@"app.cyberimpact.com/footer-image"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"DocuMatix": @[@"enews.itcu.org/op\\?m="],
@@ -345,7 +346,8 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"google-analytics.com/collect",
             @"google.com/appserve/mkt/img/",
             @"notifications.google.com/g/img/(.*).gif",
-            @"youtube.com/gen_204"
+            @"youtube.com/gen_204",
+            @"youtube.com/attribution_link"
         ],
         @"Grammarly": @[@"grammarly.com/open"],
         @"Granicus": @[
@@ -404,6 +406,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"links.[a-zA-Z0-9-.]+/oo/",
             @"s0hu.mj.am/oo/"
         ],
+        @"Mailshake": @[@"w\\d.msstnu.com/prod/open/"],
         @"Mailspring": @[@"getmailspring.com/open"],
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
@@ -600,6 +603,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Upland PostUp": @[@"efeedbacktrk.com/.*.gif"],
         @"US Bancorp": @[@"post-images.com/amy/open.action"],
         @"Validity": @[@"pixel.app.returnpath.net/pixel.gif"],
+        @"Varibase": @[@"e.varibase.com/mail/MOS"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
         @"Vice Media": @[@"rs-stripe.refinery29.com/stripe/image"],

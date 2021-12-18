@@ -2,8 +2,10 @@
 
 ## [0.5.6] - TBA
 
-- improved Higher Logic rule (thanks James M.)
-- improved Salesforce rule (thanks Steve H.)
+- improve Higher Logic, add Mailshake rules (thanks James M.)
+- improve Salesforce rule (thanks Steve H.)
+- #158 add Cyberimpact, Veribase (thanks @austinhuang0131)
+- improve YouTube rule (thanks Robert R.)
 
 ## [0.5.5] - 2021-12-08
 
