@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.5.6] - TBA
+## [0.5.6] - 2021-12-18
 
 - improve Higher Logic, add Mailshake rules (thanks James M.)
 - improve Salesforce rule (thanks Steve H.)
