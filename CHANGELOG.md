@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.7] - TBA
+
+- improve 1&1 rule (thanks James M.)
+- #159 improve Selligent and HubSpot rules, add Tripolis rule (thanks @Jee-Bee)
+- improve Infusion Software, add G-Lock Analytics, Ongage (thanks Robert R.)
+
 ## [0.5.6] - 2021-12-18
 
 - improve Higher Logic, add Mailshake rules (thanks James M.)

@@ -93,7 +93,8 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     // strip additional CSS tracker
     NSArray *cssTrackingDict = @[
         [[trackingDict valueForKey:@"Email on Acid"] firstObject],
-        [[trackingDict valueForKey:@"Litmus"] firstObject]
+        [[trackingDict valueForKey:@"Litmus"] firstObject],
+        [[trackingDict valueForKey:@"G-Lock Analytics"] firstObject]
     ];
     for (NSString *regexValue in cssTrackingDict) {
         NSString *regexStr = [NSString stringWithFormat:kCSSTemplateRegex, regexValue];
@@ -161,7 +162,8 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     return @{
         @"1&1": @[
             @"simg.1und1.de",
-            @"oc.ionos.com/\\?utm_rid="
+            @"oc.ionos.com/\\?utm_rid=",
+            @"t.ionos.com/oms_p/"
         ],
         @"365offers.trade": @[@"trk.365offers.trade"],
         @"3hands": @[@"mi.pbz.jp/"],
@@ -333,6 +335,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"GetNotify": @[@"email81.com/case"],
         @"GetResponse": @[@"/open.html\\?x="],
         @"GitHub": @[@"github.com/notifications/beacon/"],
+        @"G-Lock Analytics": @[@"fssdev.com/t/\\?[po]"],
         @"Gmass": @[
             @"ec2-52-26-194-35.us-west-2.compute.amazonaws.com",
             @"link.gmreg\\d.net",
@@ -364,13 +367,17 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"t.strk\\d{2}.email",
             @"track.getsidekick.com",
             @"/e2t/(o|c|to)/",
+            @"hubspotlinks.com/Bto",
             @"/e3t/Bto/"
         ],
         @"Hunter.io": @[@"mltrk.io/pixel"],
         @"Hyper Hyper": @[@"hyperhub.com.au/newhub/api/email/track"],
         @"iContact": @[@"click.icptrack.com/icp"],
         @"Indeed": @[@"subscriptions.indeed.com/imgping"],
-        @"Infusionsoft": @[@"infusionsoft.com/app/emailOpened"],
+        @"Infusion Software": @[
+            @"infusionsoft.com/app/emailOpened",
+            @"keap-link\\d{3}.com/v2/render/"
+        ],
         @"Integral Ad Science": @[@"pixel.adsafeprotected.com"],
         @"Intercom": @[@"via.intercom.io/o", @"intercom-mail[a-zA-Z0-9-.]*.com/(via/)?(o|q)"],
         @"Intuit": @[
@@ -449,6 +456,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
         @"NTT": @[@"club-ntt-west.com/cn-w/cmn/img/1.png"],
         @"Omnisend": @[@"/track/.*/.*\\?signature="],
+        @"Ongage": @[@"/\\?xol=\\w{21,29}&eih=\\w{21,29}"],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
         @"Optimove": @[@"/ss/o/(\\w|-){22}/\\w{3}/(\\w|-){22}/\\w{2}.gif"],
@@ -521,6 +529,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"SalesHandy": @[@"saleshandy.com/web/email/countopened"],
         @"SalesLoft": @[@"salesloft.com/email_trackers"],
         @"Selligent": @[
+            @"/optiext/optiextension.dll",
             @"strongview.com/t",
             @"emsecure.net",
             @"selligent.com",
@@ -595,6 +604,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"trackapp.io/static/img/track.gif"
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
+        @"Tripolis": @[@"/public/o/(\\w|\\+|/){40,50}/t.gif"],
         @"Twilio": @[@"api.segment.io/v1/pixel/track"],
         @"Twitch": @[@"spade.twitch.tv/track"],
         @"Twitter": @[@"twitter.com/scribe/ibis"],
