@@ -294,6 +294,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Drop": @[@"pixel.massdrop.com/open/pixel.gif"],
         @"Dropbox": @[@"dropbox.com/l/"],
         @"Dyson": @[@"tracking.dyson.com/t/"], //.*?k=.*&m=.*&c=
+        @"eBay": @[@"ebayadservices.com/marketingtracking/v1/impression"],
         @"Ebsta": @[@"console.ebsta.com", @"ebsta.gif", @"ebsta.com/r/"],
         @"EdgeSuite": @[@"epidm.edgesuite.net"],
         @"eGain": @[@"notify.egain.cloud/egain/notify/"],
