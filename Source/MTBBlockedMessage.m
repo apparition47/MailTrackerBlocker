@@ -500,6 +500,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Quora": @[@"quora.com/qemail/mark_read"],
         @"Rabobank": @[@"mail.rabobank.nl/public/o/"],
         @"Rakuten": @[
+            @"img.travel.rakuten.co.jp/share/mail/img/open/",
             @"r.rakuten.co.jp/(.*).gif\\?mpe=(\\d+)",
             @"cl.rakuten-bank.co.jp/rw/beacon_(.*).gif",
             @"cmb.rakuten-sec.co.jp/bin/checker"
