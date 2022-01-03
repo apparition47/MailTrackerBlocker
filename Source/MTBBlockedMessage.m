@@ -315,7 +315,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"EventsInYourArea": @[@"eventsinyourarea.com/track/"],
         @"EveryAction": @[@"click.everyaction.com/j/"],
         @"Evite": @[@"pippio.com/api/sync", @"nli.evite.com/imp"],
-        @"Expedia": @[@"link.expediamail.com/o/"],
         @"Fastic": @[@"/e/eo\\?_t=[^>]+_m=[^>]+_e="],
         @"Flatastic": @[@"api.flatastic-app.com/index.php/img"],
         @"Flipkart": @[@"flipkart.com/t/open"],
@@ -425,6 +424,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Maropost": @[@"/a/\\d{4}/open/\\d{4}/\\d{6,7}/\\w{40}"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
+        @"MessageGears": @[@"expediamail.com/o/"],
         @"Meta": @[
             @"facebook.com/aymt/aa/",
             @"facebook.com/r/v/",

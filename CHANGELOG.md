@@ -7,6 +7,7 @@
 - improve Infusion Software, add G-Lock Analytics, Ongage (thanks Robert R.)
 - #161 add eBay rule (thanks @m-schmitt)
 - improve Rakuten (Travel) rule
+- relabel Expedia under MessageGears
 
 ## [0.5.6] - 2021-12-18
 
