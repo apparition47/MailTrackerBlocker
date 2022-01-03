@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.5.7] - TBA
+## [0.5.7] - 2022-01-03
 
 - improve 1&1 rule (thanks James M.)
 - #159 improve Selligent and HubSpot rules, add Tripolis rule (thanks @Jee-Bee)
