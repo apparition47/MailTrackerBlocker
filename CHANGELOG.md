@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.8] - TBA
+
+- fix LiveIntent rule
+- add Hiretual rule
+- improve Acoustic rule (thanks Steve H.)
+- add Disney, improve Microsoft, fix Ongage, ActiveCampaign rules (thanks Robert R.)
+- improve phpList rule (thanks @oneofthedamons)
+- improve Validity rule (thanks James M.)
+
 ## [0.5.7] - 2022-01-03
 
 - improve 1&1 rule (thanks James M.)

@@ -170,12 +170,12 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"4Cite": @[@"/\\?sv_cid=\\d+_\\d+&sv_emopen=true&sv_sveme=\\w+"],
         @"ActiveCampaign": @[
             @"/lt.php\\?.*l=open",
-            @".lt.acemlnb.com/Prod/link-tracker\\?nl="
+            @".lt.acemln(a|b|c|d).com/Prod/link-tracker\\?nl="
         ],
         @"Act-On": @[@"actonsoftware.com"],
         @"activecore": @[@"h-cast.jp/mail_open"],
         @"Acoustic": @[
-            @"open.mkt\\d{2,3}.net/open/log/",
+            @"/open/log/",
             @"mkt\\d{3,4,5}.com/open",
             @"/eos/v1/\\w{232}",
         ],
@@ -287,6 +287,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Cyberimpact": @[@"app.cyberimpact.com/footer-image"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
+        @"Disney": @[@"clk.messaging.go.com/c/\\d\\d/bcasts/\\d{10}/view"],
         @"DocuMatix": @[@"enews.itcu.org/op\\?m="],
         @"Doorkeeper": @[@"r.doorkeeper.jp/(\\w|_|-){40,100}.png"],
         @"DotDigital": @[@"trackedlink.net", @"dmtrk.net", @"email.syntricate.com.au"],
@@ -361,6 +362,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Groupon": @[@"groupon.com/analytic/track.gif\\?"],
         @"GrowthDot": @[@"growthdot.com/api/mail-tracking"],
         @"Higher Logic": @[@"informz.net/z/\\w{45,60}/image.gif"],
+        @"Hiretual": @[@"api.hiretual.com/webhooks/tracking/open/"],
         @"Homeaway": @[@"trk.homeaway.com"],
         @"HubSpot": @[
             @"t.(hubspotemail|hubspotfree|signaux|senal|signale|sidekickopen|sigopn|hsmsdd)",
@@ -392,7 +394,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"LinkedIn": @[@"linkedin.com/emimp/", @"help.linkedin.com/rd/"],
         @"Litmus": @[@"emltrk.com"],
         @"Liveclicker": @[@"em.realtime.email/service/rte\\?kind=duration"],
-        @"LiveIntent": @[@"/imp\\?s=\\d{6}&li="], // imp?s=&li=&e=&p=&stpe= // imp?s=&li=&m=&p=
+        @"LiveIntent": @[@"/imp\\?s=\\d{6}&amp;li="], // imp?s=&li=&e=&p=&stpe= // imp?s=&li=&m=&p=
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
         @"Klaviyo": @[@"trk.klaviyomail.com"],
@@ -436,7 +438,8 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Microsoft": @[
             @"svc.dynamics.com/t/i/", // Dynamics 365
             @"mucp.api.account.microsoft.com",
-            @"gridinbound.blob.core.windows.net"
+            @"gridinbound.blob.core.windows.net",
+            @"dist.nam.formspro.microsoft.com/api/invite/outbound/"
         ],
         @"MixMax": @[
             @"(email|track).mixmax.com",
@@ -457,7 +460,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
         @"NTT": @[@"club-ntt-west.com/cn-w/cmn/img/1.png"],
         @"Omnisend": @[@"/track/.*/.*\\?signature="],
-        @"Ongage": @[@"/\\?xol=\\w{21,29}&eih=\\w{21,29}"],
+        @"Ongage": @[@"/\\?xol=\\w{21,29}&amp;eih=\\w{21,29}"],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
         @"Optimove": @[@"/ss/o/(\\w|-){22}/\\w{3}/(\\w|-){22}/\\w{2}.gif"],
@@ -489,7 +492,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"mag.flypeach.com/c/.*.gif" // Cuenote
         ],
         @"PersistIQ": @[@"infinite-stream-5194.herokuapp.com/pixel"],
-        @"phpList": @[@"phplist.com/lists/ut.php"],
+        @"phpList": @[@"/ut.php\\?u="],
         @"PipeDrive": @[@"api.nylas.com/open"],
         @"Playdom": @[@"playdom.com/g"],
         @"Polymail": @[@"polymail.io/v2/z/|share.polymail.io"],
@@ -508,7 +511,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"ReplyCal": @[@"replycal.com/home/index/\\?token"],
         @"ReplyMsg": @[@"replymsg.com"],
         @"Responder.co.il": @[@"opens.responder.co.il"],
-        @"Return Path": @[@"returnpath.net/pixel.gif"],
         @"Rewe": @[@"epost.rewe.de/action/view/"],
         @"Rocketbolt": @[@"email.rocketbolt.com/o/"],
         @"Runtastic": @[@"runtastic.com/mo/"],
@@ -589,7 +591,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Techgig": @[@"tj_mailer_opened_count_all.php"],
         @"Telstra": @[@"tapi.telstra.com/presentation/v1/notification-mngmt/delivery-status-tracker"],
         @"The Atlantic": @[
-            @"links.e.theatlantic.com/open/log/",
             @"data-cdn.theatlantic.com/email.gif"
         ],
         @"The Chronicle of Higher Education": @[@"d2uowlhdj52lqx.cloudfront.net/emailbeacon.png"],
