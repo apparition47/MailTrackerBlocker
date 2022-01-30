@@ -1,7 +1,8 @@
 # Changelog
 
-## [0.5.8] - TBA
+## [0.6.0] - TBA
 
+- show all tracker vendors in emails instead of only the first one
 - fix LiveIntent rule
 - add Hiretual rule
 - improve Acoustic rule (thanks Steve H.)

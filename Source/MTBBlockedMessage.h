@@ -22,9 +22,13 @@ typedef enum BLOCKING_RESULT_CERTAINTY: NSUInteger {
 @property(readonly, nonatomic) NSString *subjectField;
 @property(readonly, nonatomic) NSString *fromField;
 @property(readonly, nonatomic) NSString *deeplinkField;
+@property (nonatomic, assign, readonly) NSUInteger unknownTrackerCount;
+- (instancetype)init NS_UNAVAILABLE;
 - (id)initWithHtml:(NSString*)html;
 - (id)initWithHtml:(NSString*)html from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink;
 - (NSString *)detectedTracker;
+- (NSSet *)detectedTrackers;
+- (NSUInteger)knownTrackerCount;
 - (enum BLOCKING_RESULT_CERTAINTY)certainty;
 - (NSString*)sanitizedHtml;
 @end

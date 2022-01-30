@@ -1,6 +1,7 @@
 "BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker не обнаружил никаких трекеров в этом сообщении";
 "BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker обнаружил и превентивно заблокировал возможный трекер в этом сообщении";
 "BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker заблокировал трекер от %@";
+"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCHES" = "MailTrackerBlocker заблокировал %d трекера";
 "MTB_MULTIPLE_INSTALLATIONS_TITLE" = "Обнаружено несколько установок MailTrackerBlocker";
 "MTB_MULTIPLE_INSTALLATIONS_MESSAGE" = "Detected multiple installations in the following locations which will lead to an immediate crash:\n\n%@\n\nPlease remove the MailTrackerBlocker.mailbundle in one of the locations and restart Mail.\n";
 "MTB_MULTIPLE_INSTALLATIONS_BUTTON" = "выйти из приложения";

@@ -185,7 +185,8 @@
     MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<p>This is an email with 2 trackers <img src=\"https://pixel.app.returnpath.net/pixel.gif?r=ed9192ab2ef6abcde2e8e6ff2800a1f9c04d3790&c=OP21002_Tax_Readiness_EM_DM\" width=\"1\" height=\"1\" /><img src=\"https://click.e-vanguard.com/open.aspx?ffcb10-fe87157972610abcde-fe3217727162057c721673-fe9a13727561007d76-ff6a1abcde-fe3315737367047e711478-fefa15717abcde&d=70166&bmt=0\" width=\"1\" height=\"1\" alt=\"\"></p>"];
     XCTAssertEqualObjects(msg.sanitizedHtml,
                           @"<p>This is an email with 2 trackers </p>");
-    XCTAssertEqualObjects(msg.detectedTracker, @"Salesforce");
+    BOOL didPassMultiTest = [msg.detectedTrackers isEqualToSet:[[NSSet alloc] initWithArray:@[@"Salesforce", @"Validity"]]];
+    XCTAssertTrue(didPassMultiTest);
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 

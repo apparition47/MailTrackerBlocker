@@ -1,6 +1,7 @@
 "BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker did not detect any trackers in this email";
 "BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker detected and preemptively blocked a possible tracker in this email";
 "BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker blocked a tracker from %@";
+"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCHES" = "MailTrackerBlocker blocked %d trackers";
 "MTB_MULTIPLE_INSTALLATIONS_TITLE" = "Found multiple installations of MailTrackerBlocker";
 "MTB_MULTIPLE_INSTALLATIONS_MESSAGE" = "Detected multiple installations in the following locations which will lead to an immediate crash:\n\n%@\n\nPlease remove the MailTrackerBlocker.mailbundle in one of the locations and restart Mail.\n";
 "MTB_MULTIPLE_INSTALLATIONS_BUTTON" = "Quit Mail";

@@ -27,7 +27,6 @@
 		7312BAB124D2F3BE00037A14 /* inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7312BAB024D2F3BE00037A14 /* inactive.pdf */; };
 		737675362652A9DF00363783 /* MailApp+MailTrackerBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 737675352652A9DF00363783 /* MailApp+MailTrackerBlocker.m */; };
 		737C5508265FB778009E4D06 /* MTBPackageValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 737C5507265FB778009E4D06 /* MTBPackageValidator.m */; };
-		737EDFC226501A4100766F97 /* Reports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */; };
 		737EDFC326501A4100766F97 /* MTBReportPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */; };
 		737EDFC426501A4100766F97 /* MTBReportViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFB126501A3E00766F97 /* MTBReportViewModel.m */; };
 		737EDFC526501A4100766F97 /* MTBReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFB226501A3E00766F97 /* MTBReportViewController.m */; };
@@ -36,6 +35,7 @@
 		737EDFCC26501A4100766F97 /* MTBReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737EDFBD26501A4100766F97 /* MTBReportViewController.xib */; };
 		737EDFCD26501A4100766F97 /* MTBCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 737EDFBE26501A4100766F97 /* MTBCoreDataManager.m */; };
 		7384C1BB24E0059200C25B97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7384C1BD24E0059200C25B97 /* Localizable.strings */; };
+		7387417C27A6D7340026188B /* Reports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7387417A27A6D7340026188B /* Reports.xcdatamodeld */; };
 		738936162651222C008F4DDB /* MTBReportingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 738936152651222C008F4DDB /* MTBReportingManager.m */; };
 		738BDCFB25F7A2EC00D563F2 /* embeddedBase64Img.html in Resources */ = {isa = PBXBuildFile; fileRef = 738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */; };
 		739ACCD02655360900DA6078 /* MTBUpdateCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739ACCCF2655360900DA6078 /* MTBUpdateCheckViewController.xib */; };
@@ -126,7 +126,6 @@
 		737C5506265FB778009E4D06 /* MTBPackageValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBPackageValidator.h; sourceTree = "<group>"; };
 		737C5507265FB778009E4D06 /* MTBPackageValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBPackageValidator.m; sourceTree = "<group>"; };
 		737EDFAB26501A3D00766F97 /* NSManagedObjectContext+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Merge.h"; sourceTree = "<group>"; };
-		737EDFAD26501A3E00766F97 /* CDCourses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDCourses.xcdatamodel; sourceTree = "<group>"; };
 		737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTBReportPopover.xib; sourceTree = "<group>"; };
 		737EDFAF26501A3E00766F97 /* MTBReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBReportViewController.h; sourceTree = "<group>"; };
 		737EDFB026501A3E00766F97 /* MTBCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTBCoreDataManager.h; sourceTree = "<group>"; };
@@ -139,6 +138,7 @@
 		737EDFBD26501A4100766F97 /* MTBReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTBReportViewController.xib; sourceTree = "<group>"; };
 		737EDFBE26501A4100766F97 /* MTBCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBCoreDataManager.m; sourceTree = "<group>"; };
 		7384C1BC24E0059200C25B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7387417B27A6D7340026188B /* Reports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reports.xcdatamodel; sourceTree = "<group>"; };
 		7389361426510410008F4DDB /* MTBReportingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBReportingManager.h; sourceTree = "<group>"; };
 		738936152651222C008F4DDB /* MTBReportingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTBReportingManager.m; sourceTree = "<group>"; };
 		738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = embeddedBase64Img.html; sourceTree = "<group>"; };
@@ -1696,7 +1696,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */,
+				7387417A27A6D7340026188B /* Reports.xcdatamodeld */,
 				73CE068F2670D1CD006FB79F /* MTBLicensesViewController.xib */,
 				73ABE26F2657B97D005B6FCA /* MTBSidebarMenu.xib */,
 				737EDFAE26501A3E00766F97 /* MTBReportPopover.xib */,
@@ -3586,6 +3586,7 @@
 				73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */,
 				1BED92F81079529C00D22B4C /* MTBMailBundle.m in Sources */,
 				738936162651222C008F4DDB /* MTBReportingManager.m in Sources */,
+				7387417C27A6D7340026188B /* Reports.xcdatamodeld in Sources */,
 				73A43DD326A2AFE900157391 /* MTBWindowController.m in Sources */,
 				737EDFC926501A4100766F97 /* NSManagedObjectContext+Merge.m in Sources */,
 				73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */,
@@ -3594,7 +3595,6 @@
 				73A216882653C39E00045303 /* MTBUpdateManager.m in Sources */,
 				737C5508265FB778009E4D06 /* MTBPackageValidator.m in Sources */,
 				1B32AFF713AF827B0072079B /* CCLog.m in Sources */,
-				737EDFC226501A4100766F97 /* Reports.xcdatamodeld in Sources */,
 				737EDFC526501A4100766F97 /* MTBReportViewController.m in Sources */,
 				73ABE2732657BB85005B6FCA /* MTBSidebarMenu.m in Sources */,
 				73A2168E2653DF4F00045303 /* MTBGitHubReleases.m in Sources */,
@@ -3986,12 +3986,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		737EDFAC26501A3E00766F97 /* Reports.xcdatamodeld */ = {
+		7387417A27A6D7340026188B /* Reports.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				737EDFAD26501A3E00766F97 /* CDCourses.xcdatamodel */,
+				7387417B27A6D7340026188B /* Reports.xcdatamodel */,
 			);
-			currentVersion = 737EDFAD26501A3E00766F97 /* CDCourses.xcdatamodel */;
+			currentVersion = 7387417B27A6D7340026188B /* Reports.xcdatamodel */;
 			path = Reports.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

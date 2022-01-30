@@ -26,6 +26,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
 - (id)init {
     if( self = [super init]) {
         trackers = [[NSMutableSet alloc] init];
+        _unknownTrackerCount = 0;
     }
     return self;
 }
@@ -54,6 +55,14 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
 
 - (NSString *)detectedTracker {
     return [trackers anyObject];
+}
+
+- (NSSet *)detectedTrackers {
+    return trackers;
+}
+
+- (NSUInteger)knownTrackerCount {
+    return [trackers count];
 }
 
 - (enum BLOCKING_RESULT_CERTAINTY)certainty {
@@ -102,6 +111,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         while (matchedRange.location != NSNotFound) {
             result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
             matchedRange = [result rangeFromPattern:regexStr];
+            _unknownTrackerCount++;
         }
     }
     
@@ -144,6 +154,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             continue; // no replacement
         } else {
             replacement = @"";
+            _unknownTrackerCount++;
         }
 
         [mutableString replaceCharactersInRange:resultRange withString:replacement];

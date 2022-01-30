@@ -92,8 +92,12 @@
         _trackerNameLabel.stringValue = @"-";
         _trackerDescriptionLabel.stringValue = MTBLocalizedString(@"BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC");
     } else {
-        _trackerNameLabel.stringValue = [blockedMessage detectedTracker];
-        _trackerDescriptionLabel.stringValue = [NSString stringWithFormat:MTBLocalizedString(@"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH"), blockedMessage.detectedTracker];
+        _trackerNameLabel.stringValue = [blockedMessage.detectedTrackers.allObjects componentsJoinedByString:@", "];
+        if ([blockedMessage knownTrackerCount] == 1) {
+            _trackerDescriptionLabel.stringValue = [NSString stringWithFormat:MTBLocalizedString(@"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH"), blockedMessage.detectedTracker];
+        } else {
+            _trackerDescriptionLabel.stringValue = [NSString stringWithFormat:MTBLocalizedString(@"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCHES"), blockedMessage.knownTrackerCount];
+        }
     }
 }
 @end
