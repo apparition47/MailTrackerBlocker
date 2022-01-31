@@ -66,7 +66,6 @@
                 [components addObject:[NSPredicate predicateWithFormat:@"name == %@", trackerName]];
             }
             fetchRequest.predicate = [NSCompoundPredicate orPredicateWithSubpredicates:components];
-            fetchRequest.fetchLimit = 5;
             entity = [NSEntityDescription entityForName:@"Tracker"
                                                       inManagedObjectContext:context];
             [fetchRequest setEntity:entity];
@@ -79,7 +78,9 @@
             
             // update tracker with email added
             if (trackerFetchResults.count > 0) {
-                [[trackerFetchResults.firstObject mutableSetValueForKey:@"reports"] addObject:email];
+                for (id trackerFetchResult in trackerFetchResults) {
+                    [[trackerFetchResult mutableSetValueForKey:@"reports"] addObject:email];
+                }
             } else {
                 // create new tracker
                 for (NSString *trackerName in blkMsg.detectedTrackers) {

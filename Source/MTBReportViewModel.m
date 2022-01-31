@@ -82,7 +82,7 @@
         NSArray<Email *> *emails = [strongSelf.managedObjectContext executeFetchRequest:fetchRequest error:&error];
         NSInteger trackedEmails = 0;
         for (Email *email in emails) {
-            trackedEmails += email.tracker != nil ? 1 : 0;
+            trackedEmails += email.tracker.count ? 1 : 0;
         }
         if (error) {
             errorCompletion(error);
