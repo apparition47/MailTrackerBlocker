@@ -3,6 +3,10 @@
 ## [0.6.0] - TBA
 
 - show all tracker vendors in emails instead of only the first one
+
+## [0.5.8] - 2022-01-31
+
+- #165 support for macOS 12.3 (thanks @malwcal)
 - fix LiveIntent rule
 - add Hiretual rule
 - improve Acoustic rule (thanks Steve H.)
