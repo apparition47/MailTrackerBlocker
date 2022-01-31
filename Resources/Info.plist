@@ -91,19 +91,11 @@
 	</array>
 	<key>Supported12.3PluginCompatibilityUUIDs</key>
 	<array>	
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
 	</array>
 	<key>Supported12.4PluginCompatibilityUUIDs</key>
 	<array>	
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-	</array>
-	<key>Supported12.5PluginCompatibilityUUIDs</key>
-	<array>	
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-	</array>
-	<key>Supported12.6PluginCompatibilityUUIDs</key>
-	<array>	
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
 	</array>
 	<key>SupportedPluginCompatibilityUUIDs</key>
 	<array>

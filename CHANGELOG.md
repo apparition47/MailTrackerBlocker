@@ -2,6 +2,7 @@
 
 ## [0.5.8] - TBA
 
+- #165 support for macOS 12.3 (thanks @malwcal)
 - fix LiveIntent rule
 - add Hiretual rule
 - improve Acoustic rule (thanks Steve H.)
