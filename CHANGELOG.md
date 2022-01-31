@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.5.8] - TBA
+## [0.5.8] - 2022-01-31
 
 - #165 support for macOS 12.3 (thanks @malwcal)
 - fix LiveIntent rule
