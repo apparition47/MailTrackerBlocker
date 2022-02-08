@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.6.0] - TBA
+## [0.6.0] - 2022-02-08
 
 - #167 fix broken Responsys rule and improve Validity and Movable Ink rules (thanks @spalmen)
 - add Traverse and exempt PayPal spacers (thanks Robert R.)
