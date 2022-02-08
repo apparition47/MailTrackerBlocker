@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.9] - TBA
+
+- #167 fix broken Responsys rule and improve Validity and Movable Ink rules (thanks @spalmen)
+
 ## [0.5.8] - 2022-01-31
 
 - #165 support for macOS 12.3 (thanks @malwcal)
