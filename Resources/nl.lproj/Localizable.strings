@@ -1,6 +1,7 @@
 "BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker heeft geen trackers gevonden in deze e-mail";
 "BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker heeft een mogelijke tracker gedetecteerd in deze e-mail en preventief geblokkkeerd";
 "BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker heeft een tracker van %@ geblokkkeerd";
+"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCHES" = "MailTrackerBlocker blokkeerde %d trackers";
 "MTB_MULTIPLE_INSTALLATIONS_TITLE" = "Meerdere installaties van MailTrackerBlocker gevonden";
 "MTB_MULTIPLE_INSTALLATIONS_MESSAGE" = "Meerdere installaties van MailTrackerBlocker gevonden in de volgende locaties die zullen leiden tot een onmiddelijke crash:\n\n%@\n\nVerwijder de MailTrackerBlocker.mailbundle op één van de locaties en start Mail opnieuw op.\n";
 "MTB_MULTIPLE_INSTALLATIONS_BUTTON" = "Sluit Mail";
