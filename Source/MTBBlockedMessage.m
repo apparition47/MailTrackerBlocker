@@ -457,7 +457,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"mixmax.com/api/track/"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
-        @"Movable Ink": @[@"movable-ink-3094.com/p/cp/"],
+        @"Movable Ink": @[
+            @"/p/rp/\\w{16}.png",
+            @"/p/cp/\\w{16,32}/o.gif"
+        ],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
         @"Nation Builder": @[@"nationbuilder.com/r/o"],
         @"NeteCart": @[@"netecart.com/ltrack"],
@@ -483,7 +486,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"bm5150.com/t/",
             @"bm23.com/t/",
             @"/t/o\\?", // bronto
-            @"/pub/as\\?_ri_=.*&_ei_=", // Responsys
+            @"/pub/as\\?_ri_=", // Responsys
             @"[a-zA-Z0-9-.]/e/FooterImages/FooterImage"
         ],
         @"OutMaster": @[@"outmaster.co/mailer/index.php/campaigns/"],
@@ -626,7 +629,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upland PostUp": @[@"efeedbacktrk.com/.*.gif"],
         @"US Bancorp": @[@"post-images.com/amy/open.action"],
-        @"Validity": @[@"pixel.app.returnpath.net/pixel.gif"],
+        @"Validity": @[@"pixel.(app|monitor1|monitor2).returnpath.net/pixel.gif"],
         @"Varibase": @[@"e.varibase.com/mail/MOS"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
