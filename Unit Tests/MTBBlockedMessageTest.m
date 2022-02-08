@@ -242,8 +242,13 @@
     XCTAssertEqualObjects(msg5.sanitizedHtml, email5);
     XCTAssertEqualObjects(msg5.detectedTracker, nil);
     XCTAssertEqual(msg5.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
+    
+    NSString *emailPP = @"<img src=\"https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/sidebar-gradient.png\" width=\"1\" height=\"100\" style=\"display:block;\" alt=\"\">";
+    MTBBlockedMessage *msgPP = [[MTBBlockedMessage alloc] initWithHtml:emailPP];
+    XCTAssertEqualObjects(msgPP.sanitizedHtml, email5);
+    XCTAssertEqualObjects(msgPP.detectedTracker, nil);
+    XCTAssertEqual(msgPP.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
 }
-
 #pragma mark - Helpers
 
 - (NSString*)getHTMLResourceWithFileName:(NSString*)fileName {

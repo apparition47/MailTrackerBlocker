@@ -3,6 +3,7 @@
 ## [0.6.0] - TBA
 
 - #167 fix broken Responsys rule and improve Validity and Movable Ink rules (thanks @spalmen)
+- add Traverse and exempt PayPal spacers (thanks Robert R.)
 - show all tracker vendors in emails instead of only the first one
 
 ## [0.5.8] - 2022-01-31

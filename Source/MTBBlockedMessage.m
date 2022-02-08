@@ -148,7 +148,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
                                                    template:@"$0"];
         
         NSString* replacement;
-        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web";
+        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web|sidebar-gradient";
         NSRange matchedRange = [match rangeFromPattern:regexStr];
         if (matchedRange.location != NSNotFound) {
             continue; // no replacement
@@ -621,6 +621,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"trackapp.io/static/img/track.gif"
         ],
         @"Transferwise": @[@"links.transferwise.com/track/"],
+        @"Traverse": @[
+            @"/v1/(\\w|-){36}/\\d.gif\\?emailMd5Lower=",
+            @"getpic.php\\?l="
+        ],
         @"Tripolis": @[@"/public/o/(\\w|\\+|/){40,50}/t.gif"],
         @"Twilio": @[@"api.segment.io/v1/pixel/track"],
         @"Twitch": @[@"spade.twitch.tv/track"],
