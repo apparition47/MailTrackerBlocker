@@ -40,7 +40,7 @@
             return;
         }
         Email *email;
-        if (fetchResults.count && ![fetchResults.firstObject.tracker isEqualToSet:blkMsg.detectedTrackers]) {
+        if (fetchResults.count > 0 && ![fetchResults.firstObject.tracker.name isEqualToString:blkMsg.detectedTracker]) {
             // if tracker has assoc with tracker rule that since changed
             [context deleteObject:fetchResults.firstObject];
             
@@ -59,13 +59,10 @@
         }
         
         // check if tracker has been prev saved
-        if (blkMsg.knownTrackerCount) {
-            fetchRequest = [NSFetchRequest new];
-            NSMutableArray *components = [NSMutableArray new];
-            for (NSString *trackerName in blkMsg.detectedTrackers) {
-                [components addObject:[NSPredicate predicateWithFormat:@"name == %@", trackerName]];
-            }
-            fetchRequest.predicate = [NSCompoundPredicate orPredicateWithSubpredicates:components];
+        if (blkMsg.detectedTracker != nil) {
+            fetchRequest = [[NSFetchRequest alloc] init];
+            fetchRequest.predicate = [NSPredicate predicateWithFormat:@"name == %@", blkMsg.detectedTracker];
+            fetchRequest.fetchLimit = 1;
             entity = [NSEntityDescription entityForName:@"Tracker"
                                                       inManagedObjectContext:context];
             [fetchRequest setEntity:entity];
@@ -78,16 +75,12 @@
             
             // update tracker with email added
             if (trackerFetchResults.count > 0) {
-                for (id trackerFetchResult in trackerFetchResults) {
-                    [[trackerFetchResult mutableSetValueForKey:@"reports"] addObject:email];
-                }
+                [[trackerFetchResults.firstObject mutableSetValueForKey:@"reports"] addObject:email];
             } else {
                 // create new tracker
-                for (NSString *trackerName in blkMsg.detectedTrackers) {
-                    Tracker *tracker = [NSEntityDescription insertNewObjectForEntityForName:@"Tracker" inManagedObjectContext:context];
-                    [tracker setName:trackerName];
-                    [tracker setReports:[NSSet setWithArray:@[email]]];
-                }
+                Tracker *tracker = [NSEntityDescription insertNewObjectForEntityForName:@"Tracker" inManagedObjectContext:context];
+                [tracker setName:blkMsg.detectedTracker];
+                [tracker setReports:[NSSet setWithArray:@[email]]];
             }
         }
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G415" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Email" representedClassName="Email" syncable="YES" codeGenerationType="class">
         <attribute name="deeplink" optional="YES" attributeType="String"/>
         <attribute name="read_timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="subject" optional="YES" attributeType="String"/>
-        <relationship name="tracker" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Tracker" inverseName="reports" inverseEntity="Tracker"/>
+        <relationship name="tracker" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Tracker" inverseName="reports" inverseEntity="Tracker"/>
     </entity>
     <entity name="Tracker" representedClassName="Tracker" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="reports" toMany="YES" deletionRule="No Action" destinationEntity="Email" inverseName="tracker" inverseEntity="Email"/>
+        <relationship name="reports" toMany="YES" minCount="1" deletionRule="No Action" destinationEntity="Email" inverseName="tracker" inverseEntity="Email"/>
     </entity>
     <elements>
-        <element name="Email" positionX="-28.73736572265625" positionY="-280.8207397460938" width="128" height="89"/>
+        <element name="Email" positionX="-28.73736572265625" positionY="-280.8207397460938" width="128" height="103"/>
         <element name="Tracker" positionX="-18" positionY="54" width="128" height="59"/>
     </elements>
 </model>
