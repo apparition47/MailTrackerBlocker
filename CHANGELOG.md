@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.6.1] - TBA
+## [0.6.1] - 2022-03-13
 
 - #169 add Inxmail rule (thanks @m-schmitt)
 - add Clarivate rule (thanks @oneofthedamons)
