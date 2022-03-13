@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.1] - TBA
+
+- #169 add Inxmail rule (thanks @m-schmitt)
+- add Clarivate rule (thanks @oneofthedamons)
+- improve Mailshake rule
+
 ## [0.6.0] - 2022-02-08
 
 - #167 fix broken Responsys rule and improve Validity and Movable Ink rules (thanks @spalmen)

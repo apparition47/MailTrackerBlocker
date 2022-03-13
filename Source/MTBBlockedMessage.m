@@ -145,7 +145,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
                                                    template:@"$0"];
         
         NSString* replacement;
-        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web|sidebar-gradient";
+        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web|sidebar-gradient|transparent.gif";
         NSRange matchedRange = [match rangeFromPattern:regexStr];
         if (matchedRange.location != NSNotFound) {
             continue; // no replacement
@@ -270,6 +270,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Cheetah Digital": @[@"/rts/open.aspx\\?tp="],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
+        @"Clarivate": @[@"/email/track\\?a="],
         @"ClickMeter": @[@"pixel.watch/"],
         @"Clio": @[@"app.clio.com/tracking_pixel"],
         @"Close": @[@"close.(io|com)/email_opened", @"dripemail2"],
@@ -395,6 +396,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"us\\d+.mailchimp.com/mctx/opens",
             @"/track/open.php\\?u=",
         ],
+        @"Inxmail": @[@"/d/d.gif\\?"],
         @"Is-tracking-pixel-api-prod.appspot.com": @[@"is-tracking-pixel-api-prod.appspot.com"],
 //        @"JangoMail": @["/[a-z].z\\?[a-z]="],
         @"LaunchBit": @[@"launchbit.com/taz-pixel"],
@@ -423,7 +425,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"links.[a-zA-Z0-9-.]+/oo/",
             @"s0hu.mj.am/oo/"
         ],
-        @"Mailshake": @[@"w\\d.msstnu.com/prod/open/"],
+        @"Mailshake": @[@"w1.(mslai.net|msstnu.com)/prod/open/"],
         @"Mailspring": @[@"getmailspring.com/open"],
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
