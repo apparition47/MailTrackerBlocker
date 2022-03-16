@@ -248,6 +248,16 @@
     XCTAssertEqualObjects(msgPP.detectedTracker, nil);
     XCTAssertEqual(msgPP.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
 }
+
+- (void)testTwoTrackersSameVendor {
+    NSString *emailPP = @"<img src=\"https://sli.komando.com/imp?s=810140&amp;e=example@gmail.com&amp;p=1647437190982&amp;stpe=default\" border=\"0\" width=\"600\" style=\"width: 100%; max-width: 600px !important;\"><img src=\"https://sli.komando.com/imp?s=810141&amp;e=example@gmail.com&amp;p=1647437190982&amp;stpe=default\" border=\"0\" width=\"600\" style=\"width: 100%; max-width: 600px !important;\">";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:emailPP];
+    XCTAssertEqualObjects(msg.sanitizedHtml,
+                          @"");
+    XCTAssertEqualObjects(msg.detectedTracker, @"LiveIntent");
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 #pragma mark - Helpers
 
 - (NSString*)getHTMLResourceWithFileName:(NSString*)fileName {

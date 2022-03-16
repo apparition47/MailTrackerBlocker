@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.2] - TBA
+
+- block Jeeng ads (thanks GrafhamVillage)
+- fixed issue that prevented more than one LiveIntent ad from being blocked
+- add Cordial rule
+
 ## [0.6.1] - 2022-03-13
 
 - #169 add Inxmail rule (thanks @m-schmitt)

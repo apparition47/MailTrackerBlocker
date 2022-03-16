@@ -88,9 +88,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         for (NSString *trkRegexStr in [trackingDict objectForKey:trackingSourceKey]) {
             NSString *regexStr = [NSString stringWithFormat:kImgTagTemplateRegex, trkRegexStr];
             NSRange matchedRange = [result rangeFromPattern:regexStr];
-            if (matchedRange.location != NSNotFound) {
+            while (matchedRange.location != NSNotFound) {
                 [trackers addObject:trackingSourceKey];
                 result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
+                matchedRange = [result rangeFromPattern:regexStr];
                 _knownTrackerCount++;
             }
         }
@@ -109,6 +110,20 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
             matchedRange = [result rangeFromPattern:regexStr];
             _knownTrackerCount++;
+        }
+    }
+    
+    // strip non-tracking static ad content
+    NSArray *staticContentDict = @[
+        @"/branding/recommend/short.png", // Jeeng
+        @"nl-static1.komando.com/wp-content/uploads/ad-"
+    ];
+    for (NSString *regexValue in staticContentDict) {
+        NSString *regexStr = [NSString stringWithFormat:kImgTagTemplateRegex, regexValue];
+        NSRange matchedRange = [result rangeFromPattern:regexStr];
+        while (matchedRange.location != NSNotFound) {
+            result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
+            matchedRange = [result rangeFromPattern:regexStr];
         }
     }
     
@@ -285,6 +300,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"open.convertkit-mail2.com/[a-z0-9]{20}"
         ],
         @"Copper": @[@"prosperworks.com/tp/t"],
+        @"Cordial": @[@"/o/p/\\d\\d\\d\\d:"],
         @"Cprpt": @[@"/o.aspx\\?t="],
         @"Creditmantri.com": @[@"mailer.creditmantri.com/t/"],
         @"Critical Impact": @[@"portal.criticalimpact.com/c2/"],
@@ -399,12 +415,13 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Inxmail": @[@"/d/d.gif\\?"],
         @"Is-tracking-pixel-api-prod.appspot.com": @[@"is-tracking-pixel-api-prod.appspot.com"],
 //        @"JangoMail": @["/[a-z].z\\?[a-z]="],
+        @"Jeeng": @[@"/stripe/image\\?cs_"],
         @"LaunchBit": @[@"launchbit.com/taz-pixel"],
         @"Lidl": @[@"servicemails.lidl.de/d/d.gif"],
         @"LinkedIn": @[@"linkedin.com/emimp/", @"help.linkedin.com/rd/"],
         @"Litmus": @[@"emltrk.com"],
         @"Liveclicker": @[@"em.realtime.email/service/rte\\?kind=duration"],
-        @"LiveIntent": @[@"/imp\\?s=\\d{6}&amp;li="], // imp?s=&li=&e=&p=&stpe= // imp?s=&li=&m=&p=
+        @"LiveIntent": @[@"/imp\\?s=\\d{6,9}&"], // imp?s=&li=&e=&p=&stpe= // imp?s=&li=&m=&p= // imp?s=&e=&p=&stpe
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
         @"Klaviyo": @[@"trk.klaviyomail.com"],
@@ -636,7 +653,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Varibase": @[@"e.varibase.com/mail/MOS"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
-        @"Vice Media": @[@"rs-stripe.refinery29.com/stripe/image"],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
         @"WhatCounts": @[@"whatcounts.com/t"],
         @"We Are Web": @[@"tracking.weareweb.in/index.php/campaigns/"],
