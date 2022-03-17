@@ -4,7 +4,9 @@
 
 - block Jeeng ads (thanks GrafhamVillage)
 - fixed issue that prevented more than one LiveIntent ad from being blocked
-- add Cordial rule
+- add MailReach, CommissionSoup (thanks Robert R.)
+- add Cordial, ANA rules
+- improve Validity, Mailspring rules
 
 ## [0.6.1] - 2022-03-13
 

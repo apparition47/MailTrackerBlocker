@@ -223,6 +223,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"gqco.net/i/",
         ],
         @"Alida": @[@"www.aaacrossroads.com/c/static_images/.*.png1"], // formerly Vision Critical
+        @"All Nippon Airways": @[@"amc.ana.co.jp/bin/checker"],
         @"Amazon": @[@"sellercentral(-europe|-japan|)?.amazon.(com|co.uk|com.au|sg|in|com.tr|ae|com.br)/nms/img/"],
         @"Amazon SES": @[
             @".r.(us-east-2|us-east-1|us-west-2|ap-south-1|ap-northeast-2|ap-southeast-1|ap-southeast-2|ap-northeast-1|ca-central-1|eu-central-1|eu-west-1|eu-west-2|sa-east-1|us-gov-west-1).awstrack.me/I0/\\w{16}-\\w{8}-\\w{4}",
@@ -291,6 +292,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Close": @[@"close.(io|com)/email_opened", @"dripemail2"],
         @"cloudHQ": @[@"cloudhq.io/mail_track", @"cloudhq-mkt(d).net/mail_track"],
         @"Coda": @[@"coda.io/logging/ping"],
+        @"CommissionSoup": @[@"cstrk.net/imp.aspx\\?l="],
         @"ConneQuityMailer": @[@"connequitymailer.com/open/"],
         @"Conrad": @[@"aktuell.conrad.de/g.html"],
         @"Constant Contact": @[@"rs6.net/on.jsp"],
@@ -357,7 +359,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"GearBest": @[@"appinthestore.com/marketing/mail-user-deal/open"],
         @"Gem": @[@"zen.sr/o"],
         @"GetBase": @[@"getbase.com/e1t/o/"],
-        @"GetMailSpring": @[@"getmailspring.com/open"],
         @"GetNotify": @[@"email81.com/case"],
         @"GetResponse": @[@"/open.html\\?x="],
         @"GitHub": @[@"github.com/notifications/beacon/"],
@@ -443,7 +444,9 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"s0hu.mj.am/oo/"
         ],
         @"Mailshake": @[@"w1.(mslai.net|msstnu.com)/prod/open/"],
-        @"Mailspring": @[@"getmailspring.com/open"],
+        @"Mailspring": @[@"getmailspring.com/open",
+                         @"img.secureserver.net/bbimage.aspx"
+        ],
         @"MailTag": @[@"mailtag.io/email-event"],
         @"MailTrack": @[@"mailtrack.io/trace", @"mltrk.io/pixel"],
         @"Mailzter": @[@"mailzter.in/ltrack"],
@@ -538,6 +541,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"cl.rakuten-bank.co.jp/rw/beacon_(.*).gif",
             @"cmb.rakuten-sec.co.jp/bin/checker"
         ],
+        @"ReachMail": @[@"/open/\\w{23}/image.gif"],
         @"ReplyCal": @[@"replycal.com/home/index/\\?token"],
         @"ReplyMsg": @[@"replymsg.com"],
         @"Responder.co.il": @[@"opens.responder.co.il"],
@@ -649,7 +653,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upland PostUp": @[@"efeedbacktrk.com/.*.gif"],
         @"US Bancorp": @[@"post-images.com/amy/open.action"],
-        @"Validity": @[@"pixel.(app|monitor1|monitor2).returnpath.net/pixel.gif"],
+        @"Validity": @[
+            @"pixel.(app|monitor1|monitor2).returnpath.net/pixel.gif",
+            @"/ea/\\w{10}/\\?e=(\\w|-){36}@" // 250ok
+        ],
         @"Varibase": @[@"e.varibase.com/mail/MOS"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
