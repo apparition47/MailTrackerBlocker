@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.6.2] - TBA
+## [0.6.2] - 2022-03-19
 
 - block Jeeng ads (thanks GrafhamVillage)
 - fixed issue that prevented more than one LiveIntent ad from being blocked
