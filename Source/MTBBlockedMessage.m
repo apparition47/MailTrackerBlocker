@@ -493,7 +493,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
         @"NTT": @[@"club-ntt-west.com/cn-w/cmn/img/1.png"],
         @"Omnisend": @[@"/track/.*/.*\\?signature="],
-        @"Ongage": @[@"/\\?xol=\\w{21,29}&amp;eih=\\w{21,29}"],
+        @"Ongage": @[@"/\\?x(o|u)l=\\w{21,29}&(amp;)?eih=\\w{21,29}"],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
         @"Optimove": @[@"/ss/o/(\\w|-){22}/\\w{3}/(\\w|-){22}/\\w{2}.gif"],

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.6.3] - TBA
+
+- improve Ongage rule (thanks Robert R.)
+
 ## [0.6.2] - 2022-03-19
 
 - block Jeeng ads (thanks GrafhamVillage)
