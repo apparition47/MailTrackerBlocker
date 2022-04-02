@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.6.3] - TBA
+## [0.6.3] - 2022-04-02
 
 - improve Ongage rule (thanks Robert R.)
 - improve MailerLite rule
