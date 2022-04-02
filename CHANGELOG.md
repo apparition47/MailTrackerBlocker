@@ -3,6 +3,8 @@
 ## [0.6.3] - TBA
 
 - improve Ongage rule (thanks Robert R.)
+- improve MailerLite rule
+- add Campaigner rule
 
 ## [0.6.2] - 2022-03-19
 

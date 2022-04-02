@@ -282,6 +282,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"cmail\\d{1,2}.com/t/.+.gif",
             @"createsend\\d+.com/.+.gif"
         ],
+        @"Campaigner": @[@"trk.cp20.com/open/"],
         @"CanaryMail": @[@"canarymail.io(:\\d+)?/track"],
         @"Cheetah Digital": @[@"/rts/open.aspx\\?tp="],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
@@ -435,7 +436,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Mailcampaigns": @[@"interface.mailcampaigns.nl/v\\d/t/"],
         @"Mailcastr": @[@"mailcastr.com/image/"],
         @"MailCoral": @[@"mailcoral.com/open"],
-        @"MailerLite": @[@"click.mlsend.com/link/o/"],
+        @"MailerLite": @[@"/link/o/"],
         @"Mailgun": @[@"/o/eJ"],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
         @"Mailjet": @[
