@@ -397,7 +397,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"track.getsidekick.com",
             @"/e2t/(o|c|to)/",
             @"hubspotlinks.com/Bto",
-            @"/e3t/Bto/"
+            @"/e3t/(B|C)to/"
         ],
         @"Hunter.io": @[@"mltrk.io/pixel"],
         @"Hyper Hyper": @[@"hyperhub.com.au/newhub/api/email/track"],

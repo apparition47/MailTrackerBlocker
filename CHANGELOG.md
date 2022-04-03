@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.6.4] - TBA
+
+- #170 improve Hubspot rule (thanks @m-schmitt)
+
 ## [0.6.3] - 2022-04-02
 
 - improve Ongage rule (thanks Robert R.)
