@@ -313,6 +313,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/e/o/[a-zA-Z0-9=]{60}",
         ],
         @"Cyberimpact": @[@"app.cyberimpact.com/footer-image"],
+        @"dataX": @[@"openedlog.bdash-cloud.com/opened"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"Disney": @[@"clk.messaging.go.com/c/\\d\\d/bcasts/\\d{10}/view"],
@@ -542,7 +543,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"cl.rakuten-bank.co.jp/rw/beacon_(.*).gif",
             @"cmb.rakuten-sec.co.jp/bin/checker"
         ],
-        @"ReachMail": @[@"/open/\\w{23}/image.gif"],
+        @"ReachMail": @[@"/open/(\\w|-){23}/image.gif"],
         @"ReplyCal": @[@"replycal.com/home/index/\\?token"],
         @"ReplyMsg": @[@"replymsg.com"],
         @"Responder.co.il": @[@"opens.responder.co.il"],
@@ -551,7 +552,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Runtastic": @[@"runtastic.com/mo/"],
         @"Sailthru": @[
             @"sailthru.com/trk",
-            @"link.axios.com/img/.*.gif"
+            @"/img/\\w{48}/\\w{8}.gif"
         ],
         @"Salesforce": @[ // ExactTarget
             @"salesforceiq.com/t.png",
@@ -661,6 +662,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Varibase": @[@"e.varibase.com/mail/MOS"],
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
+        @"VinSolutions": @[@"vinlens.com/email.ashx\\?c="],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
         @"WhatCounts": @[@"whatcounts.com/t"],
         @"We Are Web": @[@"tracking.weareweb.in/index.php/campaigns/"],

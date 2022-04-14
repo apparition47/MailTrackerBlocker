@@ -3,6 +3,9 @@
 ## [0.6.4] - TBA
 
 - #170 improve Hubspot rule (thanks @m-schmitt)
+- add VinSolutions, improve ReachMail rules (thanks Robert R.)
+- improve Sailthru rule
+- add dataX rule
 
 ## [0.6.3] - 2022-04-02
 
