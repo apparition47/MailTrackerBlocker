@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.6.4] - TBA
+## [0.6.4] - 2022-04-23
 
 - #170 improve Hubspot rule (thanks @m-schmitt)
 - add VinSolutions, improve ReachMail rules (thanks Robert R.)
