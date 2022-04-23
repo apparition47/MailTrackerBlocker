@@ -425,6 +425,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Litmus": @[@"emltrk.com"],
         @"Liveclicker": @[@"em.realtime.email/service/rte\\?kind=duration"],
         @"LiveIntent": @[@"/imp\\?s=\\d{6,9}&"], // imp?s=&li=&e=&p=&stpe= // imp?s=&li=&m=&p= // imp?s=&e=&p=&stpe
+        @"Locaweb": @[@".br/accounts/\\d{4}/messages/\\d{3}/openings/\\d{5}\\?envelope_id="],
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
         @"Klaviyo": @[@"trk.klaviyomail.com"],
@@ -457,6 +458,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"enews.zdnet.com/imagelibrary/"
         ],
         @"Maropost": @[@"/a/\\d{4}/open/\\d{4}/\\d{6,7}/\\w{40}"],
+        @"MDirector": @[@"track.mdrctr.com/track/open/key/"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
         @"MessageGears": @[@"expediamail.com/o/"],
         @"Meta": @[
@@ -495,7 +497,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
         @"NTT": @[@"club-ntt-west.com/cn-w/cmn/img/1.png"],
         @"Omnisend": @[@"/track/.*/.*\\?signature="],
-        @"Ongage": @[@"/\\?x(o|u)l=\\w{21,29}&(amp;)?eih=\\w{21,29}"],
+        @"Ongage": @[@"/\\?x(o|u)l=\\w{20,29}&(amp;)?eih=\\w"],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
         @"Optimove": @[@"/ss/o/(\\w|-){22}/\\w{3}/(\\w|-){22}/\\w{2}.gif"],
