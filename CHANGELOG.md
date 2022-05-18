@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.6.5] - TBA
+## [0.6.5] - 2022-05-19
 
 - #171 support macOS 12.5 beta (thanks @berkue)
 - add MDirector, Locaweb and improve Ongage rules (thanks Robert R.)
