@@ -2,7 +2,8 @@
 
 ## [0.6.5] - TBA
 
-- add MDirector rule (thanks Robert R.) 
+- #171 support macOS 12.5 beta (thanks @berkue)
+- add MDirector, Locaweb and improve Ongage rules (thanks Robert R.)
 
 ## [0.6.4] - 2022-04-23
 
