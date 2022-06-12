@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.6.6]
+
+- #172 disabled Movable Ink ad rule
+
 ## [0.6.5] - 2022-05-19
 
 - #171 support macOS 12.5 beta (thanks @berkue)

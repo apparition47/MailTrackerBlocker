@@ -480,10 +480,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"mixmax.com/api/track/"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
-        @"Movable Ink": @[
-            @"/p/rp/\\w{16}.png",
-            @"/p/cp/\\w{16,32}/o.gif"
-        ],
+//        @"Movable Ink": @[
+//            @"/p/rp/\\w{16}.png",
+//            @"/p/cp/\\w{16,32}/o.gif"
+//        ],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
         @"Nation Builder": @[@"nationbuilder.com/r/o"],
         @"NeteCart": @[@"netecart.com/ltrack"],
