@@ -313,6 +313,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/e/o/[a-zA-Z0-9=]{60}",
         ],
         @"Cyberimpact": @[@"app.cyberimpact.com/footer-image"],
+        @"Data Axle": @[@"ympxl.com/log.gif"],
         @"dataX": @[@"openedlog.bdash-cloud.com/opened"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],

@@ -3,6 +3,7 @@
 ## [0.6.6]
 
 - #172 disabled Movable Ink ad rule
+- #174 add Data Axle
 
 ## [0.6.5] - 2022-05-19
 
