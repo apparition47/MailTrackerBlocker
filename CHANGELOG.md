@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.6.6]
+## [0.7.0] - TBA
+
+- Unofficial macOS 13 support
+
+## [0.6.6] - 2022-06-19
 
 - #172 disabled Movable Ink ad rule
 - #174 add Data Axle
