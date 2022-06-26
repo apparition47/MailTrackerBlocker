@@ -222,6 +222,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"sjv.io/i/",
             @"gqco.net/i/",
         ],
+        @"Alibaba": @[@"ae.mmstat.com/ae.edm.edm_open"],
         @"Alida": @[@"www.aaacrossroads.com/c/static_images/.*.png1"], // formerly Vision Critical
         @"All Nippon Airways": @[@"amc.ana.co.jp/bin/checker"],
         @"Amazon": @[@"sellercentral(-europe|-japan|)?.amazon.(com|co.uk|com.au|sg|in|com.tr|ae|com.br)/nms/img/"],
