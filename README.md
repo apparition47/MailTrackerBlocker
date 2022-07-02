@@ -21,7 +21,7 @@ Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 
 ## Prerequisites
 
-Apple Mail on macOS 10.11 - 12.x.
+Apple Mail on macOS 10.11 - 13.x.
 
 ⚠️ If you have macOS 12 and up, [Mail Privacy Protection](https://support.apple.com/en-ca/guide/mail/mlhl03be2866/mac) is recommended over MailTrackerBlocker for more complete privacy guards.
 
@@ -38,10 +38,31 @@ $ brew install mailtrackerblocker
 
 ### Usage
 
-1. [Additional step for macOS 10.14, 10.15 only] Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`. Note that you'll need to do this again for each update.
-2. Tap on the `ⓧ` button to find out what was blocked.
+<details>
+<summary><h4>macOS 12, 13</h4></summary>
+<br>
+1. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
+<br><br>
+⚠️ Enabling <a href="https://techviral.net/wp-content/uploads/2021/11/Mail-Privacy-Protection.jpg">"Block All Remote Content"</a> with MailTrackerBlocker enabled is redundant; disable this option for the best experience.
+</details>
 
-⚠️ Disabling ["load remote content in messages"](https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg) with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
+<details>
+<summary><h4>macOS 10.11, 10.12, 10.13, 11</h4></summary>
+<br>
+1. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
+<br><br>
+⚠️ Disabling <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"load remote content in messages"</a> with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
+</details>
+
+<details open>
+<summary><h4>macOS 10.14, 10.15</h4></summary>
+<br>
+1. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`. Note that you'll need to do this again for each update.
+<br>
+2. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
+<br><br>
+⚠️ Disabling <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"load remote content in messages"</a> with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
+</details>
 
 
 ### To uninstall

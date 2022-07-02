@@ -1,6 +1,12 @@
 # Changelog
 
-## [0.6.6]
+## [0.7.0] - 2022-07-02
+
+- Unofficial macOS 13 Ventura support
+- #138 add toggle to temporarily disable MailTrackerBlocker (thanks @m-schmitt, @edmechem)
+- add Alibaba rule
+
+## [0.6.6] - 2022-06-19
 
 - #172 disabled Movable Ink ad rule
 - #174 add Data Axle
