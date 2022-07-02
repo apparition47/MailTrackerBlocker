@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MTBReportPopover">
             <connections>
+                <outlet property="blockingToggle" destination="hlN-66-Bfh" id="RPP-bo-w81"/>
                 <outlet property="trackerDescriptionLabel" destination="HW9-Rf-LDY" id="t2Y-Gl-dGR"/>
                 <outlet property="trackerNameLabel" destination="m69-cz-IjM" id="ttW-NJ-j0k"/>
                 <outlet property="view" destination="0kg-w9-yn9" id="fAV-sF-e2u"/>
@@ -26,44 +27,40 @@
             </connections>
         </popover>
         <customView id="0kg-w9-yn9">
-            <rect key="frame" x="0.0" y="0.0" width="367" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="367" height="96"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GzM-jn-FqP">
-                    <rect key="frame" x="8" y="24" width="40" height="40"/>
+                <textField translatesAutoresizingMaskIntoConstraints="NO" id="HW9-Rf-LDY">
+                    <rect key="frame" x="58" y="16" width="259" height="32"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="2i0-NV-h4J"/>
-                        <constraint firstAttribute="height" constant="40" id="sfy-Np-pXJ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="NoD-OT-hqS"/>
+                        <constraint firstAttribute="width" constant="255" id="ZXv-17-10G"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="PrivacyReportPopoverShield" id="64g-l1-GJO"/>
-                </imageView>
-                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HW9-Rf-LDY">
-                    <rect key="frame" x="54" y="16" width="259" height="16"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="255" id="lvP-ZQ-AeI"/>
-                    </constraints>
-                    <textFieldCell key="cell" title="Tracker detected" id="OGc-Mw-u2A">
+                    <textFieldCell key="cell" title="Tracker detected Tracker detected Tracker detected Tracker detected " id="OGc-Mw-u2A">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LH0-Us-8gD">
-                    <rect key="frame" x="327" y="4" width="32" height="32"/>
+                    <rect key="frame" x="12" y="40" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="32" id="DZT-8k-wUD"/>
-                        <constraint firstAttribute="height" constant="32" id="VZc-Gb-AN6"/>
+                        <constraint firstAttribute="width" constant="40" id="DZT-8k-wUD"/>
+                        <constraint firstAttribute="height" constant="40" id="VZc-Gb-AN6"/>
                     </constraints>
-                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="info-circle" imagePosition="only" alignment="center" inset="2" id="qkl-hZ-4uE">
+                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="PrivacyReportPopoverShield" imagePosition="only" alignment="center" inset="2" id="qkl-hZ-4uE">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
                     <connections>
-                        <action selector="reportPressed:" target="-2" id="L2E-su-ZSi"/>
+                        <action selector="reportPressed:" target="-2" id="LfK-cl-WIo"/>
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m69-cz-IjM">
-                    <rect key="frame" x="54" y="48" width="88" height="16"/>
+                    <rect key="frame" x="58" y="64" width="88" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="Yo1-hM-rW0"/>
+                    </constraints>
                     <textFieldCell key="cell" title="example.com" id="YCq-jV-tcp">
                         <font key="font" metaFont="systemSemibold" size="13"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -71,7 +68,7 @@
                     </textFieldCell>
                 </textField>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Nj-KX-2al">
-                    <rect key="frame" x="327" y="40" width="32" height="32"/>
+                    <rect key="frame" x="327" y="48" width="32" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="g5m-I7-Uio"/>
                         <constraint firstAttribute="width" constant="32" id="nNV-vy-g43"/>
@@ -84,27 +81,41 @@
                         <action selector="sidebarPressed:" target="-2" id="9EN-bO-pVy"/>
                     </connections>
                 </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hlN-66-Bfh">
+                    <rect key="frame" x="319" y="20" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="WMf-4O-ZE2"/>
+                        <constraint firstAttribute="height" constant="20" id="c55-b2-y0u"/>
+                    </constraints>
+                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="toggle-on" imagePosition="only" alignment="center" inset="2" id="Hau-ao-u3j">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="disableBlockingPressed:" target="-2" id="Ef1-a2-kKQ"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstItem="GzM-jn-FqP" firstAttribute="leading" secondItem="0kg-w9-yn9" secondAttribute="leading" constant="8" id="7Jv-gk-gGt"/>
-                <constraint firstAttribute="trailing" secondItem="LH0-Us-8gD" secondAttribute="trailing" constant="8" id="8yD-5p-8hE"/>
-                <constraint firstItem="HW9-Rf-LDY" firstAttribute="trailing" secondItem="LH0-Us-8gD" secondAttribute="leading" constant="-16" id="FJZ-SY-OHx"/>
-                <constraint firstItem="LH0-Us-8gD" firstAttribute="top" secondItem="0Nj-KX-2al" secondAttribute="bottom" constant="4" id="Lj0-sS-6hZ"/>
+                <constraint firstItem="m69-cz-IjM" firstAttribute="top" secondItem="0kg-w9-yn9" secondAttribute="top" constant="16" id="ARc-rd-mDR"/>
+                <constraint firstItem="m69-cz-IjM" firstAttribute="leading" secondItem="LH0-Us-8gD" secondAttribute="trailing" constant="8" id="PNh-vl-6l0"/>
+                <constraint firstItem="LH0-Us-8gD" firstAttribute="leading" secondItem="0kg-w9-yn9" secondAttribute="leading" constant="12" id="R5O-4n-mdV"/>
+                <constraint firstItem="hlN-66-Bfh" firstAttribute="trailing" secondItem="0Nj-KX-2al" secondAttribute="trailing" id="SUb-19-1iP"/>
+                <constraint firstItem="hlN-66-Bfh" firstAttribute="top" secondItem="0Nj-KX-2al" secondAttribute="bottom" constant="8" id="TYE-ZV-Ndp"/>
                 <constraint firstAttribute="bottom" secondItem="HW9-Rf-LDY" secondAttribute="bottom" constant="16" id="YZ2-26-zRq"/>
                 <constraint firstItem="HW9-Rf-LDY" firstAttribute="top" secondItem="m69-cz-IjM" secondAttribute="bottom" constant="16" id="eSZ-N7-qfw"/>
-                <constraint firstItem="m69-cz-IjM" firstAttribute="top" secondItem="GzM-jn-FqP" secondAttribute="top" id="fce-T2-dlW"/>
-                <constraint firstItem="HW9-Rf-LDY" firstAttribute="leading" secondItem="GzM-jn-FqP" secondAttribute="trailing" constant="8" id="gGg-G2-Tqj"/>
-                <constraint firstItem="GzM-jn-FqP" firstAttribute="top" secondItem="0kg-w9-yn9" secondAttribute="top" constant="16" id="m7R-pW-qHh"/>
-                <constraint firstItem="m69-cz-IjM" firstAttribute="leading" secondItem="GzM-jn-FqP" secondAttribute="trailing" constant="8" id="oQX-ah-Ub4"/>
-                <constraint firstItem="0Nj-KX-2al" firstAttribute="top" secondItem="0kg-w9-yn9" secondAttribute="top" constant="8" id="sMj-SM-qoY"/>
+                <constraint firstItem="LH0-Us-8gD" firstAttribute="top" secondItem="0kg-w9-yn9" secondAttribute="top" constant="16" id="gbp-ja-WCo"/>
+                <constraint firstItem="HW9-Rf-LDY" firstAttribute="leading" secondItem="LH0-Us-8gD" secondAttribute="trailing" constant="8" id="iod-jj-nKx"/>
+                <constraint firstItem="hlN-66-Bfh" firstAttribute="leading" secondItem="HW9-Rf-LDY" secondAttribute="trailing" constant="4" id="jCv-iR-lFM"/>
+                <constraint firstItem="0Nj-KX-2al" firstAttribute="top" secondItem="0kg-w9-yn9" secondAttribute="top" constant="16" id="sMj-SM-qoY"/>
                 <constraint firstAttribute="trailing" secondItem="0Nj-KX-2al" secondAttribute="trailing" constant="8" id="wJ5-Du-rJJ"/>
             </constraints>
-            <point key="canvasLocation" x="-12" y="-189"/>
+            <point key="canvasLocation" x="-12.5" y="-164"/>
         </customView>
     </objects>
     <resources>
         <image name="PrivacyReportPopoverShield" width="40" height="40"/>
         <image name="ellipsis-vertical" width="40" height="40"/>
-        <image name="info-circle" width="40" height="40"/>
+        <image name="toggle-on" width="40" height="40"/>
     </resources>
 </document>

@@ -25,5 +25,10 @@
     [self MTBSetWebDocument:webDocument];
 }
 
+- (void)setOriginalWebDoc:(MUIWebDocument*)webDocument {
+    MTBBlockedMessage *blkMsg = [[mailself conversationMember] getIvar: @"MTBBlockedMessage"];
+    webDocument.html = blkMsg.originalHtml;
+    [self MTBSetWebDocument:webDocument];
+}
 @end
 #undef mailself

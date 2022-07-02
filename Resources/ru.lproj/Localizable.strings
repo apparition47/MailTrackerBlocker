@@ -1,3 +1,4 @@
+"BLOCKING_DISABLED" = "⚠️ MailTrackerBlocker временно отключен для этого письма";
 "BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker не обнаружил никаких трекеров в этом сообщении";
 "BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker обнаружил и превентивно заблокировал возможный трекер в этом сообщении";
 "BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker заблокировал трекер от %@";

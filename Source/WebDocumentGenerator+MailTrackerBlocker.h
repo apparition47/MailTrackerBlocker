@@ -13,5 +13,5 @@
 @interface WebDocumentGenerator_MailTrackerBlocker : NSObject
 
 - (void)MTBSetWebDocument:(MUIWebDocument *)webDocument;
-
+- (void)setOriginalWebDoc:(MUIWebDocument*)webDocument;
 @end

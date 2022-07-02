@@ -22,6 +22,8 @@ typedef enum BLOCKING_RESULT_CERTAINTY: NSUInteger {
 @property(readonly, nonatomic) NSString *subjectField;
 @property(readonly, nonatomic) NSString *fromField;
 @property(readonly, nonatomic) NSString *deeplinkField;
+@property(readonly, nonatomic) NSString *originalHtml;
+@property (assign) BOOL isBlockingEnabled;
 @property (nonatomic, assign, readonly) NSUInteger knownTrackerCount;
 - (instancetype)init NS_UNAVAILABLE;
 - (id)initWithHtml:(NSString*)html;

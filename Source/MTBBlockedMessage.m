@@ -26,6 +26,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
 - (id)init {
     if( self = [super init]) {
         trackers = [[NSMutableSet alloc] init];
+        _isBlockingEnabled = YES;
         _knownTrackerCount = 0;
     }
     return self;
@@ -36,7 +37,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     if (!self) {
         return nil;
     }
-    
+    _originalHtml = html;
     _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
     return self;
 }
@@ -46,6 +47,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     if (!self) {
         return nil;
     }
+    _originalHtml = html;
     _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
     _deeplinkField = deeplink;
     _fromField = from;

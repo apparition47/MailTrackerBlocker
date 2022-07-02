@@ -7,7 +7,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MTBBlockedMessage.h"
+#import "WebDocumentGenerator+MailTrackerBlocker.h"
 
 @interface MTBReportPopover : NSViewController
 @property(retain) MTBBlockedMessage *blockedMessage;
+@property(retain) WebDocumentGenerator *documentGenerator;
 @end
