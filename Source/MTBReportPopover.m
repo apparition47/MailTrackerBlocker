@@ -11,16 +11,20 @@
 #import "MTBReportingManager.h"
 #import "MTBSidebarMenu.h"
 #import "MTBWindowController.h"
+#import "MUIWebDocument.h"
+#import "ConversationMember.h"
 
 @interface MTBReportPopover () <NSPopoverDelegate>
 #pragma mark - IBOutlet
 @property (weak) IBOutlet NSTextField *trackerNameLabel;
 @property (weak) IBOutlet NSTextField *trackerDescriptionLabel;
+@property (weak) IBOutlet NSButton *blockingToggle;
+@property (assign) BOOL isBlockingEnabled;
 @end
 
 @implementation MTBReportPopover
 
-@synthesize blockedMessage;
+@synthesize blockingToggle, blockedMessage, documentGenerator, isBlockingEnabled;
 
 #pragma mark - View Lifecycle
 
@@ -31,6 +35,17 @@
 
 #pragma mark - IBAction
 
+-(IBAction)disableBlockingPressed:(NSButton*)sender {
+    blockedMessage.isBlockingEnabled = !blockedMessage.isBlockingEnabled;
+    [self setupView];
+    
+    MUIWebDocument *webDocument = [documentGenerator.conversationMember webDocument];
+    if (blockedMessage.isBlockingEnabled) {
+        [documentGenerator setWebDocument:webDocument];
+    } else {
+        [(WebDocumentGenerator_MailTrackerBlocker*)documentGenerator setOriginalWebDoc:webDocument];
+    }
+}
 -(IBAction)sidebarPressed:(NSButton*)sender {
     NSPopover * targetPopover = [[NSPopover alloc] init];
     targetPopover.delegate = self;
@@ -85,13 +100,24 @@
 #pragma mark - Private
 
 -(void)setupView {
-    if ([blockedMessage certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {
+    if (!blockedMessage.isBlockingEnabled) {
+        [blockingToggle setImage: [[MTBMailBundle bundle] imageForResource:@"toggle-off"]];
+        [blockingToggle setEnabled:YES];
+        _trackerNameLabel.stringValue = @"-";
+        _trackerDescriptionLabel.stringValue = MTBLocalizedString(@"BLOCKING_DISABLED");
+    } else if ([blockedMessage certainty] == BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES) {
+        [blockingToggle setImage: [[MTBMailBundle bundle] imageForResource:@"toggle-on"]];
+        [blockingToggle setEnabled:NO];
         _trackerNameLabel.stringValue = @"-";
         _trackerDescriptionLabel.stringValue = MTBLocalizedString(@"BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES");
     } else if ([blockedMessage certainty] == BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC) {
+        [blockingToggle setImage: [[MTBMailBundle bundle] imageForResource:@"toggle-on"]];
+        [blockingToggle setEnabled:YES];
         _trackerNameLabel.stringValue = @"-";
         _trackerDescriptionLabel.stringValue = MTBLocalizedString(@"BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC");
     } else {
+        [blockingToggle setImage: [[MTBMailBundle bundle] imageForResource:@"toggle-on"]];
+        [blockingToggle setEnabled:YES];
         _trackerNameLabel.stringValue = [blockedMessage.detectedTrackers.allObjects componentsJoinedByString:@", "];
         if ([blockedMessage knownTrackerCount] == 1) {
             _trackerDescriptionLabel.stringValue = [NSString stringWithFormat:MTBLocalizedString(@"BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH"), blockedMessage.detectedTracker];

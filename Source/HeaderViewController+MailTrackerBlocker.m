@@ -85,6 +85,7 @@ NSString * const kBlockingBtn = @"kBlockingBtn";
     
     MTBReportPopover *reportPopover = [[MTBReportPopover alloc] initWithNibName:@"MTBReportPopover" bundle:[MTBMailBundle bundle]];
     reportPopover.blockedMessage = blkMsg;
+    reportPopover.documentGenerator = [[mailself representedObject] documentGenerator];
     NSRect entryRect = [sender convertRect:sender.bounds
                                   toView:mailself.view];
     [mailself presentViewController:reportPopover asPopoverRelativeToRect:entryRect ofView:mailself.view preferredEdge:NSMaxYEdge behavior:NSPopoverBehaviorTransient];

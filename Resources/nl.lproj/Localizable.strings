@@ -1,3 +1,4 @@
+"BLOCKING_DISABLED" = "⚠️ MailTrackerBlocker is tijdelijk uitgeschakeld voor deze e-mail";
 "BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker heeft geen trackers gevonden in deze e-mail";
 "BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker heeft een mogelijke tracker gedetecteerd in deze e-mail en preventief geblokkkeerd";
 "BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker heeft een tracker van %@ geblokkkeerd";

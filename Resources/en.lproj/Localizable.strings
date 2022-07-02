@@ -1,3 +1,4 @@
+"BLOCKING_DISABLED" = "⚠️ MailTrackerBlocker is temporarily disabled for this email";
 "BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES" = "MailTrackerBlocker did not detect any trackers in this email";
 "BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC" = "MailTrackerBlocker detected and preemptively blocked a possible tracker in this email";
 "BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH" = "MailTrackerBlocker blocked a tracker from %@";
