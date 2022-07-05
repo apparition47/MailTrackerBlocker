@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.1] - TBA
+
+- add Bento rule
+
 ## [0.7.0] - 2022-07-02
 
 - Unofficial macOS 13 Ventura support

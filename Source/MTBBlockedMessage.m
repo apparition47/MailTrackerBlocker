@@ -264,6 +264,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Autopilot": @[@"autopilotmail\\d?.io"],
         @"AWeber": @[@"openrate.aweber.com"],
+        @"Backpack Internet": @[@"app.bentonow.com/ahoy/messages/"],
         @"Bananatag": @[@"bl-1.com"],
         @"Bison": @[@"clicks.bisonapp.com"],
         @"Bandsintown": @[@"px1.bandsintown.com/.+.gif"],
