@@ -3,6 +3,7 @@
 ## [0.7.1] - TBA
 
 - add Bento rule
+- #179 add ezyVet rule (thanks @oneofthedamons)
 
 ## [0.7.0] - 2022-07-02
 

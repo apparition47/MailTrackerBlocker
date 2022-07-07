@@ -350,6 +350,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"EventsInYourArea": @[@"eventsinyourarea.com/track/"],
         @"EveryAction": @[@"click.everyaction.com/j/"],
         @"Evite": @[@"pippio.com/api/sync", @"nli.evite.com/imp"],
+        @"ezyVet": @[@"ezyvet.com/email_open_log.php"],
         @"Fastic": @[@"/e/eo\\?_t=[^>]+_m=[^>]+_e="],
         @"Flatastic": @[@"api.flatastic-app.com/index.php/img"],
         @"Flipkart": @[@"flipkart.com/t/open"],
