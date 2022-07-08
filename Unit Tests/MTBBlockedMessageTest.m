@@ -258,6 +258,12 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)test2x2TrackerVendor {
+    NSString *email = @"<img src=\"https://link.runtastic.com/mo/W37jKbRMwg_645781705_2447263_458311_1086436.gif\" height=\"2\" width=\"2\" border=\"0\" alt=\"\"></body>";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:email];
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 #pragma mark - Helpers
 
 - (NSString*)getHTMLResourceWithFileName:(NSString*)fileName {

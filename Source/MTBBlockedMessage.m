@@ -335,7 +335,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"eGain": @[@"notify.egain.cloud/egain/notify/"],
         @"Email on Acid": @[@"eoapxl.com"],
         @"EmailTracker.website": @[@"my-email-signature.link"],
-        @"Emarsys": @[@"emarsys.com/e2t/o/"],
+        @"Emarsys": @[
+            @"/mo/\\w{43}.gif",
+            @"emarsys.com/e2t/o/"
+        ],
         @"EmberPoint MailPublisher": @[@"rec.mpse.jp/(.*)/rw/beacon_"],
         @"Envoke": @[@"envoke.com/o/"],
         @"Epic Games": @[@"accts.epicgames.com/O/"],
@@ -557,7 +560,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Responder.co.il": @[@"opens.responder.co.il"],
         @"Rewe": @[@"epost.rewe.de/action/view/"],
         @"Rocketbolt": @[@"email.rocketbolt.com/o/"],
-        @"Runtastic": @[@"runtastic.com/mo/"],
         @"Sailthru": @[
             @"sailthru.com/trk",
             @"/img/\\w{48}/\\w{8}.gif"
