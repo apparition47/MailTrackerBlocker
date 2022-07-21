@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.7.1] - TBA
+## [0.7.1] - 2022-07-21
 
 - add Bento rule
 - #179 add ezyVet rule (thanks @oneofthedamons)
