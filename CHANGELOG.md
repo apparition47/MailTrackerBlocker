@@ -5,6 +5,7 @@
 - add Bento rule
 - #179 add ezyVet rule (thanks @oneofthedamons)
 - #180 add Emarsys (thanks @oneofthedamons)
+- #181 improve WildApricot rule (thanks @m-schmitt)
 
 ## [0.7.0] - 2022-07-02
 

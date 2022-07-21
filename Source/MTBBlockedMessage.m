@@ -679,7 +679,8 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Webtrekk": @[@"webtrekk.net"],
         @"WildApricot": @[
             @"wildapricot.com/o/",
-            @"wildapricot.org/emailtracker"
+            @"wildapricot.org/emailtracker",
+            @"/EmailTracker/EmailTracker.ashx"
         ],
         @"Wish": @[@"wish.com/email-beacon.png"],
         @"Wix": @[@"shoutout.wix.com/.*/pixel"],
