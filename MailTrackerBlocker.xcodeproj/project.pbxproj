@@ -50,6 +50,7 @@
 		73ABE2732657BB85005B6FCA /* MTBSidebarMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ABE2722657BB85005B6FCA /* MTBSidebarMenu.m */; };
 		73BB027E24BACA08009BBD68 /* MTBBlockedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027D24BACA08009BBD68 /* MTBBlockedMessage.m */; };
 		73BB028024BAD368009BBD68 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BB027F24BAD368009BBD68 /* NSObject+LPDynamicIvars.m */; };
+		73C8BAB0288B934E001874A2 /* multibgcsstrackers.html in Resources */ = {isa = PBXBuildFile; fileRef = 73C8BAAF288B934E001874A2 /* multibgcsstrackers.html */; };
 		73CE06902670D1CD006FB79F /* MTBLicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CE068E2670D1CD006FB79F /* MTBLicensesViewController.m */; };
 		73CE06912670D1CD006FB79F /* MTBLicensesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73CE068F2670D1CD006FB79F /* MTBLicensesViewController.xib */; };
 		73D0B1A024D689ED00CAC03F /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D0B19F24D689ED00CAC03F /* NSString+RegEx.m */; };
@@ -1631,6 +1632,7 @@
 		73C7C02B24B0B499005BE934 /* MFMessageChangeManager_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFMessageChangeManager_macOS.h; sourceTree = "<group>"; };
 		73C7C02C24B0B499005BE934 /* MFEWSSuppressReadReceiptsRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFEWSSuppressReadReceiptsRequestOperation.h; sourceTree = "<group>"; };
 		73C7C02D24B0B499005BE934 /* MFUIMailbox-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFUIMailbox-Protocol.h"; sourceTree = "<group>"; };
+		73C8BAAF288B934E001874A2 /* multibgcsstrackers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = multibgcsstrackers.html; sourceTree = "<group>"; };
 		73CE068D2670D1CD006FB79F /* MTBLicensesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBLicensesViewController.h; sourceTree = "<group>"; };
 		73CE068E2670D1CD006FB79F /* MTBLicensesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBLicensesViewController.m; sourceTree = "<group>"; };
 		73CE068F2670D1CD006FB79F /* MTBLicensesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTBLicensesViewController.xib; sourceTree = "<group>"; };
@@ -1884,6 +1886,7 @@
 			isa = PBXGroup;
 			children = (
 				738BDCFA25F7A2EC00D563F2 /* embeddedBase64Img.html */,
+				73C8BAAF288B934E001874A2 /* multibgcsstrackers.html */,
 			);
 			path = Emails;
 			sourceTree = "<group>";
@@ -3503,6 +3506,7 @@
 				1B87639E17862AAA00B24BBC /* MailTrackerBlocker.mailbundle in Resources */,
 				1B8763671786020A00B24BBC /* InfoPlist.strings in Resources */,
 				1B22C45D17B138390073DF81 /* cd-bundle.bundle in Resources */,
+				73C8BAB0288B934E001874A2 /* multibgcsstrackers.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

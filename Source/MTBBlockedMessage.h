@@ -24,11 +24,13 @@ typedef enum BLOCKING_RESULT_CERTAINTY: NSUInteger {
 @property(readonly, nonatomic) NSString *deeplinkField;
 @property(readonly, nonatomic) NSString *originalHtml;
 @property (assign) BOOL isBlockingEnabled;
+// Total number of generic and named trackers
 @property (nonatomic, assign, readonly) NSUInteger knownTrackerCount;
 - (instancetype)init NS_UNAVAILABLE;
 - (id)initWithHtml:(NSString*)html;
 - (id)initWithHtml:(NSString*)html from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink;
 - (NSString *)detectedTracker;
+// Returns display names of trackers detected in message
 - (NSSet *)detectedTrackers;
 - (enum BLOCKING_RESULT_CERTAINTY)certainty;
 - (NSString*)sanitizedHtml;

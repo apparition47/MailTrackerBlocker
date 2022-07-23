@@ -210,6 +210,15 @@
 //    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)testMultipleBackgroundCSSAndImgTagTrackers {
+    NSString *email = [self getHTMLResourceWithFileName:@"multibgcsstrackers"];
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:email];
+    XCTAssertEqual(msg.detectedTrackers.count, 2);
+    XCTAssertEqual(msg.knownTrackerCount, 10);
+    XCTAssertTrue([msg.detectedTrackers containsObject:@"Litmus"]);
+    XCTAssertTrue([msg.detectedTrackers containsObject:@"SparkPost"]);
+}
+
 // expected not be marked as generic pixels
 - (void)testSpacers {
     NSString *email = @"<img src=\"https://www.redditstatic.com/spacer.gif\" width=\"620\" height=\"1\" style=\"min-width:620px\" alt=\" border=\"0\" />";
