@@ -3,6 +3,7 @@
 ## [0.7.2] - TBA
 
 - add user.com rule
+- #182 refined/reenabled Movable Ink rule, improved Epsilon and Validity rules (thanks @m-schmitt)
 
 ## [0.7.1] - 2022-07-21
 

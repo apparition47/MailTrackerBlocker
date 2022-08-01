@@ -345,6 +345,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Epsilon": @[
             @"login.dotomi.com/ucm/UCMController",
             @"/O/\\w{34}/\\w{32}",
+            @"/O/(\\w|-){214}",
             @"ind.dell.com"
         ],
         @"eSputnik": @[@"esputnik.com/repository/applications/commons/hidden.png"],
@@ -489,10 +490,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"mixmax.com/api/track/"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
-//        @"Movable Ink": @[
-//            @"/p/rp/\\w{16}.png",
-//            @"/p/cp/\\w{16,32}/o.gif"
-//        ],
+        @"Movable Ink": @[
+//            @"/p/rp/\\w{16}.png", // exception for useful info, call-to-action or ad banners
+            @"/p/(c|u)p/\\w{16,32}/o.gif"
+        ],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
         @"Nation Builder": @[@"nationbuilder.com/r/o"],
         @"NeteCart": @[@"netecart.com/ltrack"],
@@ -668,7 +669,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"User.com": @[@".user.com/emails/open/"],
         @"Validity": @[
             @"pixel.(app|monitor1|monitor2).returnpath.net/pixel.gif",
-            @"/ea/\\w{10}/\\?e=(\\w|-){36}@" // 250ok
+            @"/ea/\\w{10}/\\?e=(\\w|-){36}" // everestengagement.com
         ],
         @"Varibase": @[@"e.varibase.com/mail/MOS"],
         @"Vcommission": @[@"tracking.vcommission.com"],
