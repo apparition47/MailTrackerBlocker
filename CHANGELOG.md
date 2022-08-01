@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.2] - TBA
+
+- add user.com rule
+
 ## [0.7.1] - 2022-07-21
 
 - add Bento rule

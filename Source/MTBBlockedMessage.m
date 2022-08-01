@@ -665,6 +665,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Unsplash": @[@"email.unsplash.com/o/"],
         @"Upland PostUp": @[@"efeedbacktrk.com/.*.gif"],
         @"US Bancorp": @[@"post-images.com/amy/open.action"],
+        @"User.com": @[@".user.com/emails/open/"],
         @"Validity": @[
             @"pixel.(app|monitor1|monitor2).returnpath.net/pixel.gif",
             @"/ea/\\w{10}/\\?e=(\\w|-){36}@" // 250ok
