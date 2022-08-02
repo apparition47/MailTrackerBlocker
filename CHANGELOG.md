@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.7.2] - TBA
+## [0.7.2] - 2022-08-02
 
 - add user.com rule
 - #182 refined/reenabled Movable Ink rule, improved Epsilon and Validity rules (thanks @m-schmitt)
