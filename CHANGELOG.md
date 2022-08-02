@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- add Bazaarvoice, improve HubSpot rule
+
 ## [0.7.2] - 2022-08-02
 
 - add user.com rule

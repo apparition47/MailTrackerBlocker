@@ -266,6 +266,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"AWeber": @[@"openrate.aweber.com"],
         @"Backpack Internet": @[@"app.bentonow.com/ahoy/messages/"],
         @"Bananatag": @[@"bl-1.com"],
+        @"Bazaarvoice": @[@"bazaarvoice.com/a.gif"],
         @"Bison": @[@"clicks.bisonapp.com"],
         @"Bandsintown": @[@"px1.bandsintown.com/.+.gif"],
         @"Benchmark Email": @[@"bmetrack.com/c/o"],
@@ -407,7 +408,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"t.strk\\d{2}.email",
             @"track.getsidekick.com",
             @"/e2t/(o|c|to)/",
-            @"hubspotlinks.com/Bto",
+            @"hubspotlinks.com/(B|C)to/",
             @"/e3t/(B|C)to/"
         ],
         @"Hunter.io": @[@"mltrk.io/pixel"],
