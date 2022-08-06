@@ -3,6 +3,8 @@
 ## Unreleased
 
 - add Bazaarvoice, improve HubSpot rule
+- #183 fix Russian localization (thanks @grishka)
+- Localize popover menu
 
 ## [0.7.2] - 2022-08-02
 

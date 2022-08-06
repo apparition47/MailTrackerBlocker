@@ -132,10 +132,10 @@
 -(void)setupView {
     [trackerReportButton setTitle:MTBLocalizedString(@"TRACKER_REPORT")];
     [checkForUpdatesButton setTitle:MTBLocalizedString(@"UPDATE_CHECK")];
-    [websiteButton setTitle:MTBLocalizedString(@"Website")];
-    [licensesButton setTitle:MTBLocalizedString(@"Licenses")];
-    [helpButton setTitle:MTBLocalizedString(@"Help")];
-    [aboutButton setTitle:[NSString stringWithFormat:@"Version %@", [MTBMailBundle bundleVersion]]];
+    [websiteButton setTitle:MTBLocalizedString(@"WEBSITE")];
+    [licensesButton setTitle:MTBLocalizedString(@"LICENSES")];
+    [helpButton setTitle:MTBLocalizedString(@"HELP")];
+    [aboutButton setTitle:[NSString stringWithFormat:MTBLocalizedString(@"VERSION"), [MTBMailBundle bundleVersion]]];
 }
 
 @end

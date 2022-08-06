@@ -27,3 +27,7 @@
 "RELEASE_NOTES" = "Примечания к выпуску";
 "UPDATE_INSTALL" = "Обновить";
 "UPDATE_CANCEL" = "Отменить";
+"WEBSITE" = "Веб-сайт";
+"LICENSES" = "лицензии";
+"HELP" = "помощь";
+"VERSION" = "версия %@";

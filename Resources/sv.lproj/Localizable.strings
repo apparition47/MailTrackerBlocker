@@ -27,3 +27,7 @@
 "RELEASE_NOTES" = "Release-anteckningar";
 "UPDATE_INSTALL" = "Uppdatera";
 "UPDATE_CANCEL" = "Avbryt";
+"WEBSITE" = "Hemsida";
+"LICENSES" = "Licenser";
+"HELP" = "Hjälp";
+"VERSION" = "Version %@";

@@ -27,3 +27,7 @@
 "RELEASE_NOTES" = "Release-opmerkingen";
 "UPDATE_INSTALL" = "Update";
 "UPDATE_CANCEL" = "Annuleren";
+"WEBSITE" = "Website";
+"LICENSES" = "Licenties";
+"HELP" = "Helpen";
+"VERSION" = "Versie %@";

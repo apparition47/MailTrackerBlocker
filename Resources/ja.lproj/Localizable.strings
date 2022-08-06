@@ -27,3 +27,7 @@
 "RELEASE_NOTES" = "リリースノート";
 "UPDATE_INSTALL" = "更新";
 "UPDATE_CANCEL" = "キャンセル";
+"WEBSITE" = "サイト";
+"LICENSES" = "ライセンス";
+"HELP" = "お問い合わせ";
+"VERSION" = "バージョン%@";
