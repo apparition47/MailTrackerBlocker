@@ -545,6 +545,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Playdom": @[@"playdom.com/g"],
         @"Polymail": @[@"polymail.io/v2/z/|share.polymail.io"],
         @"Postmark": @[@"pstmrk.it"],
+        @"Press Ganey": @[@"email.patients.pgsurveying.com"],
         @"Product Hunt": @[@"links.producthunt.com/oo/"],
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
         @"Qualtrics": @[@"/WRQualtricsContacts/Watermark.php"],

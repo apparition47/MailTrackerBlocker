@@ -4,6 +4,7 @@
 
 - add Bazaarvoice, improve HubSpot rule
 - #183 fix Russian localization (thanks @grishka)
+- #184 add Press Ganey (thanks @m-schmitt)
 - Localize popover menu
 
 ## [0.7.2] - 2022-08-02
