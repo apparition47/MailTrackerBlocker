@@ -217,6 +217,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"postoffice.adobe.com/po-server/link/open"
         ],
         @"AgileCRM": @[@"agle2.me/open"],
+        @"Agoda": @[@"xml.agoda.com/EmailTracking/api/emailtracking/Open"],
         @"Air Miles": @[@"email.airmiles.ca/O"],
         @"Aislelabs": @[@"app.aislelabs.com/o/emailv3/emailv3onepixel.jsp"],
         @"Alaska Airlines": @[

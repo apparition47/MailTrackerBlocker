@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- add Bazaarvoice, improve HubSpot rule
+- add Bazaarvoice, add Agoda, improve HubSpot rule
 - #183 fix Russian localization (thanks @grishka)
 - #184 add Press Ganey (thanks @m-schmitt)
 - Localize popover menu
