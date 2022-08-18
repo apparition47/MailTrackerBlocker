@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [0.7.3] - 2022-08-18
 
 - add Bazaarvoice, add Agoda, improve HubSpot rule
 - #183 fix Russian localization (thanks @grishka)
