@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- #185 improve MessageGears rule (thanks @m-schmitt)
+
 ## [0.7.3] - 2022-08-18
 
 - add Bazaarvoice, add Agoda, improve HubSpot rule

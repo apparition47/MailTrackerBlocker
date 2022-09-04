@@ -472,7 +472,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Maropost": @[@"/a/\\d{4}/open/\\d{4}/\\d{6,7}/\\w{40}"],
         @"MDirector": @[@"track.mdrctr.com/track/open/key/"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
-        @"MessageGears": @[@"expediamail.com/o/"],
+        @"MessageGears": @[@"/o/4/eyJhaSI6"],
         @"Meta": @[
             @"facebook.com/aymt/aa/",
             @"facebook.com/r/v/",
