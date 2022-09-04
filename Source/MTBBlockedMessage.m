@@ -633,6 +633,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Splio": @[@"trk-2.net/ouv"],
         @"Staples": @[@"/ctt/mktOpen\\?"],
+        @"Step Coupon": @[@"step-coupon.com/review_mail_read_status.html"],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"SMTP.com": @[@"track.smtpsendmail.com/\\d{5}/o"],
         @"Substack": @[@"substack.com/o/"],
