@@ -615,6 +615,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Shopify": @[@"/tools/emails/open/"],
         @"Signal": @[@"signl.live/tracker"],
         @"Smore": @[@"smore.com/app/reporting/pixel/"],
+        @"Snov.io": @[@"/track/open/v2-"],
         @"SparkPost": @[
 //            @"mailer.codepen.io/q",
 //            @"sptrack.trello.com/q/",

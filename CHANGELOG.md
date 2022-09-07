@@ -3,7 +3,7 @@
 ## TBA
 
 - #185 improve MessageGears rule (thanks @m-schmitt)
-- add Step Coupon rule
+- add Step Coupon, Snov.io rules
 
 ## [0.7.3] - 2022-08-18
 
