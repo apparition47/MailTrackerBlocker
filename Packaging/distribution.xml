@@ -6,7 +6,7 @@
     <welcome file="welcome.rtf"/>
     <conclusion file="conclusion.rtf"/>
         <allowed-os-versions>
-        <os-version min="10.11" before="14.0"/>
+        <os-version min="10.11" before="13.0"/>
     </allowed-os-versions>
     <choices-outline>
         <line choice="default">

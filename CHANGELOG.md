@@ -4,6 +4,7 @@
 
 - #185 improve MessageGears rule (thanks @m-schmitt)
 - add Step Coupon, Snov.io rules
+- #187 #186 macOS 11.7, 12.5 compatibility (thanks @berkue, @edmechem)
 
 ## [0.7.3] - 2022-08-18
 
