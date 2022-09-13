@@ -1,6 +1,6 @@
 # Changelog
 
-## TBA
+## [0.7.4] - 2022-09-13
 
 - #185 improve MessageGears rule (thanks @m-schmitt)
 - add Step Coupon, Snov.io rules
