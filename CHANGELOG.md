@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- improve dataX/b→dash rule
+
 ## [0.7.5] - 2022-09-13
 
 - #185 improve MessageGears rule (thanks @m-schmitt)

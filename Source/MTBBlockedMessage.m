@@ -320,7 +320,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Cyberimpact": @[@"app.cyberimpact.com/footer-image"],
         @"Data Axle": @[@"ympxl.com/log.gif"],
-        @"dataX": @[@"openedlog.bdash-cloud.com/opened"],
+        @"dataX": @[@"openedlog.(bdash-cloud|smart-bdash).com/opened"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"Disney": @[@"clk.messaging.go.com/c/\\d\\d/bcasts/\\d{10}/view"],
