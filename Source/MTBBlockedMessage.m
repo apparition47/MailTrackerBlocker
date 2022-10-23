@@ -508,7 +508,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Newegg": @[@"newegg.com/mr/\\w{32}/\\w{96}.gif"],
         @"NewtonHQ": @[@"tr.cloudmagic.com"],
         @"NTT": @[@"club-ntt-west.com/cn-w/cmn/img/1.png"],
-        @"Omnisend": @[@"/track/.*/.*\\?signature="],
+        @"Omnisend": @[@"/transactional/track/\\w{24}\\?signature="],
         @"Ongage": @[@"/\\?x(o|u)l=\\w{20,29}&(amp;)?eih=\\w"],
         @"OpenBracket": @[@"openbracket.co/track"],
         @"Opicle": @[@"track.opicle.com"],
