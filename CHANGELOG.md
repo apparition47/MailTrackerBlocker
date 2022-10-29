@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- add Infobip
+
 ## [0.7.6] - 2022-10-23
 
 - improve dataX/b→dash, Omnisend rules
