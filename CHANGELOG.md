@@ -3,6 +3,7 @@
 ## TBA
 
 - add Infobip
+- #189 support macOS 13.1 (thanks @malwcal)
 
 ## [0.7.6] - 2022-10-23
 

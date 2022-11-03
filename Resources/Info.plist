@@ -117,6 +117,34 @@
 	<array>	
 		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
 	</array>
+	<key>Supported13.1PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
+	</array>
+	<key>Supported13.2PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
+	</array>
+	<key>Supported13.3PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
+	</array>
+	<key>Supported13.4PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
+	</array>
+	<key>Supported13.5PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
+	</array>
+	<key>Supported13.6PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
+	</array>
+	<key>Supported13.7PluginCompatibilityUUIDs</key>
+	<array>	
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
+	</array>
 	<key>SupportedPluginCompatibilityUUIDs</key>
 	<array>
 		<string>71562B89-0D90-4588-8E94-A75B701D6443</string>
