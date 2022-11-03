@@ -1,6 +1,6 @@
 # Changelog
 
-## TBA
+## [0.7.7] - 2022-11-03
 
 - add Infobip
 - #189 support macOS 13.1 (thanks @malwcal)
