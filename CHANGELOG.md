@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- #190 add Steam rule
+
 ## [0.7.7] - 2022-11-03
 
 - add Infobip
