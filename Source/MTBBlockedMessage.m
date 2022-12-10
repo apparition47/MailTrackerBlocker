@@ -639,7 +639,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Steam": @[@"store.steampowered.com/emi/"],
         @"Step Coupon": @[@"step-coupon.com/review_mail_read_status.html"],
         @"Streak": @[@"mailfoogae.appspot.com"],
-        @"SMTP.com": @[@"track.smtpsendmail.com/\\d{5}/o"],
+        @"SMTP.com": @[@"track.smtpsendmail.com/\\d{5,7}/o"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],
