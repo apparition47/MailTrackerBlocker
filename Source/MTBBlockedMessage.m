@@ -214,6 +214,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"t.info.adobesystems.com",
             @"toutapp.com",
             @"112.2o7.net",
+            @"/ee/v1/open", // adobe experience cloud
             @"postoffice.adobe.com/po-server/link/open"
         ],
         @"AgileCRM": @[@"agle2.me/open"],

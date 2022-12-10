@@ -3,6 +3,7 @@
 ## TBA
 
 - #190 add Steam rule
+- improve Adobe rule
 
 ## [0.7.7] - 2022-11-03
 
