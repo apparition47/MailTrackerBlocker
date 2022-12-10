@@ -1,6 +1,6 @@
 # Changelog
 
-## TBA
+## [0.7.8] - 2022-12-11
 
 - #190 add Steam rule
 - improve Adobe rule
