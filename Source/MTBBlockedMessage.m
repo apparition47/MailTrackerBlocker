@@ -279,6 +279,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Blueshift.com": @[
             @"getblueshift.com/track"
         ],
+        @"British Airways": @[@"britishairways.com/cms/global/assets/images/global/email_images/structural/primary1px.gif"],
         @"Bombcom": @[@"bixel.io"],
         @"Boomerang": @[@"mailstat.us/tr"],
         @"Boots": @[@"boots.com/rts/open.aspx"],
@@ -305,6 +306,10 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Conrad": @[@"aktuell.conrad.de/g.html"],
         @"Constant Contact": @[@"rs6.net/on.jsp"],
         @"ContactMonkey": @[@"contactmonkey.com/api/v1/tracker"],
+        @"Copernica": @[
+            @"/image/\\d{4}/\\w{32}/image.gif\\?cdmiv=",
+            @"/images/pixel2.gif\\?pomiv="
+        ],
         @"ConvertKit": @[
             @"convertkit-mail.com/o/",
             @"open.convertkit-mail2.com/[a-z0-9]{20}"

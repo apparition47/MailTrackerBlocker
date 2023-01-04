@@ -3,6 +3,7 @@
 ## TBA
 
 - #191 improve ActiveCampaign rule (thanks @m-schmitt)
+- add Copernica and British Airways rules (thanks @Jee-Bee)
 
 ## [0.7.8] - 2022-12-11
 
