@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- #191 improve ActiveCampaign rule (thanks @m-schmitt)
+
 ## [0.7.8] - 2022-12-11
 
 - #190 add Steam rule

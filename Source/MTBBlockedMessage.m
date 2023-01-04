@@ -195,7 +195,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"4Cite": @[@"/\\?sv_cid=\\d+_\\d+&sv_emopen=true&sv_sveme=\\w+"],
         @"ActiveCampaign": @[
             @"/lt.php\\?.*l=open",
-            @".lt.acemln(a|b|c|d).com/Prod/link-tracker\\?nl="
+            @"/Prod/link-tracker\\?nl="
         ],
         @"Act-On": @[@"actonsoftware.com"],
         @"activecore": @[@"h-cast.jp/mail_open"],
