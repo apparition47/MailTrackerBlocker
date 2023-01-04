@@ -1,6 +1,6 @@
 # Changelog
 
-## TBA
+## [0.7.9] - 2023-01-04
 
 - #191 improve ActiveCampaign rule (thanks @m-schmitt)
 - add Copernica and British Airways rules (thanks @Jee-Bee)
