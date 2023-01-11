@@ -94,6 +94,10 @@ defaults delete com.apple.mail _mtb_LastUpdateCheckDate
 
 Typically caused by Mac migration or restoration from backup. [Delete Mail's private plugin-ins dir (or DataVaults)](https://c-command.com/spamsieve/help/resetting-mail-s-privat) to fix this issue. This dir will automatically be regenerated afterwards.
 
+### Why is my Mail so slow?
+
+This issue isn't related to MailTrackerBlocker but such problems can be resolved by doing a [Mailbox Rebuild](https://c-command.com/spamsieve/help/how-can-i-rebuild-apple) to force Mail to regenerate its indexes.
+
 
 ## Building from source
 
