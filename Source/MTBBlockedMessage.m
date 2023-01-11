@@ -645,6 +645,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Step Coupon": @[@"step-coupon.com/review_mail_read_status.html"],
         @"Streak": @[@"mailfoogae.appspot.com"],
         @"SMTP.com": @[@"track.smtpsendmail.com/\\d{5,7}/o"],
+        @"Squarespace": @[@"engage.squarespace-mail.com/v2/a.gif"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],

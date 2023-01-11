@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.10] - TBA
+
+- add Squarespace rule
+
 ## [0.7.9] - 2023-01-04
 
 - #191 improve ActiveCampaign rule (thanks @m-schmitt)
