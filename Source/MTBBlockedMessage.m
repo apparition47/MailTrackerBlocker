@@ -292,6 +292,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Campaigner": @[@"trk.cp20.com/open/"],
         @"CanaryMail": @[@"canarymail.io(:\\d+)?/track"],
+        @"Canary Mail Updated": @[@"read-receipts.canarymail.io"],
         @"Cheetah Digital": @[@"/rts/open.aspx\\?tp="],
         @"CircleCI": @[@"https://email.circleci.com/o/"],
         @"Cirrus Insight": @[@"tracking.cirrusinsight.com"],
