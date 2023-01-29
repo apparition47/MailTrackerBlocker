@@ -3,6 +3,7 @@
 ## [0.7.10] - TBA
 
 - add Squarespace rule
+- improve Bento rule (Backpack Internet)
 
 ## [0.7.9] - 2023-01-04
 
