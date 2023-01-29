@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.7.10] - TBA
+## [0.7.10] - 2022-01-29
 
 - add Squarespace rule
 - improve Bento rule (Backpack Internet)
