@@ -51,7 +51,7 @@ if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" !
 else
     mtb_log "auto-enabling plugin for $USER (11.x and up only)"
 
-    # if CLI install (i.e. homebrew)
+    # if not a CLI/Homebrew install
     GUI_INSTALLER_PID=($(pgrep -u "$USER" -f /System/Library/CoreServices/Installer.app/Contents/MacOS/Installer))
     if [ ! -z "$GUI_INSTALLER_PID" ]; then
         # foreground the installer
