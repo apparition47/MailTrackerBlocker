@@ -51,14 +51,13 @@ if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" !
 else
     mtb_log "auto-enabling plugin for $USER (11.x and up only)"
 
-    # if CLI/Homebrew install
+    # if not a CLI/Homebrew install
     GUI_INSTALLER_PID=($(pgrep -u "$USER" -f /System/Library/CoreServices/Installer.app/Contents/MacOS/Installer))
-    if [ -z "$GUI_INSTALLER_PID" ]; then
-        osascript -e 'display dialog "If prompted, please allow the installer to use Finder to enable the plugin." buttons {"OK"} default button 1 giving up after 60 with icon caution'
-    else
+    if [ ! -z "$GUI_INSTALLER_PID" ]; then
         # foreground the installer
         osascript -e 'tell application "/System/Library/CoreServices/Installer.app"
         activate
+        display dialog "If prompted, please allow the installer to use Finder to enable the plugin." buttons {"OK"} default button 1 giving up after 60 with icon caution
         end tell'        
     fi
 
