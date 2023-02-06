@@ -57,8 +57,6 @@ else
         # foreground the installer
         osascript -e 'tell application "/System/Library/CoreServices/Installer.app"
         activate
-
-        display dialog "If prompted, please allow the installer to use Finder to enable the plugin." buttons {"OK"} default button 1 giving up after 60 with icon caution
         end tell'
     fi
 
