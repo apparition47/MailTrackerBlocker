@@ -105,20 +105,18 @@ Building will automatically install a copy into your `/Library/Mail/Bundles/` di
 
 ```bash
 git clone https://github.com/apparition47/MailTrackerBlocker.git --recursive
+cd MailTrackerBlocker
 ```
 
 #### A. Make
 
-You'll need to edit `Makefile` and specify your own `Developer ID Application` (used to sign the plugin binary [for macOS 11 and up]) and `Developer ID Installer` (used to sign the pkg) certificates.
+To sign with your identity, edit the `Makefile` to specify your own `Developer ID Application` (used to sign the plugin binary [for macOS 11 and up]) and `Developer ID Installer` (used to sign the pkg) certificates. You can also comment out the top lines to disable signing.
+
+To build binary, pkg and sign (if configured):
 
 ```bash
-cd MailTrackerBlocker
-
-# build-only
-make
-
-# build, sign binary and make pkg
 make all
+open build/Release
 ```
 
 #### B. Xcode
