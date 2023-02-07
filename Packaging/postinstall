@@ -51,15 +51,21 @@ if [ "$(printf '%s\n' "$macOSBigSur" "$currentMacOSVer" | sort -V | head -n1)" !
 else
     mtb_log "auto-enabling plugin for $USER (11.x and up only)"
 
-    osascript -e 'tell application "/System/Library/CoreServices/Installer.app"
-    activate
-    display dialog "If prompted, please allow the installer to use Finder to enable the plugin." buttons {"OK"} default button 1 giving up after 60 with icon caution
-    end tell'
+    # if a GUI install (i.e. not a CLI/Homebrew install)
+    GUI_INSTALLER_PID=($(pgrep -u "$USER" -f /System/Library/CoreServices/Installer.app/Contents/MacOS/Installer))
+    if [ ! -z "$GUI_INSTALLER_PID" ]; then
+        # foreground the installer
+        osascript -e 'tell application "/System/Library/CoreServices/Installer.app"
+        activate
+        end tell'
+    fi
 
     osascript -e 'on run argv
     set src to item 1 of argv as POSIX file
     set dst to item 2 of argv as POSIX file
     set appSupportDir to item 3 of argv as POSIX file
+
+    display dialog "If prompted, please allow the installer to use Finder to enable the plugin." buttons {"OK"} default button 1 giving up after 30 with icon caution
 
     tell application "Finder"
         set folderNames to {"Mail", "Plug-ins", "Bundles", "Library", "Mail", "Bundles"}
