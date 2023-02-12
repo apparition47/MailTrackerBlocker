@@ -1,8 +1,9 @@
 # Changelog
 
-## [0.7.11] - TBA
+## [0.7.11] - 2022-02-12
 
 - add Mercari (JP), Windscribe, Bloomreach, Mumara rules
+- #194 #106 fix Installer.app opening during CLI/Homebrew installations (thanks @toobuntu, @yhoiseth)
 
 ## [0.7.10] - 2022-01-29
 
