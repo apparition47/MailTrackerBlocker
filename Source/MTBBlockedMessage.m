@@ -279,6 +279,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"support.planetary.org/site/PixelServer",
             @"/smtp.mailopen\\?id=" // not 100% sure
         ],
+        @"Bloomreach": @[@"cdn.us1.exponea.com/(\\w|.|/|-){100,150}/open"],
         @"Blueshift.com": @[
             @"getblueshift.com/track"
         ],
@@ -482,6 +483,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Maropost": @[@"/a/\\d{4}/open/\\d{4}/\\d{6,7}/\\w{40}"],
         @"MDirector": @[@"track.mdrctr.com/track/open/key/"],
         @"Medallia": @[@"survey\\d?.medallia.[A-Za-z]{2,3}/\\?\\w+&invite-opened=yes"],
+        @"Mercari": @[@"bmo.mercari.jp"],
         @"MessageGears": @[@"/o/4/eyJhaSI6"],
         @"Meta": @[
             @"facebook.com/aymt/aa/",
@@ -506,6 +508,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
 //            @"/p/rp/\\w{16}.png", // exception for useful info, call-to-action or ad banners
             @"/p/(c|u)p/\\w{16,32}/o.gif"
         ],
+        @"Mumara": @[@"/campaign/track-email/\\d{6}__\\d{3}__\\d{7}__\\d{3}"],
         @"MyEmma": @[@"e2ma.net/track", @"t.e2ma.net"],
         @"Nation Builder": @[@"nationbuilder.com/r/o"],
         @"NeteCart": @[@"netecart.com/ltrack"],
@@ -651,6 +654,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Squarespace": @[@"engage.squarespace-mail.com/v2/a.gif"],
         @"Substack": @[@"substack.com/o/"],
         @"Superhuman": @[@"r.superhuman.com"],
+        @"Taguchi": @[@"taguchimail.com/i/app"],
         @"TataDocomoBusiness": @[@"tatadocomobusiness.com/rts/"],
         @"Techgig": @[@"tj_mailer_opened_count_all.php"],
         @"Telstra": @[@"tapi.telstra.com/presentation/v1/notification-mngmt/delivery-status-tracker"],
@@ -696,6 +700,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"WhatCounts": @[@"whatcounts.com/t"],
         @"We Are Web": @[@"tracking.weareweb.in/index.php/campaigns/"],
         @"Webtrekk": @[@"webtrekk.net"],
+        @"Windscribe": @[@"windscribe.com/pixel"],
         @"WildApricot": @[
             @"wildapricot.com/o/",
             @"wildapricot.org/emailtracker",

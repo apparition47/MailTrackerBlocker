@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.11] - TBA
+
+- add Mercari (JP), Windscribe, Bloomreach, Mumara rules
+
 ## [0.7.10] - 2022-01-29
 
 - add Squarespace rule
