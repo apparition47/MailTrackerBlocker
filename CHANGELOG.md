@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- add Cuenote rule
+
 ## [0.7.11] - 2022-02-12
 
 - add Mercari (JP), Windscribe, Bloomreach, Mumara rules

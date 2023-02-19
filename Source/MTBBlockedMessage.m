@@ -323,6 +323,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Cprpt": @[@"/o.aspx\\?t="],
         @"Creditmantri.com": @[@"mailer.creditmantri.com/t/"],
         @"Critical Impact": @[@"portal.criticalimpact.com/c2/"],
+        @"Cuenote": @[@"cuenote.jp/c/"],
         @"Customer.io": @[
             @"customeriomail.com/e/o",
             @"track.customer.io/e/o",
