@@ -2,7 +2,8 @@
 
 ## TBA
 
-- add Cuenote rule
+- add Cuenote, Moneyforward rules
+- #196 fix WhatCounts rule (thanks @malwcal)
 
 ## [0.7.11] - 2022-02-12
 

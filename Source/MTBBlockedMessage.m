@@ -505,6 +505,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"mixmax.com/api/track/"
         ],
         @"Mixpanel": @[@"api.mixpanel.com/(trk|track)"],
+        @"Moneyforward": @[@"tm.moneyforward.com/I/"],
         @"Movable Ink": @[
 //            @"/p/rp/\\w{16}.png", // exception for useful info, call-to-action or ad banners
             @"/p/(c|u)p/\\w{16,32}/o.gif"
@@ -698,7 +699,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
         @"VinSolutions": @[@"vinlens.com/email.ashx\\?c="],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
-        @"WhatCounts": @[@"whatcounts.com/t"],
+        @"WhatCounts": @[@"/t\\?c=\\d{4}&r=\\d{4}&l=\\d{2,3}&t=\\d{2}&e=\\w{48}"],
         @"We Are Web": @[@"tracking.weareweb.in/index.php/campaigns/"],
         @"Webtrekk": @[@"webtrekk.net"],
         @"Windscribe": @[@"windscribe.com/pixel"],

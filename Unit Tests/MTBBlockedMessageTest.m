@@ -125,6 +125,20 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)testWhatCounts {
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:@"<!--STARTTTAG-->\\n<img src=\"http://marketing.yourcentre.com.au/t?c=1109&r=6455&l=445&t=10&e=BD6A538E5E55F07F21769496C4BAD3DF0CD83620A56156C8\" width=1 height=1 border=0>\\n<!--ENDTTAG-->"];
+    XCTAssertEqualObjects(msg.sanitizedHtml,
+                          @"<!--STARTTTAG-->\\n\\n<!--ENDTTAG-->");
+    XCTAssertEqualObjects(msg.detectedTracker, @"WhatCounts");
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+
+    MTBBlockedMessage *msg2 = [[MTBBlockedMessage alloc] initWithHtml:@"<!--STARTTTAG-->\\n<img src=\"https://tracking.whatcounts.com/t?c=1286&r=6049&l=72&t=10&e=0217D218A1DD2DFBDB56273B045B6272E479F7D10B9C8731\" width=1 height=1 border=0>\\n<!--ENDTTAG-->"];
+    XCTAssertEqualObjects(msg2.sanitizedHtml,
+                          @"<!--STARTTTAG-->\\n\\n<!--ENDTTAG-->");
+    XCTAssertEqualObjects(msg2.detectedTracker, @"WhatCounts");
+    XCTAssertEqual(msg2.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+}
+
 - (void)testMailgun {
     MTBBlockedMessage *mail1 = [[MTBBlockedMessage alloc] initWithHtml:@"<img width=\"1px\" height=\"1px\" alt=\" src=\"http://email.mgdynamic1.webpt.com/o/eJwtz81uhCAUQOGnqZtJCCoOsmA3D9Ck3ZvL5aqMIArqaJ--P-n-LM5nNZUCAItEgGMHuLk468c1Q3BYOH0vq0bKsq7b1qqOKsOlqFtRGsFrUatKKXgTXIlKSd4CIa9YAOeLUZfSyAbR3qWVgpteNQrQ1tgbsrw4pqDfsAuUMwzUOauf8_6cDrOveFrCYXiNF17opxXD7vGK59CfYcoegj1SXjyuRdImmp-BtOccWd5262KxpHg4S6mLaYDZfcGf6WNL7qDb-3hlh-Bvn4yxf3WmdFDSSwrsRWbZGMbwDa8dYfg\">"];
     XCTAssertEqualObjects(mail1.sanitizedHtml, @"");
