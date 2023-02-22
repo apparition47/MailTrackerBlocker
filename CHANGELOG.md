@@ -1,6 +1,6 @@
 # Changelog
 
-## TBA
+## [0.7.12] - 2022-02-22
 
 - add Cuenote, Moneyforward rules
 - #196 fix WhatCounts rule (thanks @malwcal)
