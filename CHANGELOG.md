@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- #197 support Ventura 13.3 (thanks @berkue)
+
 ## [0.7.12] - 2022-02-22
 
 - add Cuenote, Moneyforward rules
