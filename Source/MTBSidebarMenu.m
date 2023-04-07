@@ -96,7 +96,6 @@
 
 -(IBAction)websitePressed:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"https://apparition47.github.io/MailTrackerBlocker/"]];
-    [self dismissViewController:self];
 }
 
 -(IBAction)licensesPressed:(id)sender {
@@ -124,7 +123,6 @@
 
 -(IBAction)helpPressed:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/apparition47/MailTrackerBlocker/issues"]];
-    [self dismissViewController:self];
 }
 
 #pragma mark - Private
