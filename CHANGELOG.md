@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.14] - 2023-04-07
+
+- #199 fix sidemenu "Help" or "Website" crash (thanks @oneofthedamons)
+
 ## [0.7.13] - 2023-03-02
 
 - #197 support Ventura 13.3 (thanks @berkue)
