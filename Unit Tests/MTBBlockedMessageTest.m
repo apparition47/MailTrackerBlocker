@@ -220,8 +220,8 @@
     NSString *css = @"<style>#_eoa_div, #_eoa_img { display: none; } @media print { #_eoa_div { background-image: url('https://b2ccbsz7BC.eoapxl.com/b2ccbsz7BC/3211022171135001432317022/P');} } div.OutlookMessageHeader, table.moz-email-headers-table, blockquote #_eoa_div, #mailContainerBody #_eoa_div {background-image: url('https://b2ccbsz7BC.eoapxl.com/b2ccbsz7BC/3211022171135001432317022/F') }</style>";
     MTBBlockedMessage *msg3 = [[MTBBlockedMessage alloc] initWithHtml:css];
     XCTAssertEqualObjects(msg3.sanitizedHtml, @"<style>#_eoa_div, #_eoa_img { display: none; } @media print { #_eoa_div { ;} } div.OutlookMessageHeader, table.moz-email-headers-table, blockquote #_eoa_div, #mailContainerBody #_eoa_div { }</style>");
-//    XCTAssertEqualObjects(msg3.detectedTracker, @"Email on Acid");
-//    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    // email on acid
+    XCTAssertEqual(msg3.knownTrackerCount, 2);
 }
 
 - (void)testMultipleBackgroundCSSAndImgTagTrackers {
@@ -231,6 +231,29 @@
     XCTAssertEqual(msg.knownTrackerCount, 10);
     XCTAssertTrue([msg.detectedTrackers containsObject:@"Litmus"]);
     XCTAssertTrue([msg.detectedTrackers containsObject:@"SparkPost"]);
+}
+
+- (void)testEscalentBackgroundCSSAndImgTagTrackers {
+    NSString *email = @"<style> @media print{ #_two50 { background-image:url('http://email-analytics.morpace.com/ea/IImB1RCPJg/?t=p&e=4642959029~F230064_7&c=F230064_7&ID=4642959029'); } } blockquote #_two50, #mailContainerBody #_two50, div.OutlookMessageHeader, table.moz-email-headers-table { background-image:url('http://email-analytics.morpace.com/ea/IImB1RCPJg/?t=f&e=4642959029~F230064_7&c=F230064_7&ID=4642959029'); } </style> <div id='_two50'></div> <img id='_two50_img' src='http://email-analytics.morpace.com/ea/IImB1RCPJg/?e=4642959029~F230064_7&c=F230064_7&ID=4642959029' width='1' height='1' style='margin:0 !important; padding:0 !important; border:0 !important; height:1px !important; width:1px !important;' />";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:email];
+    XCTAssertEqual(msg.detectedTrackers.count, 1);
+    XCTAssertEqual(msg.knownTrackerCount, 3);
+    XCTAssertTrue([msg.detectedTrackers containsObject:@"Escalent"]);
+}
+
+- (void)testSendy {
+    NSString *email = @"<img src=\"https://lists.panic.com/t/TfytDRucxMhTmMmeRUryNg/Bw2EZEL3ysIdV5Ql3aYwKw\" alt=\"\" style=\"width:1px;height:1px;\"/>";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:email];
+    XCTAssertEqual(msg.detectedTrackers.count, 1);
+    XCTAssertEqual(msg.knownTrackerCount, 1);
+    XCTAssertEqualObjects(msg.detectedTracker, @"Sendy");
+}
+
+- (void)testRFC2392EmbeddedSpacer {
+    NSString *email = @"<img src=\"cid:image001.gif@01D99D4F.450764F0\" v:src=\"cid:image001.gif@01D99D4F.450764F0\" v:shapes=\"_x0000_Mail\" width=\"0\" height=\"0\" class=\"shape\" style=\"display:none;width:0;height:0\">";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:email];
+    XCTAssertEqual(msg.detectedTrackers.count, 0);
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES);
 }
 
 // expected not be marked as generic pixels

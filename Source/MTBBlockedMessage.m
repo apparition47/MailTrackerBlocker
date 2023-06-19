@@ -19,7 +19,7 @@
 
 NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?[\"'\\s]|[^-]width:\\s*[01]px)+[^>]*>";
 NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
-NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\"]?[\\w:./]*%@[\\w:&./\\?=]*[\'\"]?\\)";
+NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\"]?[\\w:./]*%@[\\w:&./\\?=~]*[\'\"]?\\)";
 
 @synthesize trackers, delegate;
 
@@ -100,9 +100,11 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     }
     
     // strip additional CSS tracker
+    // doesn't add to trackers since it picked up as img above
     NSArray *cssTrackingDict = @[
         [[trackingDict valueForKey:@"Email on Acid"] firstObject],
         [[trackingDict valueForKey:@"Litmus"] firstObject],
+        [[trackingDict valueForKey:@"Escalent"] firstObject],
         [[trackingDict valueForKey:@"G-Lock Analytics"] firstObject]
     ];
     for (NSString *regexValue in cssTrackingDict) {
@@ -161,8 +163,9 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
                                                      offset:offset
                                                    template:@"$0"];
         
+        // skip spacers and RFC2392 embedded images
         NSString* replacement;
-        NSString *regexStr = @"spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web|sidebar-gradient|transparent.gif";
+        NSString *regexStr = @"cid:|spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web|sidebar-gradient|transparent.gif";
         NSRange matchedRange = [match rangeFromPattern:regexStr];
         if (matchedRange.location != NSNotFound) {
             continue; // no replacement
@@ -361,6 +364,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/O/(\\w|-){214}",
             @"ind.dell.com"
         ],
+        @"Escalent": @[@"email-analytics.morpace.com"],
         @"eSputnik": @[@"esputnik.com/repository/applications/commons/hidden.png"],
         @"Etransmail": @[@"ftrans03.com/linktrack/"],
         @"EventBrite": @[@"eventbrite.com/emails/action"],
@@ -626,7 +630,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/wf/open\\?upn="
         ],
         @"SendPulse": @[@"stat-pulse.com"],
-        @"Sendy": @[@"/sendy/t/"],
+        @"Sendy": @[@"/t/\\w{22}/\\w{22}"],
         @"Shopify": @[@"/tools/emails/open/"],
         @"Signal": @[@"signl.live/tracker"],
         @"Smore": @[@"smore.com/app/reporting/pixel/"],
