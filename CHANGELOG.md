@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.14] - 2023-06-19
+
+- #201 add Escalent, improve Sendy rules and ignore RFC2392 embedded images
+
 ## [0.7.14] - 2023-04-07
 
 - #199 fix sidemenu "Help" or "Website" crash (thanks @oneofthedamons)
