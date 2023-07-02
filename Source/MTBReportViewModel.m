@@ -34,6 +34,8 @@
 }
 
 - (void)getTrackersWithSuccess:(void (^)(NSArray<Tracker*> *reports, NSString *mostFreqTracker, NSInteger noTrackersPrevented))successCompletion error:(void (^)(NSError *error))errorCompletion {
+    [managedObjectContext refreshAllObjects];
+
     __weak typeof(self) weakSelf = self;
     [managedObjectContext performBlock:^{
         __strong typeof(self) strongSelf = weakSelf;

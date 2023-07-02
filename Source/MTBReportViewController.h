@@ -8,5 +8,5 @@
 #import <Appkit/Appkit.h>
 
 @interface MTBReportViewController : NSViewController <NSOutlineViewDelegate, NSOutlineViewDataSource>
-
+-(void)fetchData;
 @end

@@ -6,12 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MTBBlockedMessage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTBReportingManager : NSObject
 + (instancetype)sharedInstance;
--(void)markEmailRead:(NSString*)emailBody;
+-(void)markEmailRead:(MTBBlockedMessage*)emailBody;
 -(void)purgeReports30DaysOrOlder;
 @end
 
