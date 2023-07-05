@@ -7,11 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum BLOCKING_RESULT_CERTAINTY: NSUInteger {
+typedef NS_ENUM(NSUInteger, BLOCKING_RESULT_CERTAINTY) {
     BLOCKING_RESULT_CERTAINTY_LOW_NO_MATCHES,
     BLOCKING_RESULT_CERTAINTY_MODERATE_HEURISTIC,
     BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH
-} BLOCKING_RESULT_CERTAINTY;
+};
 
 @protocol MTBBlockedMessageDelegate <NSObject>
 @optional
@@ -31,7 +31,7 @@ typedef enum BLOCKING_RESULT_CERTAINTY: NSUInteger {
 - (id)initWithHtml:(NSString*)html from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink;
 - (NSString *)detectedTracker;
 // Returns display names of trackers detected in message
-- (NSSet *)detectedTrackers;
+- (NSSet<NSString*> *)detectedTrackers;
 - (enum BLOCKING_RESULT_CERTAINTY)certainty;
 - (NSString*)sanitizedHtml;
 @end
