@@ -41,7 +41,7 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            abort();
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         }
     }
 }
@@ -91,7 +91,7 @@
         NSInferMappingModelAutomaticallyOption:@YES
     };
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
-        abort();
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
     }
     
     return _persistentStoreCoordinator;
