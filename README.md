@@ -9,21 +9,19 @@ Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 <p align="center"><img width="600" src="https://user-images.githubusercontent.com/3298414/121038136-00d2f780-c7eb-11eb-8e1a-d7d1fafc2e15.jpg"></p>
 
 ```diff
+<!-- Normal email content -->
 <a style="color: #770506;">
 <img src="http://cdn.website.com/newsletter/logo.png" width="438" height="42" border="0" style="max-width: 90%; height: auto" alt="logo.png">
 </a>
-
-<br>
 <a href="https://website.us5.list-manage.com/unsubscribe?u=abdef">Click here to unsubscribe</a> or <a href="https://website.us5.list-manage.com/profile?u=abdef">Update subscription preferences</a>
 
--<img width="0" height="0" class="mailtrack-img" alt="" style="display:flex" src="https://mailtrack.io/trace/mail/0eabccbe98c98e9b8e9a8b89eab89ce9ab89e8bc.png?u=1234567">
+-<!-- Invisible tracker disabled by MailTrackerBlocker -->
+-<img width="1" height="1" src="https://example.com/trace/mail/0eabccbe98c98e9b8ee8bc.png?u=abdef">
 ```
 
 ## Prerequisites
 
 Apple Mail on macOS 10.11 - 13.x.
-
-⚠️ If you have macOS 12 and up, [Mail Privacy Protection](https://support.apple.com/en-ca/guide/mail/mlhl03be2866/mac) is recommended over MailTrackerBlocker for more complete privacy guards.
 
 
 ## Setup
@@ -90,13 +88,17 @@ defaults delete com.apple.mail _mtb_LastUpdateCheckDate
 
 ## FAQ
 
+### Does this work with Mail Privacy Protection?
+
+Yes, in some network environments (e.g. VPN) where Mail Privacy Protection doesn't work, MailTrackerBlocker will still block and identify trackers if you choose to "Load Remote Content".
+
 ### Why am I getting a "Incompatible Plug-ins Disabled" message after enabling?
 
-Typically caused by Mac migration or restoration from backup. [Delete Mail's private plugin-ins dir (or DataVaults)](https://c-command.com/spamsieve/help/resetting-mail-s-privat) to fix this issue. This dir will automatically be regenerated afterwards.
+Typically caused by a Mac migration or a restoration from backup. [Delete Mail's private plugin-ins dir (or DataVaults)](https://c-command.com/spamsieve/help/resetting-mail-s-privat) to fix this issue. This directory will safely and automatically be regenerated afterwards.
 
 ### Why is my Mail so slow?
 
-This issue isn't related to MailTrackerBlocker but such problems can be resolved by doing a [Mailbox Rebuild](https://c-command.com/spamsieve/help/how-can-i-rebuild-apple) to force Mail to regenerate its indexes.
+This issue isn't related to MailTrackerBlocker but such problems can be resolved by doing a complete [Mailbox Rebuild](https://c-command.com/spamsieve/help/how-can-i-rebuild-apple) to force Mail to regenerate its indexes.
 
 
 ## Building from source

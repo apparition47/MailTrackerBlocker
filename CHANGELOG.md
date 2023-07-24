@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.7.15] - 2023-07-24
+
+- add ChurnZero rule
+- simplified some regex rules to improve performance
+
 ## [0.7.14] - 2023-06-19
 
 - #201 add Escalent, improve Sendy rules and ignore RFC2392 embedded images
