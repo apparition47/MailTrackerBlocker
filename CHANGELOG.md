@@ -1,5 +1,9 @@
 # Changelog
 
+## TBA
+
+- improve Google rule
+
 ## [0.7.15] - 2023-07-24
 
 - add ChurnZero rule

@@ -407,6 +407,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"google.com/appserve/mkt/img/",
             @"notifications.google.com/g/img/",
             @"youtube.com/gen_204",
+            @"notifications.googleapis.com/email/t",
             @"youtube.com/attribution_link"
         ],
         @"Grammarly": @[@"grammarly.com/open"],
