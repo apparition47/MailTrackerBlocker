@@ -11,8 +11,12 @@
 -(void)executeAndMergeChangesUsing:(NSBatchDeleteRequest*)batchDeleteRequest error:(NSError**)error {
     batchDeleteRequest.resultType = NSBatchDeleteResultTypeObjectIDs;
     NSError *deleteError = nil;
-    id result = [self executeRequest:batchDeleteRequest error:&deleteError];
-    NSDictionary *changes = @{NSDeletedObjectsKey: !result ? result : @[]};
-    [NSManagedObjectContext mergeChangesFromRemoteContextSave:changes intoContexts:@[self]];
+    NSBatchDeleteResult *bur = [self executeRequest:batchDeleteRequest error:&deleteError];
+    if (bur && bur.resultType == NSUpdatedObjectIDsResultType){
+        NSArray <NSManagedObjectID*> *arr = bur.result;
+        if ([arr isKindOfClass:NSArray.class] && arr.count > 0) {
+            [NSManagedObjectContext mergeChangesFromRemoteContextSave:@{NSUpdatedObjectsKey:arr} intoContexts:@[self]];
+        }
+    }
 }
 @end
