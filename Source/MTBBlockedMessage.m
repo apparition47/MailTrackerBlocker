@@ -640,6 +640,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/q/.*~~/",
         ],
         @"Splio": @[@"trk-2.net/ouv"],
+        @"Sprinklr": @[@"tracking-prod.sprinklr.com"],
         @"Staples": @[@"/ctt/mktOpen\\?"],
         @"Steam": @[@"store.steampowered.com/emi/"],
         @"Step Coupon": @[@"step-coupon.com/review_mail_read_status.html"],

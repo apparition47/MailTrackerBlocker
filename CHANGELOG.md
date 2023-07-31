@@ -3,6 +3,7 @@
 ## TBA
 
 - improve Google rule
+- add Sprinklr (thanks @m-schmitt)
 
 ## [0.7.15] - 2023-07-24
 
