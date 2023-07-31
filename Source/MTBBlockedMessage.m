@@ -10,7 +10,7 @@
 
 @interface MTBBlockedMessage ()
 @property (nonatomic, copy) NSString *sanitizedHtml;
-@property (nonatomic, retain) NSMutableSet *trackers;
+@property (nonatomic, retain) NSSet *trackers;
 @property BOOL matchedGeneric;
 @property (nonatomic, weak) id <MTBBlockedMessageDelegate> delegate;
 @end
@@ -18,14 +18,14 @@
 @implementation MTBBlockedMessage
 
 NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?[\"'\\s]|[^-]width:\\s*[01]px)+[^>]*>";
-NSString * const kImgTagTemplateRegex = @"<img[^>]+%@+[^>]*>";
+NSString * const kImgTagTemplateRegex = @"<img[^>]*>";
 NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\"]?[\\w:./]*%@[\\w:&./\\?=~]*[\'\"]?\\)";
 
 @synthesize trackers, delegate;
 
 - (id)init {
     if( self = [super init]) {
-        trackers = [[NSMutableSet alloc] init];
+        trackers = [[NSSet alloc] init];
         _isBlockingEnabled = YES;
         _knownTrackerCount = 0;
     }
@@ -85,19 +85,71 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     
     // img tags
     NSString *result = html;
+    NSMutableArray *trackerTemp = [@[] mutableCopy];
     NSDictionary *trackingDict = [self getTrackerDict];
-    for (id trackingSourceKey in trackingDict) {
-        for (NSString *trkRegexStr in [trackingDict objectForKey:trackingSourceKey]) {
-            NSString *regexStr = [NSString stringWithFormat:kImgTagTemplateRegex, trkRegexStr];
-            NSRange matchedRange = [result rangeFromPattern:regexStr];
-            while (matchedRange.location != NSNotFound) {
-                [trackers addObject:trackingSourceKey];
+
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:kImgTagTemplateRegex options:NSRegularExpressionCaseInsensitive error:nil];
+    NSArray *tcResults = [regex matchesInString:html options:0 range:NSMakeRange(0, html.length)];
+    for (NSTextCheckingResult *tcResult in [tcResults reverseObjectEnumerator]) {
+        bool hasParsedTag = false;
+        if (tcResult.range.location == NSNotFound) {
+            continue;
+        }
+        // named trackers
+        for (id vendor in trackingDict) {
+            for (NSString *rule in [trackingDict objectForKey:vendor]) {
+                NSRange matchedRange = [result matchedRange:tcResult.range from:rule];
+                if (matchedRange.location != NSNotFound) {
+                    [trackerTemp addObject:vendor];
+                    result = [result stringByReplacingCharactersInRange:tcResult.range withString:@""];
+                    _knownTrackerCount++;
+                    hasParsedTag = true;
+                    goto outer;
+                }
+            }
+        }
+        outer:
+        if (hasParsedTag) {
+            continue;
+        }
+        
+        // generic trackers
+        NSRegularExpression *genericRegex = [NSRegularExpression
+                                      regularExpressionWithPattern:kGenericSpyPixelRegex
+                                      options:NSRegularExpressionCaseInsensitive
+                                      error:nil];
+        for (NSTextCheckingResult *genericResult in [genericRegex matchesInString:html options:0 range:tcResult.range]) {
+            if (genericResult.range.location != NSNotFound) {
+                
+                // avoid false-positive spacer images
+                NSString *spacersRegexStr = @"cid:|spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web|sidebar-gradient|transparent.gif";
+                NSRange matchedRange = [result matchedRange:tcResult.range from:spacersRegexStr];
+                if (matchedRange.location == NSNotFound) {
+                    _knownTrackerCount++;
+                    _matchedGeneric = true;
+                    result = [result stringByReplacingCharactersInRange:genericResult.range withString:@""];
+                }
+                hasParsedTag = true;
+            }
+        }
+        if (hasParsedTag) {
+            continue;
+        }
+        
+        // strip non-tracking static ad content
+        NSArray *staticContentDict = @[
+            @"/branding/recommend/short.png", // Jeeng
+            @"nl-static1.komando.com/wp-content/uploads/ad-"
+        ];
+        for (NSString *staticRegexStr in staticContentDict) {
+            NSRange matchedRange = [result matchedRange:tcResult.range from:staticRegexStr];
+            if (matchedRange.location != NSNotFound) {
                 result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
-                matchedRange = [result rangeFromPattern:regexStr];
-                _knownTrackerCount++;
+                hasParsedTag = true;
             }
         }
     }
+    trackers = [NSSet setWithArray: trackerTemp];
     
     // strip additional CSS tracker
     // doesn't add to trackers since it picked up as img above
@@ -116,74 +168,8 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             _knownTrackerCount++;
         }
     }
-    
-    // strip non-tracking static ad content
-    NSArray *staticContentDict = @[
-        @"/branding/recommend/short.png", // Jeeng
-        @"nl-static1.komando.com/wp-content/uploads/ad-"
-    ];
-    for (NSString *regexValue in staticContentDict) {
-        NSString *regexStr = [NSString stringWithFormat:kImgTagTemplateRegex, regexValue];
-        NSRange matchedRange = [result rangeFromPattern:regexStr];
-        while (matchedRange.location != NSNotFound) {
-            result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
-            matchedRange = [result rangeFromPattern:regexStr];
-        }
-    }
-    
-    // strip generic pixels
-    NSUInteger originalLength = [result length];
-    result = [self replacedGenericPixelsFrom:result];
-    _matchedGeneric = originalLength != [result length];
 
     return result;
-}
-
-// replaces generic pixels but skips spacers
-// https://stackoverflow.com/questions/6222115/how-do-you-use-nsregularexpressions-replacementstringforresultinstringoffset
-- (NSString*)replacedGenericPixelsFrom:(NSString*)html {
-    NSError* error = NULL;
-    NSRegularExpression* regex = [NSRegularExpression
-                                  regularExpressionWithPattern:kGenericSpyPixelRegex
-                                  options:NSRegularExpressionCaseInsensitive
-                                  error:&error];
-
-    NSMutableString *mutableString = [html mutableCopy];
-    NSInteger offset = 0;
-    for (NSTextCheckingResult* result in [regex matchesInString:html
-                                                        options:0
-                                                          range:NSMakeRange(0, [html length])]) {
-
-        NSRange resultRange = [result range];
-        resultRange.location += offset;
-
-        // template $0 is replaced by the match
-        NSString* match = [regex replacementStringForResult:result
-                                                   inString:mutableString
-                                                     offset:offset
-                                                   template:@"$0"];
-        
-        // skip spacers and RFC2392 embedded images
-        NSString* replacement;
-        NSString *regexStr = @"cid:|spacer|attachments.office.net/owa/|fedex_collective_logo_|apple_logo_web|sidebar-gradient|transparent.gif";
-        NSRange matchedRange = [match rangeFromPattern:regexStr];
-        if (matchedRange.location != NSNotFound) {
-            continue; // no replacement
-        } else {
-            replacement = @"";
-            _knownTrackerCount++;
-        }
-
-        [mutableString replaceCharactersInRange:resultRange withString:replacement];
-        offset += ([replacement length] - resultRange.length);
-    }
-
-    // return original reference if nothing changed
-    if ([mutableString length] == [html length] && [mutableString isEqualToString:html]) {
-        return html;
-    }
-    
-    return mutableString;
 }
 
 - (NSDictionary*)getTrackerDict {
