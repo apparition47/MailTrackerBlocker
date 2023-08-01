@@ -11,6 +11,5 @@
  Get range from a regex string. Returns NSNotFound if non-existent.
  */
 @interface NSString (RegEx)
-- (NSRange)rangeFromPattern:(NSString*)pattern;
 - (NSRange)matchedRange:(NSRange)range from:(NSString*)pattern;
 @end

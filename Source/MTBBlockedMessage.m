@@ -13,13 +13,16 @@
 @property (nonatomic, retain) NSSet *trackers;
 @property BOOL matchedGeneric;
 @property (nonatomic, weak) id <MTBBlockedMessageDelegate> delegate;
++ (NSRegularExpression*)imgTagRegex;
++ (NSRegularExpression*)genericPixelRegex;
++ (NSRegularExpression*)cssRegex;
 @end
 
 @implementation MTBBlockedMessage
 
 NSString * const kGenericSpyPixelRegex = @"<img[^>]+(width\\s*=[\"'\\s]*[01]p?x?[\"'\\s]|[^-]width:\\s*[01]px)+[^>]*>";
 NSString * const kImgTagTemplateRegex = @"<img[^>]*>";
-NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\"]?[\\w:./]*%@[\\w:&./\\?=~]*[\'\"]?\\)";
+NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\"]?[\\w:&./\?=~-]+[\'\"]?\\)";
 
 @synthesize trackers, delegate;
 
@@ -77,6 +80,34 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     return _sanitizedHtml;
 }
 
+#pragma mark - Cache
++ (NSRegularExpression*)imgTagRegex {
+    static NSRegularExpression *regex = nil;
+    if (regex == nil) {
+        regex = [NSRegularExpression regularExpressionWithPattern:kImgTagTemplateRegex options:NSRegularExpressionCaseInsensitive error:nil];
+    }
+    return regex;
+}
+
++ (NSRegularExpression*)genericPixelRegex {
+    static NSRegularExpression *regex = nil;
+    if (regex == nil) {
+        regex = [NSRegularExpression
+                 regularExpressionWithPattern:kGenericSpyPixelRegex
+                 options:NSRegularExpressionCaseInsensitive
+                 error:nil];
+    }
+    return regex;
+}
+
++ (NSRegularExpression*)cssRegex {
+    static NSRegularExpression *regex = nil;
+    if (regex == nil) {
+        regex = [NSRegularExpression regularExpressionWithPattern:kCSSTemplateRegex options:NSRegularExpressionCaseInsensitive error:nil];
+    }
+    return regex;
+}
+
 #pragma mark - Helpers
 - (NSString*)sanitizedHtmlFromHtml:(NSString*)html {
     if (!html) {
@@ -88,8 +119,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     NSMutableArray *trackerTemp = [@[] mutableCopy];
     NSDictionary *trackingDict = [self getTrackerDict];
 
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:kImgTagTemplateRegex options:NSRegularExpressionCaseInsensitive error:nil];
-    NSArray *tcResults = [regex matchesInString:html options:0 range:NSMakeRange(0, html.length)];
+    NSArray *tcResults = [[[self class] imgTagRegex] matchesInString:result options:0 range:NSMakeRange(0, result.length)];
     for (NSTextCheckingResult *tcResult in [tcResults reverseObjectEnumerator]) {
         bool hasParsedTag = false;
         if (tcResult.range.location == NSNotFound) {
@@ -114,11 +144,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         }
         
         // generic trackers
-        NSRegularExpression *genericRegex = [NSRegularExpression
-                                      regularExpressionWithPattern:kGenericSpyPixelRegex
-                                      options:NSRegularExpressionCaseInsensitive
-                                      error:nil];
-        for (NSTextCheckingResult *genericResult in [genericRegex matchesInString:html options:0 range:tcResult.range]) {
+        for (NSTextCheckingResult *genericResult in [[[self class] genericPixelRegex] matchesInString:html options:0 range:tcResult.range]) {
             if (genericResult.range.location != NSNotFound) {
                 
                 // avoid false-positive spacer images
@@ -159,13 +185,18 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         [[trackingDict valueForKey:@"Escalent"] firstObject],
         [[trackingDict valueForKey:@"G-Lock Analytics"] firstObject]
     ];
-    for (NSString *regexValue in cssTrackingDict) {
-        NSString *regexStr = [NSString stringWithFormat:kCSSTemplateRegex, regexValue];
-        NSRange matchedRange = [result rangeFromPattern:regexStr];
-        while (matchedRange.location != NSNotFound) {
-            result = [result stringByReplacingCharactersInRange:matchedRange withString:@""];
-            matchedRange = [result rangeFromPattern:regexStr];
-            _knownTrackerCount++;
+    tcResults = [[[self class] cssRegex] matchesInString:result options:0 range:NSMakeRange(0, result.length)];
+    for (NSTextCheckingResult *tcResult in [tcResults reverseObjectEnumerator]) {
+        if (tcResult.range.location == NSNotFound) {
+            continue;
+        }
+        for (NSString *rule in cssTrackingDict) {
+            NSRange matchedRange = [result matchedRange:tcResult.range from:rule];
+            if (matchedRange.location != NSNotFound) {
+                result = [result stringByReplacingCharactersInRange:tcResult.range withString:@""];
+                _knownTrackerCount++;
+                break;
+            }
         }
     }
 
