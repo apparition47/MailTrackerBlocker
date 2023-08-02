@@ -135,8 +135,9 @@ open build/Release
 * MailTrackerBlocker project sponsors, donators and contributors
 * **[@dhh](https://github.com/dhh)** for the [spy pixel tracker block list used in HEY](https://gist.github.com/dhh/360f4dc7ddbce786f8e82b97cdad9d20)
 * **[@leggett](https://github.com/leggett)** for his [Simplify Gmail blocklist](https://github.com/leggett/simplify-trackers)
-* **[@raybrownco](https://github.com/raybrownco)** for the first UI design
-* **[GPGTools Team](https://gpgtools.org/)** for making this possible with GPGMail and for their extensive work on Mail plugins
+* **[@raybrownco](https://github.com/raybrownco)** for the original UI design and icon
+* **[GPGTools Team](https://gpgtools.org/)** for their open source GPGMail plugin from which MailTrackerBlocker is based on
+* **[SpamSieve](https://c-command.com/spamsieve/)** for their Mail knowledgebase and troubleshooting manuals
 
 
 ## [License](https://github.com/apparition47/MailTrackerBlocker/blob/master/LICENSE)
