@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, BLOCKING_RESULT_CERTAINTY) {
 - (NSString *)detectedTracker;
 // Returns display names of trackers detected in message
 - (NSSet<NSString*> *)detectedTrackers;
+- (NSDictionary<NSString*, NSArray<NSString*>*> *) getTrackerDict;
 - (enum BLOCKING_RESULT_CERTAINTY)certainty;
 - (NSString*)sanitizedHtml;
 @end
