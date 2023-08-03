@@ -1,8 +1,9 @@
 # Changelog
 
-## TBA
+## [0.8.0] - 2023-08-03
 
-- improve Google rule
+- much faster HTML parsing
+- improve Google/YouTube rule
 - add Sprinklr (thanks @m-schmitt)
 
 ## [0.7.15] - 2023-07-24
