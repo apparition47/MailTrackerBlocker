@@ -349,6 +349,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Creditmantri.com": @[@"mailer.creditmantri.com/t/"],
         @"Critical Impact": @[@"portal.criticalimpact.com/c2/"],
         @"Cuenote": @[@"cuenote.jp/c/"],
+        @"Curumeru": @[@"crmf.jp"],
         @"Customer.io": @[
             @"customeriomail.com/e/o",
             @"track.customer.io/e/o",
@@ -377,7 +378,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/mo/.+.gif",
             @"emarsys.com/e2t/o/"
         ],
-        @"EmberPoint MailPublisher": @[@"rec.mpse.jp"],
+        @"EmberPoint": @[@"mpse.jp"],
         @"Envoke": @[@"envoke.com/o/"],
         @"Epic Games": @[@"accts.epicgames.com/O/"],
         @"Epsilon": @[
@@ -478,6 +479,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Inxmail": @[@"/d/d.gif\\?"],
         @"Is-tracking-pixel-api-prod.appspot.com": @[@"is-tracking-pixel-api-prod.appspot.com"],
 //        @"JangoMail": @["/[a-z].z\\?[a-z]="],
+        @"Japan Railway": @[@"expy.jp/c/"],
         @"Jeeng": @[@"/stripe/image\\?cs_"],
         @"LaunchBit": @[@"launchbit.com/taz-pixel"],
         @"Lidl": @[@"servicemails.lidl.de/d/d.gif"],
@@ -668,7 +670,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"/wf/open\\?upn="
         ],
         @"SendPulse": @[@"stat-pulse.com"],
-        @"Sendy": @[@"/t/[a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_]/[a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_]"],
+        @"Sendy": @[@"/t/[a-zA-Z0-9_]+/[a-zA-Z0-9_]"],
         @"Shopify": @[@"/tools/emails/open/"],
         @"Signal": @[@"signl.live/tracker"],
         @"Smore": @[@"smore.com/app/reporting/pixel/"],
