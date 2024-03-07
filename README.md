@@ -21,7 +21,8 @@ Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 
 ## Prerequisites
 
-Apple Mail on macOS 10.11 - 13.x.
+- macOS El Capitan 10.11 - Ventura 13
+- Apple Mail
 
 
 ## Setup
@@ -37,29 +38,29 @@ $ brew install mailtrackerblocker
 ### Usage
 
 <details>
-<summary><h4>macOS 12, 13</h4></summary>
+<summary><b>macOS 12, 13</b></summary>
 <br>
 1. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
-<br><br>
-⚠️ Enabling <a href="https://techviral.net/wp-content/uploads/2021/11/Mail-Privacy-Protection.jpg">"Block All Remote Content"</a> with MailTrackerBlocker enabled is redundant; disable this option for the best experience.
+<br>
+2. [Recommended] Goto Mail > Settings > Privacy > disable <a href="https://techviral.net/wp-content/uploads/2021/11/Mail-Privacy-Protection.jpg">"Block All Remote Content"</a>.
 </details>
 
 <details>
-<summary><h4>macOS 10.11, 10.12, 10.13, 11</h4></summary>
+<summary><b>macOS 10.11, 10.12, 10.13, 11</b></summary>
 <br>
 1. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
-<br><br>
-⚠️ Disabling <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"load remote content in messages"</a> with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
+<br>
+2. [Recommended] Goto Mail > Settings > Viewing > re-enable <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"Load remote content in messages"</a>.
 </details>
 
 <details open>
-<summary><h4>macOS 10.14, 10.15</h4></summary>
+<summary><b>macOS 10.14, 10.15</b></summary>
 <br>
 1. Open Mail, goto `Preferences > General > Manage Plug-ins... > check "MailTrackerBlocker.mailbundle" > Apply and Restart Mail`. Note that you'll need to do this again for each update.
 <br>
 2. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
-<br><br>
-⚠️ Disabling <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"load remote content in messages"</a> with MailTrackerBlocker enabled is redundant; re-enable this option for the best experience.
+<br>
+3. [Recommended] Goto Mail > Settings > Viewing > re-enable <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"Load remote content in messages"</a>.
 </details>
 
 
