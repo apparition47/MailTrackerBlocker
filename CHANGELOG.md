@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.8.4] - 2024-04-22
+
+- add rule.io (thanks @noamvokaal)
+- add Curumeru, Japan Railway
+
 ## [0.8.0] - 2023-08-03
 
 - much faster HTML parsing
