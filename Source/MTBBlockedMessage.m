@@ -618,6 +618,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Responder.co.il": @[@"opens.responder.co.il"],
         @"Rewe": @[@"epost.rewe.de/action/view/"],
         @"Rocketbolt": @[@"email.rocketbolt.com/o/"],
+        @"Rule": @[@"app.rule.io/track/image"],
         @"Sailthru": @[
             @"sailthru.com/trk",
             @"/img/[a-z0-9_]+/[a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_].gif"
