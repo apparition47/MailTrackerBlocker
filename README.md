@@ -1,10 +1,4 @@
-# MailTrackerBlocker [![Awesome Humane Tech](https://codeberg.org/teaserbot-labs/delightful-humane-design/raw/branch/main/humane-tech-badge.svg)](https://codeberg.org/teaserbot-labs/delightful-humane-design)
-
-MailTrackerBlocker is a plugin (mailbundle) for the default Mail app built-in to macOS. Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails. This plugin labels who is tracking you and strips out spy pixels out of the HTML before display, rendering the typical advice of **disabling "load remote content in messages" unnecessary**.
-
-Browse your inbox privately with images displayed once again.
-
-Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
+MailTrackerBlocker is a email tracker blocking plugin (mailbundle) for macOS Mail. [Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails.](https://notospypixels.com/) Enable the plugin to find out who is tracking you and block spy pixels **without needing to disable "load remote content in messages"** so that you can browse your inbox privately with images displayed once again.
 
 <p align="center"><img width="600" src="https://user-images.githubusercontent.com/3298414/121038136-00d2f780-c7eb-11eb-8e1a-d7d1fafc2e15.jpg"></p>
 
@@ -19,9 +13,9 @@ Be informed. [Say No To Spy Pixels](https://notospypixels.com/).
 -<img width="1" height="1" src="https://example.com/trace/mail/0eabccbe98c98e9b8ee8bc.png?u=abdef">
 ```
 
-## Prerequisites
+## Requirements
 
-- macOS El Capitan 10.11 - Ventura 13
+- macOS El Capitan 10.11 - Ventura 13 ([why not newer versions?](https://www.macrumors.com/2023/06/14/macos-sonoma-drops-legacy-mail-app-plug-ins/))
 - Apple Mail
 
 
