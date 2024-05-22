@@ -1,17 +1,7 @@
-MailTrackerBlocker is a email tracker blocking plugin (mailbundle) for macOS Mail. [Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails.](https://notospypixels.com/) Enable the plugin to find out who is tracking you and block spy pixels **without needing to disable "load remote content in messages"** so that you can browse your inbox privately with images displayed once again.
+<p align="center"><img width="635" src="https://user-images.githubusercontent.com/3298414/121038136-00d2f780-c7eb-11eb-8e1a-d7d1fafc2e15.jpg"></p>
 
-<p align="center"><img width="600" src="https://user-images.githubusercontent.com/3298414/121038136-00d2f780-c7eb-11eb-8e1a-d7d1fafc2e15.jpg"></p>
+**MailTrackerBlocker** is a email tracker blocking plugin (mailbundle) for macOS Mail. [Email marketers and other interests often embed these trackers in HTML emails so they can track how often, when and where you open your emails.](https://notospypixels.com/) Find out who is tracking you and block spy pixels without needing to disable "load remote content in messages" so that you can browse your inbox privately with images displayed once again.
 
-```diff
-<!-- Normal email content -->
-<a style="color: #770506;">
-<img src="http://cdn.website.com/newsletter/logo.png" width="438" height="42" border="0" style="max-width: 90%; height: auto" alt="logo.png">
-</a>
-<a href="https://website.us5.list-manage.com/unsubscribe?u=abdef">Click here to unsubscribe</a> or <a href="https://website.us5.list-manage.com/profile?u=abdef">Update subscription preferences</a>
-
--<!-- Invisible tracker disabled by MailTrackerBlocker -->
--<img width="1" height="1" src="https://example.com/trace/mail/0eabccbe98c98e9b8ee8bc.png?u=abdef">
-```
 
 ## Requirements
 
@@ -36,7 +26,7 @@ $ brew install mailtrackerblocker
 <br>
 1. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
 <br>
-2. [Recommended] Goto Mail > Settings > Privacy > disable <a href="https://techviral.net/wp-content/uploads/2021/11/Mail-Privacy-Protection.jpg">"Block All Remote Content"</a>.
+2. [Optional] Images are safe for viewing so to re-enable: from the Mail menu bar, open Settings > Privacy > disable <a href="https://techviral.net/wp-content/uploads/2021/11/Mail-Privacy-Protection.jpg">"Block All Remote Content"</a>.
 </details>
 
 <details>
@@ -44,7 +34,7 @@ $ brew install mailtrackerblocker
 <br>
 1. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
 <br>
-2. [Recommended] Goto Mail > Settings > Viewing > re-enable <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"Load remote content in messages"</a>.
+2. [Optional] Images are safe for viewing so to re-enable: from the Mail menu bar, open Settings > Viewing > re-enable <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"Load remote content in messages"</a>.
 </details>
 
 <details open>
@@ -54,7 +44,7 @@ $ brew install mailtrackerblocker
 <br>
 2. Tap on the <strong>ⓧ</strong> button to find out what was blocked.
 <br>
-3. [Recommended] Goto Mail > Settings > Viewing > re-enable <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"Load remote content in messages"</a>.
+3. [Optional] Images are safe for viewing so to re-enable: from the Mail menu bar, open Settings > Viewing > re-enable <a href="https://www.imore.com/sites/imore.com/files/styles/xlarge/public/field/image/2019/07/mac-load-remote.jpg">"Load remote content in messages"</a>.
 </details>
 
 
