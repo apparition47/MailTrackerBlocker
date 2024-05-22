@@ -722,7 +722,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"trackapp.io/[br]/",
             @"trackapp.io/static/img/track.gif"
         ],
-        @"Transferwise": @[@"links.transferwise.com/track/"],
         @"Traverse": @[
             @"/v1/.+/[0-9].gif\\?emailMd5Lower=",
             @"getpic.php\\?l="
@@ -754,6 +753,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"wildapricot.org/emailtracker",
             @"/EmailTracker/EmailTracker.ashx"
         ],
+        @"Wise": @[@"links.transferwise.com/track/", @"api.transferwise.com"],
         @"Wish": @[@"wish.com/email-beacon.png"],
         @"Wix": @[@"shoutout.wix.com"],
         @"WordPress": @[@"pixel.wp.com/t.gif"],
