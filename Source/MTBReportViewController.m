@@ -29,6 +29,7 @@
 @property (weak) IBOutlet NSButton *faqShowButton;
 @property (weak) IBOutlet NSTextField *faqHeaderLabel;
 @property (weak) IBOutlet NSTextField *faqDescLabel;
+@property (weak) IBOutlet NSTextField *last30DaysLabel;
 @property (weak) IBOutlet NSOutlineView *trackerOutlineView;
 
 @property (nonatomic, strong) MTBReportViewModel *viewModel;
@@ -105,6 +106,7 @@
     _mostFreqTrackerLabel.stringValue = @"-";
     _faqHeaderLabel.stringValue = MTBLocalizedString(@"WHAT_ARE_TRACKERS");
     _faqDescLabel.stringValue = MTBLocalizedString(@"WHAT_ARE_TRACKERS_DESC");
+    _last30DaysLabel.stringValue = MTBLocalizedString(@"LAST_30_DAYS");
     
     CGFloat height = MIN(838, [NSScreen mainScreen] ? [NSScreen mainScreen].frame.size.height-100 : CGFLOAT_MAX);
     preferredContentSize = CGRectMake(0, 0, 656, height).size; // prevent window resize

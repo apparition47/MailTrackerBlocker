@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +14,7 @@
                 <outlet property="faqHeaderLabel" destination="Anw-2D-0bM" id="m1t-fs-pwL"/>
                 <outlet property="faqShowButton" destination="ef5-0l-h7l" id="ro2-rS-Dmy"/>
                 <outlet property="helpStackView" destination="Hwa-7c-R0k" id="ZZD-OV-xc5"/>
+                <outlet property="last30DaysLabel" destination="VvN-pS-d7W" id="aaU-lH-OmS"/>
                 <outlet property="mostFreqTrackerHeaderLabel" destination="BlY-s0-fLE" id="ERY-MA-5Fw"/>
                 <outlet property="mostFreqTrackerLabel" destination="Vph-1D-ruh" id="e4J-Gc-Rvl"/>
                 <outlet property="mostFreqTrackerView" destination="QwG-IU-sdf" id="Gv9-1Z-dmo"/>
@@ -52,7 +52,7 @@
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-bQ-6HV">
                                                 <rect key="frame" x="89" y="234" width="657" height="50"/>
                                                 <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="q9L-BW-2jY">
+                                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="q9L-BW-2jY">
                                                         <rect key="frame" x="-2" y="24" width="625" height="26"/>
                                                         <textFieldCell key="cell" selectable="YES" title="MailTrackerBlocker prevents trackers from following you via email." id="sWs-tF-GwQ">
                                                             <font key="font" textStyle="title1" name=".SFNS-Regular"/>
@@ -97,7 +97,7 @@
                                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="xtN-am-Mge">
                                                 <rect key="frame" x="0.0" y="78" width="96" height="5"/>
                                             </box>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Anw-2D-0bM">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Anw-2D-0bM">
                                                 <rect key="frame" x="-2" y="48" width="120" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Cross-site trackers" id="uLx-Cg-Uys">
                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -105,7 +105,7 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="75f-D0-Cab">
+                                            <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="75f-D0-Cab">
                                                 <rect key="frame" x="-2" y="0.0" width="750" height="32"/>
                                                 <textFieldCell key="cell" selectable="YES" id="ca6-0O-YfH">
                                                     <font key="font" metaFont="system"/>
@@ -126,7 +126,7 @@
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VvN-pS-d7W">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VvN-pS-d7W">
                                         <rect key="frame" x="46" y="387" width="82" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Last 30 days" id="Ac2-s5-ooY">
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -140,7 +140,7 @@
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="SPF-Nx-Kws">
                                                 <rect key="frame" x="0.0" y="0.0" width="369" height="90"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2bH-4i-WhK">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2bH-4i-WhK">
                                                         <rect key="frame" x="14" y="58" width="341" height="16"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Trackers prevented from profiling you" id="x1N-ha-RYR">
                                                             <font key="font" usesAppearanceFont="YES"/>
@@ -148,7 +148,7 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xHh-cM-wcx">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xHh-cM-wcx">
                                                         <rect key="frame" x="14" y="16" width="40" height="26"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="153" id="Foh-98-GHZ">
                                                             <font key="font" textStyle="title1" name=".SFNS-Regular"/>
@@ -169,7 +169,7 @@
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Vc8-WP-xKj">
                                                 <rect key="frame" x="377" y="0.0" width="369" height="90"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yxb-sW-BPd">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yxb-sW-BPd">
                                                         <rect key="frame" x="14" y="58" width="341" height="16"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Email that contacted trackers" id="xkz-wW-7lG">
                                                             <font key="font" usesAppearanceFont="YES"/>
@@ -177,7 +177,7 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-7Q-T28">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-7Q-T28">
                                                         <rect key="frame" x="14" y="16" width="48" height="26"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="70%" id="1sz-VG-iZk">
                                                             <font key="font" textStyle="title1" name=".SFNS-Regular"/>
@@ -208,7 +208,7 @@
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="QwG-IU-sdf">
                                         <rect key="frame" x="48" y="191" width="746" height="90"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BlY-s0-fLE">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BlY-s0-fLE">
                                                 <rect key="frame" x="14" y="58" width="718" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Most contacted tracker" id="zAo-zt-gM4">
                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -216,7 +216,7 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Vph-1D-ruh">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Vph-1D-ruh">
                                                 <rect key="frame" x="14" y="16" width="718" height="26"/>
                                                 <textFieldCell key="cell" title="Example was prevented from profiling you across 212 emails" id="4VK-PV-MpQ">
                                                     <font key="font" textStyle="title1" name=".SFNS-Regular"/>
@@ -242,13 +242,13 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="inset" alternatingRowBackgroundColors="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" headerView="CTp-9N-3tZ" viewBased="YES" indentationPerLevel="13" outlineTableColumn="AvC-v8-g60" id="4JE-1A-D90">
-                                                    <rect key="frame" x="0.0" y="0.0" width="489" height="90"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="491" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="17" height="0.0"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn identifier="col1" width="400" minWidth="200" maxWidth="1000" id="AvC-v8-g60">
+                                                        <tableColumn identifier="col1" width="401" minWidth="200" maxWidth="1000" id="AvC-v8-g60">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -261,11 +261,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="cell1" id="WRg-H3-8gq">
-                                                                    <rect key="frame" x="18" y="0.0" width="398" height="24"/>
+                                                                    <rect key="frame" x="18" y="0.0" width="399" height="24"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKn-Gf-Eqh">
-                                                                            <rect key="frame" x="0.0" y="4" width="398" height="16"/>
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKn-Gf-Eqh">
+                                                                            <rect key="frame" x="0.0" y="4" width="399" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="DYS-Ua-CnD">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -280,7 +280,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
-                                                        <tableColumn identifier="col2" width="40" minWidth="40" maxWidth="200" id="zgs-Af-ELJ">
+                                                        <tableColumn identifier="col2" width="41" minWidth="40" maxWidth="200" id="zgs-Af-ELJ">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -293,11 +293,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="cell2" id="2UA-44-94o">
-                                                                    <rect key="frame" x="433" y="0.0" width="37" height="24"/>
+                                                                    <rect key="frame" x="433.98871058581153" y="0.0" width="38" height="24"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giY-4t-Zjr">
-                                                                            <rect key="frame" x="0.0" y="4" width="37" height="16"/>
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="giY-4t-Zjr">
+                                                                            <rect key="frame" x="0.0" y="4" width="38" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Gsd-4V-Z3P">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -328,7 +328,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <tableHeaderView key="headerView" wantsLayer="YES" id="CTp-9N-3tZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="489" height="28"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="491" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableHeaderView>
                                     </scrollView>
