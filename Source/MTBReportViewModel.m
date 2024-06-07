@@ -37,10 +37,10 @@
     __weak typeof(self) weakSelf = self;
     [managedObjectContext performBlock:^{
         __strong typeof(self) strongSelf = weakSelf;
-        [strongSelf.managedObjectContext refreshAllObjects];
+        [weakSelf.managedObjectContext refreshAllObjects];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tracker"
-                                                  inManagedObjectContext:[self managedObjectContext]];
+                                                  inManagedObjectContext:[strongSelf managedObjectContext]];
         [fetchRequest setEntity:entity];
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"
                                                                        ascending:YES];
@@ -50,7 +50,7 @@
         
         
         NSError *error = nil;
-        strongSelf.reports = [strongSelf.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        weakSelf.reports = [strongSelf.managedObjectContext executeFetchRequest:fetchRequest error:&error];
         
         NSString *mostFreqTrackerName = @"";
         NSUInteger maxTrackerCount = 0;
@@ -76,7 +76,7 @@
         __strong typeof(self) strongSelf = weakSelf;
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Email"
-                                                  inManagedObjectContext:[self managedObjectContext]];
+                                                  inManagedObjectContext:[strongSelf managedObjectContext]];
         [fetchRequest setEntity:entity];
         
         NSError *error = nil;
@@ -99,9 +99,9 @@
 
 -(NSInteger)numberOfChildrenOfItem:(id)item {
     if (!item) {
-        return _reports.count;
+        return _reports.count; // # of trackers
     }
-    return ((Tracker *)item).reports.count;
+    return ((Tracker *)item).reports.count; // seen instances of a given tracker
 }
 
 -(id)modelAtChild:(NSInteger)index ofItem:(id)item {
