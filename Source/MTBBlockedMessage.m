@@ -360,6 +360,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"dataX": @[@"openedlog.bdash-cloud.com/opened", @"openedlog.smart-bdash.com/opened"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
+        @"Discord": @[@"discord.com/api/science/"],
         @"Disney": @[@"clk.messaging.go.com/c/[0-9][0-9]/bcasts/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/view"],
         @"DocuMatix": @[@"enews.itcu.org/op\\?m="],
         @"Doorkeeper": @[@"r.doorkeeper.jp/.+.png"],
@@ -565,6 +566,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Omnisend": @[@"/transactional/track/.+\\?signature="],
         @"Ongage": @[@"/\\?x[ou]l=.+&(amp;)?eih="],
         @"OpenBracket": @[@"openbracket.co/track"],
+        @"OpenWork": @[@"openwork.jp/log_mail_open_com"],
         @"Opicle": @[@"track.opicle.com"],
         @"Optimove": @[@"/ss/o/[a-z0-9_]+/[a-z0-9_][a-z0-9_][a-z0-9_]/[a-z0-9_]+/[a-z0-9_][a-z0-9_].gif"],
         @"Oracle": @[
@@ -744,6 +746,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
         @"VinSolutions": @[@"vinlens.com/email.ashx\\?c="],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
+        @"Walmart": @[@"w-mt.co/g/rptrcks/comm-smart-app/services/tracking/openTracker"],
         @"WhatCounts": @[@"/t\\?c=[0-9][0-9][0-9][0-9]&r=[0-9][0-9][0-9][0-9]&l=[0-9][0-9][0-9]?&t=[0-9][0-9]&e="],
         @"We Are Web": @[@"tracking.weareweb.in/index.php/campaigns/"],
         @"Webtrekk": @[@"webtrekk.net"],
