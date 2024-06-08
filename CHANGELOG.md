@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.8.5] - 2024-06-08
+
+- add Wise, Discord, Walmart, OpenWork rules
+- fix memory leak on Tracker Report
+- add missing localization on Tracker Report
+
 ## [0.8.4] - 2024-04-22
 
 - add rule.io (thanks @noamvokaal)
