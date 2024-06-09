@@ -45,7 +45,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     return self;
 }
 
-- (id)initWithHtml:(NSString*)html from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink {
+- (id)initWithHtml:(NSString*)html to:(NSString*)to from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink {
     self = [self init];
     if (!self) {
         return nil;
@@ -53,6 +53,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
     _originalHtml = html;
     _sanitizedHtml = [self sanitizedHtmlFromHtml: html];
     _deeplinkField = deeplink;
+    _toField = to;
     _fromField = from;
     _subjectField = subject;
     return self;

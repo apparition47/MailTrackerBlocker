@@ -47,6 +47,7 @@
             email = [NSEntityDescription insertNewObjectForEntityForName:@"Email" inManagedObjectContext:context];
             [email setSubject:blkMsg.subjectField];
             [email setDeeplink:blkMsg.deeplinkField];
+            [email setTo:blkMsg.toField];
             [email setRead_timestamp:[NSDate date]];
         } else if (fetchResults.count > 0) {
             // id'd tracker exists and is same as previous record
@@ -55,6 +56,7 @@
             email = [NSEntityDescription insertNewObjectForEntityForName:@"Email" inManagedObjectContext:context];
             [email setSubject:blkMsg.subjectField];
             [email setDeeplink:blkMsg.deeplinkField];
+            [email setTo:blkMsg.toField];
             [email setRead_timestamp:[NSDate date]];
         }
         

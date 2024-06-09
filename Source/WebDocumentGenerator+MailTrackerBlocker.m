@@ -19,7 +19,7 @@
 
 - (void)MTBSetWebDocument:(MUIWebDocument *)webDocument {
     ConversationMember *member = [mailself conversationMember];
-    MTBBlockedMessage *blkMsg = [[MTBBlockedMessage alloc] initWithHtml:webDocument.html from:member.sender subject:member.subject deeplink:member.originalMessage.URLString];
+    MTBBlockedMessage *blkMsg = [[MTBBlockedMessage alloc] initWithHtml:webDocument.html to:member.mailboxName from:member.sender subject:member.subject deeplink:member.originalMessage.URLString];
     [[mailself conversationMember] setIvar: @"MTBBlockedMessage" value: blkMsg];
     webDocument.html = [blkMsg sanitizedHtml];
     [self MTBSetWebDocument:webDocument];

@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, BLOCKING_RESULT_CERTAINTY) {
 @interface MTBBlockedMessage : NSObject
 @property(readonly, nonatomic) NSString *subjectField;
 @property(readonly, nonatomic) NSString *fromField;
+@property(readonly, nonatomic) NSString *toField;
 @property(readonly, nonatomic) NSString *deeplinkField;
 @property(readonly, nonatomic) NSString *originalHtml;
 @property (assign) BOOL isBlockingEnabled;
@@ -28,7 +29,7 @@ typedef NS_ENUM(NSUInteger, BLOCKING_RESULT_CERTAINTY) {
 @property (nonatomic, assign, readonly) NSUInteger knownTrackerCount;
 - (instancetype)init NS_UNAVAILABLE;
 - (id)initWithHtml:(NSString*)html;
-- (id)initWithHtml:(NSString*)html from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink;
+- (id)initWithHtml:(NSString*)html to:(NSString*)to from:(NSString*)from subject:(NSString*)subject deeplink:(NSString*)deeplink;
 - (NSString *)detectedTracker;
 // Returns display names of trackers detected in message
 - (NSSet<NSString*> *)detectedTrackers;
