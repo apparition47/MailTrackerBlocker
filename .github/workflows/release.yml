@@ -117,11 +117,3 @@ jobs:
       env:
         HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }} # repo:public_repo, workflow scope
         USER_NAME: ${{ github.event.sender.login }}
-
-    - uses: mugi111/tweet-trigger-release@v1.2
-      with:
-        consumer_key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
-        consumer_secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
-        access_token_key: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-        access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-        tweet_body: "#MailTrackerBlocker ${{ steps.branch_name.outputs.SOURCE_TAG }} released 🚀!"
