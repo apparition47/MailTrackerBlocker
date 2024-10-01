@@ -386,7 +386,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Epsilon": @[
             @"login.dotomi.com/ucm/UCMController",
             @"/O/[a-z0-9_]+/[a-z0-9_]+",
-            @"/O/[a-z0-9_-]+",
+//            @"/O/[a-z0-9_-]+",
             @"ind.dell.com"
         ],
         @"Escalent": @[@"email-analytics.morpace.com"],
@@ -569,7 +569,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"OpenBracket": @[@"openbracket.co/track"],
         @"OpenWork": @[@"openwork.jp/log_mail_open_com"],
         @"Opicle": @[@"track.opicle.com"],
-        @"Optimove": @[@"/ss/o/[a-z0-9_]+/[a-z0-9_][a-z0-9_][a-z0-9_]/[a-z0-9_]+/[a-z0-9_][a-z0-9_].gif"],
+        @"Optimove": @[@"/ss/o/[a-zA-Z0-9_.-]+/[a-z0-9][a-z0-9][a-z0-9]/[a-zA-Z0-9_]+/ho.gif"],
         @"Oracle": @[
             @"tags.bluekai.com/site", // Bluekai
             @"en25.com/e/",
@@ -601,6 +601,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"phpList": @[@"/ut.php\\?u="],
         @"PipeDrive": @[@"api.nylas.com/open"],
         @"Playdom": @[@"playdom.com/g"],
+        @"Plusgrade": @[@"upgrade.plusgrade.com/offer/"],
         @"Polymail": @[@"polymail.io/v2/z/", @"share.polymail.io"],
         @"Postmark": @[@"pstmrk.it"],
         @"Press Ganey": @[@"email.patients.pgsurveying.com"],

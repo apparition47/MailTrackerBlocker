@@ -310,6 +310,23 @@
     XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
 }
 
+- (void)testEpsilonOptimove {
+    NSString *epsilon = @"<img src='http://epslocalmail.com/O/v60000017b9910d078a63fa06e966f45e8/e2b342d0ae1348c000004c5a42963aa1' style=\"display:none; max-height: 0px; font-size: 0px; overflow: hidden; mso-hide: all\"/>";
+    MTBBlockedMessage *msg = [[MTBBlockedMessage alloc] initWithHtml:epsilon];
+    XCTAssertEqual(msg.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    XCTAssertEqualObjects(msg.detectedTracker, @"Epsilon");
+    
+    NSString *optimove = @"<img src=\"https://go.plusgrade.com/ss/o/u001.lsFKJ9Fa9n-KRP_ajN93Pw/4a7/ZtpKq_D_S7KL50N0dhBq1w/ho.gif\" alt=\"\" width=\"1\" height=\"1\" border=\"0\" style=\"height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;\"/>";
+    MTBBlockedMessage *msg2 = [[MTBBlockedMessage alloc] initWithHtml:optimove];
+    XCTAssertEqual(msg2.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    XCTAssertEqualObjects(msg2.detectedTracker, @"Optimove");
+    
+    NSString *optimove2 = @"<!-- Optimove tracking pixel --><img src=\"http://link.connected.staples.com/ss/o/6ZE6KrHd5ORUv7rSk2hs9Q/3gr/9qWpxTCoT2eaNXK5D0V6jQ/ho.gif\" alt=\"\" width=\"1\" height=\"1\" border=\"0\" style=\"height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;\"/>";
+    MTBBlockedMessage *msg3 = [[MTBBlockedMessage alloc] initWithHtml:optimove];
+    XCTAssertEqual(msg3.certainty, BLOCKING_RESULT_CERTAINTY_CONFIDENT_HARD_MATCH);
+    XCTAssertEqualObjects(msg3.detectedTracker, @"Optimove");
+}
+
 #pragma mark - Helpers
 
 - (NSString*)getHTMLResourceWithFileName:(NSString*)fileName {
