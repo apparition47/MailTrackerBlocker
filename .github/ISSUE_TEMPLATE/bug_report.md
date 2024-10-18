@@ -25,6 +25,7 @@ If this is about a crash, when you see the crash dialog, hit `Report...` then co
 
 **Environment (please complete the following information):**
  - OS: [e.g. macOS 13.4.1]
+ - MailTrackerBlocker version: [e.g. 1.1.11]
  - Other enabled plugins/extensions:
 
 **Additional context**
