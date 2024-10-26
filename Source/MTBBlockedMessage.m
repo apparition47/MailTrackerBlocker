@@ -502,7 +502,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Mailcampaigns": @[@"interface.mailcampaigns.nl/v[0-9]/t/"],
         @"Mailcastr": @[@"mailcastr.com/image/"],
         @"MailCoral": @[@"mailcoral.com/open"],
-        @"MailerLite": @[@"/link/o/"],
+        @"MailerLite": @[@"/link/o/", @"clicks.mlsend.com"],
         @"Mailgun": @[@"/o/eJ"],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
         @"Mailjet": @[
@@ -625,7 +625,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Rule": @[@"app.rule.io/track/image"],
         @"Sailthru": @[
             @"sailthru.com/trk",
-            @"/img/[a-z0-9_]+/[a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_].gif"
+            @"/img/[a-z0-9_.]+/[a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_][a-z0-9_].gif"
         ],
         @"Salesforce": @[ // ExactTarget
             @"salesforceiq.com/t.png",
