@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.8.6] - 2024-10-26
+
+- Update MailerLite ruleset (thanks @oneofthedamons)
+- Update Epsilon, Optimove, Plusgrade, Sailthru ruleset
+
 ## [0.8.5] - 2024-06-08
 
 - add Wise, Discord, Walmart, OpenWork rules
