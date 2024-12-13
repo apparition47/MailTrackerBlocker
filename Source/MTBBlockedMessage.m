@@ -360,6 +360,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Data Axle": @[@"ympxl.com/log.gif"],
         @"dataX": @[@"openedlog.bdash-cloud.com/opened", @"openedlog.smart-bdash.com/opened"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
+        @"designtrendsfs.de": @[@"designtrendsfs.de/[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]"],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"Discord": @[@"discord.com/api/science/"],
         @"Disney": @[@"clk.messaging.go.com/c/[0-9][0-9]/bcasts/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/view"],
