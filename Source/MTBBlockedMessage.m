@@ -361,6 +361,11 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Data Axle": @[@"ympxl.com/log.gif"],
         @"dataX": @[@"openedlog.bdash-cloud.com/opened", @"openedlog.smart-bdash.com/opened"],
         @"Dating Profits": @[@"click.xnxxinc.com/campaign/track-email/"],
+        @"Deployteq": @[
+            @"click.centraalbeheer.nl",
+            @"e.wehkamp.nl",
+            @"e.bax-shop.nl"
+        ],
         @"DidTheyReadIt": @[@"xpostmail.com"],
         @"Discord": @[@"discord.com/api/science/"],
         @"Disney": @[@"clk.messaging.go.com/c/[0-9][0-9]/bcasts/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/view"],
@@ -506,11 +511,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"MailerLite": @[@"/link/o/", @"clicks.mlsend.com"],
         @"Mailgun": @[@"/o/eJ"],
         @"MailInifinity": @[@"mailinifinity.com/ptrack"],
-        @"Mailjet": @[
-            @"mjt.lu/oo",
-            @"links.+/oo/",
-            @"s0hu.mj.am/oo/"
-        ],
+        @"Mailjet": @[@"/oo/[a-z0-9]+/[a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9]/e.gif"],
         @"Mailshake": @[@"w1.mslai.net/prod/open/", @"w1.msstnu.com/prod/open/"],
         @"Mailspring": @[@"getmailspring.com/open",
                          @"img.secureserver.net/bbimage.aspx"
@@ -598,6 +599,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"mlapp.flypeach.com/mail/prod/receipt/read.php\\?id=",
             @"mag.flypeach.com/c/" // Cuenote
         ],
+        @"Pepipost": @[@"[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]\\?id="],
         @"PersistIQ": @[@"infinite-stream-5194.herokuapp.com/pixel"],
         @"phpList": @[@"/ut.php\\?u="],
         @"PipeDrive": @[@"api.nylas.com/open"],
@@ -606,7 +608,6 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Polymail": @[@"polymail.io/v2/z/", @"share.polymail.io"],
         @"Postmark": @[@"pstmrk.it"],
         @"Press Ganey": @[@"email.patients.pgsurveying.com"],
-        @"Product Hunt": @[@"links.producthunt.com/oo/"],
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
         @"Qualtrics": @[@"/WRQualtricsContacts/Watermark.php"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
@@ -748,6 +749,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Vcommission": @[@"tracking.vcommission.com"],
         @"Verizon": @[@"verizon.com/econtact/ecrm/EmailTracking.serv"],
         @"VinSolutions": @[@"vinlens.com/email.ashx\\?c="],
+        @"Vinted": @[@"vinted.[a-z][a-z]/crm/email_track\\?crm_email_id="],
         @"Vtiger": @[@"od2.vtiger.com/shorturl.php"],
         @"Walmart": @[@"w-mt.co/g/rptrcks/comm-smart-app/services/tracking/openTracker"],
         @"WhatCounts": @[@"/t\\?c=[0-9][0-9][0-9][0-9]&r=[0-9][0-9][0-9][0-9]&l=[0-9][0-9][0-9]?&t=[0-9][0-9]&e="],
