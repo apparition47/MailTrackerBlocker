@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.8.7] - 2025-02-04
+
+- updated ruleset (thanks @Jee-Bee, James M. Damon S.)
+
 ## [0.8.6] - 2024-10-26
 
 - Update MailerLite ruleset (thanks @oneofthedamons)
