@@ -7,6 +7,7 @@ on:
       - 'Source/**'
       - 'Unit Tests/**'
   pull_request:
+  workflow_dispatch:
 
 jobs:
   unit-test:
