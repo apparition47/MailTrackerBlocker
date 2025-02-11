@@ -498,7 +498,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Locaweb": @[@".br/accounts/[0-9][0-9][0-9][0-9]/messages/[0-9][0-9][0-9]/openings/[0-9][0-9][0-9][0-9][0-9]\\?envelope_id="],
         @"LogDNA": @[@"ping.answerbook.com"],
         @"Keychron": @[@"keychron.com/_t/open/"],
-        @"Klaviyo": @[@"trk.klaviyomail.com", @"ctrk.klclick[123].com/o/"],
+        @"Klaviyo": @[@"trk.klaviyomail.com", @"ctrk.klclick[123]?.com/o/"],
         @"Magento": @[
             @"magento.com/trk",
             @"go.rjmetrics.com"
