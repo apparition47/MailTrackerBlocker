@@ -15,18 +15,18 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         submodules: true
 
     # get copy of Mail.app since it's missing from the GitHub Actions runner images
     - name: checkout Mail.app
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: apparition47/Mail.app
         path: mail-app
 
-    - uses: apple-actions/import-codesign-certs@v1
+    - uses: apple-actions/import-codesign-certs@master
       with:
         p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
         p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
@@ -62,29 +62,17 @@ jobs:
         ' CHANGELOG.md > build/releaselog.md
     - name: create release
       id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{ github.ref }}
-        release_name: ${{ github.ref }} Release
+        token: ${{ secrets.GITHUB_TOKEN }}
+        name: ${{ github.ref }} Release
         body_path: ./build/releaselog.md
         draft: false
         prerelease: false
-
-    - name: upload release asset pkg
-      id: upload-pkg
-      uses: actions/upload-release-asset@v1.0.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./build/Release/MailTrackerBlocker.pkg
-        asset_name: MailTrackerBlocker.pkg
-        asset_content_type: application/x-newton-compatible-pkg 
+        files: ./build/Release/MailTrackerBlocker.pkg
 
     - name: Checkout private Homebrew tap
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: apparition47/homebrew-tap
         path: apparition47-homebrew-tap
@@ -93,9 +81,9 @@ jobs:
     - name: Branch name
       id: branch_name
       run: |
-        echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
-        echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
-        echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+        echo "SOURCE_NAME=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+        echo "SOURCE_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+        echo "SOURCE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
 
     - name: Update cask in Homebrew tap
       run: |
