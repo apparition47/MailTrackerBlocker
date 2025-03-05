@@ -1,17 +1,18 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - "!*"
-    tags:
-      - '[0-9].[0-9]+.[0-9]+'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "semver string for release e.g. 0.8.7"
+        required: true
+        type: string
 
 jobs:
 
   sign-pack-upload:
 
-    runs-on: macos-13
+    runs-on: [self-hosted]  # prefer macOS 12
 
     steps:
 
@@ -56,7 +57,7 @@ jobs:
 
     - name: generate release log
       run: |
-        CURRENT_TAG=${GITHUB_REF#refs/tags/}
+        CURRENT_TAG=${{ inputs.version }}
         awk -v ver=$CURRENT_TAG '
          /^#+ \[/ { if (p) { exit }; if ($2 == "["ver"]") { p=1; next} } p && NF
         ' CHANGELOG.md > build/releaselog.md
@@ -66,8 +67,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: ${{ github.ref }} Release
+        tag_name: ${{ inputs.version }}
+        release_name: ${{ inputs.version }} Release
         body_path: ./build/releaselog.md
         draft: false
         prerelease: false
@@ -90,17 +91,10 @@ jobs:
         path: apparition47-homebrew-tap
         token: ${{ secrets.REPO_PAT }} # repo scope
 
-    - name: Branch name
-      id: branch_name
-      run: |
-        echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
-        echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
-        echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
-
     - name: Update cask in Homebrew tap
       run: |
         CASK_NAME=mailtrackerblocker
-        CASK_VERSION=${{ steps.branch_name.outputs.SOURCE_TAG }}
+        CASK_VERSION=${{ inputs.version }}
         CASK_SHA256=$(shasum --algorithm 256 "build/Release/MailTrackerBlocker.pkg" | awk '{print $1}')
 
         brew update
