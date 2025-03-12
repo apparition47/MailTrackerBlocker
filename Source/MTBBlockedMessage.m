@@ -733,6 +733,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             @"getpic.php\\?l="
         ],
         @"Tripolis": @[@"/public/o/.+/t.gif"],
+        @"Trustyou": @[@"analytics.trustyou.com/surveys/api/mailing/events/invitation/opened"],
         @"Twilio": @[@"api.segment.io/v1/pixel/track"],
         @"Twitch": @[@"spade.twitch.tv/track"],
         @"Twitter": @[@"twitter.com/scribe/ibis"],
