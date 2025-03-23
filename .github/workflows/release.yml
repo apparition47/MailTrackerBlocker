@@ -12,7 +12,9 @@ jobs:
 
   sign-pack-upload:
 
-    runs-on: [self-hosted]  # prefer macOS 12
+    runs-on: [self-hosted]  # prefer macOS 12, Xcode 13.4.1
+    env:
+      KEYCHAIN: job-${{ github.job }}-${{ github.run_id	}}-${{ github.run_number }}-${{ github.run_attempt }}
 
     steps:
 
@@ -29,6 +31,7 @@ jobs:
 
     - uses: apple-actions/import-codesign-certs@v3
       with:
+        keychain: ${{ env.KEYCHAIN }}
         p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
         p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
 
@@ -111,3 +114,8 @@ jobs:
       env:
         HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }} # repo:public_repo, workflow scope
         USER_NAME: ${{ github.event.sender.login }}
+
+    - name: Delete keychain
+      if: always() # Always run this step to ensure the keychain is properly disposed of
+      run: |
+        security delete-keychain "${{ env.KEYCHAIN }}".keychain
