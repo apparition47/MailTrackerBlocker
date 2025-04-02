@@ -299,6 +299,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Bazaarvoice": @[@"bazaarvoice.com/a.gif"],
         @"Bison": @[@"clicks.bisonapp.com"],
         @"Bandsintown": @[@"px1.bandsintown.com"],
+        @"beehiiv": @[@"/ss/o/[a-zA-Z0-9_.]+/[a-z0-9][a-z0-9][a-z0-9]/[a-zA-Z0-9_.-]+/ho.gif"],
         @"Benchmark Email": @[@"bmetrack.com/c/o"],
         @"Blackbaud": @[
             @"support.planetary.org/site/PixelServer",
