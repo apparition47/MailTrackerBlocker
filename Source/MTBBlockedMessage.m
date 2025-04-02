@@ -163,6 +163,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             continue;
         }
         
+        #ifndef CONTENT_BLOCKER
         // strip non-tracking static ad content
         NSArray *staticContentDict = @[
             @"/branding/recommend/short.png", // Jeeng
@@ -175,9 +176,11 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
                 hasParsedTag = true;
             }
         }
+        #endif
     }
     trackers = [NSSet setWithArray: trackerTemp];
     
+    #ifndef CONTENT_BLOCKER
     // strip additional CSS tracker
     // doesn't add to trackers since it picked up as img above
     NSArray *cssTrackingDict = @[
@@ -200,6 +203,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
             }
         }
     }
+    #endif
 
     return result;
 }
