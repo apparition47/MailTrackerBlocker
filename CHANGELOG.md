@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.8.9] - 2025-07-12
+
+- Important: the signing certificate has changed so the auto-updater will fail to update. Please manually update.
+- add beehiiv rule (thanks Damon S.)
+
 ## [0.8.7] - 2025-02-04
 
 - updated ruleset (thanks @Jee-Bee, James M. Damon S.)
