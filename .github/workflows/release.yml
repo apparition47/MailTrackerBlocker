@@ -32,6 +32,7 @@ jobs:
     - uses: apple-actions/import-codesign-certs@v3
       with:
         keychain: ${{ env.KEYCHAIN }}
+        # base64 enc of Developer ID Application + Developer ID Application with priv keys p12
         p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
         p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
 
@@ -101,6 +102,7 @@ jobs:
         CASK_SHA256=$(shasum --algorithm 256 "build/Release/MailTrackerBlocker.pkg" | awk '{print $1}')
 
         brew update
+        brew tap homebrew/cask --force
         brew bump-cask-pr --no-browse --sha256 ${CASK_SHA256} --version ${CASK_VERSION} --no-audit --no-style ${CASK_NAME}
 
         cd apparition47-homebrew-tap
