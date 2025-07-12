@@ -8,8 +8,10 @@
 #import "MTBPackageValidator.h"
 #import <xar/xar.h>
 
-// PKCS#1 base64 enc output from SecKeyCopyExternalRepresentation
-// of my Developer ID Installer (XXX)
+// Use the public key of your Developer ID Installer
+// Derived from PKCS#1 base64 enc output from SecKeyCopyExternalRepresentation of my Developer ID Installer (XXX)
+// OR command to get without ASN.1 parsing output:
+// $ security find-certificate -c "Developer ID Installer: Name (TEAM_ID)" -p | openssl x509 -pubkey -noout | openssl asn1parse -strparse 19 -noout -out - | base64
 const NSString *pinnedDevIDInstallerPKCS1PubKey = @"MIIBCgKCAQEA0vFlrhW0ldvlYKgQe8tQ+wsI6wzoKsjTF7M/fdnzx2SP0NqVQ/eLYk9wCiCQEJkZJXZznGyXzl1oeTjjQVfsH2TvMElhEzKXcyCEOd7axmEYGro/wwZlTlYEGOuR9GwgghCltHU9x/cSyOMDPOcM+ySG9Porea+GPbyeURzeT4QnSKMCE2y+Tdxo/aRgJfcn57DRXCFy/CEhMPJm8axr2bsoLfaj6RHA7TrQurphryvO9VBKL+2b1sbj9B8OXunlwe5t4Bq3DfXpjzhPWt1pXdve+q8qbtIatrLgYcpq1yOfhToMVQzMBf2NHteqPhhaHRDEG0gmjzoUD9r6sAwwRQIDAQAB";
 
 @implementation MTBPackageValidator
