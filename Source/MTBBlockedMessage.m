@@ -491,6 +491,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Inxmail": @[@"/d/d.gif\\?"],
         @"Is-tracking-pixel-api-prod.appspot.com": @[@"is-tracking-pixel-api-prod.appspot.com"],
+        @"Iterable": @[@"/s/eo/[a-zA-Z0-9_-]+/[a-zA-Z0-9]+/[0-9][0-9]"],
 //        @"JangoMail": @["/[a-z].z\\?[a-z]="],
         @"Japan Railway": @[@"expy.jp/c/"],
         @"Jeeng": @[@"/stripe/image\\?cs_"],
