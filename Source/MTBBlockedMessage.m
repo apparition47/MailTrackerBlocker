@@ -477,6 +477,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Hyper Hyper": @[@"hyperhub.com.au/newhub/api/email/track"],
         @"iContact": @[@"click.icptrack.com/icp"],
         @"Indeed": @[@"subscriptions.indeed.com/imgping"],
+        @"Inflection": @[@"tracking.inflection.io"],
         @"Infobip": @[@"/tracking/1/open/"],
         @"Infusion Software": @[
             @"infusionsoft.com/app/emailOpened",
