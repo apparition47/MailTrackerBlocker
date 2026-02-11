@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.8.10] - 2026-02-11
+
+- updated ruleset for Iterable, Inflection, gogcli
+
 ## [0.8.9] - 2025-07-12
 
 - Important: the signing certificate has changed so the auto-updater will fail to update. Please manually update.
