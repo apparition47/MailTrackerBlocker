@@ -436,6 +436,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         ],
         @"Gmelius": @[@"gml.email"],
         @"GoDaddy": @[@"email.cloud.secureclick.net/view\\?"],
+        @"gogcli": @[@"gog-email-tracker-"],
         @"Google": @[
             @"ad.doubleclick.net/ddm/ad",
             @"google-analytics.com/collect",
