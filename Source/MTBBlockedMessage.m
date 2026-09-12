@@ -620,7 +620,7 @@ NSString * const kCSSTemplateRegex = @"(background-image|content):\\s?url\\([\'\
         @"Postmark": @[@"pstmrk.it"],
         @"Press Ganey": @[@"email.patients.pgsurveying.com"],
         @"ProlificMail": @[@"prolificmail.com/ltrack"],
-        @"Qualtrics": @[@"/WRQualtricsContacts/Watermark.php"],
+        @"Qualtrics": @[@"/WRQualtricsContacts/Watermark.php", @"survey.satrixresearch.com/subscription/watermark.gif"],
         @"Quora": @[@"quora.com/qemail/mark_read"],
         @"Rabobank": @[@"mail.rabobank.nl/public/o/"],
         @"Rakuten": @[
